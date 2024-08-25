@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Blackclaw";
+	ITEM.name = "Черный Коготь";
 	ITEM.model = "models/begotten/weapons/uniquegoresword.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_unique_1h_blackclaw";
 	ITEM.category = "Melee";
-	ITEM.description = "A black Shagalaxian steel sword somehow forged in the fires of hell. It is cursed with the souls of its victims, thousands of fallen foes wandering a black void without heads. This weapon is clearly not meant to be held in your hands.";
+	ITEM.description = "Черный шагалакский стальной меч, каким-то образом выкованный в адском огне. Он проклят душами своих жертв, тысячами павших врагов, блуждающих в черной пустоте без голов. Это оружие явно не предназначено для того, чтобы держать его в руках.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/blackclaw.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
