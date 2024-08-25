@@ -3,7 +3,7 @@
 --]]
 
 local COMMAND = Clockwork.command:New("ContTakePassword")
-COMMAND.tip = "Take a container's password."
+COMMAND.tip = "Удалить пароль от Контейнера."
 COMMAND.flags = CMD_DEFAULT
 COMMAND.access = "a"
 
@@ -27,15 +27,15 @@ function COMMAND:OnRun(player, arguments)
 				trace.Entity:SetNWBool("unlocked", true);
 				cwStorage:SaveStorage();
 
-				Schema:EasyText(player, "cornflowerblue", "This container's password has been removed.")
+				Schema:EasyText(player, "cornflowerblue", "Пароль на этом контейнере был удален.")
 			else
-				Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+				Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 			end
 		else
-			Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+			Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 		end
 	else
-		Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+		Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 	end
 end
 

@@ -44,19 +44,19 @@ if (SERVER) then
 end
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Bear Trap";
+	ITEM.name = "Медвежий Капкан";
 	ITEM.uniqueID = "bear_trap";
 	ITEM.model = "models/begotten/beartrap/beartrapopen.mdl";
 	ITEM.weight = 8;
 	ITEM.category = "Tools";
-	ITEM.description = "A metal pressure-activated trap with jagged teeth, designed to capture the strongest of prey, be they animal or man.";
+	ITEM.description = "Эта массивная металлическая ловушка, словно порождение самых тёмных уголков разума, предназначена для поимки различных существ, будь то зверь или человек.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/bear_trap.png";
-	ITEM.useText = "Deploy";
+	ITEM.useText = "Поставить Ловушку";
 	ITEM.requiredbeliefs = {"ingenious"};
 	
 	function ITEM:OnUse(player, itemEntity)
 		if Schema.towerSafeZoneEnabled and player:InTower() then
-			Schema:EasyText(player, "chocolate", "You cannot deploy a bear trap inside a safezone!");
+			Schema:EasyText(player, "chocolate", "Вы не можете установить медвежий капкан внутри безопасной зоны!");
 			
 			return false;
 		end
@@ -79,14 +79,14 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Campfire Kit";
+	ITEM.name = "Набор для Костра";
 	ITEM.uniqueID = "campfire_kit"
 	ITEM.model = "models/mosi/fallout4/props/junk/components/wood.mdl";
 	ITEM.weight = 2;
 	ITEM.useText = "Deploy";
 	ITEM.category = "Other";
 	ITEM.useSound = "physics/wood/wood_strain3.wav";
-	ITEM.description = "A large kit that is able to deploy a campfire which will last for 15 minutes, though more wood may be added as fuel to extend its lifetime.";
+	ITEM.description = "Большой комплект, позволяющий развести костер, который будет гореть в течение пятнадцати минут, хотя для продления срока службы можно добавлять больше дров.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/wood.png"
 	ITEM.stackable = false;
 
@@ -97,12 +97,12 @@ local ITEM = Clockwork.item:New();
 		local valuewater = bit.band(util.PointContents(position), CONTENTS_WATER) == CONTENTS_WATER;
 		
 		if player:InTower() then
-			Schema:EasyText(player, "peru", "You cannot deploy this in the Tower of Light!");
+			Schema:EasyText(player, "peru", "Вы не можете использовать это в Башне Света!");
 			return false;
 		end
 		
 		if tr.Entity and tr.Entity:GetClass() == "cw_longship" then
-			Schema:EasyText(player, "peru", "You cannot deploy this on a longship!");
+			Schema:EasyText(player, "peru", "Вы не сможете установить это на корабле!");
 			return false;
 		end
 		
@@ -110,7 +110,7 @@ local ITEM = Clockwork.item:New();
 			if v.playersOnBoard then
 				for i2, v2 in ipairs(v.playersOnBoard) do
 					if player == v2 then
-						Schema:EasyText(player, "peru", "You cannot deploy this while sailing!");
+						Schema:EasyText(player, "peru", "Вы не можете использовать это во время плавания!");
 						return false;
 					end
 				end
@@ -122,10 +122,10 @@ local ITEM = Clockwork.item:New();
 			ent:SetPos(position)
 			ent:Spawn()
 		elseif valuewater == true then
-			Schema:EasyText(player, "peru", "You cannot deploy this underwater!");
+			Schema:EasyText(player, "peru", "Вы не можете использовать это под водой!");
 			return false;
 		else
-			Schema:EasyText(player, "peru", "You cannot deploy this that far away!")
+			Schema:EasyText(player, "peru", "Вы не можете использовать это так далеко!")
 			return false;
 		end
 	end;
@@ -135,14 +135,14 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Siege Ladder";
+	ITEM.name = "Осадная Лестница";
 	ITEM.uniqueID = "siege_ladder";
 	ITEM.model = "models/begotten/misc/siegeladder_compact.mdl";
 	ITEM.weight = 11;
 	ITEM.category = "Tools";
-	ITEM.description = "A long, sturdy siege ladder for the express purpose of scaling the fortifications of the Castle, Gorewatch, or the Tower of Light.";
+	ITEM.description = "Длинная, прочная осадная лестница, специально предназначенная для преодоления укреплений Лавового Замка, Горвотча или Башни Света.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/siege_ladder.png";
-	ITEM.useText = "Erect";
+	ITEM.useText = "Установить Лестницу";
 	
 	function ITEM:OnUse(player, itemEntity)
 		local playerPos = player:GetPos();
@@ -155,7 +155,7 @@ local ITEM = Clockwork.item:New();
 					player.ladderConstructing = {index = i, condition = self:GetCondition()};
 					ladderPos.occupier = "constructing";
 					
-					Clockwork.chatBox:AddInTargetRadius(player, "me", "begins erecting a siege ladder!", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+					Clockwork.chatBox:AddInTargetRadius(player, "me", "устанавливает осадную лестницу!", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 					
 					Clockwork.player:SetAction(player, "building", 30, 3, function()
 						if IsValid(player) and player.ladderConstructing then
@@ -183,7 +183,7 @@ local ITEM = Clockwork.item:New();
 			end
 		end
 		
-		Schema:EasyText(player, "chocolate", "You must erect this siege ladder at a valid location outside the walls of the Castle or the Tower of Light!");
+		Schema:EasyText(player, "chocolate", "Вам необходимо установить осадную лестницу в подходящем месте за стенами Замка или Башни Света!");
 		return false;
 	end
 	-- Called when a player drops the item.
@@ -232,13 +232,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Armor Repair Kit";
+	ITEM.name = "Инструменты для ремонта Брони";
 	ITEM.uniqueID = "armor_repair_kit";
 	ITEM.cost = 50;
 	ITEM.model = "models/props/de_prodigy/ammo_can_02.mdl";
 	ITEM.weight = 1;
 	ITEM.category = "Tools";
-	ITEM.description = "A collection of tools and materials that can easily be used to repair one's armor.";
+	ITEM.description = "Набор инструментов и материалов, которые можно легко использовать для ремонта брони.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/repair_kit.png";
 	ITEM.conditionReplenishment = 200;
 	ITEM.stackable = false;
@@ -250,13 +250,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Firearm Repair Kit";
+	ITEM.name = "Инструменты для ремонта Огнестрельного Оружия";
 	ITEM.uniqueID = "firearm_repair_kit";
 	ITEM.cost = 50;
 	ITEM.model = "models/props/de_prodigy/ammo_can_02.mdl";
 	ITEM.weight = 1;
 	ITEM.category = "Tools";
-	ITEM.description = "A collection of delicate tools and spare parts that can be used to repair firearms.";
+	ITEM.description = "Коллекция деликатных инструментов и запасных частей, которые можно использовать для ремонта огнестрельного оружия.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/repair_kit.png";
 	ITEM.conditionReplenishment = 200;
 	ITEM.stackable = false;
@@ -268,13 +268,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Melee Repair Kit";
+	ITEM.name = "Инструменты для ремонта Оружия Ближнего Боя";
 	ITEM.uniqueID = "weapon_repair_kit";
 	ITEM.cost = 50;
 	ITEM.model = "models/props/de_prodigy/ammo_can_02.mdl";
 	ITEM.weight = 1;
 	ITEM.category = "Tools";
-	ITEM.description = "A collection of tools and materials that can easily be used to repair one's melee weapon or shield.";
+	ITEM.description = "Набор инструментов и материалов, которые можно легко использовать для ремонта оружия ближнего боя или щита.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/repair_kit.png";
 	ITEM.conditionReplenishment = 200;
 	ITEM.stackable = false;
@@ -286,13 +286,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Engraving Tool";
+	ITEM.name = "Инструмент для Гравировки";
 	ITEM.uniqueID = "engraving_tool";
 	ITEM.cost = 50;
 	ITEM.model = "models/props_c17/TrapPropeller_Lever.mdl";
 	ITEM.weight = 0.25;
 	ITEM.category = "Tools";
-	ITEM.description = "A small tool that can be used to etch a name into a weapon or shield.";
+	ITEM.description = "Небольшой инструмент, который можно использовать для гравировки на оружии или щите.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ampoule.png"
 	--ITEM.itemSpawnerInfo = {category = "Junk", rarity = 95};
 	-- Called when a player drops the item.
@@ -300,21 +300,21 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Bindings";
+	ITEM.name = "Веревка";
 	ITEM.category = "Tools";
 	ITEM.cost = 4;
 	ITEM.model = "models/begotten/misc/rope.mdl";
 	ITEM.weight = 0.2;
 	ITEM.access = "v";
 	ITEM.useText = "Tie";
-	ITEM.description = "A collection of rope that can be fitted around a person's wrists to bind them together.";
+	ITEM.description = "Небольших размеров веревка, которой можно связать человека.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/bindings.png"
 	
 	ITEM.stackable = true;
 	-- Called when a player uses the item.
 	function ITEM:OnUse(player, itemEntity)
 		if (player.isTying) then
-			Schema:EasyText(player, "peru", "You are already tying a character!");
+			Schema:EasyText(player, "peru", "Вы уже связываете персонажа!");
 			
 			return false;
 		else
@@ -334,14 +334,14 @@ local ITEM = Clockwork.item:New();
 								local faction = player:GetFaction();
 								
 								if target:InTower() and Schema.towerSafeZoneEnabled and (faction ~= "Gatekeeper" and faction ~= "Holy Hierarchy") then
-									Schema:EasyText(player, "peru", "You cannot tie characters in the Tower of Light if you are not of the Holy Hierarchy!");
+									Schema:EasyText(player, "peru", "Вы не можете связывать людей в Башне Света, если вы не принадлежите к Святой Иерархии!");
 									return false;
 								end
 								
 								if player:GetMoveType() == MOVETYPE_WALK then
 									for k, v in pairs(ents.FindInSphere(player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2)) do
 										if v:IsPlayer() then
-											Clockwork.chatBox:Add(v, player, "me", "starts tying up "..Clockwork.player:FormatRecognisedText(v, "%s", target)..".");
+											Clockwork.chatBox:Add(v, player, "me", "берет веревку в руки и начинает связывать человека перед собой "..Clockwork.player:FormatRecognisedText(v, "%s", target)..".");
 										end
 									end
 								end
@@ -366,7 +366,7 @@ local ITEM = Clockwork.item:New();
 									Clockwork.player:SetAction(player, "tie", false);
 								end);
 							else
-								Schema:EasyText(player, "peru", "You cannot tie characters that are facing you!");
+								Schema:EasyText(player, "peru", "Вы можете связывать только тех, что стоят к вам спиной!");
 								
 								return false;
 							end;
@@ -377,26 +377,26 @@ local ITEM = Clockwork.item:New();
 							
 							return false;
 						else
-							Schema:EasyText(player, "firebrick", "This character is too far away!");
+							Schema:EasyText(player, "firebrick", "Он слишком далеко!");
 							
 							return false;
 						end;
 					else
-						Schema:EasyText(player, "peru", "This character is already tied!");
+						Schema:EasyText(player, "peru", "Он уже связан!");
 						
 						return false;
 					end;
 				else
 					if player.cwWakingUp then
-						Schema:EasyText(player, "firebrick", "This character is waking up after spawning and cannot currently be tied!");
+						Schema:EasyText(player, "firebrick", "Этот персонаж просыпается после появления и в данный момент не может быть связан!");
 					else
-						Schema:EasyText(player, "firebrick", "This character cannot currently be tied!");
+						Schema:EasyText(player, "firebrick", "В настоящее время он не может быть связан!");
 					end
 					
 					return false;
 				end
 			else
-				Schema:EasyText(player, "firebrick", "That is not a valid character!");
+				Schema:EasyText(player, "firebrick", "Вы не можете его связать!");
 				
 				return false;
 			end;
@@ -405,7 +405,7 @@ local ITEM = Clockwork.item:New();
 	-- Called when a player drops the item.
 	function ITEM:OnDrop(player, position)
 		if (player.isTying) then
-			Schema:EasyText(player, "peru", "You are currently tying a character!");
+			Schema:EasyText(player, "peru", "В данный момент ваши руки заняты!");
 			
 			return false;
 		end;
@@ -414,20 +414,20 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Refurbished Blood Test Kit";
+	ITEM.name = "Восстановленный набор для Анализа Крови";
 	ITEM.category = "Tools";
 	ITEM.cost = 100;
 	ITEM.model = "models/kali/miscstuff/stalker/aid/first aid kit.mdl";
 	ITEM.weight = 0.4;
 	ITEM.useText = "Test Blood";
-	ITEM.description = "An ancient device used to test another person's blood for corruption. This one is worn by age and may even be unreliable.";
+	ITEM.description = "Древнее устройство, используемое для проверки крови другого человека на наличие порчи. Это устройство изнашивается со временем и может быть даже ненадежным.";
 	ITEM.stackable = false;
 	
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/blood_test_kit.png"
 	-- Called when a player uses the item.
 	function ITEM:OnUse(player, itemEntity)
 		if (player.isTying) then
-			Schema:EasyText(player, "peru", "You are already testing a character!");
+			Schema:EasyText(player, "peru", "Вы уже проверяете его кровь!");
 			
 			return false;
 		else
@@ -440,7 +440,7 @@ local ITEM = Clockwork.item:New();
 					if player:GetMoveType() == MOVETYPE_WALK then
 						for k, v in pairs(ents.FindInSphere(player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2)) do
 							if v:IsPlayer() then
-								Clockwork.chatBox:Add(v, player, "me", "begins a blood test on "..Clockwork.player:FormatRecognisedText(v, "%s", target)..".");
+								Clockwork.chatBox:Add(v, player, "me", "проверяет кровь человека перед собой на наличие порчи "..Clockwork.player:FormatRecognisedText(v, "%s", target)..".");
 							end
 						end
 					end
@@ -478,12 +478,12 @@ local ITEM = Clockwork.item:New();
 					
 					return false;
 				else
-					Schema:EasyText(player, "firebrick", "This character is too far away!");
+					Schema:EasyText(player, "firebrick", "Он слишком далеко!");
 					
 					return false;
 				end;
 			else
-				Schema:EasyText(player, "firebrick", "That is not a valid character!");
+				Schema:EasyText(player, "firebrick", "Это не действительный Персонаж!");
 				
 				return false;
 			end;
@@ -492,7 +492,7 @@ local ITEM = Clockwork.item:New();
 	-- Called when a player drops the item.
 	function ITEM:OnDrop(player, position)
 		if (player.isTying) then
-			Schema:EasyText(player, "peru", "You are currently tying a character!");
+			Schema:EasyText(player, "peru", "В данный момент ваши руки заняты!");
 			
 			return false;
 		end;
@@ -501,20 +501,20 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Advanced Blood Test Kit";
+	ITEM.name = "Расширенный набор для Анализа Крови";
 	ITEM.category = "Tools";
 	ITEM.cost = 2500;
 	ITEM.model = "models/kali/miscstuff/stalker/aid/first aid kit.mdl";
 	ITEM.weight = 0.4;
 	ITEM.useText = "Test Blood";
-	ITEM.description = "An ancient device used to test another person's blood for corruption. This device in particular is an advanced model, designed by Skylight engineers to detect the blood of the infamous Black Hats.";
+	ITEM.description = "Древнее устройство, используемое для проверки крови другого человека на наличие порчи. Это устройство, в частности, является усовершенствованной моделью, разработанной лучшими био-инженерами для обнаружения крови печально известных Черных Шляп.";
 	ITEM.stackable = false;
 	
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/blood_test_kit.png"
 	-- Called when a player uses the item.
 	function ITEM:OnUse(player, itemEntity)
 		if (player.isTying) then
-			Schema:EasyText(player, "peru", "You are already testing a character!");
+			Schema:EasyText(player, "peru", "Вы уже проверяете его кровь!");
 			
 			return false;
 		else
@@ -527,7 +527,7 @@ local ITEM = Clockwork.item:New();
 					if player:GetMoveType() == MOVETYPE_WALK then
 						for k, v in pairs(ents.FindInSphere(player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2)) do
 							if v:IsPlayer() then
-								Clockwork.chatBox:Add(v, player, "me", "begins a blood test on "..Clockwork.player:FormatRecognisedText(v, "%s", target)..".");
+								Clockwork.chatBox:Add(v, player, "me", "проверяет кровь человека перед собой на наличие порчи "..Clockwork.player:FormatRecognisedText(v, "%s", target)..".");
 							end
 						end
 					end
@@ -565,12 +565,12 @@ local ITEM = Clockwork.item:New();
 					
 					return false;
 				else
-					Schema:EasyText(player, "firebrick", "This character is too far away!");
+					Schema:EasyText(player, "firebrick", "Он слишком далеко!");
 					
 					return false;
 				end;
 			else
-				Schema:EasyText(player, "firebrick", "That is not a valid character!");
+				Schema:EasyText(player, "firebrick", "Это не действительный Персонаж!");
 				
 				return false;
 			end;
@@ -579,7 +579,7 @@ local ITEM = Clockwork.item:New();
 	-- Called when a player drops the item.
 	function ITEM:OnDrop(player, position)
 		if (player.isTying) then
-			Schema:EasyText(player, "peru", "You are currently testing a character!");
+			Schema:EasyText(player, "peru", "В данный момент ваши руки заняты!");
 			
 			return false;
 		end;
@@ -587,20 +587,20 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Blood Test Kit";
+	ITEM.name = "Набор для Анализа Крови";
 	ITEM.category = "Tools";
 	ITEM.cost = 1000;
 	ITEM.model = "models/kali/miscstuff/stalker/aid/first aid kit.mdl";
 	ITEM.weight = 0.4;
 	ITEM.useText = "Test Blood";
-	ITEM.description = "An ancient device used to test another person's blood for corruption.";
+	ITEM.description = "Древнее устройство, используемое для проверки крови другого человека на наличие порчи.";
 	ITEM.stackable = false;
 	
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/blood_test_kit.png"
 	-- Called when a player uses the item.
 	function ITEM:OnUse(player, itemEntity)
 		if (player.isTying) then
-			Schema:EasyText(player, "peru", "You are already testing a character!");
+			Schema:EasyText(player, "peru", "Вы уже проверяете его кровь!");
 			
 			return false;
 		else
@@ -613,7 +613,7 @@ local ITEM = Clockwork.item:New();
 					if player:GetMoveType() == MOVETYPE_WALK then
 						for k, v in pairs(ents.FindInSphere(player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2)) do
 							if v:IsPlayer() then
-								Clockwork.chatBox:Add(v, player, "me", "begins a blood test on "..Clockwork.player:FormatRecognisedText(v, "%s", target)..".");
+								Clockwork.chatBox:Add(v, player, "me", "проверяет кровь человека перед собой на наличие порчи "..Clockwork.player:FormatRecognisedText(v, "%s", target)..".");
 							end
 						end
 					end
@@ -651,12 +651,12 @@ local ITEM = Clockwork.item:New();
 					
 					return false;
 				else
-					Schema:EasyText(player, "firebrick", "This character is too far away!");
+					Schema:EasyText(player, "firebrick", "Он слишком далеко!");
 					
 					return false;
 				end;
 			else
-				Schema:EasyText(player, "firebrick", "That is not a valid character!");
+				Schema:EasyText(player, "firebrick", "Это не действительный Персонаж!");
 				
 				return false;
 			end;
@@ -666,7 +666,7 @@ local ITEM = Clockwork.item:New();
 	-- Called when a player drops the item.
 	function ITEM:OnDrop(player, position)
 		if (player.isTying) then
-			Schema:EasyText(player, "peru", "You are currently testing a character!");
+			Schema:EasyText(player, "peru", "В данный момент ваши руки заняты!");
 			
 			return false;
 		end;
@@ -674,15 +674,15 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "District One Power Cell";
+	ITEM.name = "Энергоблок для Силовой Брони";
 	ITEM.uniqueID = "power_cell";
 	ITEM.cost = 500;
 	ITEM.model = "models/mosi/fallout4/props/junk/components/nuclear.mdl";
 	ITEM.weight = 1;
 	ITEM.category = "Tools";
-	ITEM.description = "A nuclear power cell of ancient Glazic manufacture, used to power District One armor.";
+	ITEM.description = "Ядерный элемент питания, используемый для зарядки Силовой Брони.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/power_cell.png"
-	ITEM.useText = "Recharge Power Armor";
+	ITEM.useText = "Зарядить Силовую Броню";
 	ITEM.useSound = "items/battery_pickup.wav";
 	
 	ITEM.itemSpawnerInfo = {category = "Armor", rarity = 600, supercrateOnly = true};
@@ -696,7 +696,7 @@ local ITEM = Clockwork.item:New();
 			
 			player.nextChargeDepleted = CurTime() + 120;
 		else
-			Schema:EasyText(player, "chocolate", "You must be inside a suit of power armor in order to recharge it!");
+			Schema:EasyText(player, "chocolate", "Чтобы использовать блок, вам необходимо быть внутри Силовой Брони!");
 			
 			return false;
 		end
@@ -707,11 +707,11 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Warhorn";
+	ITEM.name = "Боевой Горн";
 	ITEM.model = "models/begotten/misc/warhorn.mdl";
 	ITEM.weight = 1;
 	ITEM.category = "Communication"
-	ITEM.description = "A stout warhorn that when blown will communicate orders to nearby friendlies.";
+	ITEM.description = "Крепкий боевой рог, который, если в него подуть, будет передавать приказы находящимся поблизости союзникам.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/warhorn.png"
 	ITEM.customFunctions = {"Sound Attack", "Sound Rally", "Sound Rally - Marching Formation", "Sound Rally - Shieldwall", "Sound Retreat"};
 	-- Called when a player drops the item.
@@ -735,9 +735,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == "Gatekeeper" or vFaction == "Holy Hierarchy" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling an attack!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая идти в Атаку!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -749,9 +749,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == "Gatekeeper" or vFaction == "Holy Hierarchy" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling a rally!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая собраться вместе!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -763,9 +763,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == "Gatekeeper" or vFaction == "Holy Hierarchy" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling a rally in a marching formation!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая выстроить формацию Походного Строя!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -777,9 +777,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == "Gatekeeper" or vFaction == "Holy Hierarchy" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling a rally in a shieldwall formation!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая выстроить Стену Щитов!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -791,9 +791,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == "Gatekeeper" or vFaction == "Holy Hierarchy" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling a retreat!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая Отступать!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -807,9 +807,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == faction then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling an attack!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая идти в Атаку!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -821,9 +821,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == faction then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling a rally!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая собраться вместе!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -835,9 +835,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == faction then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling a rally in a marching formation!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая выстроить формацию Походного Строя!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -849,9 +849,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == faction then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling a rally in a shieldwall formation!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая выстроить Стену Щитов!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -863,9 +863,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == faction then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, signalling a retreat!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, приказывая Отступать!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." blows their warhorn, but its signal is unknown to you!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." трубит в свой боевой рог, но что это значит, вам неизвестно!");
 								end
 							end
 						end
@@ -882,11 +882,11 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Death Whistle";
+	ITEM.name = "Адский Свисток";
 	ITEM.model = "models/begotten/misc/skull.mdl";
 	ITEM.weight = 1;
 	ITEM.category = "Communication"
-	ITEM.description = "A human skull that has been grafted with holes to generate a bone-chilling whistle.";
+	ITEM.description = "Человеческий череп с отверстиями, издающий леденящий душу свист.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/skull.png"
 	ITEM.customFunctions = {"Sound Attack", "Sound Rally", "Sound Rally - Marching Formation", "Sound Rally - Shieldwall", "Sound Retreat"};
 	-- Called when a player drops the item.
@@ -909,9 +909,9 @@ local ITEM = Clockwork.item:New();
 							if v:IsPlayer() then
 								local vFaction = v:GetFaction();
 								if vFaction == "Children of Satan" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds their death whistle, signalling an attack!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." дует в свой Адский Свисток, уведомляя собратьев о Начале Атаки!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds a terrifying death whistle!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." используя ужасающий артефакт, издает протяжный свист, пугая врагов и подбадривая союзные силы Темного Лорда!");
 								end
 							end
 						end
@@ -922,9 +922,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == "Children of Satan" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds their death whistle, signalling a rally!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." дует в свой Адский Свисток, зазывая собратьев и уведомляя о сборе возле него!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds a terrifying death whistle!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." используя ужасающий артефакт, издает протяжный свист, пугая врагов и подбадривая союзные силы Темного Лорда!");
 								end
 							end
 						end
@@ -935,9 +935,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == "Children of Satan" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds their death whistle, signalling a rally in a marching formation!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." дует в свой Адский Свисток, зазывая собратьев выстроить формацию походного строя!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds a terrifying death whistle!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." используя ужасающий артефакт, издает протяжный свист, пугая врагов и подбадривая союзные силы Темного Лорда!");
 								end
 							end
 						end
@@ -948,9 +948,9 @@ local ITEM = Clockwork.item:New();
 								local vFaction = v:GetFaction();
 								
 								if vFaction == "Children of Satan" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds their death whistle, signalling a rally in a shieldwall formation!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." дует в свой Адский Свисток, зазывая собратьев выстроить стену щитов!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds a terrifying death whistle!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." используя ужасающий артефакт, издает протяжный свист, пугая врагов и подбадривая союзные силы Темного Лорда!");
 								end
 							end
 						end
@@ -960,9 +960,9 @@ local ITEM = Clockwork.item:New();
 							if v:IsPlayer() then
 								local vFaction = v:GetFaction();
 								if vFaction == "Children of Satan" then
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds their death whistle, signalling a retreat!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." дует в свой Адский Свисток, зазывая собратьев отступать!");
 								else
-									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." sounds a terrifying death whistle!");
+									Clockwork.chatBox:Add(v, nil, "localevent", player:Name().." используя ужасающий артефакт, издает протяжный свист, пугая врагов и подбадривая союзные силы Темного Лорда!");
 								end
 							end
 						end

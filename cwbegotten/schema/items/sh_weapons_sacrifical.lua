@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Hellfire Sword";
+	ITEM.name = "Меч Адского Пламени";
 	ITEM.model = "models/items/weapons/sword_of_fire/sword_of_fire.mdl";
 	ITEM.weight = 1.5;
 	ITEM.uniqueID = "begotten_sacrificial_hellfiresword";
 	ITEM.category = "Melee";
-	ITEM.description = "A ancient hellforged sword still empowered with a dark catalyst. It burns hot in your hand, and even hotter in the flesh of your enemy.";
+	ITEM.description = "Древний выкованный в аду меч, все еще усиленный темным катализатором. Он горит жаром в твоей руке, и еще жарче в плоти твоего врага.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/hellfire_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -20,12 +20,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Blessed Druid Sword";
+	ITEM.name = "Священный Клинок Друида";
 	ITEM.model = "models/begotten/weapons/sword1_unique.mdl";
 	ITEM.weight = 0.7;
 	ITEM.uniqueID = "begotten_sacrificial_blesseddruidsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A crude iron blade. It is engraved with various Goreic glyphs that make it glow hot with flame.";
+	ITEM.description = "Грубый железный клинок. На нем выгравированы различные горейские символы, которые заставляют его пылать вечным пламенем.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/blessed_druid_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -40,13 +40,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Unholy Sigil Sword (Fire)";
+	ITEM.name = "Нечестивый Огненный Меч";
 	ITEM.model = "models/props/begotten/melee/smelter_sword.mdl";
 	ITEM.skin = 0;
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_sacrificial_unholysigilsword_fire";
 	ITEM.category = "Melee";
-	ITEM.description = "A scarred black iron sigil sword forged in the fires of hell. It is empowered by a dark catalyst that makes it rage in a hellish inferno.";
+	ITEM.description = "Покрытый шрамами черный железный меч, выкованный в адском огне. Он усилен темным катализатором, который заставляет его пылать адским пламенем.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/unholy_sigil_sword_fire.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -62,13 +62,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Unholy Sigil Sword (Ice)";
+	ITEM.name = "Нечестивый Ледяной Меч";
 	ITEM.model = "models/props/begotten/melee/smelter_sword.mdl";
 	ITEM.skin = 1;
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_sacrificial_unholysigilsword_ice";
 	ITEM.category = "Melee";
-	ITEM.description = "A scarred black iron sigil sword forged in the fires of hell. It is empowered by a dark catalyst that makes it squall with a freezing deathly chill.";
+	ITEM.description = "Покрытый шрамами черный железный меч, выкованный в адском огне. Он усилен темным катализатором, который заставляет его превращать в лед все, до чего коснется лезвие.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/unholy_sigil_sword_ice.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -84,12 +84,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Enchanted Longsword";
+	ITEM.name = "Меч Северного Сияния";
 	ITEM.model = "models/begotten/weapons/irithyll_straight_sword.mdl";
 	ITEM.weight = 1.5;
 	ITEM.uniqueID = "begotten_sacrificial_enchantedlongsword_ice";
 	ITEM.category = "Melee";
-	ITEM.description = "A longsword seemingly made of ice, it has a chilling grip.";
+	ITEM.description = "Длинный меч, словно сделанный изо льда. Он заставляет души врагов трепетать.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/enchanted_longsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -105,12 +105,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Dark Ice Dagger";
+	ITEM.name = "Ледяной Кинжал";
 	ITEM.model = "models/items/weapons/dg_ash_hammer/daggers_ash_hammer_on.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "begotten_dagger_sacrificial_darkdagger_ice";
 	ITEM.category = "Melee";
-	ITEM.description = "A small dagger embued with the power of ice.";
+	ITEM.description = "Маленький кинжал, наделенный силой льда.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/dark_ice_dagger.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -125,12 +125,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Dark Fire Dagger";
+	ITEM.name = "Огненный Кинжал";
 	ITEM.model = "models/items/weapons/dg_ash_hammer/daggers_ash_hammer.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "begotten_dagger_sacrificial_darkdagger_fire";
 	ITEM.category = "Melee";
-	ITEM.description = "A small dagger embued with the power of fire.";
+	ITEM.description = "Небольшой кинжал, наделенный силой огня.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/dark_fire_dagger.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -145,12 +145,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Glazic Sword + Sol Shield";
+	ITEM.name = "Меч Сияния и Щит Сола";
 	ITEM.model = "models/demonssouls/weapons/rune sword.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "begotten_sacrificial_glazicsword_glazicshield";
 	ITEM.category = "Melee";
-	ITEM.description = "A golden Maximillian blade and star shield enchanted by fire and wealthy sigils.";
+	ITEM.description = "Клинок из Максимилианской Стали с рунами огня на лезвии и Золотой Щит, благословленный СОЛ'ом.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/glazic_sword_sol_shield.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -166,12 +166,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Bell Hammer";
+	ITEM.name = "Священный Колокол";
 	ITEM.model = "models/props/begotten/melee/sacred_chime_hammer.mdl";
 	ITEM.weight = 18;
 	ITEM.uniqueID = "begotten_2h_great_bellhammer";
 	ITEM.category = "Melee";
-	ITEM.description = "A colossal cast-iron beast of holy judgement. It imbues the righteous with just enough strength to wield it without toppling over. A true strike will sound the church bell, signalling a congregation of holy wrath for all to hear.";
+	ITEM.description = "Колоссальный чугунный зверь святого суда. Он наделяет праведника силой, достаточной для того, чтобы владеть им, не опрокидываясь. Оружие, что повергает врагов в ужас.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/bellhammer.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -187,12 +187,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Demonslayer Greataxe";
+	ITEM.name = "Бич Демонов";
 	ITEM.model = "models/props/begotten/melee/drakekeeper_great_axe.mdl";
 	ITEM.weight = 8;
 	ITEM.uniqueID = "begotten_2h_great_demonslayerhammer";
 	ITEM.category = "Melee";
-	ITEM.description = "A huge Shagalaxian steel greataxe, engraved with ancient Goreic runes that repel demonic influence. If wielded by a strong enough user, this weapon has the potential to shatter one's bones in only a single swing.";
+	ITEM.description = "Огромный топор из лучшей Шагалакской Стали. В руках опытного воина это оружие способно разрубать кости одним взмахом.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/demonslayer_greataxe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -207,12 +207,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Dreadaxe";
+	ITEM.name = "Топор Ужаса";
 	ITEM.model = "models/props/begotten/melee/black_knight_greataxe.mdl";
 	ITEM.weight = 7;
 	ITEM.uniqueID = "begotten_2h_great_dreadaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A black steel greataxe of malevolent design. A weapon gifted to only the most talented executioners in the Children of Satan.";
+	ITEM.description = "Черный стальной топор злобного дизайна. Оружие, даруемое только самым талантливым палачам Темного Лорда.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/black_knight_greataxe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -226,12 +226,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Frozen Fatherland Axe";
+	ITEM.name = "Морозный Топор Предков";
 	ITEM.model = "models/begotten/weapons/gore_ice_axe.mdl";
 	ITEM.weight = 5;
 	ITEM.uniqueID = "begotten_sacrificial_frozenfatherlandaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A war axe that has been cursed by the gods with an unceasing icy grip. It seeks a worthy wielder to freeze the blood of the unworthy.";
+	ITEM.description = "Боевой топор, проклятый богами с непрекращающейся ледяной хваткой. Он ищет достойного владельца, чтобы заморозить кровь слабаков.";
 	ITEM.iconoverride = "begotten/ui/itemicons/gore_ice_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

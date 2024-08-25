@@ -52,7 +52,7 @@ function ENT:OnTakeDamage(damageInfo)
 			end
 			
 			if self.strikesRequired <= 0 then
-				Clockwork.chatBox:AddInTargetRadius(player, "it", "The siege ladder finally gives way and breaks into several pieces!", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(player, "it", "Осадная лестница наконец не выдерживает и разваливается на несколько частей!", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 				self:EmitSound("physics/wood/wood_plank_break3.wav");
 				self:Remove();
 			end

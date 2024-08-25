@@ -4,16 +4,16 @@
 --]]
 
 local PROWESS = cwBeliefs.beliefTrees:New("prowess")
-	PROWESS.name = "Prowess";
+	PROWESS.name = "Мастерство";
 	PROWESS.color = Color(150, 50, 20);
 	PROWESS.order = 1;
 	PROWESS.size = {w = 378, h = 407};
 	PROWESS.textures = {"prowess", "prowessarrows"};
 	PROWESS.tooltip = {
-		{"Prowess", PROWESS.color, "Civ5ToolTip4"},
-		{"Prowess is a measure of your character's physical strength, primarily affecting your character's melee combat effectiveness, as well as inventory capacity.", Color(225, 200, 200)},
-		{"\n\"But then he visited the Dark Kingdom, and this was the point of no return. He felt in his wrist a tremble that manifested into a quake. His fibers were now thorns, his liquids boiled. He felt he would lose sight of the truth, and that he did...\"", Color(128, 90, 90, 240)},
-		{"\nBelief Tree Completion Bonus: +50% Inventory Capacity and +10% Melee Damage (Stacks w/ Other Buffs)", Color(50, 255, 50)}
+		{"Мастерство", PROWESS.color, "Civ5ToolTip4"},
+		{"Мастерство — это мера физической силы вашего персонажа, в первую очередь влияющая на его эффективность в ближнем бою, а также на вместимость инвентаря.", Color(225, 200, 200)},
+		{"\n\"Но затем он посетил Темное Королевство, и это была точка невозврата. Он почувствовал дрожь в запястье, которая проявилась в сотрясении. Его волокна теперь были шипами, его жидкости кипели. Он чувствовал, что он потеряет из виду истину, и он это сделал...\"", Color(128, 90, 90, 240)},
+		{"\nБонус за завершение древа верований: +50% к вместимости инвентаря и +10% к урону в ближнем бою (суммируется с другими усилениями).", Color(50, 255, 50)}
 	};
 	PROWESS.columnPositions = {
 		[1] = (PROWESS.size.w - 4) * 0.1,
@@ -37,24 +37,24 @@ local PROWESS = cwBeliefs.beliefTrees:New("prowess")
 	PROWESS.beliefs = {
 		[1] = {
 			["halfsword_sway"] = {
-				name = "Halfsword and Sway",
-				description = "Unlocks the ability to change weapon stance for all weapons.",
-				quote = "\"Don't you hack at that plate with your sword like some fucker joe! Stab at the joints and gaps you unenlightened fucklets!\"",
+				name = "Используя по Назначению",
+				description = "Открывает возможность менять стойку для большинства видов оружия.",
+				quote = "\"Малец, повторяю первый и последний раз. Своей ебучей заточкой, сколько не тыкай, доспех не пробьешь. Меть в щели и открытые участки тела, тогда победа будет за тобой.\"",
 				requirements = {"fighter"},
 				row = 2,
 			},
 			["blademaster"] = {
-				name = "Blademaster",
-				description = "All one handed slashing weapons and claws now deal 15% more damage.",
+				name = "Заточенное Лезвие",
+				description = "Все одноручное рубящее оружие и когти теперь наносят на 15% больше урона.",
 				iconOverride = "begotten/ui/belieficons/swordsman.png",
 				lockedSubfactions = {"Auxiliary"},
 				requirements = {"fighter", "halfsword_sway"},
 				row = 3,
 			},
 			["billman"] = {
-				name = "Billman",
-				description = "Polearms, spears, rapiers, crossbow bolts, and throwables now deal 20% more armor piercing damage.",
-				quote = "The honest soldier keeps his distance from the bloodthirsty fools who seek his demise.",
+				name = "Надёжный Хват",
+				description = "Древковое оружие, копья, рапиры, арбалетные болты и метательное оружие теперь наносят на 20% больше урона от брони.",
+				quote = "Вот так, да! Теперь понял, как держать свое чертовое оружие?!",
 				lockedSubfactions = {"Auxiliary"},
 				requirements = {"fighter", "halfsword_sway", "blademaster"},
 				row = 4,
@@ -62,14 +62,14 @@ local PROWESS = cwBeliefs.beliefTrees:New("prowess")
 		},
 		[2] = {
 			["parrying"] = {
-				name = "Parrying",
-				description = "Unlocks the 'Parry' ability for melee, which allows you to counter enemy blows and deal additional damage.",
+				name = "Парирование",
+				description = "Открывает способность «Парирование» для ближнего боя, которая позволяет вам парировать удары противника и наносить дополнительный урон.",
 				requirements = {"fighter"},
 				row = 2,
 			},
 			["repulsive_riposte"] = {
-				name = "Repulsive Riposte",
-				description = "Unlocks the ability to chain-parry, extending your active parry window by 0.15 seconds every time you connect a parry, thus allowing you to parry multiple opponents with greater ease. Multi-parries will successively restore more stamina the more targets you parry. Riposte attack damage from successful parries is increased from 200% to 250%.";
+				name = "Сокрушительный Выпад",
+				description = "Дает возможность парировать несколько целей с малым промежутком времени, увеличивая ваше активное окно парирования на 0,15 секунды каждый раз, когда вы соединяете парирование, что позволяет вам парировать нескольких противников с большей легкостью. Многократное парирование последовательно восстанавливает больше выносливости, чем больше целей вы парируете. Урон от атаки рипоста от успешных парирований увеличивается с 200% до 250%.";
 				lockedSubfactions = {"Auxiliary"},
 				requirements = {"fighter", "parrying"},
 				row = 3,
@@ -77,28 +77,28 @@ local PROWESS = cwBeliefs.beliefTrees:New("prowess")
 		},
 		[3] = {
 			["fighter"] = {
-				name = "Fighter",
-				description = "Maximum stamina is now increased by 10 points.",
-				quote = "\"Pick up that spear, boy! You'll be fighting in the Lord's army now.\"",
+				name = "Ополченец",
+				description = "Максимальная выносливость теперь увеличена на 10 единиц.",
+				quote = "\"Подними копье, мальчик! Теперь ты будешь сражаться в армии Лорда.\"",
 				row = 1,
 			},
 			["wrestle_subdue"] = {
-				name = "Wrestle and Subdue",
-				description = "Unlocks the ability to pick up foes who have been knocked over in combat, even while they are getting up.",
-				quote = "\"Lose your footing and fall? I will smother you into the dirt.\"",
+				name = "Схватить и Удержать",
+				description = "Открывает возможность поднимать противников, сбитых с ног в бою, даже когда они встают.",
+				quote = "\"Потерял равновесие ?! Я втопчу тебя в грязь!\"",
 				requirements = {"fighter"},
 				row = 2,
 			},
 			["warrior"] = {
-				name = "Warrior",
-				description = "Maximum stamina is now increased by an additional 10 points.",
+				name = "Пехотинец",
+				description = "Максимальная выносливость теперь увеличена еще на 10 очков.",
 				lockedSubfactions = {"Auxiliary"},
 				requirements = {"fighter", "wrestle_subdue"},
 				row = 3,
 			},
 			["master_at_arms"] = {
-				name = "Master at Arms",
-				description = "Maximum stamina is now increased by an additional 15 points.",
+				name = "Ветеран",
+				description = "Максимальная выносливость теперь увеличена еще на 15 очков.",
 				lockedSubfactions = {"Auxiliary"},
 				requirements = {"fighter", "wrestle_subdue", "warrior"},
 				row = 4,
@@ -106,14 +106,14 @@ local PROWESS = cwBeliefs.beliefTrees:New("prowess")
 		},
 		[4] = {
 			["deflection"] = {
-				name = "Deflection",
-				description = "Successful deflections (perfect blocks) now restore +15 points of stamina and +5 points of stability, as well as prevent enemy attacks for a minimum of 1 second.",
+				name = "Идеальный Блок",
+				description = "Успешные отражения (идеальные блоки) теперь восстанавливают +15 очков выносливости и +5 очков устойчивости, а также предотвращают атаки противника как минимум на 1 секунду.",
 				requirements = {"fighter"},
 				row = 2,
 			},
 			["sidestep"] = {
-				name = "Sidestep",
-				description = "Successful deflections now restore +10 more points of stamina and stability, and also prevents enemy attacks for an additional second.",
+				name = "Ошеломляя Врага",
+				description = "Успешное отражение теперь восстанавливает +10 очков выносливости и устойчивости, а также предотвращает атаки противника на дополнительную секунду.",
 				lockedSubfactions = {"Auxiliary"},
 				requirements = {"fighter", "deflection"},
 				row = 3,
@@ -121,22 +121,22 @@ local PROWESS = cwBeliefs.beliefTrees:New("prowess")
 		},
 		[5] = {
 			["strength"] = {
-				name = "Strength",
-				description = "Unlocks the ability to use great weapons. Prevents being disarmed when taking damage if using a throwable weapon in its melee stance. Also unlocks the ability to reload crossbows.",
+				name = "Сильный",
+				description = "Разблокирует возможность использовать тяжелое оружие. Предотвращает обезоруживание при получении урона при использовании метательного оружия в ближнем бою. Также разблокирует возможность перезарядки арбалетов.",
 				requirements = {"fighter"},
 				row = 2,
 			},
 			["might"] = {
-				name = "Might",
-				description = "Increased inventory capacity by 50%. Deal 15% more stability damage with all melee weapons. Fists and fisted weapons now deal 20% more damage.",
-				quote = "\"I smash you now!\"",
+				name = "Тяжелая Рука",
+				description = "Увеличена вместимость инвентаря на 50%. Наносит на 15% больше урона стабильности всем оружием ближнего боя. Кулаки и кулаковое оружие теперь наносят на 20% больше урона.",
+				quote = "\"Ты УНИЧТОЖУ тебя!\"",
 				lockedSubfactions = {"Auxiliary"},
 				requirements = {"fighter", "strength"},
 				row = 3,
 			},
 			["unrelenting"] = {
-				name = "Unrelenting",
-				description = "Great weapons, scythes, and two handed weapons now deal 10% more damage. All melee weapons now deal 25% more stamina damage. Removes the damage penalty for hitting multiple targets with a single swing.",
+				name = "Неумолимый",
+				description = "Тяжелое оружие, косы и двуручное оружие теперь наносят на 10% больше урона. Все оружие ближнего боя теперь наносит на 25% больше урона выносливости. Убирает штраф к урону за поражение нескольких целей одним ударом.",
 				lockedSubfactions = {"Auxiliary"},
 				requirements = {"fighter", "strength", "might"},
 				row = 4,

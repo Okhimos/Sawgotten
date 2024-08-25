@@ -59,7 +59,7 @@ end
 
 Clockwork.fonts:Add("cwMainText",
 {
-	font		= "Immortal",
+	font		= "Vinque Rg",
 	size		= Clockwork.kernel:FontScreenScale(7),
 	weight		= 700,
 	antialiase	= true,
@@ -68,7 +68,7 @@ Clockwork.fonts:Add("cwMainText",
 })
 Clockwork.fonts:Add("cwESPText",
 {
-	font		= "Immortal",
+	font		= "Ikusuteito",
 	size		= Clockwork.kernel:FontScreenScale(5.5),
 	weight		= 700,
 	antialiase	= true,
@@ -77,8 +77,8 @@ Clockwork.fonts:Add("cwESPText",
 })
 Clockwork.fonts:Add("cwTooltip",
 {
-	font		= "Arial",
-	size		= Clockwork.kernel:FontScreenScale(5),
+	font		= "ERThird",
+	size		= Clockwork.kernel:FontScreenScale(6),
 	weight		= 700,
 	antialiase	= true,
 	additive 	= false,
@@ -86,8 +86,8 @@ Clockwork.fonts:Add("cwTooltip",
 })
 Clockwork.fonts:Add("Clockwork.menuTextBig",
 {
-	font		= "Immortal",
-	size		= Clockwork.kernel:FontScreenScale(18),
+	font		= "Ikusuteito",
+	size		= Clockwork.kernel:FontScreenScale(15),
 	weight		= 700,
 	antialiase	= true,
 	additive 	= false,
@@ -95,8 +95,8 @@ Clockwork.fonts:Add("Clockwork.menuTextBig",
 })
 Clockwork.fonts:Add("Clockwork.menuTextTiny",
 {
-	font		= "Immortal",
-	size		= Clockwork.kernel:FontScreenScale(7),
+	font		= "Ikusuteito",
+	size		= Clockwork.kernel:FontScreenScale(10),
 	weight		= 700,
 	antialiase	= true,
 	additive 	= false,
@@ -104,8 +104,8 @@ Clockwork.fonts:Add("Clockwork.menuTextTiny",
 })
 Clockwork.fonts:Add("cwInfoTextFont",
 {
-	font		= "Arial",
-	size		= Clockwork.kernel:FontScreenScale(6),
+	font		= "Ikusuteito",
+	size		= Clockwork.kernel:FontScreenScale(12),
 	weight		= 700,
 	antialiase	= true,
 	additive 	= false,
@@ -113,7 +113,7 @@ Clockwork.fonts:Add("cwInfoTextFont",
 })
 Clockwork.fonts:Add("Clockwork.menuTextHuge",
 {
-	font		= "Immortal",
+	font		= "Ikusuteito",
 	size		= Clockwork.kernel:FontScreenScale(30),
 	weight		= 700,
 	antialiase	= true,
@@ -122,8 +122,8 @@ Clockwork.fonts:Add("Clockwork.menuTextHuge",
 })
 Clockwork.fonts:Add("Clockwork.menuTextSmall",
 {
-	font		= "Immortal",
-	size		= Clockwork.kernel:FontScreenScale(10),
+	font		= "ERThird",
+	size		= Clockwork.kernel:FontScreenScale(8),
 	weight		= 700,
 	antialiase	= true,
 	additive 	= false,
@@ -131,7 +131,7 @@ Clockwork.fonts:Add("Clockwork.menuTextSmall",
 })
 Clockwork.fonts:Add("cwIntroTextBig",
 {
-	font		= "Immortal",
+	font		= "Ikusuteito",
 	size		= Clockwork.kernel:FontScreenScale(18),
 	weight		= 700,
 	antialiase	= true,
@@ -140,8 +140,8 @@ Clockwork.fonts:Add("cwIntroTextBig",
 })
 Clockwork.fonts:Add("cwIntroTextTiny",
 {
-	font		= "Immortal",
-	size		= Clockwork.kernel:FontScreenScale(9),
+	font		= "Ikusuteito",
+	size		= Clockwork.kernel:FontScreenScale(15),
 	weight		= 700,
 	antialiase	= true,
 	additive 	= false,
@@ -149,8 +149,8 @@ Clockwork.fonts:Add("cwIntroTextTiny",
 })
 Clockwork.fonts:Add("cwIntroTextSmall",
 {
-	font		= "Immortal",
-	size		= Clockwork.kernel:FontScreenScale(7),
+	font		= "Ikusuteito",
+	size		= Clockwork.kernel:FontScreenScale(15),
 	weight		= 700,
 	antialiase	= true,
 	additive 	= false,
@@ -158,7 +158,7 @@ Clockwork.fonts:Add("cwIntroTextSmall",
 })
 Clockwork.fonts:Add("cwLarge3D2D",
 {
-	font		= "Arial",
+	font		= "Uk_Antique",
 	size		= Clockwork.kernel:GetFontSize3D(),
 	weight		= 700,
 	antialiase	= true,
@@ -167,8 +167,8 @@ Clockwork.fonts:Add("cwLarge3D2D",
 })
 Clockwork.fonts:Add("cwScoreboardName",
 {
-	font		= "Arial",
-	size		= Clockwork.kernel:FontScreenScale(7),
+	font		= "Uk_Antique",
+	size		= Clockwork.kernel:FontScreenScale(15),
 	weight		= 600,
 	antialiase	= true,
 	additive 	= false,
@@ -176,7 +176,7 @@ Clockwork.fonts:Add("cwScoreboardName",
 })
 Clockwork.fonts:Add("cwScoreboardDesc",
 {
-	font		= "Arial",
+	font		= "Uk_Antique",
 	size		= Clockwork.kernel:FontScreenScale(5),
 	weight		= 600,
 	antialiase	= true,
@@ -185,7 +185,7 @@ Clockwork.fonts:Add("cwScoreboardDesc",
 })
 Clockwork.fonts:Add("cwCinematicText",
 {
-	font		= "Trebuchet",
+	font		= "Uk_Antique",
 	size		= Clockwork.kernel:FontScreenScale(8),
 	weight		= 700,
 	antialiase	= true,
@@ -194,7 +194,7 @@ Clockwork.fonts:Add("cwCinematicText",
 })
 Clockwork.fonts:Add("cwChatSyntax",
 {
-	font		= "Day Roman",
+	font		= "Uk_Antique",
 	size		= Clockwork.kernel:FontScreenScale(7),
 	weight		= 600,
 	antialiase	= true,
@@ -203,7 +203,7 @@ Clockwork.fonts:Add("cwChatSyntax",
 })
 Clockwork.fonts:Add("cwChatGore",
 {
-	font		= "Acadian Runes",
+	font		= "Moderno Two",
 	size		= Clockwork.kernel:FontScreenScale(7),
 	weight		= 600,
 	antialiase	= true,
@@ -213,8 +213,8 @@ Clockwork.fonts:Add("cwChatGore",
 
 Clockwork.fonts:Add("cwChatVoltist",
 {
-	font		= "Electrica Salsa",
-	size		= Clockwork.kernel:FontScreenScale(5),
+	font		= "FK Aarco.kz",
+	size		= Clockwork.kernel:FontScreenScale(8),
 	weight		= 600,
 	antialiase	= true,
 	additive 	= false,

@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Claymore";
+	ITEM.name = "Клеймор";
 	ITEM.model = "models/demonssouls/weapons/claymore.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_2h_claymore";
 	ITEM.category = "Melee";
-	ITEM.description = "A steel greatsword. Its hilt is engraved with Glazic markings of a long dead noble household.";
+	ITEM.description = "Стальной двуручный меч. На его рукояти выгравированы знаки давно умершего дворянского рода Сияния.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/claymore.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -17,12 +17,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore Cleaver";
+	ITEM.name = "Секач Горов";
 	ITEM.model = "models/begotten/weapons/2h_axe3.mdl";
 	ITEM.weight = 5;
 	ITEM.uniqueID = "begotten_2h_great_gorecleaver";
 	ITEM.category = "Melee";
-	ITEM.description = "A particularly heavy and brutish weapon. A weapon favored by Gore Chieftains, for its ability to instill fear and take heads.";
+	ITEM.description = "Особенно тяжелое и жестокое оружие. Оружие, любимое Вождями Горов, за его способность вселять страх и сносить головы.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_cleaver.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -35,12 +35,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore Club";
+	ITEM.name = "Дубина Горов";
 	ITEM.model = "models/begotten/weapons/2h_mace1.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_2h_great_goreclub";
 	ITEM.category = "Melee";
-	ITEM.description = "A hardy wooden club cut from Goreic Forest lumber. It is reinforced with iron braces and spikes for piercing plate.";
+	ITEM.description = "Прочная деревянная дубинка, вырезанная из древесины Горейского Леса. Усилена железными скобами и шипами для пробития брони.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_club.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -53,12 +53,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore War Axe";
+	ITEM.name = "Боевой Топор Клана Гор";
 	ITEM.model = "models/begotten/weapons/2h_axe1.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_2h_great_gorewaraxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A heavy war axe made of a crude craft. It bears the distinctive markings of Clan Gore.";
+	ITEM.description = "Грубо сделанный тяжелый боевой топор. Имеет отличительные знаки Клана Гора.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_war_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -71,12 +71,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Grockling Sacred Stone Maul";
+	ITEM.name = "Священная Булава Клана Грок";
 	ITEM.model = "models/begotten/weapons/2h_mace3.mdl";
 	ITEM.weight = 7;
 	ITEM.uniqueID = "begotten_2h_great_grocklingsacredstonemaul";
 	ITEM.category = "Melee";
-	ITEM.description = "A blessed runestone, carved by the original Blade Druids with ancient knowledge. To use such a weapon is considered an insult by the other Gore Clans, as it is a disgrace to the Gods. Those of Clan Grock are the only ones who would dare risk the wrath of the Gods.";
+	ITEM.description = "Благословенный рунный камень, вырезанный первыми друидами клинка с помощью древних знаний. Использование такого оружия считается оскорблением для других кланов Народа Копья, поскольку это позор перед Богами. Только те, кто принадлежит к клану Грок, осмеливаются пренебрегать гневом Семьи.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/grockling_sacred_stone_maul.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -91,12 +91,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register(); 
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Grockling Stone Maul";
+	ITEM.name = "Булава Клана Грок";
 	ITEM.model = "models/begotten/weapons/2h_mace2.mdl";
 	ITEM.weight = 6.5;
 	ITEM.uniqueID = "begotten_2h_great_grocklingstonemaul";
 	ITEM.category = "Melee";
-	ITEM.description = "A stacked set of Goreic runestones hammered onto an engraved wooden club. A weapon typically used by the godless Grocklings, for its excellence at equalizing armored foes.";
+	ITEM.description = "Сложенный набор горейских рунических камней, прибитых к гравированной деревянной дубинке. Оружие, которое обычно используют безбожные Гроки, за его превосходство в битве с бронированными врагами..";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/grockling_stone_maul.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -111,12 +111,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Haralder War Axe";
+	ITEM.name = "Боевой Топор Клана Харальд";
 	ITEM.model = "models/witcher2soldiers/tw2_bigaxe.mdl";
 	ITEM.weight = 3.5;
 	ITEM.uniqueID = "begotten_2h_great_haralderwaraxe";
 	ITEM.category = "Melee";
-	ITEM.description = "An ornate war axe made from Shagalaxian steel. This axe is often used by the sea raiders of Clan Harald.";
+	ITEM.description = "Богато украшенный боевой топор из шагалаксианской стали. Этот топор часто используют морские разбойники из клана Харальд.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/haralder_war_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -129,12 +129,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Heavy Battle Axe";
+	ITEM.name = "Тяжеллый Боевой Топор";
 	ITEM.model = "models/demonssouls/weapons/battle axe.mdl";
 	ITEM.weight = 5;
 	ITEM.uniqueID = "begotten_2h_great_heavybattleaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A heavy black iron axe. A crude and brutal weapon. It is unclear what dark host this weapon was made for.";
+	ITEM.description = "Тяжелый железный топор. Грубое и жестокое оружие, которое неплохо пробивает броню, но еще лучше рубит головы.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/battle_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -147,12 +147,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Reaver War Axe";
+	ITEM.name = "Боевой топор Клана Ривер";
 	ITEM.model = "models/begotten/weapons/2h_axe2.mdl";
 	ITEM.weight = 5;
 	ITEM.uniqueID = "begotten_2h_great_reaverwaraxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A heavy jagged axe made for the wicked sea slavers of Clan Reaver. It is likely whoever crafted this weapon did so with spite and disdain.";
+	ITEM.description = "Тяжелый зазубренный топор, созданный для злобных морских работорговцев Клана Ривера. Вероятно, тот, кто создал это оружие, делал это со злобой и презрением.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/reaver_war_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -165,12 +165,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Scraphammer";
+	ITEM.name = "Скрап-Молот";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/rockethammer.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_great_scraphammer";
 	ITEM.category = "Melee";
-	ITEM.description = "A makeshift sledgehammer, assembled from various pieces of Wasteland scrap.";
+	ITEM.description = "Самодельная кувалда, собранная из разных кусков мусора с Пустоши.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scraphammer.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -183,12 +183,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Skylight Sword";
+	ITEM.name = "Меч Первого Дистрикта";
 	ITEM.model = "models/doom/weapons/templar_sword.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_skylightsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A technologically advanced piece of equipment. The sheer level of technical brilliance that went into the perfection of this weapon's other-worldly material qualities is breathtaking to behold. A weapon able to swiftly and elegantly cleave through countless horrors yet retain its razor-sharp edge in perfect form. There are only a few of these weapons left, remnants of the glorious District One at the heart of the Holy Hierarchy itself.";
+	ITEM.description = "Это снаряжение олицетворяет технологическое совершенство. Его уровень технического блеска настолько высок, что кажется, будто оружие обладает потусторонними свойствами. Каждый его аспект завораживает, поражая своей утончённостью и мощью. Этот клинок создан для того, чтобы с безупречной точностью и грацией разить бесчисленные ужасы, не теряя при этом ни доли своей безупречно острой кромки. Сейчас таких шедевров осталось всего несколько, они — последние артефакты величественного Дистрикта Один, когда-то бывшего сердцем Святой Иерархии.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/skylight_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -200,12 +200,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Volthammer";
+	ITEM.name = "Вольт-Молот";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/rockethammer.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_2h_great_volthammer";
 	ITEM.category = "Melee";
-	ITEM.description = "An electrically-charged makeshift sledgehammer, used by the Voltists for its anti-armor capabilities.";
+	ITEM.description = "Самодельная кувалда с электрическим зарядом, используемая вольтистами из-за ее способности пробивать броню.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/volthammer.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -219,12 +219,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "War Club";
+	ITEM.name = "Боевая Дубина";
 	ITEM.model = "models/demonssouls/weapons/great club.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_2h_great_warclub";
 	ITEM.category = "Melee";
-	ITEM.description = "A large wooden club reinforced with iron braces and spikes. A simplistic design that has empowered many a warlord and tyrant through the ages.";
+	ITEM.description = "Большая деревянная дубинка, укрепленная железными скобами и шипами. Простая конструкция, которая на протяжении веков давала силу многим военачальникам и тиранам.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/war_club.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -238,12 +238,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Satanic Maul";
+	ITEM.name = "Сатанинская Кувалда";
 	ITEM.model = "models/skyrim/daedric/warhammer/w_daedricwarhammer.mdl";
 	ITEM.weight = 3.2;
 	ITEM.uniqueID = "begotten_2h_great_satanicmaul";
 	ITEM.category = "Melee";
-	ITEM.description = "A black steel maul of twisted design. It excels at pummeling lambs into the dirt, armored or not.";
+	ITEM.description = "Черная стальная кувалда с закрученным дизайном. Она отлично подходит для того, чтобы вбивать слабаков грязь. Неважно, бронированных или нет.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/satanic_maul.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -257,12 +257,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Maximus Wrath";
+	ITEM.name = "Гнев Максимуса";
 	ITEM.model = "models/begotten/weapons/maximus_wrath.mdl";
 	ITEM.weight = 2.7;
 	ITEM.uniqueID = "begotten_2h_great_maximuswrath";
 	ITEM.category = "Melee";
-	ITEM.description = "District One Supersteel charged with advanced technology; a glorious weapon befitting a demigod. BEHOLD! The Maximus Wrath!";
+	ITEM.description = "Гордость Первого Дистрикта, пронизанная передовыми технологиями — оружие неслыханной силы, достойное полубога. ВЗГЛЯНИТЕ! Ярость Максимуса!";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/maximus_wrath.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -274,12 +274,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Darklander Bardiche";
+	ITEM.name = "Бердыш Темноземца";
 	ITEM.model = "models/demonssouls/weapons/crescent axe.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_2h_great_darklanderbardiche";
 	ITEM.category = "Melee";
-	ITEM.description = "A large crescent axe adorned with Darklander designs. An effective pole weapon, it excels at breaking shieldwalls.";
+	ITEM.description = "Большой серповидный топор, украшенный узорами Темноземцев. Эффективное древковое оружие, отлично подходящее для уничтожения щитов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/bardiche.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -293,12 +293,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Evening Star";
+	ITEM.name = "Вечерняя Звезда";
 	ITEM.model = "models/begotten/weapons/eveningstar.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_2h_great_eveningstar";
 	ITEM.category = "Melee";
-	ITEM.description = "A black steel ball of atonement fixed upon a braced wooden pole. It is incredibly top-heavy and delivers a brutal pounding to anyone who dares attempt to block its judgement. A weapon typically made by the self-hating Orthodoxy.";
+	ITEM.description = "Чёрный стальной шар искупления, надёжно закреплённый на массивном деревянном древке с укрепляющими распорками, внушает ужас одним своим видом. Тяжёлый и неумолимый, он сокрушает любого, кто осмелится встать на пути его правосудия. Это грозное оружие, рожденное ненавистью и болью, обычно создаётся ненавидящими себя Православными.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/eveningstar.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

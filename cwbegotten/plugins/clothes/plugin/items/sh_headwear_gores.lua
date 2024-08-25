@@ -1,5 +1,5 @@
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Shagalax Helm"
+	ITEM.name = "Горейский Шлем «Шагалакс»"
 	ITEM.model = "models/begotten/headgroup_props/gore_helm5.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_black_steel_helm.png"
 	ITEM.weight = 2
@@ -8,7 +8,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 5
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A blackened steel helmet used by many Gores of Clan Shagalax. It provides exemplary protection."
+	ITEM.description = "Почерневший стальной шлем, используемый многими Горами клана Шагалакс. Обеспечивает образцовую защиту."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/helmeyes";
@@ -33,7 +33,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Guardian Helm"
+	ITEM.name = "Шлем Стража Древа"
 	ITEM.model = "models/begotten/headgroup_props/gore_helm6.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_guardian_helm.png"
 	ITEM.weight = 2
@@ -42,7 +42,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 6
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A spiked and horned steel helmet typically worn by the defenders of the Great Tree. It provides exemplary protection."
+	ITEM.description = "Шипастый и рогатый стальной шлем, который обычно носят защитники Великого Древа. Он обеспечивает образцовую защиту."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/helmeyes";
@@ -67,7 +67,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Seafarer Hood"
+	ITEM.name = "Капюшон Горов"
 	ITEM.model = "models/begotten/headgroup_props/gore_hood1.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_hood.png"
 	ITEM.weight = 0.5
@@ -76,7 +76,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 9
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A typical Spearfolk cloth hood decorated with the teeth of slain beasts. The cloth smells of salty sea water."
+	ITEM.description = "Типичный капюшон, украшенный зубами убитых зверей. Ткань пахнет соленой морской водой."
 	ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	
@@ -99,7 +99,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Warfighter Helm"
+	ITEM.name = "Шлем Воина Горов"
 	ITEM.model = "models/begotten/headgroup_props/gore_helm4.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_horned_helm.png"
 	ITEM.weight = 1.5
@@ -108,7 +108,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 4
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A crudely made horned helmet commonly worn by the savage warriors of Clan Gore. It provides reasonable protection."
+	ITEM.description = "Грубо сделанный рогатый шлем, который обычно носят дикие воины Клана Гор. Он обеспечивает разумную защиту."
 	ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/helmeyes";
@@ -133,7 +133,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Raider Helm"
+	ITEM.name = "Шлем Налетчика"
 	ITEM.model = "models/begotten/headgroup_props/gore_helm2.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_raider_helm.png"
 	ITEM.weight = 1.5
@@ -142,7 +142,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 2
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A compact iron helmet with two small horns, commonly worn by the Goreic raiders of Clan Harald."
+	ITEM.description = "Компактный железный шлем с двумя небольшими рогами, который обычно носили морсие разбойники клана Харальд."
 	ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	
@@ -165,7 +165,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Ridge Helm"
+	ITEM.name = "Горейский Гребневой Шлем"
 	ITEM.model = "models/begotten/headgroup_props/gore_helm1.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_ridge_helm.png"
 	ITEM.weight = 1.5
@@ -174,7 +174,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 1
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "An iron ridge helm of Goreic origin, embellished with decorations."
+	ITEM.description = "Железный шлем горейского происхождения, украшенный рунами Семьи."
 	ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -199,7 +199,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Dread Minotaur Helm"
+	ITEM.name = "Ужасающий Шлем Горейского Минотавра"
 	ITEM.model = "models/begotten/headgroup_props/gore_mino1.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_skull_helm.png"
 	ITEM.weight = 1.5
@@ -209,7 +209,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 10
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "The skull of a slain beast, decorated with horns and cursed tribal fetishes. This helm instills a sense of impending doom into your enemies."
+	ITEM.description = "Череп убитого зверя, украшенный рогами и проклятыми племенными рунами. Этот предмет защиты вселяет в ваших врагов чувство надвигающейся гибели."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	ITEM.attributes = {"fear"};
@@ -234,7 +234,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Twisted Minotaur Helm"
+	ITEM.name = "Рогатый Шлем Минотавра"
 	ITEM.model = "models/begotten/headgroup_props/gore_mino2.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_skull_helm2.png"
 	ITEM.weight = 1.5
@@ -244,7 +244,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 11
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "The skull of a slain beast, decorated with twisted horns and boiled pelts. This helm strikes fear into your enemies."
+	ITEM.description = "Череп убитого зверя, украшенный рогами и проклятыми племенными рунами. Этот предмет защиты вселяет в ваших врагов чувство надвигающейся гибели."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	ITEM.attributes = {"fear"};
@@ -269,7 +269,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Reaver Helm"
+	ITEM.name = "Шлем Клана Ривер"
 	ITEM.model = "models/begotten/headgroup_props/gore_helm3.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_spiked_helm.png"
 	ITEM.weight = 1.0
@@ -278,7 +278,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 3
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A spiked bronze helmet worn by many Gores of Clan Reaver."
+	ITEM.description = "Бронзовый шлем с шипами, который носят многие Горы из клана Ривер."
 	ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	
@@ -301,18 +301,18 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Helm of the Father"
-	ITEM.model = "models/begotten/headgroup_props/gore_helm4.mdl"
-	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_horned_helm.png"
+	ITEM.name = "Шлем Отца"
+	ITEM.model = "models/begotten/headgroups_props/scalehelmet.mdl"
+	ITEM.iconoverride = "materials/begotten/ui/itemicons/chosenarmor_helmet.png"
 	ITEM.concealsFace = true;
 	ITEM.weight = 1.5
 	ITEM.uniqueID = "helm_of_the_father"
 	ITEM.category = "Helms"
 	ITEM.attributes = {"fear"};
 	ITEM.bodyGroup = 1
-	ITEM.bodyGroupVal = 1
+	ITEM.bodyGroupVal = 12
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A terrifying Shagalaxian steel helm shaped in the image of the Father. It is imposing enough to make any man feel that they are in the presence of a God."
+	ITEM.description = "Ужасающий шлем из лучшей Шагалакской Стали, выполненный по образу Отца. Он достаточно внушителен, чтобы заставить любого человека почувствовать, что он находится в присутствии Бога."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 
@@ -334,7 +334,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Shingar's Ridge Helm"
+	ITEM.name = "Гребневой шлем Шингара"
 	ITEM.model = "models/begotten/headgroups_props/shingarhelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_ridge_helm.png"
 	ITEM.concealsFace = true;
@@ -344,7 +344,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 1
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A practical plated helm that has survived many battles. It is custom fitted to that of the Chosen Son Singar."
+	ITEM.description = "Практичный латный шлем, переживший множество сражений. Он изготовлен по индивидуальному заказу для Избранного Сына Шингара."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 
@@ -366,7 +366,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore Champion Ridge Helm"
+	ITEM.name = "Горейский Шлем «Шелом»"
 	ITEM.model = "models/begotten/headgroups_props/lamellarridgehelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/lamellar_ridge_helm.png"
 	ITEM.weight = 3
@@ -375,7 +375,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 7
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A steel ridge helm that has been proven in combat. Only a worthy Gore may wear it."
+	ITEM.description = "Стальной гребневый шлем, проверенный в бою. Только достойный Гор может носить его."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -401,7 +401,8 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gore King's Chosen Helmet"
+	ITEM.name = "Шлем Избранного"
+	ITEM.uniqueID = "gore_champion_ridge_helm";
 	ITEM.model = "models/begotten/headgroups_props/scalehelmet.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/chosenarmor_helmet.png"
 	ITEM.weight = 2.5
@@ -409,7 +410,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 12
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A Shagalaxian steel helmet decorated with brass Familial sigils."
+	ITEM.description = "Шагалакский стальной шлем, украшенный латунными семейными символами."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -435,7 +436,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Reaver Despoiler Helm"
+	ITEM.name = "Шлем Ривера Истязателя"
 	ITEM.model = "models/begotten/headgroups_props/reaverplatehelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/reaver_plate_helm.png"
 	ITEM.weight = 4.5
@@ -445,7 +446,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 8
 	ITEM.headSuffix = "_gore";
-	ITEM.description = "A sadistic hellforged steel helm decorated by human bone and demon horns. It has been cursed with catalystic energy that prevents it from being worn by the meek."
+	ITEM.description = "Садистский адский стальной шлем, украшенный человеческими костями и рогами демона. Он был проклят энергией каталистов, которая не позволяет его носить слабакам."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -471,14 +472,14 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Reaver Marauder Helmet"
+	ITEM.name = "Шлем Ривера Мародера"
 	ITEM.model = "models/begotten_apocalypse/items/reaver_marauder_helm.mdl"
 	ITEM.iconoverride = "begotten/ui/itemicons/reaver_marauder_helm.png"
 	ITEM.headReplacement = "models/begotten/heads/reaver_marauder_helmet.mdl";
 	ITEM.weight = 1
 	ITEM.uniqueID = "reaver_marauder_helm"
 	ITEM.category = "Helms"
-	ITEM.description = "A finely-crafted spangenhelm with a chainmail aventail underneath, it is feared amongst those in the wasteland for being the last thing they ever see before they're condemned to slavery."
+	ITEM.description = "Искусно сделанный спангенхельм с кольчужной бармицей под ним внушает страх жителям пустошей, поскольку это последнее, что они видят перед тем, как их отправят в Рабство."
 	ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 	ITEM.excludeSubfactions = {"Clan Grock", "Clan Gore", "Clan Crast", "Clan Harald", "Clan Shagalax"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
@@ -503,14 +504,14 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Reaver Drottinn Helmet"
+	ITEM.name = "Шлем Ривера Вожака"
 	ITEM.model = "models/begotten_apocalypse/items/reaverchiefhelmet.mdl"
 	ITEM.iconoverride = "materials/begotten_apocalypse/ui/itemicons/reaverchiefhelmet.png"
 	ITEM.headReplacement = "models/begotten/heads/reaver_chief_helmet.mdl";
 	ITEM.weight = 1
 	ITEM.uniqueID = "reaver_drottinn_helm"
 	ITEM.category = "Helms"
-	ITEM.description = "Made of blackened hellforged steel, this helmet belongs to the twisted torturer clan of Clan Reaver."
+	ITEM.description = "Этот шлем из почерневшей адской стали принадлежит клану Ривер."
 	ITEM.requireFaction = {"Goreic Warrior"};
 	ITEM.excludeSubfactions = {"Clan Grock", "Clan Gore", "Clan Crast", "Clan Harald", "Clan Shagalax"};
 	ITEM.useSound = "armor/plate_damage_02.wav";

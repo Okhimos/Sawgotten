@@ -2448,7 +2448,7 @@ function GM:HUDDrawTargetID()
 									end
 									
 									y = Clockwork.plugin:Call("DrawTargetPlayerStatus", player, alpha, x, y) or y
-									y = Clockwork.kernel:DrawInfo("Press <X> to inspect this character.", x, y, colorWhite, alpha)
+									y = Clockwork.kernel:DrawInfo("Нажмите <X> чтобы осмотреть этого персонажа.", x, y, colorWhite, alpha)
 								end
 								
 								--[[if (!Clockwork.nextCheckRecognises or curTime >= Clockwork.nextCheckRecognises[1] or Clockwork.nextCheckRecognises[2] != player) then
@@ -2511,14 +2511,14 @@ end
 -- Called when the target's status should be drawn.
 function GM:DrawTargetPlayerStatus(target, alpha, x, y)
 	local informationColor = Clockwork.option:GetColor("information")
-	local gender = "He"
+	local gender = "Он"
 
 	if (target:GetGender() == GENDER_FEMALE) then
-		gender = "She"
+		gender = "Она"
 	end
 
 	if (!target:Alive()) then
-		return Clockwork.kernel:DrawInfo(gender.." is clearly deceased.", x, y, informationColor, alpha)
+		return Clockwork.kernel:DrawInfo(gender.." определенно труп.", x, y, informationColor, alpha)
 	else
 		return y
 	end
@@ -2587,13 +2587,13 @@ function GM:GetProgressBarInfo()
 		if ragdolled then
 			if (action == "unragdoll") then
 				if (Clockwork.Client:GetRagdollState() == RAGDOLL_FALLENOVER) then
-					return {text = "You are regaining stability.", percentage = percentage, flash = percentage < 10}
+					return {text = "Вы восстанавливаете равновесие.", percentage = percentage, flash = percentage < 10}
 				else
-					return {text = "You are regaining conciousness.", percentage = percentage, flash = percentage < 10}
+					return {text = "Вы приходите в себя.", percentage = percentage, flash = percentage < 10}
 				end
 			else
 				if (Clockwork.player:GetAction(Clockwork.Client) != "unragdoll" and hook.Run("PlayerCanGetUp")) then
-					return {text = "Press 'jump' to get up.", percentage = 100}
+					return {text = "Нажмите 'пробел' чтобы встать.", percentage = 100}
 				end
 			end
 		elseif action then
@@ -2602,12 +2602,12 @@ function GM:GetProgressBarInfo()
 			if info then return info end;
 			
 			if (action == "lock") then
-				return {text = "The door is being locked.", percentage = percentage, flash = percentage < 10}
+				return {text = "Эта дверь закрывается.", percentage = percentage, flash = percentage < 10}
 			elseif (action == "unlock") then
-				return {text = "The door is being unlocked.", percentage = percentage, flash = percentage < 10}
+				return {text = "Эта дверь открывается.", percentage = percentage, flash = percentage < 10}
 			end;
 			
-			return {text = "You are performing an action.", percentage = percentage};
+			return {text = "Вы действуете.", percentage = percentage};
 		end;
 	end;
 end
@@ -2686,10 +2686,10 @@ function GM:DestroyPlayerInfoText(playerInfoText) end
 function GM:GetTargetPlayerText(player, targetPlayerText)
 	local targetIDTextFont = Clockwork.option:GetFont("target_id_text")
 	local physDescTable = {}
-	local thirdPerson = "him"
+	local thirdPerson = "его"
 
 	if (player:GetGender() == GENDER_FEMALE) then
-		thirdPerson = "her"
+		thirdPerson = "ее"
 	end
 
 	if (Clockwork.player:DoesRecognise(player, RECOGNISE_PARTIAL)) then
@@ -2707,7 +2707,7 @@ function GM:GetTargetPlayerText(player, targetPlayerText)
 			end
 		end;
 	elseif (player:Alive()) then
-		targetPlayerText:Add("PHYSDESC", "You do not recognize "..thirdPerson..".")
+		targetPlayerText:Add("PHYSDESC", "Вы не узнаете "..thirdPerson..".")
 	end
 end
 
@@ -2716,10 +2716,10 @@ function GM:DestroyTargetPlayerText(player, targetPlayerText) end
 
 -- Called when a player's scoreboard text is needed.
 function GM:GetPlayerScoreboardText(player)
-	local thirdPerson = "him"
+	local thirdPerson = "его"
 
 	if (player:GetGender() == GENDER_FEMALE) then
-		thirdPerson = "her"
+		thirdPerson = "ее"
 	end
 
 	if (Clockwork.player:DoesRecognise(player, RECOGNISE_PARTIAL)) then
@@ -2731,7 +2731,7 @@ function GM:GetPlayerScoreboardText(player)
 			return physDesc
 		end
 	else
-		return "You do not recognize "..thirdPerson..".";
+		return "Вы не узнаете "..thirdPerson..".";
 	end
 end
 

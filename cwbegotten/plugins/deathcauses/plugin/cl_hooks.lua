@@ -5,5 +5,5 @@
 
 -- Called when a player's character screen info should be adjusted.
 function cwDeathCauses:PlayerAdjustCharacterScreenInfo(character, info)
-	info.deathcause = character.deathcause or "Died under mysterious circumstances.";
+	info.deathcause = character.deathcause or "Хуй знает как помер.";
 end

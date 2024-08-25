@@ -125,7 +125,7 @@ function ENT:Think()
 							local alive = player:Alive();
 							
 							if alive then
-								Schema:EasyText(GetAdmins(), "icon16/water.png", "cornflowerblue", player:Name().." went overboard!");
+								Schema:EasyText(GetAdmins(), "icon16/water.png", "cornflowerblue", player:Name().." как дурак оказался за бортом!");
 							end
 							
 							if self.location == "calm" or self.location == "rough" then
@@ -148,7 +148,7 @@ function ENT:Think()
 									end);
 									
 									player:SetCharacterData("permakilled", true); -- In case the player tries to d/c to avoid their fate.
-									player:DeathCauseOverride("Went overboard into the sea and drowned.");
+									player:DeathCauseOverride("Отправился на корм рыбам.");
 									
 									if player:IsRagdolled() then
 										Clockwork.player:SetRagdollState(player, RAGDOLL_NONE);
@@ -176,7 +176,7 @@ function ENT:Think()
 									local world = GetWorldEntity();
 									local damageInfo = DamageInfo();
 									
-									player:DeathCauseOverride("Went overboard into lava and burnt to a crisp.");
+									player:DeathCauseOverride("Выпал за борт и поплавал в лаве.");
 									
 									damageInfo:SetDamageType(DMG_BURN);
 									damageInfo:SetDamage(666);
@@ -277,7 +277,7 @@ function ENT:SetHP(newhp)
 						if IsValid(player) then
 							if player:Alive() then
 								player:SendLua([[Clockwork.Client:EmitSound("ambient/fire/mtov_flame2.wav", 500, 100)]]);
-								player:DeathCauseOverride("Rode a sinking ship into the lava and burnt to a crisp.");
+								player:DeathCauseOverride("Плывя по лаве, корабль утонул и все, кто были на борту, сгорели дотла.");
 								player:KillSilent();
 							else
 								local ragdollEntity = player:GetRagdollEntity();
@@ -295,7 +295,7 @@ function ENT:SetHP(newhp)
 				end);
 			end
 			
-			Clockwork.chatBox:AddInRadius(nil, "localevent", "The longship finally gives way under the strain of its damage, splitting in two and sinking into the lava below!", self:GetPos(), 1024);
+			Clockwork.chatBox:AddInRadius(nil, "localevent", "В конце концов, под тяжестью полученных повреждений корабль не выдерживает, раскалывается надвое и погружается в лаву!", self:GetPos(), 1024);
 		else
 			if self.playersOnBoard and #self.playersOnBoard > 0 then
 				local playersOnBoard = table.Copy(self.playersOnBoard);
@@ -313,7 +313,7 @@ function ENT:SetHP(newhp)
 								end);
 								
 								player:SetCharacterData("permakilled", true); -- In case the player tries to d/c to avoid their fate.
-								player:DeathCauseOverride("Rode a sinking ship into the sea and drowned.");
+								player:DeathCauseOverride("Корабль сломался, а он утонул.");
 								
 								if player:IsRagdolled() then
 									Clockwork.player:SetRagdollState(player, RAGDOLL_NONE);
@@ -339,7 +339,7 @@ function ENT:SetHP(newhp)
 				end);
 			end
 			
-			Clockwork.chatBox:AddInRadius(nil, "localevent", "The longship finally gives way under the strain of its damage, splitting in two and sinking to the bottom of the sea!", self:GetPos(), 1024);
+			Clockwork.chatBox:AddInRadius(nil, "localevent", "В конце концов, под тяжестью полученных повреждений корабль не выдерживает, раскалывается надвое и идет ко дну! Вот дела...", self:GetPos(), 1024);
 		end
 		
 		self:EmitSound("physics/wood/wood_crate_break5.wav");

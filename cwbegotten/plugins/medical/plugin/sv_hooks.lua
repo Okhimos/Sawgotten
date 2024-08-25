@@ -108,7 +108,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 								if health > 1 then
 									player:SetHealth(health - 1);
 									
-									Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken 1 damage from blood loss, leaving them at "..player:Health().." health!");
+									Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." получил 1 урон от потери крови, оставшись с "..player:Health().." здоровья!");
 									
 									local action =  Clockwork.player:GetAction(player);
 									
@@ -126,7 +126,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 												local bloodLevel = player:GetCharacterData("BloodLevel", self.maxBloodLevel);
 												
 												--if (bloodLevel <= self.lethalBloodLoss) then
-													player:DeathCauseOverride("Bled out in a puddle of their own blood.");
+													player:DeathCauseOverride("Захлебнулся в луже собственной крови.");
 													player:Kill();
 													--player:TakeDamage(99999, player, player);
 													--player:SetCrouchedWalkSpeed(1);
@@ -140,12 +140,12 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 										end);
 									end
 								elseif not plyTab.scornificationismActive then
-									player:DeathCauseOverride("Bled out in a puddle of their own blood.");
+									player:DeathCauseOverride("Захлебнулся в луже собственной крови.");
 									player:TakeDamage(1, player, player);
 								end
 							end
 						
-							Clockwork.hint:Send(player, "You are bleeding...", 5, Color(175, 100, 100));
+							Clockwork.hint:Send(player, "Из тебя течет кровь...", 5, Color(175, 100, 100));
 							player:ModifyBloodLevel(-bloodLoss);
 						end
 					else
@@ -230,7 +230,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 							local action = Clockwork.player:GetAction(player);
 							
 							plyTab.nextBleedOut = curTime + 60;
-							--Clockwork.hint:Send(player, "You are bleeding to death...", 10, Color(175, 100, 100));
+							--Clockwork.hint:Send(player, "Ты вытек насмерть...", 10, Color(175, 100, 100));
 							
 							if (action != "die") and (action != "die_bleedout") then
 								--[[player:ConCommand("+duck");
@@ -249,7 +249,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 										local bloodLevel = player:GetCharacterData("BloodLevel");
 										
 										if (bloodLevel <= self.lethalBloodLoss) then
-											player:DeathCauseOverride("Bled out in a puddle of their own blood.");
+											player:DeathCauseOverride("Захлебнулся в луже собственной крови.");
 											player:Kill();
 											--player:TakeDamage(99999, player, player);
 											--player:SetCrouchedWalkSpeed(1);
@@ -351,17 +351,17 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 															plyTab.dyingOfDisease = true;
 															
 															-- Todo: make a reverse wakeup sequence where you collapse and die.
-															Clockwork.chatBox:Add(player, nil, "itnofake", "No... this can't be the end...");
+															Clockwork.chatBox:Add(player, nil, "itnofake", "Нет... это не может быть концом...");
 															
 															player:SetCharacterData("permakilled", true); -- In case the player tries to d/c to avoid their fate.
 															
 															timer.Simple(5, function()
 																if IsValid(player) then
 																	plyTab.dyingOfDisease = false;
-																	player:DeathCauseOverride("Died from complications of the "..diseaseTable.name..".");
+																	player:DeathCauseOverride("Умер от осложнений, после "..diseaseTable.name..".");
 																	player:Kill();
 																	
-																	Clockwork.kernel:PrintLog(LOGTYPE_CRITICAL, player:Name().." has died from the "..diseaseTable.name.."!");
+																	Clockwork.kernel:PrintLog(LOGTYPE_CRITICAL, player:Name().." умер от "..diseaseTable.name.."!");
 																end
 															end);
 															
@@ -370,7 +370,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 													end
 													
 													if !plyTab.dyingOfDisease then
-														Clockwork.chatBox:Add(player, nil, "itnofake", "You start to feel better, as though your disease has finally passed.");
+														Clockwork.chatBox:Add(player, nil, "itnofake", "Вы начинаете чувствовать себя лучше, как будто ваша болезнь наконец-то прошла.");
 														
 														if diseaseTable.OnTake then
 															diseaseTable.OnTake(player);
@@ -420,7 +420,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 							local playerPos = player:GetPos();
 							local boneIndex = player:LookupBone("ValveBiped.Bip01_Head1");
 							local headPos, boneAng = player:GetBonePosition(boneIndex);
-							local strings = {"suddenly throws up on the ground, hurling vomit everywhere!", "vomits onto the ground!", "gags and then vomits all over the ground!"};
+							local strings = {"внезапно изрыгает из себя мощный фонтан, забрызгивая окружающих!", "не сдерживается и выпускает из своего рта струю, оставляя след на полу", "начинает давиться, а после раскрывает рот и блюет!"};
 							
 							if cwCharacterNeeds and player.HandleNeed then
 								player:HandleNeed("hunger", 5);
@@ -439,7 +439,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 									player:Freeze(false);
 									
 									if player:Alive() then
-										local curse_strings = {"Fuck...", "Cocksucker...", "Shit...", "Fuck's sake...", "Gah..."};
+										local curse_strings = {"Блядь...", "Ну и пиздец...", "Дерьмо...", "Мать твою...", "Угх...."};
 										
 										Clockwork.chatBox:Add(player, nil, "itnofake", curse_strings[math.random(1, #curse_strings)]);
 									end
@@ -459,7 +459,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 							local playerPos = player:GetPos();
 							local boneIndex = player:LookupBone("ValveBiped.Bip01_Head1");
 							local headPos, boneAng = player:GetBonePosition(boneIndex);
-							local strings = {"suddenly throws blood up on the ground!", "vomits blood onto the ground!", "gags and then vomits blood all over the ground!"};
+							local strings = {"внезапно изрыгает из себя мощный кровавый фонтан, забрызгивая окружающих!", "не сдерживается и выпускает из своего рта кровавую струю, оставляя след на полу! Ну и пиздец!", "начинает давиться, а после раскрывает рот и блюет кровью!"};
 							
 							if cwCharacterNeeds and player.HandleNeed then
 								player:HandleNeed("hunger", 5);
@@ -477,7 +477,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 									player:Freeze(false);
 									
 									if player:Alive() then
-										local curse_strings = {"Fuck...", "Cocksucker...", "Shit...", "Fuck's sake...", "Gah..."};
+										local curse_strings = {"Блядь...", "Ублюдство...", "Дерьмо...", "Вот уебство...", "Угх..."};
 										
 										Clockwork.chatBox:Add(player, nil, "itnofake", curse_strings[math.random(1, #curse_strings)]);
 									end
@@ -494,7 +494,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 							
 							Clockwork.chatBox:AddInTargetRadius(player, "me", strings[math.random(1, #strings)], player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);	
 						elseif random_symptom == "Coughing" then
-							local strings = {"coughs!", "hacks and wheezes!", "begins coughing loudly!"};
+							local strings = {"кашляет!", "хрипит и кашляет!", "начинает ужасно закашливаться!"};
 							
 							if (player:GetGender() == GENDER_FEMALE) then
 								player:EmitSound("ambient/voices/cough"..math.random(1, 3)..".wav", 65, math.random(140, 150));
@@ -512,7 +512,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 							
 							Clockwork.chatBox:AddInTargetRadius(player, "me", strings[math.random(1, #strings)], player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);	
 						elseif random_symptom == "Fatigue" then
-							Clockwork.chatBox:Add(player, nil, "itnofake", "I don't feel so good...");
+							Clockwork.chatBox:Add(player, nil, "itnofake", "Мне чертовски плохо...");
 							
 							if cwCharacterNeeds and player.HandleNeed then
 								player:HandleNeed("sleep", 3);
@@ -520,13 +520,13 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 							
 							timer.Simple(math.random(2, 5), function()
 								if IsValid(player) and player:Alive() and not player:IsRagdolled() and not plyTab.iFrames and not plyTab.opponent then
-									local gender = "his"
+									local gender = "его"
 
 									if (player:GetGender() == GENDER_FEMALE) then
-										gender = "her"
+										gender = "ее"
 									end
 									
-									Clockwork.chatBox:AddInTargetRadius(player, "me", "goes weak at "..gender.." knees with exhaustion, collapsing onto the ground.", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+									Clockwork.chatBox:AddInTargetRadius(player, "me", "теряет равновесие и падает на  "..gender.." колени, а после и наземь, окончательно теряя равновесие.", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 									Clockwork.player:SetRagdollState(player, RAGDOLL_FALLENOVER, 10);
 								end
 							end);
@@ -556,7 +556,7 @@ function cwMedicalSystem:PlayerThink(player, curTime, infoTable, alive, initiali
 						
 						if messupChance then
 							if math.random(1, 20) == 1 and player:GetRagdollState() ~= RAGDOLL_KNOCKEDOUT then
-								Clockwork.chatBox:AddInTargetRadius(player, "me", "screams in pain!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+								Clockwork.chatBox:AddInTargetRadius(player, "me", "кричит от боли, что не может стерпеть!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 							elseif math.random(1, (100 - messupChance)) == 1 then
 								local injuries = self:GetInjuries(player);
 								
@@ -673,7 +673,7 @@ function cwMedicalSystem:PostCalculatePlayerDamage(player, hitGroup, damageInfo)
 						local bloodLevel = player:GetCharacterData("BloodLevel", self.maxBloodLevel);
 						
 						--if (bloodLevel <= self.lethalBloodLoss) then
-							player:DeathCauseOverride("Bled out in a puddle of their own blood.");
+							player:DeathCauseOverride("Захлебнулся в луже собственной крови.");
 							player:Kill();
 							--player:TakeDamage(99999, player, player);
 							--player:SetCrouchedWalkSpeed(1);
@@ -690,9 +690,9 @@ function cwMedicalSystem:PostCalculatePlayerDamage(player, hitGroup, damageInfo)
 		
 		if (!plyTab.nextHealWarn or plyTab.nextHealWarn < curTime) then
 			if (player:Health() <= 50) then
-				Clockwork.hint:Send(player, "You are seriously injured...", 10, Color(175, 100, 100));
+				Clockwork.hint:Send(player, "Ты серьезно ранен...", 10, Color(175, 100, 100));
 			elseif (player:Health() <= 15) then
-				Clockwork.hint:Send(player, "You are near death...", 10, Color(175, 100, 100));
+				Clockwork.hint:Send(player, "Ты близок к смерти...", 10, Color(175, 100, 100));
 			end;
 			
 			plyTab.nextHealWarn = curTime + 45;
@@ -801,7 +801,7 @@ function cwMedicalSystem:PostCalculatePlayerDamage(player, hitGroup, damageInfo)
 								player:AddInjury(self.cwHitGroupToString[hitGroup], "broken_bone");
 								player:StartBleeding(hitGroup);
 								
-								Clockwork.chatBox:AddInTargetRadius(player, "me", "'s "..self.cwHitGroupToString[hitGroup].." audibly breaks with a horrifying snap!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+								Clockwork.chatBox:AddInTargetRadius(player, "me", "'s "..self.cwHitGroupToString[hitGroup].." ломается с ужасающим хрустом!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 
 								player:EmitSound("misc/bone_fracture.wav", 75, math.random(95, 100));
 							end;
@@ -993,9 +993,9 @@ function cwMedicalSystem:PlayerLimbFallDamageTaken(player, amount)
 			
 			if bone_broken then
 				if both_bones_broken then
-					Clockwork.chatBox:AddInTargetRadius(player, "me", "'s legs audibly break with a horrifying snap!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+					Clockwork.chatBox:AddInTargetRadius(player, "me", "'s legs ломается с ужасающим хрустом!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 				else
-					Clockwork.chatBox:AddInTargetRadius(player, "me", "'s "..bone_broken.." leg audibly breaks with a horrifying snap!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+					Clockwork.chatBox:AddInTargetRadius(player, "me", "'s "..bone_broken.." leg ломается с ужасающим хрустом!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 				end
 				
 				player:EmitSound("misc/bone_fracture.wav", 75, math.random(95, 100));
@@ -1125,7 +1125,7 @@ function cwMedicalSystem:PlayerCanUseItem(player, itemTable, noMessage)
 	local action = Clockwork.player:GetAction(player);
 	
 	if (action == "die") or (action == "die_bleedout") then
-		Schema:EasyText(player, "firebrick", "You cannot use items while you are dying!");
+		Schema:EasyText(player, "firebrick", "Ты не можешь это сделать, пока УМИРАЕШЬ!");
 		
 		return false;
 	end;

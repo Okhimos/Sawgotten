@@ -72,7 +72,7 @@ function PANEL:Rebuild(bounties, state)
 		bountyForm:SetText("");
 	
 		local descriptionLabel = vgui.Create("cwInfoText", self);
-		descriptionLabel:SetText("Those listed here have committed transgressions against the Glaze and must be corpsed.");
+		descriptionLabel:SetText("Перечисленные здесь должны быть Казнены во имя Сияния!");
 		descriptionLabel:SetWide(self:GetWide() - 8);
 		descriptionLabel:SetPos(4, 22);
 		
@@ -97,7 +97,7 @@ function PANEL:Rebuild(bounties, state)
 			
 			if state == "Hierarchy" or Clockwork.Client:IsAdmin() then
 				label.DoRightClick = function()
-					Derma_Query("Do you wish to remove this bounty?", label:GetText(), "Yes", function()
+					Derma_Query("Хочешь удалить этот заказ?", label:GetText(), "Да.", function()
 						local player = Clockwork.player:FindByID(label.charName);
 						
 						if player and player:IsWanted() then
@@ -140,7 +140,7 @@ function PANEL:PaintOver(width, height)
 		surface.DrawTexturedRect(x, y, wid, hei)
 		draw.RoundedBox(4, x, y, wid, hei, Color(0, 0, 0, 100));
 		
-		draw.DrawText("There are currently no active bounties,\n though there are yet enemies of the Glaze.", self.font, (width / 2), (height / 2), Color(170, 0, 0, 255), 1, 1);
+		draw.DrawText("В настоящее время активных наград нет,\n хотя враги у Сияния есть.", self.font, (width / 2), (height / 2), Color(170, 0, 0, 255), 1, 1);
 	end
 end
 
@@ -175,7 +175,7 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	
 	local proclamationLabel = vgui.Create("DLabel", wantedPoster);
 	proclamationLabel:SetPos(0, 55);
-	proclamationLabel:SetText("PROCLAMATION OF THE HOLY HIERARCHY");
+	proclamationLabel:SetText("ОПОВЕЩЕНИЕ ОТ СВЯТОЙ ИЕРАРХИИ");
 	proclamationLabel:SetTextColor(Color(25, 25, 25, 255));
 	proclamationLabel:SetFont("Papyrus_Text");
 	proclamationLabel:SizeToContents();
@@ -183,7 +183,7 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	
 	local wantedLabel = vgui.Create("DLabel", wantedPoster);
 	wantedLabel:SetPos(0, 80);
-	wantedLabel:SetText("WANTED");
+	wantedLabel:SetText("РАЗЫСКИВАЕТСЯ");
 	wantedLabel:SetTextColor(Color(120, 25, 25, 255));
 	wantedLabel:SetFont("Papyrus_Header");
 	wantedLabel:SizeToContents();
@@ -201,7 +201,7 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	local reason = bountyData.reason or "crimes against the Holy Hierarchy.";
 	local reasonLabel = vgui.Create("DLabel", wantedPoster);
 	reasonLabel:SetPos(0, 165);
-	reasonLabel:SetText("For "..reason);
+	reasonLabel:SetText("За "..reason);
 	reasonLabel:SetTextColor(Color(25, 25, 25, 255));
 	reasonLabel:SetFont("Papyrus_Text");
 	reasonLabel:SetAutoStretchVertical(true);
@@ -344,7 +344,7 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	
 	local physdescLabel = vgui.Create("DLabel", wantedPoster);
 	physdescLabel:SetPos(0, 510);
-	physdescLabel:SetText(bountyData.physDesc or "They have no known physical description.");
+	physdescLabel:SetText(bountyData.physDesc or "Никто не знает, как он выглядит.");
 	physdescLabel:SetTextColor(Color(25, 25, 25, 255));
 	physdescLabel:SetFont("Papyrus_Text_Small");
 	physdescLabel:SetWidth(math.min(470, physdescLabel:GetContentSize()));
@@ -355,12 +355,12 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	
 	local statusLabel = vgui.Create("DLabel", wantedPoster);
 	statusLabel:SetPos(0, 540);
-	statusLabel:SetText("CURRENT LOCATION UNKNOWN");
+	statusLabel:SetText("Текущее местоположение неизвестно.");
 	statusLabel:SetTextColor(Color(120, 25, 25, 255));
 	
 	for i, v in ipairs(_player.GetAll()) do
 		if v:GetNetVar("Key") == charKey then
-			statusLabel:SetText("ACTIVE IN THE AREA");
+			statusLabel:SetText("Орудует в округе.");
 			statusLabel:SetTextColor(Color(25, 120, 25, 255));
 			
 			break;
@@ -373,7 +373,7 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	
 	local rewardLabel = vgui.Create("DLabel", wantedPoster);
 	rewardLabel:SetPos(0, 575);
-	rewardLabel:SetText(tostring(bountyData.bounty or 0).." COIN REWARD!");
+	rewardLabel:SetText(tostring(bountyData.bounty or 0).." Денежная Награда!");
 	rewardLabel:SetTextColor(Color(25, 25, 25, 255));
 	rewardLabel:SetFont("Papyrus_Subheader");
 	rewardLabel:SizeToContents();
@@ -381,7 +381,7 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	
 	local captureLabel = vgui.Create("DLabel", wantedPoster);
 	captureLabel:SetPos(0, 615);
-	captureLabel:SetText("FOR THEIR CAPTURE DEAD OR ALIVE!");
+	captureLabel:SetText("ЖИВОЙ ИЛИ МЕРТВЫЙ!");
 	captureLabel:SetTextColor(Color(25, 25, 25, 255));
 	captureLabel:SetFont("Papyrus_Text");
 	captureLabel:SizeToContents();
@@ -389,7 +389,7 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	
 	local authorityLabel = vgui.Create("DLabel", wantedPoster);
 	authorityLabel:SetPos(0, 666);
-	authorityLabel:SetText("This proclamation is issued by the authority of:");
+	authorityLabel:SetText("ПОВЕСИВШИЙ ОБЪЯВЛЕНИЕ:");
 	authorityLabel:SetTextColor(Color(25, 25, 25, 255));
 	authorityLabel:SetFont("Papyrus_Text");
 	authorityLabel:SizeToContents();
@@ -397,7 +397,7 @@ function PANEL:DisplayWantedPoster(bountyData, charKey)
 	
 	local posterLabel = vgui.Create("DLabel", wantedPoster);
 	posterLabel:SetPos(0, 690);
-	posterLabel:SetText(bountyData.poster or "The Holy Hierarchy");
+	posterLabel:SetText(bountyData.poster or "Святой Иерархии");
 	posterLabel:SetTextColor(Color(25, 25, 25, 255));
 	posterLabel:SetFont("Papyrus_Text");
 	posterLabel:SizeToContents();

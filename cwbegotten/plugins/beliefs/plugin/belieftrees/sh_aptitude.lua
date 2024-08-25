@@ -4,16 +4,16 @@
 --]]
 
 local APTITUDE = cwBeliefs.beliefTrees:New("aptitude")
-	APTITUDE.name = "Aptitude";
+	APTITUDE.name = "Образованность";
 	APTITUDE.color = Color(107, 92, 77)
 	APTITUDE.order = 8;
 	APTITUDE.size = {w = 378, h = 407};
 	APTITUDE.textures = {"aptitude", "aptitudearrows"};
 	APTITUDE.tooltip = {
-		{"Aptitude", APTITUDE.color, "Civ5ToolTip4"},
-		{"Aptitude is a measure of your character's intellect, affecting your character's literacy, effectiveness at alchemy, and effectiveness as a healer. Upgrading this belief set will unlock new ways to learn and adapt, become a skilled doctor or alchemist, as well as unlocking the ability to read.", Color(225, 200, 200)},
-		{"\n\"Do not taint the legacy of Hard-Glaze if you cannot bear to sustain code.\"\nHer voice was no murmur, but a bold challenge to all who opposed.\n\"Was that the final testimony? Transcendence has brought me closer, resonating in a ray of almighty God's newfound hope.\"", Color(128, 90, 90, 240)},
-		{"\nBelief Tree Completion Bonus: +75% Faith gain from all sources.", Color(50, 255, 50)},
+		{"Образованность", APTITUDE.color, "Civ5ToolTip4"},
+		{"Образованность — это мера интеллекта вашего персонажа, влияющая на его грамотность, эффективность в алхимии и эффективность в качестве целителя. Улучшение этого набора убеждений откроет новые способы обучения и адаптации, пути становления искусным врачом или алхимиком, а также разблокирует способность читать.", Color(225, 200, 200)},
+		{"\n\"Не портьте наследие Стойкого Сияния, если вы не в силах поддерживать код.\"\nЕе голос был не ропотом, а смелым вызовом всем, кто выступал против.\n\"Это было последнее свидетельство? Трансцендентность приблизила меня, резонируя в луче вновь обретенной надежды всемогущего Бога.\"", Color(128, 90, 90, 240)},
+		{"\nБонус за завершение древа верований: +75% к приросту веры из всех источников.", Color(50, 255, 50)},
 	};
 	APTITUDE.columnPositions = {
 		[1] = (APTITUDE.size.w - 4) * 0.1,
@@ -72,64 +72,64 @@ local APTITUDE = cwBeliefs.beliefTrees:New("aptitude")
 				row = 4,
 				disabled = true,
 			},
-		},
+		}, 
 		[3] = {
 			["literacy"] = {
-				name = "Literacy",
-				description = "Unlocks the ability to read. Gain a moderate amount of faith for each unique scripture read.",
+				name = "Грамотный",
+				description = "Открывает способность читать. Получайте некоторое количество веры за каждое уникальное прочитанное писание.",
 				row = 1,
 			},
 			["scribe"] = {
-				name = "Scribe",
-				description = "Unlocks the ability to copy scriptures. Gain an abundance of faith for every unique scripture copied (halved for subsequent copies).",
+				name = "Писарь",
+				description = "Разблокирует возможность копировать писания. Получите некоторое количество веры за каждое уникальное скопированное писание (уменьшается вдвое для последующих копий).",
 				requirements = {"literacy"},
 				row = 2,
 			},
 			["anthropologist"] = {
-				name = "Anthropologist",
-				description = "Unlocks the ability to read and copy Runic and Darklander texts.",
+				name = "Антрополог",
+				description = "Открывает возможность читать и копировать Рунические, а также Темноземские тексты.",
 				requirements = {"literacy", "scribe"},
 				row = 3,
 			},
 			["loremaster"] = {
-				name = "Loremaster",
-				description = "Increases your sacrament level cap by 10 but locks the 'Prowess' tree. Any epiphanies invested in 'Prowess' will be refunded.",
-				quote = "Throw away your desires. Toss aside your warrior spirit. You are a beacon of knowledge. Let the young fools squabble and die. Become all-knowing, and wisdom will be your weapon.",
+				name = "Ученый",
+				description = "Увеличивает максимальный уровень таинства на 10, но блокирует древо навыков «Мастерство». Любые прозрения, вложенные в «Мастерство», будут возвращены.",
+				quote = "Отбросьте свои желания. Отбросьте свой воинский дух. Вы — маяк знаний. Пусть молодые глупцы ссорятся и умирают. Станьте всезнающим, и мудрость станет вашим оружием.",
 				requirements = {"literacy", "scribe", "anthropologist"},
 				row = 4,
 			},
 		},
 		[4] = {
 			["sanitary"] = {
-				name = "Sanitary",
-				description = "Significantly reduces the chances of catching a disease or infection, and entirely eliminates the risk of catching diseases from handling corpses.",
-				quote = "Insanitation of the mind is the root cause of insanity; insanitation of the body is the root cause of affliction.",
+				name = "Санитария",
+				description = "Значительно снижает вероятность заражения болезнями или инфекциями и полностью исключает риск заражения болезнями при работе с трупами.",
+				quote = "Нездоровье ума — коренная причина безумия; нездоровье тела — коренная причина несчастья.",
 				requirements = {"literacy"},
 				row = 2,
 			},
 			["doctor"] = {
-				name = "Doctor",
-				description = "Unlocks the ability to diagnose a patient's injuries. Doubles the speed of healing other characters as well as the speed of applying chloroform.",
+				name = "Доктор",
+				description = "Открывает возможность диагностировать травмы пациента. Удваивает скорость лечения других персонажей, а также скорость применения хлороформа.",
 				requirements = {"literacy", "sanitary"},
 				row = 3,
 			},
 			["surgeon"] = {
-				name = "Surgeon",
-				description = "Unlocks the ability to perform operations to treat advanced injuries.",
+				name = "Хирург",
+				description = "Открывает возможность проводить операции по лечению сложных травм.",
 				requirements = {"literacy", "sanitary", "doctor"},
 				row = 4,
 			},
 		},
 		[5] = {
 			["medicine_man"] = {
-				name = "Medicine Man",
-				description = "Triples the effectiveness of healing items when used on other characters. Doubles their effectiveness for yourself.",
+				name = "Рожден Лечить",
+				description = "Утраивает эффективность предметов лечения при использовании на других персонажах. Удваивает их эффективность для себя.",
 				requirements = {"literacy", "sanitary"},
 				row = 3,
 			},
 			["plague_doctor"] = {
-				name = "Plague Doctor",
-				description = "Unlocks the ability to create a cure for the Begotten Plague. Also unlocks the ability to craft Plague Doctor Outfit and wear it.",
+				name = "Чумной Доктор",
+				description = "Открывает возможность создания лекарства от Чумы Порожденных. Также открывает возможность создания костюма Чумного Доктора и его ношения.",
 				requirements = {"literacy", "sanitary", "medicine_man"},
 				row = 4,
 			},

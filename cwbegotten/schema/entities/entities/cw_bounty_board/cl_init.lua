@@ -12,8 +12,8 @@ function ENT:HUDPaintTargetID(x, y, alpha)
 	local colorTargetID = Clockwork.option:GetColor("target_id")
 	local colorWhite = Clockwork.option:GetColor("white")
 	
-	y = Clockwork.kernel:DrawInfo("Bounty Board", x, y, colorTargetID, alpha)
-	y = Clockwork.kernel:DrawInfo("A board with bounties for enemies of the Glaze pinned to it.", x, y, colorWhite, alpha);
+	y = Clockwork.kernel:DrawInfo("Доска с Объявлениями", x, y, colorTargetID, alpha)
+	y = Clockwork.kernel:DrawInfo("Доска с наградами за головами врагов Сияния.", x, y, colorWhite, alpha);
 end;
 
 local function CreateMenu(state)
@@ -35,9 +35,9 @@ local function CreateMenu(state)
 
 	if state == "Hierarchy" then
 		menu:AddOption("Add Bounty", function()
-			Derma_StringRequest("Bounty Board", "Who do you want to add to the bounty board?", nil, function(target)
-				Derma_StringRequest(target, "How much coin will this bounty be worth?", nil, function(price)
-					Derma_StringRequest(target, "What should the reason for this bounty be?", nil, function(reason)
+			Derma_StringRequest("Bounty Board", "Кого бы вы хотели добавить в список врагов?", nil, function(target)
+				Derma_StringRequest(target, "Сколько будет стоить его голова?", nil, function(price)
+					Derma_StringRequest(target, "Почему этого человека нужно убить?", nil, function(reason)
 						Clockwork.kernel:RunCommand("AddBounty", target, price, reason);
 					end);
 				end);

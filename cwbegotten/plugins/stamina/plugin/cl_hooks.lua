@@ -23,7 +23,7 @@ function cwStamina:GetBars(bars)
 	end;
 	
 	if (self.stamina < max_stamina - 5) then
-		bars:Add("STAMINA", Color(100, 175, 100, 255), "STAMINA", self.stamina, max_stamina, self.stamina < 10);
+		bars:Add("ВЫНОСЛИВОСТЬ", Color(100, 175, 100, 255), "ВЫНОСЛИВОСТЬ", self.stamina, max_stamina, self.stamina < 10);
 	end;
 end;
 

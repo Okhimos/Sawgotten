@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Caestus";
+	ITEM.name = "Цестус";
 	ITEM.model = "models/props/begotten/melee/caestus.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "begotten_fists_caestus";
 	ITEM.category = "Melee";
-	ITEM.description = "A padded leather battle glove. It can turn your fists into brutal mauls.";
+	ITEM.description = "Кожаные перчатки, созданные для боя. Наделяют удары владельца значительной пробивной способностью и ударно-дробящими свойствами.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/caestus.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -16,12 +16,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Iron Knuckles";
+	ITEM.name = "Железные Кастеты";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/knuckles.mdl";
 	ITEM.weight = 0.4;
 	ITEM.uniqueID = "begotten_fists_ironknuckles";
 	ITEM.category = "Melee";
-	ITEM.description = "An iron pair of knuckles. An excellent advantage to any fistfight.";
+	ITEM.description = "Пара кастетов. Отличное преимущество в любой драке.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/iron_knuckles.png"
 	ITEM.meleeWeapon = true;
 	ITEM.attributes = {"concealable"};
@@ -31,13 +31,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Spiked Knuckles";
+	ITEM.name = "Шипастые Кастеты";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/knuckles.mdl";
 	ITEM.bodygroup1 = 2;
 	ITEM.weight = 0.4;
 	ITEM.uniqueID = "begotten_fists_spikedknuckles";
 	ITEM.category = "Melee";
-	ITEM.description = "An iron pair of knuckles that has been fitted with spiked prongs. A single punch could take a man's eyes.";
+	ITEM.description = "Железная пара кастетов, оснащенная шипами. Один удар может лишить человека глаз.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/spiked_knuckles.png"
 	ITEM.meleeWeapon = true;
 	ITEM.attributes = {"concealable"};

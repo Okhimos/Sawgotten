@@ -77,20 +77,20 @@ function ENT:OnTakeDamage(damageInfo)
 				if math.random(1, 150) == 1 then
 					itemName = "gold_ore";
 					
-					Clockwork.chatBox:AddInTargetRadius(player, "it", "As you strike the rocks, you notice a faint glimmer. Are your eyes decieving you? Gold!.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+					Clockwork.chatBox:AddInTargetRadius(player, "it", "Продолжая рудокопить, вы случайно замечаете слабый проблеск золотого оттенка. Ваши глаза обманывают вас? Нет! Это Золото!.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 				elseif math.random(1, 666) == 1 then
 					itemName = "uncut_blood_diamond";
 					
-					Clockwork.chatBox:AddInTargetRadius(player, "it", "As you strike the rocks, a beautiful blood-red gem is unearthed from the pile. Whispers fill the caverns around you as the precious stone glimmers.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+					Clockwork.chatBox:AddInTargetRadius(player, "it", "Продолжая рудокопить, вы сулчайно замечаете, как из кучи вытаскивается прекрасный кроваво-красный драгоценный камень. Шепот наполняет пещеры вокруг вас, когда драгоценный камень мерцает.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 					
 					self:EmitSound("darkwhisper/darkwhisper_long3.mp3", 500);
 					
-					Clockwork.player:NotifyAdmins("operator", player:Name().." has unearthed a Blood Diamond. Let the chaos caused by greed ensue.", nil);
+					Clockwork.player:NotifyAdmins("operator", player:Name().." выкопал Кровавый Алмаз. Пусть наступит хаос, вызванный жадностью.", nil);
 					
 					for k, v in pairs(_player.GetAll()) do
 						if v ~= player and v:GetFaith() == "Faith of the Dark" then
 							v:SendLua([[Clockwork.Client:EmitSound("darkwhisper/darkwhisper_long"..math.random(1, 5)..".mp3", 80, 100)]]);
-							Schema:EasyText(v, "red", "Your mind is abruptly overcome with feelings of unrestrained desire. A Blood Diamond has been unearthed somewhere, and it must be yours...");
+							Schema:EasyText(v, "red", "Ваш разум внезапно охвачен чувством необузданного желания. Где-то был найден Кровавый Алмаз, и он должен быть вашим...");
 							v:HandleSanity(10);
 						end
 					end
@@ -116,9 +116,9 @@ function ENT:OnTakeDamage(damageInfo)
 					local playerFaction = player:GetFaction();
 					
 					if playerFaction == "Gatekeeper" or playerFaction == "Goreic Warrior" then
-						player:HandleXP(30);
+						player:HandleXP(90);
 					else
-						player:HandleXP(10);
+						player:HandleXP(30);
 					end
 				end
 				
@@ -145,7 +145,7 @@ function ENT:OnTakeDamage(damageInfo)
 			end
 			
 			if self.oreLeft <= 0 then
-				Clockwork.chatBox:AddInTargetRadius(player, "it", "The ore pile is reduced to nothing, its resources fully extracted.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(player, "it", "Рудная жила опустошилась, полезные ресурсы полностью извлечены.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 				
 				self:Remove();
 			end

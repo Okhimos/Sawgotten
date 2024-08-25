@@ -3,11 +3,11 @@
 --]]
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Ampoule";
-	ITEM.useText = "Inject";
+	ITEM.name = "Ампула";
+	ITEM.useText = "Вколоть";
 	ITEM.model = "models/props_c17/TrapPropeller_Lever.mdl";
 	ITEM.weight = 0.15;
-	ITEM.description = "A glass vial filled with a mysterious clear liquid that can be injected into someone for a burst of energy...";
+	ITEM.description = "Стеклянный флакон, наполненный таинственной прозрачной жидкостью, которую можно ввести человеку, чтобы получить прилив энергии.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ampoule.png"
 	ITEM.useSound = "begotten/items/meat_inject.mp3";
 	ITEM.uniqueID = "ampoule"
@@ -44,17 +44,17 @@ local ITEM = Clockwork.item:New("medical_base");
 			
 			Clockwork.player:SetRagdollState(player, RAGDOLL_FALLENOVER);
 			
-			Clockwork.chatBox:AddInTargetRadius(player, "me", "jolts awake!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+			Clockwork.chatBox:AddInTargetRadius(player, "me", "резко просыпается!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 		end
 	end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Black Syringe";
-	ITEM.useText = "Inject";
+	ITEM.name = "Черный Укол";
+	ITEM.useText = "Вколоть";
 	ITEM.model = "models/props_c17/TrapPropeller_Lever.mdl";
 	ITEM.weight = 0.15;
-	ITEM.description = "A syringe that hosts something...";
+	ITEM.description = "Шприц, в котором что-то находится...";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ampoule.png"
 	ITEM.useSound = "begotten/items/meat_inject.mp3";
 	ITEM.uniqueID = "blacksyringe"
@@ -69,19 +69,19 @@ local ITEM = Clockwork.item:New("medical_base");
 		player:GiveDisease("begotten_plague");
 		player:HandleStamina(40);
 		player:HandleSanity(25);
-		Schema:EasyText(player, "olivedrab","It's been done. The plight will take hold in due time.");
+		Schema:EasyText(player, "olivedrab","Что сделано, то сделано...");
 		netstream.Start(player, "Stunned", 1);
 	end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Antibiotic Paste";
+	ITEM.name = "Антибиотическая Паста";
 	ITEM.cost = 100;
 	ITEM.model = "models/props_c17/TrapPropeller_Lever.mdl";
 	ITEM.weight = 0.5;
 	ITEM.useText = "Apply";
 	ITEM.useSound = "begotten/ui/sanity_gain.mp3";
-	ITEM.description = "An old tube of paste that can be used to stop infections.";
+	ITEM.description = "Старый тюбик пасты, которую можно использовать для предотвращения инфекции.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ampoule.png"
 	ITEM.uniqueID = "antibiotic_paste"
 	
@@ -99,13 +99,13 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Antibiotics";
+	ITEM.name = "Антибиотики";
 	ITEM.cost = 150;
 	ITEM.model = "models/props_junk/glassjug01.mdl";
 	ITEM.weight = 0.5;
 	ITEM.useText = "Drink";
 	ITEM.useSound = "npc/barnacle/barnacle_gulp1.wav";
-	ITEM.description = "A rarity indeed! These ancient capsules are renowned for their ability to stop most diseases or cure infections.";
+	ITEM.description = "Действительно редкость! Это древнее лекарство славится своей способностью лечить большинство инфекций.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/laudanum.png"
 	ITEM.uniqueID = "antibiotics"
 
@@ -115,7 +115,7 @@ local ITEM = Clockwork.item:New("medical_base");
 	
 	function ITEM:OnUsed(player, itemEntity)
 		if player:Alive() and !player:IsRagdolled() then
-			Schema:EasyText(player, "olivedrab","You swallow what few pills remain in the bottle, hoping it will cure your ailments.");
+			Schema:EasyText(player, "olivedrab","Вы глотаете оставшиеся в бутылочке несколько таблеток, надеясь, что это излечит ваши недуги.");
 			
 			if player:HasDisease("common_cold") or player:HasDisease("flu") then
 				player:TakeDisease("common_cold");
@@ -136,13 +136,13 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Black Remedy";
+	ITEM.name = "Черный Порошок";
 	ITEM.cost = 150;
 	ITEM.model = "models/weapons/w_oil.mdl";
 	ITEM.weight = 0.2;
 	ITEM.useText = "Drink";
 	ITEM.useSound = "npc/barnacle/barnacle_gulp1.wav";
-	ITEM.description = "A nasty soupy mix in a black jar. Could it be a cure to the Plague?";
+	ITEM.description = "Мерзкая смесь в черной банке. Может ли это быть лекарством от чумы?";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/small_oil.png";
 	ITEM.uniqueID = "black_remedy"
 
@@ -152,7 +152,7 @@ local ITEM = Clockwork.item:New("medical_base");
 	
 	function ITEM:OnUsed(player, itemEntity)
 		if player:Alive() and !player:IsRagdolled() then
-			Schema:EasyText(player, "olivedrab","You slurp the disgusting drink, hoping that it will remove what plagues you. After a short time, you feel your mind clear and your skin lighten.");
+			Schema:EasyText(player, "olivedrab","Вы открываете крышку и засыпаете в свое горло отвратительный порошок, надеясь, что он избавит вас от болезни. Через некоторое время вы чувствуете, что ваш разум проясняется, а кожа светлеет.");
 			
 			if player:HasDisease("begotten_plague") then
 				player:TakeDisease("begotten_plague");
@@ -172,13 +172,13 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Bloody Fucked Bandage";
+	ITEM.name = "Окровавленный Бинт";
 	ITEM.cost = 8;
 	ITEM.model = "models/kali/miscstuff/stalker/aid/bandage.mdl";
 	ITEM.weight = 0.1;
 	ITEM.useText = "Apply";
 	ITEM.useSound = "ambient/voices/citizen_beaten4.wav";
-	ITEM.description = "This bandage roll is fucked. It's bloody, stained, and likely to give you an infection.";
+	ITEM.description = "Моток тряпки, который промочен чьей-то кровью и грязью. Конечно, можно перебинтоваться, но стоит ли оно того?";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/bandage.png"
 	ITEM.uniqueID = "bandage"
 	
@@ -194,13 +194,13 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Gauze";
+	ITEM.name = "Марля";
 	ITEM.cost = 8;
 	ITEM.model = "models/healthvial_gauze.mdl";
 	ITEM.weight = 0.2;
 	ITEM.useText = "Apply";
 	ITEM.useSound = "bandaging_1.wav";
-	ITEM.description = "A roll of heavy-duty gauze which can be wrapped around wounds, it can be used to treat gashes.";
+	ITEM.description = "Плотная тканая повязка, которую можно использовать для остановки кровотечения из больших рваных ран.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gauze.png"
 	ITEM.uniqueID = "gauze"
 	
@@ -219,13 +219,13 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Skingauze";
+	ITEM.name = "Марля из Плоти";
 	ITEM.cost = 8;
 	ITEM.model = "models/mosi/fnv/props/gore/gorehead01.mdl";
 	ITEM.weight = 0.4;
 	ITEM.useText = "Apply";
 	ITEM.useSound = "bandaging_1.wav";
-	ITEM.description = "A roll of thick skin wrapped around a human spine. It can be used to treat gashes, but at what cost?";
+	ITEM.description = "Рулон толстой кожи, скрепленной веревкой. Его можно использовать для перекрытия рваных ран...Но какой ценой?";
 	ITEM.iconoverride = "begotten/ui/itemicons/skingauze.png"
 	ITEM.uniqueID = "skingauze"
 	
@@ -244,17 +244,17 @@ local ITEM = Clockwork.item:New("medical_base");
 
 	-- Called when a player uses the item.
 	function ITEM:OnUsed(player, itemEntity)
-		Schema:EasyText(player, "olive","The damp skin of another is wrapped around your wounds. There is something deeply disturbing about this act, which troubles your sanity.");
+		Schema:EasyText(player, "olive","Влажный кусочек кожи ближнего твоего осторожно обволакивает рану, не давая крови больше сочиться наружу. В этом есть что-то рвущее душу на части. Жить становится тяжелее, чем обычно...");
 		player:HandleSanity(-10);
 	end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Laudanum";
+	ITEM.name = "Настойка Опия";
 	ITEM.model = "models/props_junk/glassjug01.mdl";
 	ITEM.weight = 0.3;
 	ITEM.useText = "Drink";
-	ITEM.description = "A bottle of laudanum. This will clear one's mind, giving them a better grasp of reality.";
+	ITEM.description = "Небольших размеров сосуд с прозрачной жидкостью. Расслабляет и дает возможность забыться.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/laudanum.png"
 	ITEM.uniqueID = "laudanum";
 	ITEM.useSound = "begotten/ui/sanity_gain.mp3";
@@ -285,13 +285,13 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Crafted Bandage";
+	ITEM.name = "Самодельный Бинт";
 	ITEM.cost = 15;
 	ITEM.model = "models/props_wasteland/prison_toiletchunk01f.mdl";
 	ITEM.weight = 0.1;
 	ITEM.useText = "Apply";
 	ITEM.useSound = "bandaging_1.wav";
-	ITEM.description = "A makeshift bandage created with stitched-together pieces of scavenged cloth. It isn't much but it can help stop bleeding and is less likely to infect wounds compared to many alternatives.";
+	ITEM.description = "Маленький рулон, сделанный из сшитых вместе кусков относительно чистой ткани. Конечно, разорванную конечность не восстановит, но вот кровотечение вполне себе остановит.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/skintape.png"
 	ITEM.uniqueID = "crafted_bandage"
 	
@@ -307,13 +307,13 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Ointment";
+	ITEM.name = "Мазь";
 	ITEM.cost = 8;
 	ITEM.model = "models/props_junk/glassjug01.mdl";
 	ITEM.weight = 0.5;
 	ITEM.useText = "Apply";
 	ITEM.useSound = "begotten/ui/sanity_gain.mp3";
-	ITEM.description = "A bottle of old ointment for use in treating burn injuries.";
+	ITEM.description = "Бутылка старой вязкой жижицы для лечения ожогов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/laudanum.png"
 	ITEM.uniqueID = "ointment"
 	
@@ -335,14 +335,14 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Skintape";
+	ITEM.name = "Ломоть Кожи";
 	ITEM.cost = 15;
 	ITEM.model = "models/cofprops/skintape.mdl";
 	ITEM.weight = 0.2;
 	ITEM.access = "v";
 	ITEM.useText = "Mend";
 	ITEM.useSound = "begotten/items/skintape.ogg";
-	ITEM.description = "A packet of skin that can be used to replace dead flesh and patch up bleeding wounds.";
+	ITEM.description = "Небольшой кусок кожи, которым можно перевязать кровоточащую рану...Но стоит ли оно того?";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/skintape2.png"
 	ITEM.uniqueID = "skintape";
 	
@@ -359,19 +359,19 @@ local ITEM = Clockwork.item:New("medical_base");
 
 	-- Called when a player uses the item.
 	function ITEM:OnUsed(player, itemEntity)
-		Schema:EasyText(player, "olive","The damp skin of another is applied to your wounds. There is something deeply disturbing about this act, which troubles your sanity.");
+		Schema:EasyText(player, "olive","Влажный кусочек кожи ближнего твоего осторожно обволакивает рану, не давая крови больше сочиться наружу. В этом есть что-то рвущее душу на части. Жить становится тяжелее, чем обычно...");
 		player:HandleSanity(-10);
 	end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Makeshift Splint";
+	ITEM.name = "Самодельная Шина";
 	ITEM.cost = 8;
 	ITEM.model = "models/Gibs/wood_gib01b.mdl"; -- find a good model later
 	ITEM.weight = 1;
 	ITEM.useText = "Place";
 	ITEM.useSound = "begotten/items/first_aid.wav";
-	ITEM.description = "A makeshift splint made using a plank of wood and some lengths wire.";
+	ITEM.description = "Самодельная шина, сделанная из деревянной доски и куска проволоки.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/splint.png"
 	ITEM.uniqueID = "splint"
 	
@@ -384,14 +384,14 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Survival Pack";
+	ITEM.name = "Медицинский Набор";
 	ITEM.cost = 30;
 	ITEM.model = "models/items/healthkit_nmrih.mdl";
 	ITEM.weight = 3;
 	ITEM.access = "v";
 	ITEM.useText = "Heal";
 	ITEM.useSound = "bandaging_1.wav";
-	ITEM.description = "An unopened pack full of medical supplies. Is it too good to be true?!";
+	ITEM.description = "Нераспечатанная упаковка, полная медицинских принадлежностей. Лучший день в вашей жизни!";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/survival_pack.png"
 	ITEM.uniqueID = "survivalpack"
 	
@@ -410,20 +410,20 @@ local ITEM = Clockwork.item:New("medical_base");
 	
 	-- Called when a player uses the item.
 	function ITEM:OnUsed(player, itemEntity)
-		Schema:EasyText(player, "olivedrab","The medical supplies in this pouch are bountiful, you are clearly divinely favored this day! You are able to heal all of your wounds.");
+		Schema:EasyText(player, "olivedrab","Медицинских принадлежностей в этой сумке настолько много, что вы способны залечить все свои раны...Блаженство.");
 		player:HandleSanity(10);
 	end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Scalpel";
+	ITEM.name = "Скальпель";
 	ITEM.cost = 15;
 	ITEM.model = "models/props_c17/TrapPropeller_Lever.mdl";
 	ITEM.weight = 0.25;
 	ITEM.access = "v";
 	ITEM.useText = "Cut";
 	ITEM.useSound = "bandaging_1.wav";
-	ITEM.description = "A rusty scalpel for surgical incisions.";
+	ITEM.description = "Относительно нормальный скальпель, которым можно разрезать плоть.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ampoule.png"
 	ITEM.uniqueID = "scalpel"
 	
@@ -436,14 +436,14 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Forceps";
+	ITEM.name = "Щипцы";
 	ITEM.cost = 15;
 	ITEM.model = "models/downpour/scissors01_m0_ah.mdl";
 	ITEM.weight = 0.25;
 	ITEM.access = "v";
 	ITEM.useText = "Clamp";
 	ITEM.useSound = "bandaging_1.wav";
-	ITEM.description = "A rusty pair of forceps that can be used to remove objects from the site of an incision.";
+	ITEM.description = "Ржавый пинцет, который можно использовать для извлечения предметов из места разреза.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/forceps.png"
 	ITEM.uniqueID = "forceps"
 	
@@ -456,14 +456,14 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("medical_base");
-	ITEM.name = "Suture";
+	ITEM.name = "Хирургическая Нить";
 	ITEM.cost = 15;
 	ITEM.model = "models/props_junk/cardboard_box004a.mdl";
 	ITEM.weight = 0.25;
 	ITEM.access = "v";
 	ITEM.useText = "Stitch";
 	ITEM.useSound = "bandaging_1.wav";
-	ITEM.description = "A box containing thread and a needle for stiching up wounds.";
+	ITEM.description = "Коробка с нитками и иглой для зашивания ран.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/box.png"
 	ITEM.uniqueID = "suture"
 	
@@ -476,20 +476,20 @@ local ITEM = Clockwork.item:New("medical_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Chloroform";
+	ITEM.name = "Хлороформ";
 	ITEM.cost = 50;
 	ITEM.model = "models/props_junk/garbage_newspaper001a.mdl";
 	ITEM.weight = 0.1;
 	ITEM.useText = "Knock Out";
 	ITEM.category = "Medical";
-	ITEM.description = "Using this on somebody will knock them out cold for a few minutes.";
+	ITEM.description = "Используя это средство, можно лишить человека сознания на несколько минут.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/chloroform.png"
 	ITEM.stackable = true;
 
 	-- Called when a player uses the item.
 	function ITEM:OnUse(player, itemEntity)
 		if (player.isChloroforming) then
-			Schema:EasyText(player, "peru", "You are already tying a character!");
+			Schema:EasyText(player, "peru", "Вы уже делаете это!");
 			
 			return false;
 		else
@@ -534,7 +534,7 @@ local ITEM = Clockwork.item:New();
 							end;
 						end);
 					else
-						Schema:EasyText(player, "firebrick", "You cannot use chloroform characters that are facing you!");
+						Schema:EasyText(player, "firebrick", "Вы можете использовать Хлороформ только на тех, кто стоит к вам спиной!");
 						
 						return false;
 					end;
@@ -545,12 +545,12 @@ local ITEM = Clockwork.item:New();
 					
 					return false;
 				else
-					Schema:EasyText(player, "firebrick", "This character is too far away!");
+					Schema:EasyText(player, "firebrick", "Он слишком далеко!");
 					
 					return false;
 				end;
 			else
-				Schema:EasyText(player, "grey","That is not a valid character!");
+				Schema:EasyText(player, "grey","Вы должны смотреть на кого-нибудь, дабы применить Хлороформ!");
 				
 				return false;
 			end;
@@ -564,12 +564,12 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Tech";
+	ITEM.name = "Микрросхема";
 	ITEM.category = "Crafting Materials";
 	ITEM.model = "models/mosi/fallout4/props/junk/components/circuitry.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "tech";
-	ITEM.description = "Ancient circuitry from machines which have long surpassed their purpose. This is of great value to Voltists.";
+	ITEM.description = "Микросхема, находящаяся здесь с незапамятных времен. Представляет большую ценность для вольтистов.";
 	ITEM.useSound = "physics/plastic/plastic_barrel_break1.wav";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
 	ITEM.stackable = false;
@@ -577,7 +577,7 @@ local ITEM = Clockwork.item:New();
 	ITEM.itemSpawnerInfo = {category = "Crafting Materials", rarity = 55};
 	
 	if cwMedicalSystem then
-		ITEM.useText = "Apply";
+		ITEM.useText = "Использовать";
 		ITEM.applicable = true;
 		ITEM.isMedical = true;
 		ITEM.useOnSelf = true; -- Can use on self.
@@ -599,15 +599,15 @@ local ITEM = Clockwork.item:New();
 					local action = Clockwork.player:GetAction(player);
 						
 					if (action == "heal") then
-						Schema:EasyText(player, "peru", "Your character is already healing!");
+						Schema:EasyText(player, "peru", "Вы уже лечите себя!");
 						
 						return false;
 					elseif (action == "healing") then
-						Schema:EasyText(player, "peru", "You are already healing somebody!");
+						Schema:EasyText(player, "peru", "Вы уже лечите его!");
 						
 						return false;
 					elseif (action == "performing_surgery") then
-						Schema:EasyText(player, "peru", "You are already performing surgery on someone!");
+						Schema:EasyText(player, "peru", "Вы уже проводите кому-то операцию!");
 						
 						return false;
 					else
@@ -626,7 +626,7 @@ local ITEM = Clockwork.item:New();
 					
 					player:TakeItem(self, true);
 					
-					Schema:EasyText(player, "olive", "You stab yourself with the circuitry!");
+					Schema:EasyText(player, "olive", "Вы уже используете Микросхему!");
 				end
 			end;
 		end;
@@ -638,15 +638,15 @@ local ITEM = Clockwork.item:New();
 					local action = Clockwork.player:GetAction(player);
 						
 					if (action == "heal") then
-						Schema:EasyText(player, "peru", "Your character is already healing!");
+						Schema:EasyText(player, "peru", "Вы уже лечите себя!");
 						
 						return false;
 					elseif (action == "healing") then
-						Schema:EasyText(player, "peru", "You are already healing somebody!");
+						Schema:EasyText(player, "peru", "Вы уже лечите его!");
 						
 						return false;
 					elseif (action == "performing_surgery") then
-						Schema:EasyText(player, "peru", "You are already performing surgery on someone!");
+						Schema:EasyText(player, "peru", "Вы уже проводите кому-то операцию!");
 						
 						return false;
 					else
@@ -668,15 +668,15 @@ local ITEM = Clockwork.item:New();
 			local action = Clockwork.player:GetAction(player);
 				
 			if (action == "heal") then
-				Schema:EasyText(player, "firebrick", "You cannot drop this while healing!");
+				Schema:EasyText(player, "firebrick", "Ты не можешь выбросить это, пока лечишься!");
 				
 				return false;
 			elseif (action == "healing") then
-				Schema:EasyText(player, "firebrick", "You cannot drop this while healing somebody!");
+				Schema:EasyText(player, "firebrick", "Ты не можешь выбросить это, пока лечишь кого-то!");
 				
 				return false;
 			elseif (action == "performing_surgery") then
-				Schema:EasyText(player, "firebrick", "You cannot drop this while performing surgery on someone!");
+				Schema:EasyText(player, "firebrick", "Ты не можешь выбросить это, пока проводишь кому-то операцию!");
 				
 				return false;
 			end;
@@ -710,7 +710,7 @@ local ITEM = Clockwork.item:New();
 					player:TakeDamageInfo(d);
 					player:TakeItem(self, true);
 					
-					Schema:EasyText(player, "olive", "You shove the circuitry in your mouth and fuck up your teeth!");
+					Schema:EasyText(player, "olive", "Ты засовываешь микросхему в рот и начинаешь ее жевать! Зубам больно, но что поделать....!");
 				end
 			end;
 		end;
@@ -722,12 +722,12 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Technocraft";
+	ITEM.name = "Технокрафт";
 	ITEM.category = "Crafting Materials";
 	ITEM.model = "models/props/cs_office/computer_caseb_p7a.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "technocraft";
-	ITEM.description = "An amalgamation of ancient technology thrown together.";
+	ITEM.description = "Слияние древних технологий вместе. Настоящая находка для Вольтиста.";
 	ITEM.useSound = "physics/plastic/plastic_barrel_break1.wav";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
 	ITEM.stackable = false;
@@ -757,15 +757,15 @@ local ITEM = Clockwork.item:New();
 					local action = Clockwork.player:GetAction(player);
 						
 					if (action == "heal") then
-						Schema:EasyText(player, "peru", "Your character is already healing!");
+						Schema:EasyText(player, "peru", "Ты уже лечишь себя!");
 						
 						return false;
 					elseif (action == "healing") then
-						Schema:EasyText(player, "peru", "You are already healing somebody!");
+						Schema:EasyText(player, "peru", "Ты уже лечишь его!");
 						
 						return false;
 					elseif (action == "performing_surgery") then
-						Schema:EasyText(player, "peru", "You are already performing surgery on someone!");
+						Schema:EasyText(player, "peru", "Ты уже проводишь операцию на нем!");
 						
 						return false;
 					else
@@ -782,7 +782,7 @@ local ITEM = Clockwork.item:New();
 					
 					player:TakeDamageInfo(d);
 					
-					Schema:EasyText(player, "olive", "You stab yourself with the circuitry!");
+					Schema:EasyText(player, "olive", "Вы используете это на себе!");
 				end
 			end;
 		end;
@@ -794,15 +794,15 @@ local ITEM = Clockwork.item:New();
 					local action = Clockwork.player:GetAction(player);
 						
 					if (action == "heal") then
-						Schema:EasyText(player, "peru", "Your character is already healing!");
+						Schema:EasyText(player, "peru", "Ты уже лечишь себя!");
 						
 						return false;
 					elseif (action == "healing") then
-						Schema:EasyText(player, "peru", "You are already healing somebody!");
+						Schema:EasyText(player, "peru", "Ты уже лечишь его!");
 						
 						return false;
 					elseif (action == "performing_surgery") then
-						Schema:EasyText(player, "peru", "You are already performing surgery on someone!");
+						Schema:EasyText(player, "peru", "Ты уже проводишь на нем операцию!");
 						
 						return false;
 					else
@@ -824,15 +824,15 @@ local ITEM = Clockwork.item:New();
 			local action = Clockwork.player:GetAction(player);
 				
 			if (action == "heal") then
-				Schema:EasyText(player, "firebrick", "You cannot drop this while healing!");
+				Schema:EasyText(player, "firebrick", "Ты не можешь выкинуть это, пока лечишься!");
 				
 				return false;
 			elseif (action == "healing") then
-				Schema:EasyText(player, "firebrick", "You cannot drop this while healing somebody!");
+				Schema:EasyText(player, "firebrick", "Ты не можешь выкинуть это, пока лечишь кого-то!");
 				
 				return false;
 			elseif (action == "performing_surgery") then
-				Schema:EasyText(player, "firebrick", "You cannot drop this while performing surgery on someone!");
+				Schema:EasyText(player, "firebrick", "Ты не можешьв ыкинуть это, пока проводишь кому-то операцию!");
 				
 				return false;
 			end;
@@ -866,7 +866,7 @@ local ITEM = Clockwork.item:New();
 					player:TakeDamageInfo(d);
 					player:TakeItem(self, true);
 					
-					Schema:EasyText(player, "olive", "You shove the circuitry in your mouth and fuck up your teeth!");
+					Schema:EasyText(player, "olive", "Ты засовываешь микросхему в рот и начинаешь ее жевать! Зубам больно, но что поделать....!");
 				end
 			end;
 		end;

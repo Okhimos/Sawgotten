@@ -1,5 +1,6 @@
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gatekeeper Helmet"
+	ITEM.name = "Шлем Привратника"
+	ITEM.uniqueID = "gatekeeper_helmet";
 	ITEM.model = "models/begotten/headgroup_props/headgroup_gatekeeper_medhelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gatekeeper_helmet.png"
 	ITEM.weight = 1.5
@@ -8,7 +9,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 4
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "An iron helmet mass-produced in an ancient era, now commonly used by the Holy Order of the Gatekeepers."
+	ITEM.description = "Железный шлем, массово производившийся в древности. В настоящее время широко используется Священным Орденом Привратников."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -33,14 +34,15 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Helm of Atonement"
+	ITEM.name = "Шлем Мученика"
+	ITEM.uniqueID = "helm_of_atonement";
 	ITEM.model = "models/begotten/headgroups_props/sol_bellhelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/helm_of_atonement.png"
 	ITEM.weight = 4
 	ITEM.uniqueID = "helm_of_atonement"
 	ITEM.category = "Helms"
 	ITEM.headReplacement = "models/begotten/heads/sol_bellhelm.mdl";
-	ITEM.description = "A holy iron bell to be permanently fitted around a flagellant's head. Once a technique of torture and humiliation; the bell would be repeatedly struck, deafening and disorienting the victim. Now the Orthodoxy wears this helm willingly, striking fear into the hearts of the sane."
+	ITEM.description = "Священный железный колокол, который должен быть постоянно закреплен на голове бичующего. Когда-то это был метод пыток и унижений; в колокол многократно били, оглушая и дезориентируя жертву. Теперь православие носит этот шлем охотно, вселяя страх в сердца здравомыслящих."
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/skullhelm";
 	
@@ -74,14 +76,15 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Helm of Repentance"
+	ITEM.name = "Шлем Покаяния"
+	ITEM.uniqueID = "helm_of_repentance";
 	ITEM.model = "models/begotten/headgroups_props/sol_ironcladhelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/helm_of_repentance.png"
 	ITEM.weight = 4
 	ITEM.uniqueID = "helm_of_repentance"
 	ITEM.category = "Helms"
 	ITEM.headReplacement = "models/begotten/heads/sol_ironcladhelm.mdl";
-	ITEM.description = "An ironclad torture device that is bolted into the flayed faces of the accused. Inside the helm are various bloodied screws that can be further tightened to increase agony. It is now used by the flagellants of the Orthodoxy, who wear this torturous instrument to ensure their continued suffering."
+	ITEM.description = "Железное орудие пыток, которое привинчивается к освежеванным лицам обвиняемых. Внутри шлема находятся различные окровавленные винты, которые можно затянуть еще сильнее, чтобы усилить агонию. Теперь его используют флагелланты Православия, которые носят этот пыточный инструмент, чтобы обеспечить себе постоянные страдания."
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/skullhelm";
 	
@@ -115,7 +118,8 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Old Soldier Helm"
+	ITEM.name = "Шлем Старого Солдата"
+	ITEM.uniqueID = "old_soldier_helm";
 	ITEM.model = "models/begotten/headgroups_props/morion.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/old_soldier_helm.png"
 	ITEM.weight = 1
@@ -124,7 +128,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 8
 	ITEM.headSuffix = "_wanderer";
-	ITEM.description = "A rusty iron helmet that was famous in its time as the symbol of Lord Maximus' conquests, and perhaps even in times before that. Its sloping surfaces provide excellent protection by deflecting blows."
+	ITEM.description = "Ржавый железный шлем, который был известен в свое время как символ завоеваний Лорда Максимуса, а возможно, и во времена до этого. Его наклонные поверхности обеспечивают превосходную защиту, отражая удары."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 
@@ -148,13 +152,14 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Wanderer Crude Plate Helm"
+	ITEM.name = "Грубый Латный Шлем Странника"
+    ITEM.uniqueID = "wanderer_crude_plate_helm";
 	ITEM.model = "models/begotten/headgroups_props/crudeplate_helmet.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/crude_plate_helm.png"
 	ITEM.weight = 1.5
 	ITEM.category = "Helms"
 	ITEM.headReplacement = "models/begotten/heads/crudeplate_helmet.mdl";
-	ITEM.description = "A crudely constructed steel helmet, its design obviously inspired by older Empire of Light designs."
+	ITEM.description = "Грубо сделанный стальной шлем, дизайн которого, очевидно, вдохновлен более ранними вариантами шлемов из Империи Света."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -180,7 +185,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Hood"
+	ITEM.name = "Капюшон"
 	ITEM.model = "models/begotten/headgroup_props/headgroup_wanderer_hood.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/hood.png"
 	ITEM.weight = 0.5
@@ -189,7 +194,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 1
 	ITEM.headSuffix = "_wanderer";
-	ITEM.description = "A ragged hood commonly worn by those who inhabit the Wasteland to protect themselves from the elements."
+	ITEM.description = "Рваный капюшон, который обычно носят обитатели Пустоши, чтобы защитить себя от стихии."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	ITEM.itemSpawnerInfo = {category = "Helms", rarity = 300};
@@ -198,7 +203,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Masked Hood"
+	ITEM.name = "Капюшон с Маской"
 	ITEM.model = "models/begotten/headgroup_props/headgroup_wanderer_hood2.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/hood_mask.png"
 	ITEM.weight = 0.5
@@ -207,7 +212,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 2
 	ITEM.headSuffix = "_wanderer";
-	ITEM.description = "A ragged hood and bandana commonly worn by those who inhabit the Wasteland to protect themselves from the elements."
+	ITEM.description = "Рваный капюшон и бандана, которые обычно носят обитатели Пустоши, чтобы защитить себя от стихии."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	ITEM.itemSpawnerInfo = {category = "Helms", rarity = 800};
@@ -216,14 +221,14 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Skintape Mask"
+	ITEM.name = "Маска Людоеда"
 	ITEM.model = "models/begotten/headgroups_props/skintape_helmet.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/skintape_mask.png"
 	ITEM.weight = 0.5
 	ITEM.uniqueID = "skintape_mask"
 	ITEM.category = "Helms"
 	ITEM.headReplacement = "models/begotten/heads/skintape_helmet.mdl";
-	ITEM.description = "The horrifying creation of a twisted mind, this mask is made from the face of a cannibalized victim. Although it has very little protective value, it is sure to strike fear into the hearts of the wearer's future meals."
+	ITEM.description = "Ужасающее творение извращенного ума, эта маска сделана из лица съеденной жертвы. Хотя она имеет очень мало защитной ценности, она наверняка вселит страх в сердца будущих жертв владельца."
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	
 	ITEM.effectiveLimbs = {
@@ -242,7 +247,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "County District Hat"
+	ITEM.name = "Шляпа Низшего Уезда"
 	ITEM.model = "models/begotten/headgroup_props/headgroup_emp_witch_hunter_hat_01.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_hat_1.png"
 	ITEM.weight = 0.5
@@ -251,7 +256,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 1
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "A tall leather watchtower hat embroidered with the markings of the Second Inquisition."
+	ITEM.description = "Высокая кожаная шляпа, украшенная вышитыми знаками Второй инквизиции."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	ITEM.itemSpawnerInfo = {category = "Helms", rarity = 350, bNoSupercrate = true};
@@ -260,7 +265,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Inquisitorial Hat"
+	ITEM.name = "Шляпа Инквизитора"
 	ITEM.model = "models/begotten/headgroup_props/headgroup_emp_witch_hunter_hat_02.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_hat_2.png"
 	ITEM.weight = 0.5
@@ -269,7 +274,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 2
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "A slouch hat used by some members of the Holy Order of the Glaze's Inquisitors."
+	ITEM.description = "Широкополая шляпа, которую носили некоторые члены Священного Ордена Инквизиторов Сияния."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 		
@@ -277,7 +282,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Inquisitorial Hat (Black)"
+	ITEM.name = "Черная Шляпа Инквизитора"
 	ITEM.model = "models/begotten/headgroups_props/headgroup_emp_witch_hunter_hat_02_black.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_hat_2_black.png"
 	ITEM.weight = 0.5
@@ -286,7 +291,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 6
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "A slouch hat used by some members of the Holy Order of the Glaze's Inquisitors."
+	ITEM.description = "Широкополая шляпа, которую носили некоторые члены Священного Ордена Инквизиторов Сияния. Конкретно этот предмет приобрел темный оттенок."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 		
@@ -294,7 +299,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Inquisitorial Hat (White)"
+	ITEM.name = "Светлая Шляпа Инквизитора"
 	ITEM.model = "models/begotten/headgroups_props/headgroup_emp_witch_hunter_hat_02_white.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_hat_2_white.png"
 	ITEM.weight = 0.5
@@ -303,7 +308,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 8
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "A slouch hat used by some members of the Holy Order of the Glaze's Inquisitors."
+	ITEM.description = "Широкополая шляпа, которую носили некоторые члены Священного Ордена Инквизиторов Сияния. Выглядит просто прекрасно."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 		
@@ -311,7 +316,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Exquisite County District Hat"
+	ITEM.name = "Шляпа Высшего Уезда"
 	ITEM.model = "models/begotten/headgroup_props/headgroup_emp_witch_hunter_hat_03.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_hat_3.png"
 	ITEM.weight = 0.5
@@ -320,7 +325,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 3
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "An ornate watchtower hat used by distinguished members of the Holy Order of the Glaze's Inquisitors."
+	ITEM.description = "Прекрасная шляпа из дорогих материалов! Ах, как великолепно!"
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 		
@@ -328,7 +333,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Exquisite County District Hat (Black)"
+	ITEM.name = "Черная Шляпа Высшего Уезда"
 	ITEM.model = "models/begotten/headgroups_props/headgroup_emp_witch_hunter_hat_03_black.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_hat_3_black.png"
 	ITEM.weight = 0.5
@@ -337,7 +342,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 7
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "An ornate watchtower hat used by distinguished members of the Holy Order of the Glaze's Inquisitors."
+	ITEM.description = "Прекрасная шляпа из дорогих материалов! Но почему она черная...?"
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 		
@@ -345,7 +350,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Exquisite County District Hat (White)"
+	ITEM.name = "Светлая Шляпа Высшего Уезда"
 	ITEM.model = "models/begotten/headgroups_props/headgroup_emp_witch_hunter_hat_03_white.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_hat_3_white.png"
 	ITEM.weight = 0.5
@@ -354,7 +359,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 9
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "An ornate watchtower hat used by distinguished members of the Holy Order of the Glaze's Inquisitors."
+	ITEM.description = "Прекрасная шляпа из дорогих материалов, инкрустированая самым настоящим золотом. Великолепно!"
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 		
@@ -362,7 +367,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Scrap Helmet"
+	ITEM.name = "Скрап-Шлем"
 	ITEM.model = "models/begotten/headgroup_props/scrapperhelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scrap_helmet.png"
 	ITEM.weight = 0.5
@@ -371,7 +376,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 6
 	ITEM.headSuffix = "_wanderer";
-	ITEM.description = "A makeshift helmet made of various scrap found from the Wasteland."
+	ITEM.description = "Самодельный шлем, сделанный из разного хлама, найденного в Пустоши."
 	ITEM.excludeSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -396,7 +401,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Wanderer Cap"
+	ITEM.name = "Смешная Шапка Странника"
 	ITEM.model = "models/begotten/headgroup_props/wanderercap.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/wanderer_cap.png"
 	ITEM.weight = 0.5
@@ -405,7 +410,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 3
 	ITEM.headSuffix = "_wanderer";
-	ITEM.description = "A leather hood used in past times as a coif by Knights of Sol, but now more commonly used by Wanderers."
+	ITEM.description = "Кожаный чепец, который в прошлом использовали в качестве подшлемника Рыцари Солнца, но сейчас его чаще всего используют Странники."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	
@@ -428,7 +433,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Mail Coif"
+	ITEM.name = "Кольчужный Койф"
 	ITEM.model = "models/begotten/headgroup_props/mailcoif.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/mail_coif.png"
 	ITEM.weight = 1
@@ -437,7 +442,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 4
 	ITEM.headSuffix = "_wanderer";
-	ITEM.description = "A chainmail coif that provides some protection to the sides of the face."
+	ITEM.description = "Кольчужный чепец, обеспечивающий некоторую защиту головы."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 
@@ -461,7 +466,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Plate Helmet & Mail Coif"
+	ITEM.name = "Шлем с Кольчужным Койфом"
 	ITEM.model = "models/begotten/headgroup_props/platehelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/plate_helmet_mail_coif.png"
 	ITEM.weight = 2
@@ -470,7 +475,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 5
 	ITEM.headSuffix = "_wanderer";
-	ITEM.description = "An iron helmet atop a mail coif. It provides good protection except for the face."
+	ITEM.description = "Железный шлем поверх кольчужного койфа. Обеспечивает хорошую защиту, разве что не лица."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 
@@ -493,7 +498,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Spangenhelm"
+	ITEM.name = "Спангенхельм"
 	ITEM.model = "models/begotten/headgroups_props/spangenhelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/spangenhelm.png"
 	ITEM.weight = 2
@@ -502,7 +507,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 7
 	ITEM.headSuffix = "_wanderer";
-	ITEM.description = "A reinforced steel helmet with a nose guard, noted for its ease of production relative to its effectiveness."
+	ITEM.description = "Усиленный стальной шлем с защитой носа, известный своей дешевизной и эффективностью."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 
@@ -526,7 +531,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Fine Gatekeeper Helmet"
+	ITEM.name = "Хороший Шлем Привратника"
 	ITEM.model = "models/begotten/headgroup_props/gatekeeperfinehelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/fine_gatekeeper_helmet.png"
 	ITEM.weight = 1.5
@@ -535,7 +540,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 5
 	ITEM.headSuffix = "_glaze";
-	ITEM.description = "A more robust variant of the Gatekeeper Helmet made with fine steel."
+	ITEM.description = "Более прочный вариант шлема Привратника, изготовленный из высококачественной стали."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -562,14 +567,14 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Knight Helmet"
+	ITEM.name = "Рыцарский Шлем"
 	ITEM.model = "models/begotten/headgroups_props/knight_helmet.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/knight_plate_helmet.png"
 	ITEM.weight = 1.5
 	ITEM.uniqueID = "knight_helmet"
 	ITEM.category = "Helms"
 	ITEM.headReplacement = "models/begotten/heads/knight_helmet.mdl";
-	ITEM.description = "A Gothic helmet for use with the rest of a Knight's armor."
+	ITEM.description = "Готический шлем, используемый с остальными рыцарскими доспехами."
 	ITEM.requireFaction = {"Holy Hierarchy"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -594,14 +599,14 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Knight Justicar Helmet"
+	ITEM.name = "Шлем Юстициария"
 	ITEM.model = "models/begotten/headgroups_props/knight_justicar_helmet.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/knight_justicar_plate_helmet.png"
 	ITEM.weight = 1.5
 	ITEM.uniqueID = "knight_justicar_helmet"
 	ITEM.category = "Helms"
 	ITEM.headReplacement = "models/begotten/heads/knight_justicar_helmet.mdl";
-	ITEM.description = "Elite blackened steel adorned with the colors of a noble household."
+	ITEM.description = "Элитная черненая сталь, украшенная цветами знатного рода. Просто прекрасно."
 	ITEM.requireFaction = {"Holy Hierarchy"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
 	ITEM.overlay = "begotten/zomboverlay/gatekeep1";

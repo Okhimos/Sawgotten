@@ -36,12 +36,12 @@ function ENT:HUDPaintTargetID(x, y, alpha)
 	local colorWhite = Clockwork.option:GetColor("white");
 	local frequency = self:GetFrequency();
 	
-	y = Clockwork.kernel:DrawInfo("Radio", x, y, colorTargetID, alpha);
+	y = Clockwork.kernel:DrawInfo("Радиостанция", x, y, colorTargetID, alpha);
 	
 	if (self:IsCrazy()) then
 		y = Clockwork.kernel:DrawInfo(tostring(crazyNumber), x, y, colorWhite, alpha);
 	elseif (frequency == 0) then
-		y = Clockwork.kernel:DrawInfo("This radio has no frequency.", x, y, colorWhite, alpha);
+		y = Clockwork.kernel:DrawInfo("Эта радиостанция не имеет частоты.", x, y, colorWhite, alpha);
 	else
 		local faction = Clockwork.Client:GetFaction();
 		

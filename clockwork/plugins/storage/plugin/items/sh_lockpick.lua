@@ -1,11 +1,11 @@
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Lockpick";
+	ITEM.name = "Отмычка";
 	ITEM.uniqueID = "lockpick";
 	ITEM.model = "models/items/special/lockpicks/lockpick_01.mdl";
 	ITEM.weight = 0.2;
 	ITEM.category = "Tools";
 	ITEM.stackable = true;
-	ITEM.description = "A rusty lockpick, it looks like it will barely hold.";
+	ITEM.description = "Ржавая отмычка, похоже, она едва ли выдержет резкое движение.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png"
 	
 	ITEM.itemSpawnerInfo = {category = "Junk", rarity = 350, onGround = false};

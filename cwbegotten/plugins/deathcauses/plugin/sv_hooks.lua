@@ -4,66 +4,66 @@
 
 local DeathStrings = {
 	Fall = {
-		"Fell to death",
-		"Fell from a great height",
+		"Разбился",
+		"Разбился с высокой высоты как последний долбоеб",
 	},
 	Drowned = {
-		"Drowned to death",
-		"Ran out of oxygen",
+		"Утоплен",
+		"Решил поиграть в камбалу",
 	},
 	Fire = {
-		"Burned alive",
-		"Burned to a crisp",
-		"Cooked to death",
+		"Сожжен заживо",
+		"Сгорел до хрустящей корочки",
+		"Зажарен до смерти",
 	},
 	Default = {
-		"Corpsed",
-		"Turned into pink mist",
-		"Shot to death",
+		"Помер",
+		"Превратился в розовый порошок",
+		"Застрелен насмерть",
 	},
 	Stab = {
-		"Penetrated",
-		"Stabbed to death",
+		"Пропидорен тыкалкой",
+		"Заколот насмерть",
 	},
 	Club = {
-		"Bludgeoned to death",
-		"Had their skull smashed in",
-		"Hammered into the ground",
+		"Забит до смерти",
+		"Расхуярили череп",
+		"Заставили падать в хуй и молиться",
 	},
 	Poison = {
-		"Poisoned to death",
+		"Отравлен",
 	},
 	Acid = {
-		"Melted until nothing remained",
-		"Scourged with acid",
+		"Решил принять кислотную ванную",
+		"Бичевание кислотой",
 	},
 	Suicide = {
-		"Took the easy way out",
-		"Went straight to hell by killing themself",
+		"Решил пойти легким путем",
+		"Попробовал отсосать самому себе, но сдох нахуй.",
 	},
 	Prop = {
-		"Crushed to death",
-		"Flattened",
-		"Pulverized",
+		"Раздавлен под весом тещи",
+		"Раздавлен",
+		"Распидорасило",
 	},
 	Slash = {
-		"Cut down",
-		"Sliced to pieces",
-		"Cut to ribbons",
+		"Забили как поросю",
+		"Разрезали на кусочки",
+		"Разрезан на ленточки",
 	},
 	Electricity = {
-		"Shocked to death",
-		"Electrocuted",
+		"Решил трахнуть розетку",
+		"Сдох от тока",
 	},
 	Laser = {
-		"Shot with a laser",
+		"Расхуярен лазером",
 	},
 	Disintegrated = {
-		"Completely disintegrated",
+		"Испарился",
 	},
 	Explosion = {
-		"Blown up",
-		"Blown to pieces",
+		"Взорван",
+		"Ну и где этот ваш солнцепек?",
 	},
 }
 
@@ -145,20 +145,20 @@ function cwDeathCauses:PlayerDeath(player, inflictor, attacker, damageInfo)
 					if Clockwork.player:DoesRecognise(player, attacker) then
 						attackerName = attacker:Name();
 					elseif attackerFaction == "Goreic Warrior" then
-						attackerName = "an unknown Goreic Warrior";
+						attackerName = "неизвестным Горейским Войном";
 					elseif attackerFaction == "Children of Satan" then
-						attackerName = "an unknown Child of Satan";
+						attackerName = "неизвестным Войном Адского Легиона";
 					elseif attackerFaction == "Gatekeeper" or attackerFaction == "Pope Adyssa's Gatekeepers" then
-						attackerName = "an unknown Gatekeeper";
+						attackerName = "неизвестным Привратником";
 					elseif attackerFaction == "Holy Hierarchy" then
 						local attackerSubfaction = attacker:GetSubfaction();
 						
 						if attackerSubfaction == "Inquisition" then
-							attackerName = "an unknown Inquisitor";
+							attackerName = "неизвестным Инквизитором";
 						elseif attackerSubfaction == "Knights of Sol" then
-							attackerName =  "an unknown Knight of Sol";
+							attackerName =  "неизвестным Рыцарем Сола";
 						else
-							attackerName =  "an unknown Glazic nobleman";
+							attackerName =  "неизвестной Знатью Света";
 						end
 					else
 						attackerName = "an unknown assailant";
@@ -339,23 +339,23 @@ function cwDeathCauses:PlayerDeath(player, inflictor, attacker, damageInfo)
 
 						if IsValid(weapon) then
 							if itemTable then
-								player:SetCharacterData("deathcause", "Killed with a "..itemTable.name.." by "..attackerName..".");
+								player:SetCharacterData("deathcause", "Убит при помощи "..itemTable.name.." атакующим "..attackerName..".");
 								--printp("Killed with a "..itemTable.name.." by "..attackerName..".");
 							else
-								player:SetCharacterData("deathcause", "Killed with a "..weapon:GetPrintName().." by "..attackerName..".");
+								player:SetCharacterData("deathcause", "Убит при помощи "..weapon:GetPrintName().." атакующим "..attackerName..".");
 								--printp("Killed with a "..weapon:GetPrintName().." by "..attackerName..".");
 							end
 						else
-							player:SetCharacterData("deathcause", "Killed with a "..Clockwork.player:GetWeaponClass(attacker).." by "..attackerName..".");
-							--printp("Killed with a "..Clockwork.player:GetWeaponClass(attacker).." by "..attackerName..".");
+							player:SetCharacterData("deathcause", "Убитый косвенно при помощи "..Clockwork.player:GetWeaponClass(attacker).." атакующим "..attackerName..".");
+							--printp("Убит при помощи "..Clockwork.player:GetWeaponClass(attacker).." атакующим "..attackerName..".");
 						end
 					else
-						player:SetCharacterData("deathcause", "Killed indirectly by "..attackerName..".");
-						--printp("Killed indirectly by "..attackerName);
+						player:SetCharacterData("deathcause", "Убитый косвенно "..attackerName..".");
+						--printp("Убитый косвенно "..attackerName);
 					end
 				else
-					player:SetCharacterData("deathcause", "Died under mysterious circumstances.");
-					--printp("Died under mysterious circumstances.");
+					player:SetCharacterData("deathcause", "Хуй знает как, но сдох.");
+					--printp("Хуй знает как, но сдох.");
 				end
 			end
 		end

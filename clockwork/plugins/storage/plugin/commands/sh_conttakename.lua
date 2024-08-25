@@ -3,7 +3,7 @@
 --]]
 
 local COMMAND = Clockwork.command:New("ContTakeName")
-COMMAND.tip = "Take a container's name."
+COMMAND.tip = "Дай имя Контейнеру."
 COMMAND.flags = CMD_DEFAULT
 COMMAND.access = "a"
 
@@ -25,15 +25,15 @@ function COMMAND:OnRun(player, arguments)
 				trace.Entity:SetNetworkedString("Name", "")
 				cwStorage:SaveStorage()
 				
-				Schema:EasyText(player, "cornflowerblue", "This container's name has been removed.")
+				Schema:EasyText(player, "cornflowerblue", "Имя контейнера было Удалено!")
 			else
-				Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+				Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 			end
 		else
-			Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+			Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 		end
 	else
-		Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+		Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 	end
 end
 

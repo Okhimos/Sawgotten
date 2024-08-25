@@ -310,7 +310,7 @@ function cwSanity:PlayerDeath(player, inflictor, attacker)
 			
 			if (attacker:HasTrait("pacifist")) and !attacker.possessor then
 				attacker:HandleSanity(-40);
-				Clockwork.chatBox:Add(attacker, nil, "itnofake", "You feel your sanity slipping as you take the life of another.");
+				Clockwork.chatBox:Add(attacker, nil, "itnofake", "Ты чувствуешь как твой рассудок уходит с убийством другого человека.");
 			elseif (sanity >= 70) then
 				attacker:HandleSanity(-1)
 			end

@@ -21,12 +21,12 @@ function COMMAND:OnRun(player, arguments)
 							Clockwork.entity:MakeFlushToGround(entity, trace.HitPos, trace.HitNormal);
 						end;
 					else
-						Schema:EasyText(player, "firebrick", "You cannot drop your weapon that far away!");
+						Schema:EasyText(player, "firebrick", "Ты не можешь выкинуть свое оружие так далеко!");
 					end;
 			
 			
 				else
-					Schema:EasyText(player, "grey", "This is not a valid item!");
+					Schema:EasyText(player, "grey", "Это не действительный предмет!");
 				end;
 end;
 

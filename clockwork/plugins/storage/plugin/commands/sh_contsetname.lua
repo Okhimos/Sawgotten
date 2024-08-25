@@ -3,8 +3,8 @@
 --]]
 
 local COMMAND = Clockwork.command:New("ContSetName")
-COMMAND.tip = "Set a container's name."
-COMMAND.text = "[string Name]"
+COMMAND.tip = "Установите Название Контейнеру"
+COMMAND.text = "[Укажите Название для Контейнера]"
 COMMAND.flags = CMD_DEFAULT
 COMMAND.access = "a"
 COMMAND.arguments = 1
@@ -27,13 +27,13 @@ function COMMAND:OnRun(player, arguments)
 				trace.Entity:SetNetworkedString("Name", name)
 				cwStorage:SaveStorage()
 			else
-				Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+				Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 			end
 		else
-			Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+			Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 		end
 	else
-		Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+		Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 	end
 end
 

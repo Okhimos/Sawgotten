@@ -1,9 +1,9 @@
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Weak Lock";
+	ITEM.name = "Ужасный Замок";
 	ITEM.model = "models/props_wasteland/prison_padlock001a.mdl";
 	ITEM.weight = 0.2;
 	ITEM.category = "Locks";
-	ITEM.description = "A generic looking key lock.";
+	ITEM.description = "Обычный замок, к которому нужен ключ.";
 	ITEM.lockType = "key";
 	ITEM.lockTier = 1;
 

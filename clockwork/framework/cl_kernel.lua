@@ -971,7 +971,7 @@ do
 				--if player:HasTrait("possessed") then
 				if player:GetNetVar("possessed") then
 					table.insert(text, {
-						text = "*POSSESSED*", 
+						text = "*ОДЕРЖИМЫЙ*", 
 						color = Color(255, 0, 0, 255);
 					});
 				end
@@ -1742,9 +1742,9 @@ function Clockwork.kernel:HandleItemSpawnIconClick(itemTable, spawnIcon, Callbac
 	local itemFunctions = {}
 	local destroyName = Clockwork.option:GetKey("name_destroy")
 	local dropName = Clockwork.option:GetKey("name_drop")
-	local repairName = "Repair";
+	local repairName = "Починить";
 	local useName = Clockwork.option:GetKey("name_use")
-	local equipName = "Equip";
+	local equipName = "Экипировать";
 	local examineName = "Examine";
 	
 	itemFunctions[#itemFunctions + 1] = examineName;
@@ -1928,7 +1928,7 @@ function Clockwork.kernel:HandleItemSpawnIconClick(itemTable, spawnIcon, Callbac
 		local useText = (itemTable("useText") or "Use")
 		local dropText = (itemTable("dropText") or "Drop")
 		local destroyText = (itemTable("destroyText") or "Destroy")
-		local repairName = "Repair";
+		local repairName = "Починить";
 
 		if ((!useText and v == "Use") or (useText and v == useText)) then
 			local subMenu;
@@ -2369,7 +2369,7 @@ function Clockwork.kernel:DrawHealthBar()
 	end
 	
 	if (health > 0) then
-		Clockwork.bars:Add("HEALTH", Color(179, 46, 49, 255), "HEALTH", self.health, Clockwork.Client:GetMaxHealth(), self.health < 10, 2)
+		Clockwork.bars:Add("ЗДОРОВЬЕ", Color(179, 46, 49, 255), "ЗДОРОВЬЕ", self.health, Clockwork.Client:GetMaxHealth(), self.health < 10, 2)
 	end
 end
 

@@ -6,11 +6,11 @@
 --]]
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Stationary Radio";
+	ITEM.name = "Стационарное Радио";
 	ITEM.model = "models/props_lab/citizenradio_remake.mdl";
 	ITEM.weight = 5;
 	ITEM.category = "Communication"
-	ITEM.description = "An antique radio, do you think this'll still work?";
+	ITEM.description = "Старинное радио. Как вы думаете, оно еще будет работать?";
 
 	-- Called when a player uses the item.
 	function ITEM:OnUse(player, itemEntity)
@@ -44,7 +44,7 @@ local ITEM = Clockwork.item:New();
 				Clockwork.entity:MakeFlushToGround(entity, trace.HitPos, trace.HitNormal);
 			end;
 		else
-			Schema:EasyText(player, "firebrick", "You cannot drop a radio that far away!");
+			Schema:EasyText(player, "firebrick", "Ты не можешь оставить радио так далеко!");
 			
 			return false;
 		end;

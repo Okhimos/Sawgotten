@@ -8,7 +8,7 @@
 -- Called when the player attempts to hide in a container.
 function cwContainerHiding:AttemptHide(player, entity, bHide)
 	if player:GetPos():Distance(entity:GetPos()) > 128 then
-		Schema:EasyText(player, "peru", "You are too far to hide in this container.");
+		Schema:EasyText(player, "peru", "Вы слишком далеко, чтобы спрятаться в этом контейнере.");
 	
 		return;
 	end
@@ -81,7 +81,7 @@ function cwContainerHiding:OpenedStorage(player, entity)
 		self:AttemptHide(player, entity, false);
 		Clockwork.player:SetRagdollState(player, RAGDOLL_FALLENOVER, 6);
 		
-		Clockwork.chatBox:AddInTargetRadius(player, "me", " falls out of the closet they were hiding in!", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+		Clockwork.chatBox:AddInTargetRadius(player, "me", " выпадает из шкафа, в котором они прятался!", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 		
 		local sound = table.Random(self.startleSounds["female"]);
 		

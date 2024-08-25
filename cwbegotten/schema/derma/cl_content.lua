@@ -42,7 +42,7 @@ function PANEL:Rebuild()
 
 	self.disconnectButton = vgui.Create("cwLabelButton", self);
 	self.disconnectButton:SetFont(smallTextFont);
-	self.disconnectButton:SetText("DISCONNECT");
+	self.disconnectButton:SetText("ОТКЛЮЧИТЬСЯ");
 	self.disconnectButton.originalText = "DISCONNECT";
 	self.disconnectButton:SizeToContents();
 	if self.missingWorkshop then
@@ -68,7 +68,7 @@ function PANEL:Rebuild()
 		newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "VIEW CONTENT");
 		self.contentButton = vgui.Create("cwLabelButton", self);
 		self.contentButton:SetFont(smallTextFont);
-		self.contentButton:SetText("VIEW CONTENT");
+		self.contentButton:SetText("ПОСМОТРЕТЬ КОНТЕНТ");
 		self.contentButton.originalText = "VIEW CONTENT";
 		self.contentButton:SizeToContents();
 		self.contentButton:SetPos(scrW / 2 - (newsizew / 2), scrH * 0.925);		self.contentButton:SetMouseInputEnabled(true);
@@ -88,7 +88,7 @@ function PANEL:Rebuild()
 	newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "PROCEED ANYWAY");
 	self.proceedButton = vgui.Create("cwLabelButton", self);
 	self.proceedButton:SetFont(smallTextFont);
-	self.proceedButton:SetText("PROCEED ANYWAY");
+	self.proceedButton:SetText("ВСЕ РАВНО ПРОДОЛЖИТЬ");
 	self.proceedButton.originalText = "PROCEED ANYWAY";
 	self.proceedButton:SizeToContents();
 	if self.missingWorkshop then
@@ -125,28 +125,28 @@ end
 function PANEL:Paint(w, h)
 	draw.RoundedBox(0, 0, 0, w, h, colBlack);
 	
-	local newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(bigTextFont, "You are missing part of or all of the Begotten III content!");
-	draw.SimpleText("You are missing part of or all of the Begotten III content!", bigTextFont, (w * 0.5) - (newsizew / 2), h * 0.4, colRed);
+	local newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(bigTextFont, "У вас отсутствует часть или весь контент Begotten III!");
+	draw.SimpleText("У вас отсутствует часть или весь контент Begotten III!", bigTextFont, (w * 0.5) - (newsizew / 2), h * 0.4, colRed);
 	if self.missingMounts ~= "" then
 		if self.missingWorkshop then
-			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "You are also missing the following game mounts: "..self.missingMounts..".");
-			draw.SimpleText("You are also missing the following game mounts: "..self.missingMounts..".", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.51, colRed);
+			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Вам также не хватает контента из следующих игр: "..self.missingMounts..".");
+			draw.SimpleText("Вам также не хватает контента из следующих игр: "..self.missingMounts..".", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.51, colRed);
 
-			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "The center button will take you to the content's Steam Workshop page.");
-			draw.SimpleText("The center button will take you to the content's Steam Workshop page.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.61, colRed);
-			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Alternatively, you can disconnect or proceed onwards at your own risk.");
-			draw.SimpleText("Alternatively, you can disconnect or proceed onwards at your own risk.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.71, colRed);
+			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Центральная кнопка перенаправит вас на страницу Мастерской Steam с нужным контентом.");
+			draw.SimpleText("Центральная кнопка перенаправит вас на страницу Мастерской Steam с нужным контентом.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.61, colRed);
+			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "В качестве альтернатив вы можете отключиться или продолжить на свой страх и риск.");
+			draw.SimpleText("В качестве альтернатив вы можете отключиться или продолжить на свой страх и риск.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.71, colRed);
 		else
-			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "You are missing the following game mounts: "..self.missingMounts..".");
-			draw.SimpleText("You are missing the following game mounts: "..self.missingMounts..".", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.55, colRed);
-			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "You can disconnect or proceed onwards at your own risk.");
-			draw.SimpleText("You can disconnect or proceed onwards at your own risk.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.65, colRed);
+			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Вам также не хватает контента из следующих игр: "..self.missingMounts..".");
+			draw.SimpleText("Вам также не хватает контента из следующих игр: "..self.missingMounts..".", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.55, colRed);
+			newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "В качестве альтернатив вы можете отключиться или продолжить на свой страх и риск.");
+			draw.SimpleText("В качестве альтернатив вы можете отключиться или продолжить на свой страх и риск.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.65, colRed);
 		end
 	elseif self.missingWorkshop then
-		newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "The center button will take you to the content's Steam Workshop page.");
-		draw.SimpleText("The center button will take you to the content's Steam Workshop page.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.55, colRed);
-		newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Alternatively, you can disconnect or proceed onwards at your own risk.");
-		draw.SimpleText("Alternatively, you can disconnect or proceed onwards at your own risk.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.65, colRed);
+		newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Центральная кнопка перенаправит вас на страницу Мастерской Steam с нужным контентом.");
+		draw.SimpleText("Центральная кнопка перенаправит вас на страницу Мастерской Steam с нужным контентом..", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.55, colRed);
+		newsizew, newsizeH = Clockwork.kernel:GetCachedTextSize(smallTextFont, "В качестве альтернатив вы можете отключиться или продолжить на свой страх и риск.");
+		draw.SimpleText("В качестве альтернатив вы можете отключиться или продолжить на свой страх и риск.", smallTextFont, (w * 0.5) - (newsizew / 2), h * 0.65, colRed);
 	else
 		-- dunno how this would happen lol
 		netstream.Start("ContentBypass", true);

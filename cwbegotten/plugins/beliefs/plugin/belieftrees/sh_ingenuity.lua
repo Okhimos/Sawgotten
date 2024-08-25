@@ -4,16 +4,16 @@
 --]]
 
 local INGENUITY = cwBeliefs.beliefTrees:New("ingenuity")
-	INGENUITY.name = "Ingenuity";
+	INGENUITY.name = "Смекалка";
 	INGENUITY.color = Color(80, 70, 50);
 	INGENUITY.order = 5;
 	INGENUITY.size = {w = 378, h = 407};
 	INGENUITY.textures = {"ingenuity", "ingenuityarrows"};
 	INGENUITY.tooltip = {
-		{"Ingenuity", INGENUITY.color, "Civ5ToolTip4"},
-		{"Ingenuity is a measure of your character's craftiness, primarily affecting your character's effectiveness at Crafting. Upgrading this belief set will progressively unlock more crafting options. More Crafting options may become available if this belief set is paired with aptitude.", Color(225, 200, 200)},
-		{"\n\"Bobby all proud 'an cool with that 'ol apparatus back in the truck that laid him out with sweet social status, far from junior status. It be the saddest machine but nice with molasses in the power gauge, as well as the mathematics and administrative tactics.\"", Color(128, 90, 90, 240)},
-		{"\nBelief Tree Completion Bonus: Armor and weapon condition will no longer decay.", Color(50, 255, 50)}
+		{"Смекалка", INGENUITY.color, "Civ5ToolTip4"},
+		{"Смекалка — это мера мастерства вашего персонажа, в первую очередь влияющая на эффективность вашего персонажа в ремесле. Улучшение этого набора убеждений постепенно разблокирует больше возможностей для ремесла. Больше возможностей для ремесла может стать доступным, если этот набор убеждений сочетается с Сообразительностью.", Color(225, 200, 200)},
+		{"\n\"Бобби весь гордый и довольный этим старым аппаратом в грузовике, который позволил ему получить хороший социальный статус, который был далек от статуса младшего. Это будет самая грустная машина, с патокой в ​​датчике мощности, а также математикой и административной тактикой.\"", Color(128, 90, 90, 240)},
+		{"\nБонус за завершение древа верований: состояние брони и оружия больше не будет ухудшаться.", Color(50, 255, 50)}
 	};
 	INGENUITY.columnPositions = {
 		[1] = (INGENUITY.size.w - 4) * 0.1,
@@ -35,38 +35,38 @@ local INGENUITY = cwBeliefs.beliefTrees:New("ingenuity")
 	INGENUITY.beliefs = {
 		[1] = {
 			["cookist"] = {
-				name = "Cookist",
-				description = "Unlocks the crafting of cookable items.",
+				name = "Повар",
+				description = "Открывает возможность готовки.",
 				requirements = {"ingenious"},
 				row = 2,
 			},
 			["culinarian"] = {
-				name = "Culinarian",
-				description = "Unlocks master cooking recipes.",
+				name = "Кулинар",
+				description = "Открывает возможность готовить лучшую пищу.",
 				requirements = {"ingenious", "cookist"},
 				row = 3,
 			},
 		},
 		[2] = {
 			["powder_and_steel"] = {
-				name = "Powder and Steel",
-				description = "Unlocks the ability to load firearms.",
-				quote = "\"Almighty creator, deity, holiness, idol of mine. Give me power, spirit, allegiance with those who have disbanded from my ordnance of an army. Divine overseer, universal forces be with me. And for those demons, fight back in means to protect Hard-Glaze and society from its inevitable destruction. Dump the spiritual trophies for now, and unload the ammunitions to purify these unfaithful sinners of the land. Stockpile the explosives, magazine the rifles, warehouse the vehicles, but most of all, plant the inflorescence of Hard-Glaze society inside the dirt for future generations to come.\" - Lord Maximus XII",
+				name = "Порох и Сталь",
+				description = "Позволяет заряжать оружие.",
+				quote = "Всемогущий создатель, божество, святость, идол мой. Дай мне силу, дух, верность с теми, кто был расформирован из моей армейской артиллерии. Божественный надзиратель, вселенские силы будьте со мной. И для этих демонов, дать отпор означает защитить Стойкое Сияние и общество от его неминуемой гибели. Выбросьте пока духовные трофеи и разгрузите боеприпасы, чтобы очистить этих неверных грешников. Запасайте взрывчатку, храните винтовки, храните транспортные средства, но, прежде всего, посадите в грязи соцветия общества Стойкого Сияния для будущих поколений.. - Лорд Максимус XII",
 				iconOverride = "begotten/ui/belieficons/blessed_powder.png",
 				lockedSubfactions = {"Knights of Sol", "Clan Gore", "Clan Crast", "Clan Reaver", "Clan Harald", "Clan Grock"},
 				requirements = {"ingenious"},
 				row = 2,
 			},
 			["pistolier"] = {
-				name = "Pistolier",
-				description = "Massively reduces misfire chance for all firearms and prevents them from exploding.",
+				name = "Очищенное Оружие",
+				description = "Значительно снижает вероятность осечки для всех видов огнестрельного оружия и предотвращает его взрыв..",
 				lockedSubfactions = {"Knights of Sol", "Clan Gore", "Clan Crast", "Clan Reaver", "Clan Harald", "Clan Grock"},
 				requirements = {"ingenious", "powder_and_steel"},
 				row = 3,
 			},
 			["marksman"] = {
-				name = "Marksman",
-				description = "Greatly increases accuracy while standing still for all crossbows and firearms.",
+				name = "Снайпер",
+				description = "Значительно увеличивает точность стрельбы из всех арбалетов и огнестрельного оружия, при стрельбе стоя.",
 				lockedSubfactions = {"Knights of Sol", "Clan Gore", "Clan Crast", "Clan Reaver", "Clan Harald", "Clan Grock"},
 				requirements = {"ingenious", "powder_and_steel", "pistolier"},
 				row = 4,
@@ -74,46 +74,46 @@ local INGENUITY = cwBeliefs.beliefTrees:New("ingenuity")
 		},
 		[3] = {
 			["ingenious"] = {
-				name = "Ingenious",
-				description = "Unlocks the 'Crafting' mechanic and the ability to interact with traps. Unlocks the ability to utilize equipped lanterns as a light source on your hip.",
+				name = "Смекалистый",
+				description = "Разблокирует механику «Крафта» и возможность взаимодействовать с ловушками. Разблокирует возможность использовать фонари в качестве источника света на поясе.",
 				row = 1,
 			},
 			["craftsman"] = {
-				name = "Craftsman",
-				description = "Unlocks Tier II of crafting.",
+				name = "Ремесленник",
+				description = "Разблокирует II уровень крафта.",
 				requirements = {"ingenious"},
 				row = 2,
 			},
 			["mechanic"] = {
-				name = "Mechanic",
-				description = "Unlocks Tier III of crafting. Unlocks the ability to repair non-broken items by merging them in the inventory menu.",
+				name = "Механик",
+				description = "Открывает III уровень крафта. Открывает возможность чинить не сломанные предметы, объединяя их в меню инвентаря..",
 				requirements = {"ingenious", "craftsman"},
 				row = 3,
 			},
 			["artisan"] = {
-				name = "Artisan",
-				description = "Unlocks the crafting of masterworks. Also unlocks the ability to repair broken items.",
+				name = "Специалист",
+				description = "Открывает возможность создания шедевров. Также открывает возможность чинить сломанные предметы..",
 				requirements = {"ingenious", "craftsman", "mechanic"},
 				row = 4,
 			},
 		},
 		[4] = {
 			["smith"] = {
-				name = "Smith",
-				description = "Unlocks the ability to smelt Iron via crafting. Also unlocks the ability to melt down metal items at forges.",
+				name = "Подмастерье",
+				description = "Разблокирует возможность плавить железо через крафт. Также разблокирует возможность плавить предметы.",
 				iconOverride = "begotten/ui/belieficons/blacksmith.png",
 				requirements = {"ingenious"},
 				row = 2,
 			},
 			["blacksmith"] = {
-				name = "Blacksmith",
-				description = "Unlocks the ability to smelt Steel and Gold via crafting.",
+				name = "Кузнец",
+				description = "Разблокирует возможность плавить Сталь и Золото через крафт.",
 				requirements = {"ingenious", "smith"},
 				row = 3,
 			},
 			["master_blacksmith"] = {
-				name = "Master Blacksmith",
-				description = "Unlocks the ability to smelt Fine Steel via crafting.",
+				name = "Мастер-Кузнец",
+				description = "Разблокирует возможность плавить отличную сталь.",
 				iconOverride = "begotten/ui/belieficons/blacksmith.png",
 				requirements = {"ingenious", "smith", "blacksmith"},
 				row = 4,
@@ -121,14 +121,14 @@ local INGENUITY = cwBeliefs.beliefTrees:New("ingenuity")
 		},
 		[5] = {
 			["scour_the_rust"] = {
-				name = "Scour the Rust",
-				description = "Reduces armor and weapon condition decay by 50%.",
+				name = "Соскреби Ржавчину",
+				description = "Снижает ухудшение состояния брони и оружия на 50%.",
 				requirements = {"ingenious"},
 				row = 2,
 			},
 			["fortify_the_plate"] = {
-				name = "Fortify the Plate",
-				description = "Increases the protection value of all armor by 10 points.",
+				name = "Подгонка",
+				description = "Увеличивает показатель защиты всей брони на 10 единиц.",
 				iconOverride = "begotten/ui/belieficons/hauberk.png",
 				requirements = {"ingenious", "scour_the_rust"},
 				row = 3,

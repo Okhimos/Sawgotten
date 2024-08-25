@@ -46,7 +46,7 @@ if cwWeather.systemEnabled then
 					end
 				end
 				
-				Clockwork.chatBox:Add(playersInWeatherZones, nil, "event", "An acrid smell slowly begins to permeate the Wasteland, foreshadowing the imminent arrival of acid rain.");
+				Clockwork.chatBox:Add(playersInWeatherZones, nil, "event", "Едкий запах медленно начинает распространяться по Пустоши, предвещая скорое появление кислотного дождя.");
 			end,
 			leadupTime = 60,
 		},
@@ -91,7 +91,7 @@ if cwWeather.systemEnabled then
 				end
 			
 				netstream.Start(playersInWeatherZones, "EmitSound", {name = "begotten2/doom_moan.wav", pitch = 90, level = 80});
-				Clockwork.chatBox:Add(playersInWeatherZones, nil, "event", "The distant howls of Begotten thralls can be heard throughout the land. Something evil is coming.");
+				Clockwork.chatBox:Add(playersInWeatherZones, nil, "event", "Отдаленные вопли порожденных слышны по всей земле. Что-то злое приближается.");
 			end,
 			leadupTime = 60,
 		},

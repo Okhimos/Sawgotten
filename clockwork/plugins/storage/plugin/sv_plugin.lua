@@ -16,9 +16,9 @@ netstream.Hook("ContainerPassword", function(player, data)
 
 			if (entity.cwPassword == password) then
 				cwStorage:OpenContainer(player, entity, containerWeight)
-				Clockwork.kernel:PrintLog(LOGTYPE_MINOR, player:Name().." has opened the passworded container "..entity:GetNetworkedString("Name").." by using a password.");
+				Clockwork.kernel:PrintLog(LOGTYPE_MINOR, player:Name().." открыл запароленный контейнер "..entity:GetNetworkedString("Name").." используя пароль.");
 			else
-				Schema:EasyText(player, "peru", "The password you entered was incorrect!")
+				Schema:EasyText(player, "peru", "Введенный вами пароль неверный!")
 			end
 		end
 	end
@@ -272,21 +272,21 @@ function cwStorage:StartLockpick(player)
 			local lockstrength = entity.cwLockTier or 1;
 
 			if (lockstrength == 4) then
-				Schema:EasyText(player, "peru", "You cannot lockpick this lock!");
+				Schema:EasyText(player, "peru", "Этот замок невозможно взломать!");
 				return;
 			end;
 			
 			if (!player:HasItemByID("lockpick")) then
-				Schema:EasyText(player, "chocolate", "You have no lockpick!");
+				Schema:EasyText(player, "chocolate", "У тебя нет отмычки!");
 				return;
 			end;
 			
 			if cwBeliefs and player.HasBelief then
 				if (lockstrength == 3) and not player:HasBelief("safecracker") then
-					Schema:EasyText(player, "chocolate", "You need the 'Safecracker' belief to pick Tier III locks!");
+					Schema:EasyText(player, "chocolate", "Чтобы взломать замки уровня III, вам понадобится убеждение «Взломщика сейфов»!");
 					return;
 				elseif not player:HasBelief("sly_fidget") then
-					Schema:EasyText(player, "chocolate", "You need the 'Sly Fidget' belief to pick Tier I and Tier II locks!");
+					Schema:EasyText(player, "chocolate", "Чтобы взломать замки I и II уровня, вам понадобится убеждение «Хитрый Непоседа»!");
 					return;
 				end
 			end
@@ -300,10 +300,10 @@ function cwStorage:StartLockpick(player)
 			player.Lockpicking = true;
 			netstream.Start(player, "StartLockpick", {entity = entity, lockTier = lockstrength});
 		else
-			Schema:EasyText(player, "peru", "You cannot lockpick for another "..math.ceil(player.LockpickCooldown - CurTime()).." seconds!");
+			Schema:EasyText(player, "peru", "Ты не можешь взломать замок еще "..math.ceil(player.LockpickCooldown - CurTime()).." секунд!");
 		end;
 	else
-		Schema:EasyText(player, "peru", "You cannot lockpick this container for another "..math.ceil(entity.LockpickCooldown - CurTime()).." seconds!");
+		Schema:EasyText(player, "peru", "Ты не можешь взломать замок еще "..math.ceil(entity.LockpickCooldown - CurTime()).." секунд!");
 	end;
 end;
 
@@ -334,18 +334,18 @@ function cwStorage:LockpickFail(player, timeout)
 		
 		if (timeout == true) then
 			if entity.cwLockTier >= 3 and (math.random(1, 10) == 1) then
-				message = "You fail to pick the lock, and in the process your lockpick breaks!";
+				message = "Вам не удалось взломать замок, и в процессе отмычка сломалась!";
 				bDidBreak = true;
 			else
 				local itemTable = player:FindItemByID("lockpick");
 				local quality = itemTable:GetCondition();
 				
 				if (quality <= 10) then
-					message = "You fail to pick the lock, and in the process your lockpick breaks from overuse!";
+					message = "Вам не удается взломать замок, и в процессе отмычка ломается от чрезмерного напряжения!";
 					bDidBreak = true;
 				else
 					itemTable:TakeCondition(10);
-					Schema:EasyText(player, "peru", "You fail to pick the lock!");
+					Schema:EasyText(player, "peru", "Вам не удается взломать замок!");
 				end;
 			end;
 		end;
@@ -392,11 +392,11 @@ function cwStorage:FinishLockpick(player, entity)
 	if (cwStorage.containerList[model]) then
 		local containerWeight = cwStorage.containerList[model][1];
 		
-		Schema:EasyText(player, "olivedrab", "You successfully lockpick the container.");
+		Schema:EasyText(player, "olivedrab", "Вы успешно вскрываете контейнер.");
 		cwStorage:OpenContainer(player, entity, containerWeight);
 		
 		if entity.cwPassword then
-			Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has opened the passworded container "..entity:GetNetworkedString("Name").." by lockpicking it!");
+			Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." открыл запароленный контейнер "..entity:GetNetworkedString("Name").." взломав тот!");
 		end
 		
 		if entity.cwLockType == "none" then
@@ -414,17 +414,17 @@ function cwStorage:TryKey(player, itemTable, entity)
 	local model = entity:GetModel();
 
 	if (!cwStorage.containerList[model]) then
-		Schema:EasyText(player, "firebrick", "You cannot unlock this object!");
+		Schema:EasyText(player, "firebrick", "Вы не можете открыть этот объект!");
 		return;
 	end;
 	
 	if (!entity.cwPassword) then
-		Schema:EasyText(player, "peru", "This container does not have a lock!");
+		Schema:EasyText(player, "peru", "У этого контейнера нет замка!");
 		return;
 	end;
 	
 	if (entity.cwLockType != "key") then
-		Schema:EasyText(player, "peru", "You cannot use a key on this type of lock!");
+		Schema:EasyText(player, "peru", "К этому типу замка нельзя использовать ключ!");
 		return;
 	end;
 	
@@ -446,7 +446,7 @@ function cwStorage:ApplyLock(player, itemTable, entity)
 	end;
 
 	if (entity.cwPassword) then
-		Schema:EasyText(player, "peru", "This container already has a lock on it!");
+		Schema:EasyText(player, "peru", "На этом контейнере уже есть замок!");
 		return;
 	end;
 	
@@ -454,11 +454,11 @@ function cwStorage:ApplyLock(player, itemTable, entity)
 	local lockType = itemTable.lockType;
 	
 	if (!cwStorage.containerList[model]) then
-		Schema:EasyText(player, "peru", "You cannot apply a lock to this!");
+		Schema:EasyText(player, "peru", "Вы не можете применить к этому замок!");
 		return;
 	end;
 	
-	Clockwork.dermaRequest:RequestConfirmation(player, "Lock Confirmation", "Are you sure you want to put a "..string.lower(itemTable.name).." on this "..string.lower(cwStorage.containerList[model][2]).."?", function()
+	Clockwork.dermaRequest:RequestConfirmation(player, "Lock Confirmation", "Вы уверены, что хотите поставить "..string.lower(itemTable.name).." на "..string.lower(cwStorage.containerList[model][2]).."?", function()
 		if (lockType == "key") then
 			local useSound = itemTable.useSound or "items/battery_pickup.wav";
 			local lockTier = itemTable.lockTier;
@@ -475,7 +475,7 @@ function cwStorage:ApplyLock(player, itemTable, entity)
 			entity.cwLockType = lockType;
 			entity.cwLockTier = lockTier;
 			
-			Schema:EasyText(player, "indianred", "You lock the padlock with a key that came with it. You only have one key, so do not lose it.");
+			Schema:EasyText(player, "indianred", "Вы запираете замок ключом, который идет в комплекте. У вас только один ключ, так что не теряйте его.");
 		else
 			player.LockSet = true;
 			player.ActiveContainer = entity;
@@ -509,7 +509,7 @@ function cwStorage:MakeKeyCopy(player, itemTable)
 		newKey:SetData("KeyName", string.sub(itemID, string.len(itemID) - 1, string.len(itemID)));
 		newKey:SetData("bIsCopy", true);
 		
-		Schema:EasyText(player, "olivedrab", "You make a copy of the key.");
+		Schema:EasyText(player, "olivedrab", "Вы делаете копию ключа.");
 	end;
 end;
 
@@ -523,7 +523,7 @@ function cwStorage:HandleContainerLock(player, data)
 	end;
 	
 	if (!IsValid(entity)) then
-		Schema:EasyText(player, "darkgrey", "You must select a valid lock to interact with!");
+		Schema:EasyText(player, "darkgrey", "Для взаимодействия необходимо выбрать действительный замок!");
 		return;
 	end;
 
@@ -550,7 +550,7 @@ function cwStorage:HandleContainerLock(player, data)
 		
 		if (lockType == "combo") then
 			if (!data.one or !data.two or !data.three or !data.four) then
-				Schema:EasyText(player, "peru", "You must specify a four digit combination!");
+				Schema:EasyText(player, "peru", "Необходимо указать четырехзначную комбинацию!");
 				return;
 			end;
 			
@@ -560,14 +560,14 @@ function cwStorage:HandleContainerLock(player, data)
 			entity.cwPassword = tostring(password);
 			entity.cwLockType = lockType;
 
-			Schema:EasyText(player, "indianred", "You have set a 4-digit passcode for this lock: "..password);
+			Schema:EasyText(player, "indianred", "Вы установили 4-значный пароль для этого замка.: "..password);
 		elseif (lockType == "turn") then
 			local valueTable = {data.one, data.two, data.three};
 			local password = table.concat(valueTable, "");
 			
 			for k, value in pairs (valueTable) do
 				if (value > 40 or value < 0) then
-					Schema:EasyText(player, "peru", "Your combination must contain numbers between 0 and 40!");
+					Schema:EasyText(player, "peru", "Ваша комбинация должна содержать цифры от 0 до 40!");
 					
 					return;
 				else
@@ -578,7 +578,7 @@ function cwStorage:HandleContainerLock(player, data)
 			entity.cwPassword = tostring(password);
 			entity.cwLockType = lockType;
 
-			Schema:EasyText(player, "indianred", "You have set a 3 number passcode for this lock: "..(data.one.."-"..data.two.."-"..data.three));
+			Schema:EasyText(player, "indianred", "Вы установили трехзначный код доступа для этого замка.: "..(data.one.."-"..data.two.."-"..data.three));
 		end;
 
 		local useSound = lockItem.useSound or "items/battery_pickup.wav";
@@ -591,7 +591,7 @@ function cwStorage:HandleContainerLock(player, data)
 	else
 		if (lockType == "combo" or lockType == "turn") then
 			if (!data.one or !data.two or !data.three) then
-				Schema:EasyText(player, "peru", "You must specify a "..(string.find(lockType, "combo") and "four" or "three").." digit combination!");
+				Schema:EasyText(player, "peru", "Вы должны указать "..(string.find(lockType, "combo") and "four" or "three").." комбинацию!");
 				
 				return;
 			end;
@@ -600,7 +600,7 @@ function cwStorage:HandleContainerLock(player, data)
 			
 			if (lockType == "combo") then
 				if (!data.four) then
-					Schema:EasyText(player, "peru", "You must specify a four digit combination!");
+					Schema:EasyText(player, "peru", "Необходимо указать четырехзначную комбинацию!");
 					return;
 				else
 					valueTable[#valueTable + 1] = data.four;
@@ -619,7 +619,7 @@ function cwStorage:HandleContainerLock(player, data)
 					entity:SetNWBool("unlocked", true);
 				end;
 			else
-				Schema:EasyText(player, "peru", "You have entered an incorrect combination!");
+				Schema:EasyText(player, "peru", "Вы ввели неверную комбинацию!");
 			end;
 		elseif (lockType == "key") then
 			local password = entity.cwPassword;
@@ -634,7 +634,7 @@ function cwStorage:HandleContainerLock(player, data)
 					entity:SetNWBool("unlocked", true);
 				end;
 			else
-				Schema:EasyText(player, "peru", "This key does not fit the lock of this container!");
+				Schema:EasyText(player, "peru", "Этот ключ не подходит к замку этого контейнера!");
 			end;
 		end;
 	end;
@@ -700,9 +700,9 @@ netstream.Hook("ContainerPassword", function(player, data)
 			
 			if (entity.cwPassword == password) then
 				cwStorage:OpenContainer(player, entity, containerWeight);
-				Clockwork.kernel:PrintLog(LOGTYPE_MINOR, player:Name().." has opened the passworded container "..entity:GetNetworkedString("Name").." by using a password.");
+				Clockwork.kernel:PrintLog(LOGTYPE_MINOR, player:Name().." открыл запароленный контейнер "..entity:GetNetworkedString("Name").." используя пароль.");
 			else
-				Schema:EasyText(player, "peru", "You have entered an incorrect password!");
+				Schema:EasyText(player, "peru", "Вы ввели неверный пароль!");
 			end;
 		end;
 	end;

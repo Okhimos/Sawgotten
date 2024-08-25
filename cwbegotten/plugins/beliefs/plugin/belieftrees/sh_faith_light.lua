@@ -11,9 +11,9 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 	LIGHT.textures = {"light", "faithlightarrows"};
 	LIGHT.headerFontOverride = "nov_IntroTextSmallaaafaa";
 	LIGHT.tooltip = {
-		{"Faith of the Light", LIGHT.color, "Civ5ToolTip4"},
-		{"Each faith has a unique skill set, unlocking character abilities, rituals, and generally improving stats overall. One may also branch into subfaiths, though openly practicing these subfaiths may see your character deemed a heretic by the relevant religious authorities.", Color(225, 200, 200)},
-		{"\n\"The holy city of Glaze in Hell's domain. These are my dual swords to be crossed, indeed over her chest in resolution to a final cause. In a beating heart of shields.\"", Color(128, 90, 90, 240)},
+		{"Вера в Свет", LIGHT.color, "Civ5ToolTip4"},
+		{"Каждая вера имеет уникальный набор навыков, открывающих способности персонажа, ритуалы и в целом улучшающих статистику в целом. Можно также разделиться на подконфессии, хотя открытое исповедание этих подконфессий может привести к тому, что ваш персонаж будет признан еретиком соответствующими религиозными властями.", Color(225, 200, 200)},
+		{"\n\"Святой город Сияния во владениях Ада. Это мои два меча, которые нужно скрестить, действительно, на груди в решимости к последней цели. В бьющемся сердце щитов.\"", Color(128, 90, 90, 240)},
 		{"", Color(50, 255, 50)}
 	};
 	LIGHT.columnPositions = {
@@ -41,27 +41,27 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 	LIGHT.beliefs = {
 		[1] = {
 			["repentant"] = {
-				name = "Repentant",
+				name = "Раскаявшийся",
 				subfaith = "Sol Orthodoxy",
-				description = "Unlocks Tier I 'Faith of the Light' Rituals. Unlocks the ability to equip Sol Orthodoxy armors and sacrificial weapons, as well as the ability to dual-wield one-handed weapons.",
+				description = "Открывает ритуалы «Вера Света» уровня I. Открывает возможность экипировать доспехи и жертвенное оружие Солнечного Православия, а также возможность использовать одноручное оружие в двух руках.",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Holy Hierarchy"},
 				lockedSubfactions = {"Praeventor"},
 				requirements = {"sol_orthodoxy"},
 				row = 2,
 			},
 			["flagellant"] = {
-				name = "Flagellant",
+				name = "Флагеллант",
 				subfaith = "Sol Orthodoxy",
-				description = "Unlocks Tier II 'Faith of the Light' Rituals. Unlocks the ability to self-flagellate. Twice the amount of damage dealt to yourself with flagellation will be returned as stamina, and a third of the damage will restore your sanity.",
+				description = "Открывает ритуалы «Вера Света» II уровня. Открывает возможность самобичевания. Удвоенный урон, нанесенный вам бичеванием, будет возвращен в виде выносливости, а треть урона восстановит ваше здравомыслие.",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Holy Hierarchy"},
 				lockedSubfactions = {"Praeventor"},
 				requirements = {"sol_orthodoxy", "repentant"},
 				row = 3,
 			},
 			["extinctionist"] = {
-				name = "Extinctionist",
+				name = "Экстинкционист",
 				subfaith = "Sol Orthodoxy",
-				description = "Unlocks Tier III 'Faith of the Light' Rituals and unique Sol Orthodoxy Rituals. While on fire, your melee attacks will ignite any hit enemy even if they are blocking (not counting deflections/parries).",
+				description = "Открывает ритуалы «Вера Света» уровня III и уникальные ритуалы Солнечного Православия. Пока вы горите, ваши атаки ближнего боя подожгут любого пораженного врага, даже если он блокирует (не считая отражений/парирований)..",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Holy Hierarchy"},
 				lockedSubfactions = {"Praeventor"},
 				requirements = {"sol_orthodoxy", "repentant", "flagellant"},
@@ -70,10 +70,10 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 		},
 		[2] = {
 			["sol_orthodoxy"] = {
-				name = "Sol Orthodoxy",
+				name = "Солнечное Православие",
 				subfaith = "Sol Orthodoxy",
-				description = "Selects 'Sol Orthodoxy' as your subfaith. Unlocks the ability to pray. Unlocks the ability to commit suicide. Unlocks faith gain for each point of damage inflicted upon you. Faith gain from all sources will be increased slightly if your hunger or thirst values are below 40%, moreso if both are.",
-				quote = "Sol Orthodoxy is a corruption of the traditional Glazic beliefs. It dictates that no mortal being will ever achieve enlightenment as long as they still draw breath. Men are encouraged to repent for the terrible sinful nature they exhibit, through flagellation and even suicide. The Glaze of Sol will shine again, but only when there are no living eyes to see it.",
+				description = "Выбирая «Солнечное Православие» в качестве вашей субконфессии, разблокирует возможность молиться. Разблокирует возможность совершить самоубийство. Разблокирует прирост веры за каждую единицу нанесенного вам урона. Прирост веры из всех источников будет немного увеличен, если ваши значения голода или жажды ниже 40%, и тем более, если оба ниже.",
+				quote = "Солнечное Православие — это искажение традиционных верований Стойкого Сияния. Оно гласит, что ни одно смертное существо не достигнет просветления, пока оно дышит. Людей призывают раскаяться в ужасной греховной природе, которую они проявляют, посредством бичевания и даже самоубийства. Сияния снова покажется, но только тогда, когда не будет живых глаз, которые могли бы его осквернить.",
 				iconOverride = "begotten/ui/belieficons/faith-traditionalist.png",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Holy Hierarchy"},
 				lockedSubfactions = {"Praeventor"},
@@ -82,30 +82,30 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 		},
 		[3] = {
 			["prison_of_flesh"] = {
-				name = "This Prison of Flesh",
+				name = "В Тюрьме из Плоти",
 				subfaith = "Sol Orthodoxy",
-				description = "Taking damage from any damage source, starting at a minimum of 10 damage, will reduce Corruption by half of the amount of damage taken. If possessed, corruption will not be reduced until it is above 50%.",
-				quote = "\"Let the demons come to this prison of flesh! I will punish them, show them agony, and never will I give in to their desires!\"",
+				description = "Получение урона от любого источника урона, начиная с минимума в 10 единиц урона, уменьшит порчу на половину полученного урона. Если одержим, порча не будет уменьшена, пока не превысит 50%.",
+				quote = "\"Пусть демоны придут в эту тюрьму плоти! Я накажу их, покажу им агонию и никогда не уступлю их желаниям!\"",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Holy Hierarchy"},
 				lockedSubfactions = {"Praeventor"},
 				requirements = {"sol_orthodoxy"},
 				row = 2,
 			},
 			["purity_afloat"] = {
-				name = "Purity Afloat",
+				name = "Чистота на Плаву",
 				subfaith = "Sol Orthodoxy",
-				description = "Increases movement speed by a maximum of 20% (at 25% health) the lower your health is. The movement speed increase of Heavy Armor is capped at +15%.",
-				quote = "\"Unburden the shackles of the material. Strike yourself naked and true. Relinquish and be set purity afloat.\"",
+				description = "Увеличивает скорость передвижения максимум на 20% (при 25% здоровья) по мере снижения вашего здоровья. Увеличение скорости передвижения Тяжелой брони ограничено +15%.",
+				quote = "\"Сбрось оковы материального. Обнажись и будь правдивым. Откажись и пусти чистоту на плаву.\"",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Holy Hierarchy"},
 				lockedSubfactions = {"Praeventor"},
 				requirements = {"sol_orthodoxy", "prison_of_flesh"},
 				row = 3,
 			},
 			["fanaticism"] = {
-				name = "Fanaticism",
+				name = "Фанатик",
 				subfaith = "Sol Orthodoxy",
-				description = "Increases melee, stamina, and stability damage by a maximum of 40% (at 10% health) the lower your health is.",
-				quote = "\"PURITY THROUGH PAIN! EXTINCTION THROUGH SACRIFICE! THE BELLS TOLL FOR ALL!\"",
+				description = "Увеличивает урон от ближнего боя, выносливости и устойчивости максимум на 40% (при 10% здоровья) по мере снижения вашего здоровья.",
+				quote = "\"ЧИСТОТА ЧЕРЕЗ БОЛЬ! УНИЧТОЖЕНИЕ ЧЕРЕЗ ЖЕРТВОПРИНОШЕНИЕ! КОЛОКОЛА ЗВОНЯТ ПО ВСЕМ!\"",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Holy Hierarchy"},
 				lockedSubfactions = {"Praeventor"},
 				requirements = {"sol_orthodoxy", "prison_of_flesh", "purity_afloat"},
@@ -114,60 +114,60 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 		},
 		[4] = {
 			["disciple"] = {
-				name = "Disciple",
+				name = "Прихожанин",
 				subfaith = "Hard-Glazed",
-				description = "Unlocks Tier I 'Faith of the Light' Rituals. Increases the chance of finding coin in Wasteland loot containers.",
+				description = "Открывает ритуалы I уровня «Вера в Свет». Увеличивает шанс найти монет в контейнерах с добычей в Пустоши.",
 				requirements = {"hard_glazed"},
 				row = 2,
 			},
 			["acolyte"] = {
-				name = "Acolyte",
+				name = "Молящаяся Рука",
 				subfaith = "Hard-Glazed",
-				description = "Unlocks Tier II 'Faith of the Light' Rituals. Increases sanity gain from being near fires.",
+				description = "Открывает ритуалы II уровня «Вера в Свет». Увеличивает прирост рассудка от нахождения рядом с огнем.",
 				requirements = {"hard_glazed", "disciple"},
 				row = 3,
 			},
 			["emissary"] = {
-				name = "Emissary",
+				name = "Узревший Святой Свет",
 				subfaith = "Hard-Glazed",
-				description = "Unlocks Tier III 'Faith of the Light' Rituals and unique Hard-Glazed Rituals. Also unlocks the ability to smelt Maximilian Steel (only if 'Master Blacksmith' is also unlocked).",
+				description = "Открывает ритуалы III уровня «Вера в Свет» и уникальные ритуалы «Стойкого Сияния». Также открывает возможность выплавлять максимилианскую сталь (только если также разблокирован «Мастер-Кузнец»).",
 				requirements = {"hard_glazed", "disciple", "acolyte"},
 				row = 4,
 			},
 		},
 		[5] = {
 			["hard_glazed"] = {
-				name = "Hard-Glazed",
+				name = "Стойкое Сияние",
 				subfaith = "Hard-Glazed",
-				description = "Selects 'Hard-Glazed' as your subfaith. Unlocks the ability to pray. Faith gained from making large donations of Coin to the Church.",
-				quote = "Chastity and almsgiving are the core principles of the Hard-Glazed ideology. All is forfeit to the Holy Hierarchy, and one must expect only a dull life fraught with toiling to thy Minister. Yet those in the Hierarchy follow the Manifesto, and hidden in its pages lies the key to heavenly ascension.",
+				description = "Выбирая «Стойкое Сияние» в качестве субконфессии, разблокируйте возможность молиться. Также получайте дополнительную веру от пожертвований Монет в Кассу.",
+				quote = "Целомудрие и милостыня являются основными принципами идеологии Стойкого Сияния. Все отдано Святой Иерархии, и следует ожидать только скучной жизни, полной тяжких трудов во имя твоего Министра. Однако те следуют Манифесту понимают, что на его страницах сокрыт ключ к небесному вознесению.",
 				iconOverride = "begotten/ui/belieficons/faith-glaze.png",
 				row = 1,
 			},
 		},
 		[6] = {
 			["the_light"] = {
-				name = "The Light",
+				name = "Вспышка",
 				subfaith = "Hard-Glazed",
-				description = "Unlocks the ability to equip certain 'Faith of the Light' sacrificial weapons. All melee weapons, crossbow bolts, and throwables now deal 15% more armor-piercing damage.",
-				quote = "\"The Glaze is the light... it is the truth - you cannot see it in perspective as it is you; your foolishness, greatness, your power...\"",
+				description = "Разблокирует возможность экипировать определенное жертвенное оружие «Стойкого Сияния». Все оружие ближнего боя, арбалетные болты и метательные предметы теперь наносят на 15% больше бронебойного урона.",
+				quote = "\"Сияние — это свет... это истина — ты не можешь увидеть ее в перспективе, поскольку она — это ты; твоя глупость, величие, твоя сила...\"",
 				requirements = {"hard_glazed"},
 				row = 2,
 			},
 			["blessed_powder"] = {
-				name = "Blessed Powder",
+				name = "Священный Порох",
 				subfaith = "Hard-Glazed",
-				description = "All firearms now deal 25% more damage.",
-				quote = "Lord Maximus shouted with his thunderous voice \"Give them the steel\", and so, the steel was given.",
+				description = "Все огнестрельное оружие теперь наносит на 25% больше урона.",
+				quote = "Лорд Максимус крикнул громовым голосом: «Дайте им сталь!», и сталь была дана.",
 				iconOverride = "begotten/ui/belieficons/blessed_powder2.png",
 				requirements = {"hard_glazed", "the_light"},
 				row = 3,
 			},
 			["manifesto"] = {
-				name = "All Links to the Manifesto",
+				name = "Все Согласно Манифесту",
 				subfaith = "Hard-Glazed",
-				description = "You now deal 20% more damage against characters of another Faith, but deal 10% less damage against those of the same Faith. Replaces the effect of the 'Grounded' attribute on melee weapons to do 60% less melee damage while sprinting instead of disallowing melee attacks while sprinting outright.",
-				quote = "\"There is only Glaze. Corpse the fucklets indeed!\"",
+				description = "Теперь вы наносите на 20% больше урона персонажам другой Веры, но наносите на 10% меньше урона персонажам той же Веры. Заменяет эффект атрибута «Заземленный» на оружии ближнего боя, чтобы наносить на 60% меньше урона в ближнем бою во время спринта вместо запрета атак в ближнем бою во время спринта.",
+				quote = "\"Есть только Сияние. И трупы ублюдков, конечно!\"",
 				iconOverride = "begotten/ui/belieficons/loremaster.png",
 				requirements = {"hard_glazed", "the_light", "blessed_powder"},
 				row = 4,
@@ -175,9 +175,9 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 		},
 		[7] = {
 			["wire_therapy"] = {
-				name = "Wire Therapy",
+				name = "Проводная Терапия",
 				subfaith = "Voltism",
-				description = "Unlocks the ability to Relay to send messages to all other Voltists globally. Unlocks Tier I 'Voltism' crafting recipes.",
+				description = "Разблокирует возможность Ретрансляции для отправки сообщений всем остальным Вольтистам по всему миру. Разблокирует рецепты крафта Уровня I «Вольтистов».",
 				quote = "Looks like Shaye needs to spend more time on the wires.",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Gatekeeper", "Holy Hierarchy"},
 				lockedSubfactions = {"Machinist"};
@@ -185,19 +185,19 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 				row = 2,
 			},
 			["jacobs_ladder"] = {
-				name = "Jacob's Ladder",
+				name = "Лестница Иакова",
 				subfaith = "Voltism",
-				description = "Unlocks Tier II 'Voltism' crafting recipes. Unlocks the ability to consume 'Tech' items, which will decrease corruption and increase your energy, as well as providing a substantial amount of faith (XP). Benefits from consuming 'Tech' items scale with the condition of the item. Lowers maximum health by 5 points.",
+				description = "Разблокирует рецепты крафта «Вольтистов» уровня II. Разблокирует возможность потреблять Микросхемы, что уменьшает порчу и увеличивает вашу энергию, а также обеспечивает значительным количеством веры (Опытом). Преимущества от потребления Микросхем зависят от состояния предмета. Снижает максимальное здоровье на 5 единиц.",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Gatekeeper", "Holy Hierarchy"},
 				lockedSubfactions = {"Machinist"};
 				requirements = {"voltism", "wire_therapy"},
 				row = 3,
 			},
 			["the_paradox_riddle_equation"] = {
-				name = "The Paradox Riddle Equation",
+				name = "Уравнение Загадочного Парадокса",
 				subfaith = "Voltism",
-				description = "Unlocks Tier III 'Voltism' crafting recipes. At this point, you will not be able to communicate regularly as your voice will forever be altered. Unlocks the ability to apply 'Tech' items to limbs to fully heal them of injuries. Grants immunity to all diseases. Standing in any body of water, standing in the rain, or ingesting water will now deal a great amount of electric damage to you. Lowers maximum health by 5 points.",
-				quote = "\"The Paradox Riddle Equation, or the Brainfucker Paradox, refers to a terrible event in Holy Hierarchy history. A disease of the mind that originated as a simple set of questions and mathematical equations spread through the noble households and wreaked havoc across the Districts for a six-year period in recent memory. It is noted that the marble palaces of District One were covered in red splotches as a result of noble stature slamming their heads on the walls out of frustration and utter confusion. This is perhaps the only 'plague' in Holy Hierarchy history that had only affected the upper classes, as the common folk were blissfully unaware of the far-reaching indications that came with the Riddle Equation, as of course they were too simple-minded to understand it. The Paradox Riddle Equation has since been scrubbed from Glazic memory by authorities, but it has recently been given new light by the Voltists who claim to have found the answer - at the cost of their humanity.\"",
+				description = "Открывает рецепты крафта «Вольтистов» уровня III. На этом этапе вы не сможете нормально, так как ваш голос навсегда изменится. Открывает возможность применять Микросхемы к конечностям, чтобы полностью исцелять их от травм. Предоставляет иммунитет ко всем болезням. Нахождение в любом водоеме, под дождем или употребление воды теперь нанесет вам большой урон электричеством. Снижает максимальное здоровье на 5 единиц.",
+				quote = "\"Уравнение загадочного парадокса, или парадокс Мозгоебки, относится к ужасному событию в истории Святой Иерархии. Болезнь разума, которая возникла как простой набор вопросов и математических уравнений, распространилась среди знатных домов и сеяла хаос по всем Дистриктам в течение шести лет. Отмечено, что мраморные дворцы Дистрикта Один были покрыты красными пятнами в результате того, что знатные особы бились головами о стены от разочарования и полного замешательства. Это, возможно, единственная «чума» в истории Святой Иерархии, которая затронула только высшие классы, поскольку простые люди были в блаженном неведении о далеко идущих указаниях, которые пришли с Загадочным Уравнением, поскольку, конечно, они были слишком глупы, чтобы понять его. Уравнение загадочного парадокса с тех пор было вычеркнуто из памяти Сияния властями, но недавно оно было освещено в новом свете вольтистами, которые утверждают, что нашли ответ — ценой своей человечности.\"",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Gatekeeper", "Holy Hierarchy"},
 				lockedSubfactions = {"Machinist"};
 				requirements = {"voltism", "wire_therapy", "jacobs_ladder"},
@@ -206,10 +206,10 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 		},
 		[8] = {
 			["voltism"] = {
-				name = "Voltism",
+				name = "Вольтизм",
 				subfaith = "Voltism",
-				description = "Selects 'Voltism' as your subfaith. Unlocks the ability to pray. Unlocks the 'Self-Electrocution' ability to gain sanity. Gain increased faith gain from killing characters of the 'Hard-Glazed' or 'Sol Orthodoxy' subfaiths.",
-				quote = "An infestation seeking to consume the Light from within is how ministers of the Holy Hierarchy would describe Voltism. A major cult with no chain of command who seek technology and enlightenment through transhumanism. They gradually replace more of their body with machine and stimulate their minds with electrical shocks. Their true motives, or their leader, remain unknown.",
+				description = "Выбирает «Вольтизм» в качестве вашей подверы. Разблокирует возможность молиться. Разблокирует способность «Самоэлектрошок» для обретения здравомыслия. Получайте больше веры от убийства персонажей подвер «Стойкого Сияния» или «Православия Сола».",
+				quote = "Заражение, стремящееся поглотить Свет изнутри, — так министры Святой Иерархии описали бы Вольтизм. Крупный культ без цепочки командования, который ищет технологии и просветление через трансгуманизм. Они постепенно заменяют свое тело машиной и стимулируют свой разум электрическими разрядами. Их истинные мотивы или их лидер остаются неизвестными.",
 				iconOverride = "begotten/ui/belieficons/faith-volt.png",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Gatekeeper", "Holy Hierarchy"},
 				lockedSubfactions = {"Machinist"};
@@ -218,29 +218,29 @@ local LIGHT = cwBeliefs.beliefTrees:New("light")
 		},
 		[9] = {
 			["wriggle_fucking_eel"] = {
-				name = "Wriggle Like a Fucking Eel",
+				name = "Извивайся как Ебучий Угорь",
 				subfaith = "Voltism",
-				description = "Self-Electrocution now cauterizes bleeding and decreases fatigue and corruption. Unlocks the ability to use Voltist weaponry.",
+				description = "Самоэлектрошок теперь прижигает кровотечение и уменьшает усталость и порчу. Открывает возможность использовать оружие вольтистов.",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Gatekeeper", "Holy Hierarchy"},
 				lockedSubfactions = {"Machinist"};
 				requirements = {"voltism"},
 				row = 2,
 			},
 			["yellow_and_black"] = {
-				name = "Yellow and Black",
+				name = "Желтое и Черное",
 				subfaith = "Voltism",
-				description = "Unlocks the ability to equip Voltist weaponry and exoskeletons. You are no longer affected by hunger and thirst. Instead, your fatigue value will begin to damage you if left unchecked. You can only decrease fatigue through electrocution or the consumption of Tech items. Lowers maximum health by 5 points. ",
-				quote = "\"Can you hear the hum? P-Press your face into the barbs! Take notice of the yellow and black banner...\"",
+				description = "Разблокирует возможность экипировать оружие и экзоскелеты Вольтистов. Вы больше не подвержены голоду и жажде. Вместо этого ваш показатель усталости начнет наносить вам урон, если его не контролировать. Вы можете уменьшить усталость только с помощью электрошока или потребления Микросхем. Снижает максимальный запас здоровья на 5 единиц. ",
+				quote = "\"Слышишь гул? П-прижми лицо к колючей проволоке! Обрати внимание на желто-черный баннер...\"",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Gatekeeper", "Holy Hierarchy"},
 				lockedSubfactions = {"Machinist"};
 				requirements = {"voltism", "wriggle_fucking_eel"},
 				row = 3,
 			},
 			["the_storm"] = {
-				name = "The Storm",
+				name = "Шторм",
 				subfaith = "Voltism",
-				description = "At this point, you will not be able to communicate regularly as your voice will forever be altered. Electric damage attacks from Voltist weapons now deal increased damage and stability damage against enemies in metallic armor, with more damage being dealt the heavier the armor, as well as to enemies who are in the rain. Standing in any body of water, standing in the rain, or ingesting water will now deal a great amount of electric damage to you. Lowers maximum health by 5 points.",
-				quote = "\"THE ELECTRIC ONE WILL RETURN FOR US!\"",
+				description = "На этом этапе вы не сможете нормально общаться, так как ваш голос навсегда изменится. Атаки электрическим уроном от оружия Вольтистов теперь наносят повышенный урон и урон по стабильности врагам в металлической броне, причем тем больше урона наносится, чем тяжелее броня, а также врагам, находящимся под дождем. Нахождение в любом водоеме, стояние под дождем или употребление воды теперь нанесет вам большой урон электричеством. Снижает максимальное здоровье на 5 единиц.",
+				quote = "\"МИСТЕР ЭЛЕКТРИК ВЕРНЕТСЯ ЗА НАМИ!\"",
 				lockedFactions = {"Pope Adyssa's Gatekeepers", "Gatekeeper", "Holy Hierarchy"},
 				lockedSubfactions = {"Machinist"};
 				requirements = {"voltism", "wriggle_fucking_eel", "yellow_and_black"},

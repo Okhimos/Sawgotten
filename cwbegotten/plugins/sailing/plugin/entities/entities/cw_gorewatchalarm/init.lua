@@ -41,7 +41,7 @@ function ENT:OnTakeDamage(damageInfo)
 				self:EmitSound("physics/metal/metal_box_break2.wav");
 				self:EmitSound("ambient/energy/zap9.wav");
 				
-				Clockwork.chatBox:AddInRadius(nil, "itnofake", "The gorewatch alarm system breaks under the weight of an attack, ceasing its function!", self:GetPos(), config.Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInRadius(nil, "itnofake", "Система оповещения ломается, прекращая свою работу!", self:GetPos(), config.Get("talk_radius"):Get() * 2);
 			end
 		end
 	end

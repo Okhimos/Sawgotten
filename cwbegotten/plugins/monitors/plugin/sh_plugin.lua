@@ -33,10 +33,10 @@ local COMMAND = Clockwork.command:New("ToggleAFKKicker");
 	function COMMAND:OnRun(player, arguments)
 		if cas.afkKickerEnabled ~= false then
 			cas.afkKickerEnabled = false;
-			Schema:EasyText(GetAdmins(), "cornflowerblue", player:Name().." has disabled automatic AFK kicking.");
+			Schema:EasyText(GetAdmins(), "cornflowerblue", player:Name().." отключил автоматический кик за АФК.");
 		else
 			cas.afkKickerEnabled = true;
-			Schema:EasyText(GetAdmins(), "cornflowerblue", player:Name().." has enabled automatic AFK kicking.");
+			Schema:EasyText(GetAdmins(), "cornflowerblue", player:Name().." включил автоматический кик за АФК.");
 			
 			local curTime = CurTime();
 			local playerCount = _player.GetCount();

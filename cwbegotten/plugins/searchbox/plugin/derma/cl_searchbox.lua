@@ -6,7 +6,7 @@ function PANEL:Init()
 	self:SetUpdateOnType(true);
 	self:SetTextColor(Color(255,255,255));
 	self:SetPaintBackground(false);
-	self:SetPlaceholderText("Enter a search term...");
+	self:SetPlaceholderText("Ищем что-то полезное...");
 
 end
 

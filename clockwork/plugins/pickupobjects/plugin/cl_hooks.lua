@@ -4,7 +4,7 @@
 
 function cwPickupObjects:GetProgressBarInfoAction(action, percentage)
 	if (action == "pickupragdoll") then
-		return {text = "You are picking up a body. Click to cancel.", percentage = percentage, flash = percentage < 10}
+		return {text = "Вы поднимаете тело. Нажмите ЛКМ чтобы перестать.", percentage = percentage, flash = percentage < 10}
 	end
 end
 
@@ -15,9 +15,9 @@ function cwPickupObjects:GetTopText(topText)
 	
 	if (Clockwork.Client:IsRagdolled()) then
 		if beingPickedUp then
-			topText:Add("BEING_DRAGGED", "You are being picked up by someone.");
+			topText:Add("BEING_DRAGGED", "Вас поднимают.");
 		elseif beingDragged then
-			topText:Add("BEING_DRAGGED", "You are being dragged by someone.");
+			topText:Add("BEING_DRAGGED", "Вас кто-то тащит.");
 		end
 	end;
 end;

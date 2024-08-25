@@ -9,5 +9,5 @@ Clockwork.kernel:IncludePrefixed("shared.lua")
 
 -- Called when the target ID HUD should be painted.
 function ENT:HUDPaintTargetID(x, y, alpha)
-	y = Clockwork.kernel:DrawInfo("A pile of old wood from fallen trees and branches. If broken up, its contents could be used as a crafting material.", x, y, Clockwork.option:GetColor("white"), alpha);
+	y = Clockwork.kernel:DrawInfo("Куча старой древесины из упавших деревьев и веток. Если ее разбить, содержимое можно использовать в качестве материала для создания предметов.", x, y, Clockwork.option:GetColor("white"), alpha);
 end;

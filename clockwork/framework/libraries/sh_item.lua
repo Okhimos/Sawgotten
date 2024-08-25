@@ -456,7 +456,7 @@ end;
 -- A function to get whether the player can equip the item or not.
 function CLASS_TABLE:CanEquip(player)
 	if self:IsBroken() then
-		Schema:EasyText(player, "peru", "This item is broken and cannot be equipped!");
+		Schema:EasyText(player, "peru", "Этот предмет сломан и не может быть экипирован!");
 		return false;
 	end
 	

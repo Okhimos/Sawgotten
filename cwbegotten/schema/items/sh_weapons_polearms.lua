@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Poleaxe";
+	ITEM.name = "Полэкс";
 	ITEM.model = "models/witcher2soldiers/tw2_halberd.mdl";
 	ITEM.weight = 3.5;
 	ITEM.uniqueID = "begotten_polearm_gatekeeperpoleaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A well crafted short steel poleaxe. An excellent equalizer and guardsman weapon, able to keep the peace and stave off tall horrors.";
+	ITEM.description = "Хорошо сделанная короткая стальная секира. Отличное оружие уравнителя и стражника, способное поддерживать мир и отпугивать зло.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gatekeeper_poleaxe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -19,12 +19,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Billhook";
+	ITEM.name = "Билль";
 	ITEM.model = "models/bill_guisarme.mdl";
 	ITEM.weight = 3.5;
 	ITEM.uniqueID = "begotten_polearm_billhook";
 	ITEM.category = "Melee";
-	ITEM.description = "A cheaply made iron polearm that is surprisingly effective in equalizing armored foes. Even a Knight can be made humble by the lowly billman.";
+	ITEM.description = "Дешевое железное древковое оружие, которое на удивление эффективно в уравнивании бронированных врагов. Даже рыцарь может быть смиренным скромным алебардистом.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/billhook.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -39,12 +39,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Lucerne";
+	ITEM.name = "Короткий Люцернский Молот";
 	ITEM.model = "models/bec_de_corbin.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_polearm_lucerne";
 	ITEM.category = "Melee";
-	ITEM.description = "A fine steel weapon that is both practical and elegant in its design. Its ravens beak is excellent at punching holes into metal plate.";
+	ITEM.description = "Прекрасное стальное оружие, практичное и элегантное по своему дизайну. Его вороний клюв отлично подходит для проделывания отверстий в металлической пластине.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/lucerne.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -59,12 +59,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Halberd";
+	ITEM.name = "Алебарда";
 	ITEM.model = "models/demonssouls/weapons/halberd.mdl";
 	ITEM.weight = 6;
 	ITEM.uniqueID = "begotten_polearm_halberd";
 	ITEM.category = "Melee";
-	ITEM.description = "A long metal polearm. It has a steel chopping edge and a sharp metal spike for penetrating plate. A weapon typically found in the ranks of the lowly Gatekeepers, as it is capable of giving even a common fool a fighting chance against great horrors.";
+	ITEM.description = "Длинное металлическое древковое оружие. Имеет стальное рубящее лезвие и острый металлический шип для пробития пластин. Оружие, которое обычно можно встретить в рядах низших Привратников, поскольку оно способно дать даже простому дураку шанс сразиться с великими ужасами.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/halberd.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -80,12 +80,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Pike";
+	ITEM.name = "Пика";
 	ITEM.model = "models/props/begotten/melee/pike.mdl";
 	ITEM.weight = 6;
 	ITEM.uniqueID = "begotten_polearm_pike";
 	ITEM.category = "Melee";
-	ITEM.description = "A long iron polearm with simple yet effective sharp spike at its end. A weapon known for its impressive reach and penetrating power, best employed in a formation of others like it.";
+	ITEM.description = "Длинное железное древковое оружие с простым, но эффективным острым шипом на конце. Оружие, известное своей впечатляющей дальностью и проникающей силой, лучше всего использовать в составе других подобных ему.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pike.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -101,12 +101,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Polehammer";
+	ITEM.name = "Люцернский Молот";
 	ITEM.model = "models/demonssouls/weapons/mirdan hammer.mdl";
 	ITEM.weight = 8;
 	ITEM.uniqueID = "begotten_polearm_polehammer";
 	ITEM.category = "Melee";
-	ITEM.description = "A well crafted Glazic polearm. It features a brutal steel hammerhead and a deadly pike. An excellent equalizer against armored foes.";
+	ITEM.description = "Хорошо сделанное древковое оружие из Легионов Сияния. Оно оснащено брутальным стальным молотом и смертоносной пикой. Отличное уравновешивающее оружие против бронированных врагов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/polehammer.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -121,12 +121,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "War Spear";
+	ITEM.name = "Боевое Копье";
 	ITEM.model = "models/witcher2soldiers/tw2_spear.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_polearm_warspear";
 	ITEM.category = "Melee";
-	ITEM.description = "A braced wooden pole with a Shagalaxian steel spearhead. An impressively long hunting weapon turned into a weapon of war.";
+	ITEM.description = "Укрепленный деревянный шест с наконечником из стали Шагалакской стали. Впечатляюще длинное охотничье оружие, превращенное в оружие войны.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/war_spear.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -141,12 +141,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Glazic Banner";
+	ITEM.name = "Знамя Сияния";
 	ITEM.model = "models/begotten/misc/gatekeeper_banner.mdl";
 	ITEM.weight = 11;
 	ITEM.uniqueID = "begotten_polearm_glazicbanner";
 	ITEM.category = "Melee";
-	ITEM.description = "A flag bearing the insignia of the Holy Order of the Gatekeepers. It serves as an inspiration in battle, and to lose it would be extremely grave indeed.";
+	ITEM.description = "Флаг с эмблемой Святого Ордена Привратников. Он служит вдохновением в битве, и потерять его было бы крайне печально.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gatekeeper_banner.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

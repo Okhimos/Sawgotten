@@ -40,7 +40,7 @@ local function CreateMenu(state)
 	
 	if Schema.archivesBookList and !table.IsEmpty(Schema.archivesBookList) then
 		if Clockwork.Client:GetFaction() == "Holy Hierarchy" then
-			subMenu = menu:AddSubMenu("Take from Archives...");
+			subMenu = menu:AddSubMenu("Взять из архива...");
 			
 			for k, v in pairs (Schema.archivesBookList) do
 				if v and v > 0 then

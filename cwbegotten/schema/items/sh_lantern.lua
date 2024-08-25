@@ -6,13 +6,13 @@
 --]]
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Lantern";
+	ITEM.name = "Лампа";
 	ITEM.model = "models/weapons/w_lantern.mdl";
 	ITEM.weight = 0.5;
 	ITEM.category = "Lights";
 	ITEM.uniqueID = "cw_lantern";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/lantern.png";
-	ITEM.description = "An old, dim oil lantern...";
+	ITEM.description = "Старый, тусклая масляная лампа...";
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_R_Thigh";
 	ITEM.attachmentOffsetAngles = Angle(337.13, 76.57, 355.26);

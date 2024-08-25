@@ -12,7 +12,7 @@ function cwEncumberment:GetPlayerInfoText(playerInfoText)
 	local maximumWeight = Clockwork.player:GetMaxWeight();
 	
 	if (inventoryWeight > maximumWeight) then
-		playerInfoText:Add("overencumbered", "You are over-encumbered!")
+		playerInfoText:Add("overencumbered", "Вы перегружены!")
 	end;
 end;
 
@@ -26,7 +26,7 @@ function cwEncumberment:PreDateTimeDrawn(info)
 		local encumberedFont = Clockwork.option:GetFont("hints_text");
 		local colorRed = Clockwork.option:GetColor("negative_hint");
 		
-		local text = string.upper("You are overencumbered!");
+		local text = string.upper("Вы перегружены!");
 
 		Clockwork.kernel:OverrideMainFont(encumberedFont);
 			info.y = Clockwork.kernel:DrawInfo(text, info.x, info.y, colorRed, 255, true);

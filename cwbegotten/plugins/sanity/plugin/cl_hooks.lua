@@ -5,7 +5,7 @@
 local hallucinationModels = {"models/undead/charple01.mdl", "models/skeleton/skeleton_whole.mdl"};
 local medSanitySounds = {"begotten/ambient/atmosphere/apocalypse/hits/hit_1.wav", "begotten/ambient/atmosphere/apocalypse/hits/hit_2.wav", "begotten/ambient/atmosphere/apocalypse/hits/hit_3.wav", "begotten/ambient/atmosphere/apocalypse/hits/hit_4.wav", "damnation/apocalypt/metal4.mp3", "damnation/apocalypt/metal10.mp3", "damnation/apocalypt/metal11.mp3", "damnation/apocalypt/metal12.mp3", "damnation/apocalypt/metal17.mp3", "damnation/apocalypt/metal18.mp3", "damnation/apocalypt/metal19.mp3", "damnation/apocalypt/strange3.mp3", "damnation/apocalypt/woosh2.mp3", "begotten/ui/spine_tingeling.mp3"};
 local lowSanitySounds = {"damnation/apocalypt/ambience_echos.mp3", "begotten2/doom_moan.wav", "damnation/apocalypt/ambience_horn.mp3", "damnation/apocalypt/ambience_lonely.mp3", "damnation/apocalypt/ambience_ladder1.mp3", "damnation/apocalypt/ambience_metal4.mp3", "damnation/apocalypt/ambience_open.mp3", "damnation/apocalypt/ambience_door.mp3", "damnation/apocalypt/ambience_exhale.mp3", "damnation/apocalypt/ambience_silence.mp3", "damnation/apocalypt/whisper2.mp3", "damnation/apocalypt/whisper3.mp3"};
-local sanityTexts = {"...", "Insane", "Losing Sanity", "Sane", "Sanity is a measure of your character's mental condition: the lower it gets the more detached from reality they will become. Witnessing or partaking in distrubing acts is detrimental to one's sanity."};
+local sanityTexts = {"...", "Безумец", "Теряет Рассудок", "Вменяемый", "Здравомыслие - это показатель психического состояния вашего персонажа: чем оно ниже, тем более оторванным от реальности он становится. Свидетельство или участие в разрушительных действиях пагубно сказывается на здравомыслии."};
 
 -- Called when the bars are needed.
 --[[function cwSanity:GetBars(bars)
@@ -231,7 +231,7 @@ function cwSanity:Think()
 						
 							Clockwork.chatBox:Add(nil, nil, Color(255, 255, 150, 255), name.." says \""..corpseSaying.."\"");
 						else
-							Clockwork.chatBox:Add(nil, nil, Color(255, 255, 150, 255), "The corpse says \""..corpseSaying.."\"");
+							Clockwork.chatBox:Add(nil, nil, Color(255, 255, 150, 255), "Рядом лежащий труп говорит \""..corpseSaying.."\"");
 						end
 					end
 				elseif itemFound then
@@ -243,7 +243,7 @@ function cwSanity:Think()
 						Clockwork.chatBox:Add(nil, nil, Color(255, 255, 150, 255), "The "..itemTable.name.." says \""..itemSaying.."\"");
 					end
 				elseif radioFound then
-					Clockwork.chatBox:Add(nil, nil, Color(75, 150, 50, 255), "The radio emits: \""..self.radioSayings[math.random(1, #self.radioSayings)].."\"");
+					Clockwork.chatBox:Add(nil, nil, Color(75, 150, 50, 255), "Из радио слышен голос: \""..self.radioSayings[math.random(1, #self.radioSayings)].."\"");
 					
 					sound.Play("radio/radio_out"..tostring(math.random(2, 3))..".wav", radioFound:GetPos(), 80, 100, 1);
 				else
@@ -254,7 +254,7 @@ function cwSanity:Think()
 						
 						Clockwork.Client:EmitSound("radio/radio_out"..tostring(math.random(2, 3))..".wav");
 					elseif table.Count(inventory) > 3 then
-						Clockwork.chatBox:Add(nil, nil, Color(255, 255, 150, 255), "***' You hear a muffled voice coming from your backpack \""..self.backpackSayings[math.random(1, #self.backpackSayings)].."\"");
+						Clockwork.chatBox:Add(nil, nil, Color(255, 255, 150, 255), "***' Ты слышишь приглушённый голос из своего рюкзака \""..self.backpackSayings[math.random(1, #self.backpackSayings)].."\"");
 					end
 				end
 			end

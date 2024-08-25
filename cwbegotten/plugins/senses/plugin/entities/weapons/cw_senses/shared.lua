@@ -11,7 +11,7 @@ if (CLIENT) then
 	SWEP.Slot = 1;
 	SWEP.SlotPos = 5;
 	SWEP.DrawAmmo = false;
-	SWEP.PrintName = "Senses";
+	SWEP.PrintName = "Чувства";
 	SWEP.DrawCrosshair = true;
 end
 
@@ -151,18 +151,18 @@ function SWEP:SecondaryAttack()
 								self.Owner:Cloak();
 							end
 						elseif (self.Owner.cloakCooldown - curTime) > 5 then
-							Schema:EasyText(self.Owner, "chocolate", "You are covered in black powder and cannot cloak for another "..math.ceil(self.Owner.cloakCooldown - curTime).." seconds!");
+							Schema:EasyText(self.Owner, "chocolate", "Вы покрыты черным порохом и не можете стать невидимым еще "..math.ceil(self.Owner.cloakCooldown - curTime).." секунд!");
 						else
-							Schema:EasyText(self.Owner, "chocolate", "You cannot cloak for another "..math.ceil(self.Owner.cloakCooldown - curTime).." seconds!");
+							Schema:EasyText(self.Owner, "chocolate", "Вы не можете стать невидимым еще "..math.ceil(self.Owner.cloakCooldown - curTime).." секунд!");
 						end
 					else
 						self.Owner:Uncloak();
 					end
 				else
-					Schema:EasyText(self.Owner, "chocolate", "You must be crouching in order to toggle cloaking.");
+					Schema:EasyText(self.Owner, "chocolate", "Чтобы стать невидимым, вы должны находиться в присяди.");
 				end
 			else
-				Schema:EasyText(self.Owner, "peru", "You must be in the wasteland or the mines and it must currently be night or blood storming (if above ground) in order to toggle cloaking.");
+				Schema:EasyText(self.Owner, "peru", "Для того, чтобы стать невидимым вы должны находиться в пустоши или шахтах, а также в это время должна быть ночь или кровавый шторм (если вы на поверхности).");
 			end
 			
 			self:SetNextSecondaryFire(CurTime() + 2);

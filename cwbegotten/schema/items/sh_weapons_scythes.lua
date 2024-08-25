@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Glaive";
+	ITEM.name = "Глефа";
 	ITEM.model = "models/demonssouls/weapons/war scythe.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_scythe_glaive";
 	ITEM.category = "Melee";
-	ITEM.description = "A sharp blade attached to the end of a long pole, it could easily eviscerate anyone caught in its range.";
+	ITEM.description = "Острое лезвие, прикрепленное к концу длинного шеста, могло с легкостью выпотрошить любого, кто попадал в зону его действия.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/glaive.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -19,12 +19,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "War Scythe";
+	ITEM.name = "Боевая Коса";
 	ITEM.model = "models/props/begotten/melee/scythe.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_scythe_warscythe";
 	ITEM.category = "Melee";
-	ITEM.description = "A serf's tool for toiling turned into a weapon. A sight not uncommon in the Field of Tears, a land where slaves would work their bodies until death, and upon death their souls would continue to work forever more. This weapon is haunted by such souls, and it produces a mournful aura that would reduce any man to tears if prolonged.";
+	ITEM.description = "Инструмент для труда крепостного, превращенный в оружие. Зрелище удручающее, но не редкое в наши темные дни.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/war_scythe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

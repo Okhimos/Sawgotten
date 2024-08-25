@@ -1983,7 +1983,7 @@ end
 function GM:PlayerCanHolsterWeapon(player, itemTable, weapon, bForce, bNoMsg)
 	if (Clockwork.player:GetSpawnWeapon(player, itemTable:GetWeaponClass())) then
 		if (!bNoMsg) then
-			Schema:EasyText(player, "peru", "You cannot holster this weapon!")
+			Schema:EasyText(player, "peru", "Вы не можете убрать это оружие!")
 		end
 
 		return false
@@ -1998,7 +1998,7 @@ end
 function GM:PlayerCanDropWeapon(player, itemTable, weapon, bNoMsg)
 	if itemTable.GetWeaponClass and (Clockwork.player:GetSpawnWeapon(player, itemTable:GetWeaponClass())) then
 		if (!bNoMsg) then
-			Schema:EasyText(player, "peru", "You cannot drop this weapon!")
+			Schema:EasyText(player, "peru", "Вы не можете выбросить это оружие!")
 		end
 
 		return false
@@ -2021,7 +2021,7 @@ function GM:PlayerCanUseItem(player, itemTable, bNoMsg)
 
 	if (isWeapon and isSpawnWeapon) then
 		if (!bNoMsg) then
-			Schema:EasyText(player, "peru", "You cannot use this weapon!")
+			Schema:EasyText(player, "peru", "Вы не можете использовать это оружие!")
 		end
 
 		return false
@@ -2306,7 +2306,7 @@ function GM:ClockworkInitPostEntity() end
 -- Called when a player attempts to say something in-character.
 function GM:PlayerCanSayIC(player, text)
 	if ((!player:Alive() or player:IsRagdolled(RAGDOLL_FALLENOVER)) and !Clockwork.player:GetDeathCode(player, true)) or player:IsMuted() then
-		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
+		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
 
 		return false
 	else
@@ -2662,7 +2662,7 @@ function GM:PlayerSpawnNPC(player, model)
 	end
 
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
+		Schema:EasyText(player, "peru", "Ты не можешь делать это сейчас!")
 
 		return false
 	end
@@ -2820,18 +2820,18 @@ function GM:EntityHandleMenuOption(player, entity, option, arguments)
 						if repairItemTable:GetCondition() <= 0 then
 							player:TakeItem(repairItemTable, true);
 							
-							Schema:EasyText(player, "olivedrab", "You have repaired your "..itemTable.name.." to "..tostring(math.Round(itemTable:GetCondition(), 2))..", using the last of the repair kit's parts in the process.");
+							Schema:EasyText(player, "olivedrab", "Ты починил "..itemTable.name.." до "..tostring(math.Round(itemTable:GetCondition(), 2))..", используя последнюю часть набора.");
 						else
-							Schema:EasyText(player, "green", "You have repaired your "..itemTable.name.." to "..tostring(math.Round(itemTable:GetCondition(), 2))..".");
+							Schema:EasyText(player, "green", "Ты починил "..itemTable.name.." до "..tostring(math.Round(itemTable:GetCondition(), 2))..".");
 							Clockwork.inventory:Rebuild(player);
 						end
 					else
-						Schema:EasyText(player, "chocolate", "You do not have an item you can repair this item with!");
+						Schema:EasyText(player, "chocolate", "У вас нет предмета, с помощью которого можно отремонтировать это!");
 						return false;
 					end
 				end
 			else
-				Schema:EasyText(player, "peru", "This item is already in perfect condition and cannot be repaired.");
+				Schema:EasyText(player, "peru", "Этот предмет не нужно ремонтировать!");
 				return false;
 			end
 		end
@@ -2850,7 +2850,7 @@ function GM:EntityHandleMenuOption(player, entity, option, arguments)
 			local itemKills = itemTable:GetData("kills");
 			
 			if itemKills and itemKills > 0 then
-				examineText = examineText.." It has \'"..itemEngraving.."\' engraved into it, alongside a tally mark of "..tostring(itemKills).." kills.";
+				examineText = examineText.." Вы выгравировали \'"..itemEngraving.."\' вместе с количеством "..tostring(itemKills).." убийств.";
 			else
 				examineText = examineText.." It has \'"..itemEngraving.."\' engraved into it.";
 			end
@@ -2858,24 +2858,24 @@ function GM:EntityHandleMenuOption(player, entity, option, arguments)
 
 		if table.HasValue(conditionTextCategories, itemTable.category) then
 			if itemCondition >= 90 then
-				examineText = examineText.." It appears to be in immaculate condition.";
+				examineText = examineText.." Этот предмет находится в идеальном состоянии!";
 			elseif itemCondition < 90 and itemCondition >= 60 then
-				examineText = examineText.." It appears to be in a somewhat battered condition.";
+				examineText = examineText.." Похоже, он находится в несколько потрепанном состоянии!";
 			elseif itemCondition < 60 and itemCondition >= 30 then
-				examineText = examineText.." It appears to be in very poor condition.";
+				examineText = examineText.." Похоже, он находится в очень плохом состоянии!";
 			elseif itemCondition < 30 and itemCondition > 0 then
-				examineText = examineText.." It appears to be on the verge of breaking.";
+				examineText = examineText.." Похоже, он вот-вот сломается!";
 			elseif itemCondition <= 0 then
 				if itemTable:IsBroken() then
-					examineText = examineText.." It is completely destroyed and only worth its weight in scrap now.";
+					examineText = examineText.." Этот предмет полностью сломан и представляет из себя лишь мусор.";
 				else
-					examineText = examineText.." It is broken yet still usable to some degree.";
+					examineText = examineText.." Он сломан, но в какой-то степени его все еще можно использовать.";
 				end
 			end
 		elseif itemTable.category == "Shot" and itemTable.ammoMagazineSize then
 			local rounds = itemTable:GetAmmoMagazine();
 			
-			examineText = examineText.." The magazine has "..tostring(rounds).." "..itemTable.ammoName.." rounds loaded.";
+			examineText = examineText.." В магазие находится "..tostring(rounds).." "..itemTable.ammoName.." патрон.";
 		end
 		local co = itemTable.examineColor or "skyblue"
 		Schema:EasyText(player, co, examineText)
@@ -3024,7 +3024,7 @@ function GM:PlayerSpawnedProp(player, model, entity)
 				Clockwork.player:GiveCash(player, -info.cost, info.name)
 				entity.cwGiveRefundTab = {CurTime() + 10, player, info.cost}
 			else
-				Schema:EasyText(player, "chocolate", "You need another "..Clockwork.kernel:FormatCash(info.cost - player:GetCash(), nil, true).." to buy this!")
+				Schema:EasyText(player, "chocolate", "Тебе нужно еще "..Clockwork.kernel:FormatCash(info.cost - player:GetCash(), nil, true).." чтобы купить это!")
 				entity:Remove()
 				return
 			end
@@ -3052,7 +3052,7 @@ function GM:PlayerSpawnProp(player, model)
 	end
 
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
+		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
 		return false
 	end
 
@@ -3068,7 +3068,7 @@ function GM:PlayerSpawnRagdoll(player, model)
 	if (!Clockwork.player:HasFlags(player, "r")) then return false end
 
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
+		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
 
 		return false
 	end
@@ -3083,7 +3083,7 @@ end
 -- Called when a player attempts to spawn an effect.
 function GM:PlayerSpawnEffect(player, model)
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
+		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
 
 		return false
 	end
@@ -3106,7 +3106,7 @@ function GM:PlayerSpawnVehicle(player, model)
 	end
 
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
+		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
 
 		return false
 	end

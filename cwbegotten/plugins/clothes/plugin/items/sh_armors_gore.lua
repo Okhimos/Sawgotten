@@ -1,5 +1,6 @@
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Armored Blade Druid Robes";
+ITEM.name = "Армированные Робы Друида Клинка";
+ITEM.uniqueID = "armored_blade_druid_robes";
 ITEM.group = "goreicwarfighters/armoredbladedruid";
 ITEM.model = "models/begotten/headgroups_props/armoredbladedruid.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/armored_blade_druid_robes.png"
@@ -10,7 +11,7 @@ ITEM.protection = 55
 ITEM.type = "chainmail";
 ITEM.weight = 5;
 ITEM.weightclass = "Medium";
-ITEM.description = "Although traditionally regarded as weak, those born of the Mother do not find combat wanting, and as such are compelled to adorn their spiritual robes with armor. This set of armor has an enchantment to ward off the damage of firearms.";
+ITEM.description = "Хотя рожденные Матерью традиционно считаются слабыми, они не считают бой бесполезным, и поэтому вынуждены украшать свои духовные одеяния защитными пластинами. Этот конкретный комплект прекрасно останавливает пули.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior"};
 ITEM.excludeSubfactions = {"Clan Grock", "Clan Gore", "Clan Shagalax", "Clan Harald", "Clan Reaver"};
@@ -60,7 +61,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Blade Druid Robes";
+ITEM.name = "Робы Друида Клинка";
+ITEM.uniqueID = "blade_druid_robes";
 ITEM.group = "goreicwarfighters/bladedruid";
 ITEM.model = "models/begotten/headgroup_props/bladedruidrobes.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/blade_druid_robes.png"
@@ -71,7 +73,7 @@ ITEM.protection = 25
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "Layers of hide and etched cloth resembling mystic robes. Tailored in the image of the ancient Blade Druid order that were the founders of Gore society and religion. Only those born under the image of The Mother are said to be fit to wear such robes.";
+ITEM.description = "Слои шкуры и протравленной ткани напоминают мистические одеяния. Сшиты по образу и подобию древнего ордена друидов, которые были основателями общества и религии Горов. Считается, что только те, кто родился под образом Матери, могут носить такие одеяния.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.requireFaction = {"Goreic Warrior"};
 ITEM.excludeSubfactions = {"Clan Grock", "Clan Gore", "Clan Shagalax", "Clan Harald", "Clan Reaver"};
@@ -108,13 +110,14 @@ end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gore Seafarer Garb";
+ITEM.name = "Морячка Горов";
+ITEM.uniqueID = "gore_seafarer_garb";
 ITEM.group = "goreicwarfighters/goreseafarer";
 ITEM.model = "models/begotten/headgroup_props/seafarerarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_seafarer_garb.png"
 ITEM.category = "Armor"
 ITEM.weight = 2;
-ITEM.description = "A fur cloak traditionally worn by Goreic seafaring raiders. It has no protective value.";
+ITEM.description = "Меховой плащ, который традиционно носят горийские морские налетчики. Не предоставляет никакой защиты.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.requireFaction = {"Goreic Warrior"};
 
@@ -128,7 +131,7 @@ end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gore Berserker Armor";
+ITEM.name = "Шкуры Берсерка Горов";
 ITEM.uniqueID = "gore_beserker_armor"; -- due to typo in the old name
 ITEM.group = "goreicwarfighters/goreberzerker";
 ITEM.model = "models/begotten/headgroup_props/berzerkerarmor.mdl"
@@ -141,7 +144,7 @@ ITEM.protection = 25
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "A bear pelt commonly worn by Gore Berserkers, the most fearsome and fearless warriors of the Gores.";
+ITEM.description = "Медвежья шкура, которую обычно носят горейские берсерки, самые грозные и бесстрашные воины, разрывающие своих врагов в клочья.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.attributes = {"lifeleech", "rage"};
 ITEM.requireFaction = {"Goreic Warrior"};
@@ -164,7 +167,8 @@ end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gore Chainmail";
+ITEM.name = "Кольчуга Горов";
+ITEM.uniqueID = "gore_chainmail_armor";
 ITEM.group = "goreicwarfighters/gorechainmail";
 ITEM.model = "models/begotten/headgroup_props/gorechainmalarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_chainmail.png"
@@ -175,7 +179,7 @@ ITEM.protection = 50
 ITEM.type = "chainmail";
 ITEM.weight = 5;
 ITEM.weightclass = "Medium";
-ITEM.description = "A crude set of chainmail over leather and fur garb, it provides adequate protection from enemy weapons and the elements.";
+ITEM.description = "Грубой сделанная польчуга, надетая поверх кожаной и меховой одежды. Обеспечивает достойную защиту от вражеского оружия и стихий.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 ITEM.excludeSubfactions = {"Clan Grock"};
@@ -224,7 +228,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gore Housecarl Armor";
+ITEM.name = "Латы Хускарла";
+ITEM.uniqueID = "gore_housecarl_armor";
 ITEM.group = "goreicwarfighters/gorehousecarl";
 ITEM.model = "models/begotten/headgroup_props/housecarlarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_housecarl_armor.png"
@@ -235,7 +240,7 @@ ITEM.protection = 75;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
 ITEM.type = "chainmail";
-ITEM.description = "The armor of a Goreic Housecarl: a combination of chainmail and shagalaxian scale armor, with ornate leather decorations.";
+ITEM.description = "Доспехи горейского хускарла: сочетание цепной и шагалакской чешуйчатой брони с богатыми кожаными элементами.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior"};
 ITEM.excludeSubfactions = {"Clan Grock"};
@@ -286,7 +291,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Grockling Rattleshirt Armor";
+ITEM.name = "Костянка Гроков";
+ITEM.uniqueID = "grockling_rattleshirt_armor";
 ITEM.model = "models/begotten/headgroup_props/rattleshirtarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/grockling_rattleshirt_armor.png"
 ITEM.category = "Armor"
@@ -298,7 +304,7 @@ ITEM.protection = 35;
 ITEM.weight = 3;
 ITEM.weightclass = "Light";
 ITEM.type = "leather";
-ITEM.description = "A linked set of human and animal bones forming protective plates. A minotaur's head forming a terrifying war helm. The armor rattles as it moves, giving it a particularly terrifying presence. This armor is uniquely suited against blunt attacks.";
+ITEM.description = "Соединенные между собой кости человека и животного образуют защитные пластины. Голова минотавра, образующая ужасающий боевой шлем. Доспехи дребезжат при движении, что придает им особенно устрашающий вид. Эта броня уникально подходит для защиты от тупых атак.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.attributes = {"fear"};
 ITEM.requireFaction = {"Goreic Warrior"};
@@ -359,7 +365,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gore Warfighter Armor";
+ITEM.name = "Броня Горейского Воина";
+ITEM.uniqueID =  "warfighter_armor";
 ITEM.group = "goreicwarfighters/warfighter";
 ITEM.model = "models/begotten/headgroup_props/warfighterarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/warfighter_armor.png"
@@ -370,7 +377,7 @@ ITEM.protection = 33
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "Leather armor commonly worn by warriors of Clan Gore. It provides a reasonable degree of protection while not compromising mobility.";
+ITEM.description = "Кожаные доспехи, которые обычно носят воины клана Гор. Она обеспечивает разумную степень защиты, не снижая при этом мобильности.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.requireFaction = {"Goreic Warrior"};
 
@@ -400,7 +407,8 @@ end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Haralder Chainmail";
+ITEM.name = "Кольчуга Клана Харальд";
+ITEM.uniqueID = "haralder_chainmail";
 ITEM.group = "goreicwarfighters/haralderchainmail";
 ITEM.model = "models/begotten/headgroup_props/haralderarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/haralder_chainmail.png"
@@ -411,7 +419,7 @@ ITEM.protection = 50
 ITEM.type = "chainmail";
 ITEM.weight = 5;
 ITEM.weightclass = "Medium";
-ITEM.description = "A sleeveless chainmail set over leather garb, stylized in Clan Haralder's fashion. The patchwork leather smells of the sea.";
+ITEM.description = "Безрукавная кольчуга поверх кожаной одежды, стилизованной по моде клана Харальд. Лоскутная кожа отдает сильным запахом северных морей.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 ITEM.excludeSubfactions = {"Clan Grock"};
@@ -460,7 +468,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Red Wolf Plate";
+ITEM.name = "Латы Красного Волка";
+ITEM.uniqueID = "red_wolf_plate";
 ITEM.group = "goreicwarfighters/reaverplate";
 ITEM.model = "models/begotten/headgroup_props/reaverplate.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/bjornling_armor.png"
@@ -471,7 +480,7 @@ ITEM.protection = 80;
 ITEM.weight = 12;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Heavy armor made from hellforged black iron. Decorated with skulls and hides from man and demon alike, the Red Wolves of Clan Reaver make sure their presence is known.";
+ITEM.description = "Тяжелые доспехи элитных воинов клана Ривер, изготовленные из слитков черной адской стали. Украшенные черепами, шкурами людей и демонов, Красные Волки клана Ривер заботятся о том, чтобы их видели на поле Боя.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior"};
 ITEM.excludeSubfactions = {"Clan Harald", "Clan Gore", "Clan Shagalax", "Clan Crast", "Clan Grock"};
@@ -523,7 +532,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gore Lamellar";
+ITEM.name = "Горейский Ламмелярный Доспех";
+ITEM.uniqueID = "gore_lamellar"
 ITEM.group = "goreicwarfighters/gorelamellar";
 ITEM.model = "models/begotten/headgroups_props/gorelamellar.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_lamellar.png"
@@ -534,7 +544,7 @@ ITEM.protection = 65
 ITEM.type = "plate";
 ITEM.weight = 6.5;
 ITEM.weightclass = "Medium";
-ITEM.description = "Steel plates arranged in a fishscale pattern upon a gambeson coat. It provides fine protection while not being too much of a hindrance to mobility.";
+ITEM.description = "Стальные пластины, расположенные в виде рыбьей чешуи на плаще-гамбезоне. Он обеспечивает прекрасную защиту, при этом не слишком сковывает движения.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 ITEM.excludeSubfactions = {"Clan Grock"};
@@ -584,7 +594,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gore King's Chosen Armor";
+ITEM.name = "Доспех Избранного";
+ITEM.uniqueID = "gore_kings_chosen_armor";
 ITEM.group = "goreicwarfighters/gorescale";
 ITEM.model = "models/begotten/headgroups_props/gorescalearmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/chosenarmor.png"
@@ -595,7 +606,7 @@ ITEM.protection = 85;
 ITEM.weight = 9;
 ITEM.weightclass = "Heavy";
 ITEM.type = "chainmail";
-ITEM.description = "Shagalaxian steel scale armor decorated with brass Familial sigils. It is armor that boasts the approval of both the Gods and the King.";
+ITEM.description = "Превосходный чешуйчатый доспех, используемый самыми достойными и сильными горейскими воинами. Она украшена латунными эмблемами пантеона семьи и великого дерева. Это доспехи, которые могут похвастаться благословление со стороны самих богов.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior"};
 ITEM.excludeSubfactions = {"Clan Grock"};
@@ -646,7 +657,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Elder Druid Robes";
+ITEM.name = "Древние Робы Друида Клинка";
+ITEM.uniqueID = "elder_druid_robes";
 ITEM.model = "models/begotten/headgroups_props/elderdruid.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/elder_druid_robes.png"
 ITEM.helmetIconOverride = "materials/begotten/ui/itemicons/gore_skull_helm.png"
@@ -658,7 +670,7 @@ ITEM.type = "leather";
 ITEM.hasHelmet = true;
 ITEM.weight = 3.5;
 ITEM.weightclass = "Light";
-ITEM.description = "An original set of Blade Druid Robes somehow well kept over centuries. It is permanently attached to a Dread Minotaur Helm and is highly protected by the Maternal Aura. It appears that bullet projectiles are completely ineffective against this armor, as the aura protects from such cowardly means.";
+ITEM.description = "Оригинальный комплект одеяний друида клинка, каким-то образом хорошо хранившийся на протяжении веков. Она постоянно прикреплена к шлему Грозного Минотавра и надежно защищена аурой Матери. Похоже, что пули совершенно не эффективны против этих доспехов.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.requireFaction = {"Goreic Warrior"};
 ITEM.excludeSubfactions = {"Clan Grock", "Clan Gore", "Clan Shagalax", "Clan Harald", "Clan Reaver"};
@@ -701,7 +713,8 @@ end;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Reaver Marauder Lamellar";
+ITEM.name = "Ламмелярный Доспех Мародера";
+ITEM.uniqueID = "reaver_marauder_lamellar"
 ITEM.group = "goreicwarfighters/reaver_marauder";
 ITEM.model = "models/begotten/items/reaver_marauder_item.mdl"
 ITEM.iconoverride = "begotten/ui/itemicons/reaver_marauder_item.png"
@@ -712,7 +725,7 @@ ITEM.protection = 65;
 ITEM.weight = 6.5;
 ITEM.weightclass = "Medium";
 ITEM.type = "plate";
-ITEM.description = "A harness of lamellar and cold forged black iron. It is covered in sigils and runes of Clan Reaver, and even foreign symbols from far northern wastelands. Used widely in Goreic warbands for its strong protective metal plating.";
+ITEM.description = "Снаряжение из пластинчатого и холоднокованного черного железа. Она покрыта эмблемами и рунами клана Ривер и даже чужеземными символами из далеких северных пустошей. Широко используется в горейских отрядах благодаря прочному защитному металлическому покрытию.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior", "Wanderer"};
 ITEM.excludeSubfactions = {"Clan Harald", "Clan Gore", "Clan Shagalax", "Clan Crast", "Clan Grock"};
@@ -757,7 +770,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Reaver Drottinn Lamellar";
+ITEM.name = "Ламмелярный Доспех Ривера-Дроттинна";
+ITEM.uniqueID = "reaver_drottinn_lamellar";
 ITEM.group = "goreicwarfighters/reaver_chief";
 ITEM.model = "models/begotten/items/reaver_marauder_item.mdl"
 ITEM.iconoverride = "begotten/ui/itemicons/reaver_marauder_item.png"
@@ -768,7 +782,7 @@ ITEM.protection = 70;
 ITEM.weight = 7.5;
 ITEM.weightclass = "Medium";
 ITEM.type = "plate";
-ITEM.description = "A set of blackened lamellar used by the torturers, executioners, and commanders of the far-away Marauders. This armor was made to boast Goreic mastery over darkness; to wield its power without being made its subject.";
+ITEM.description = "Комплект черненых ламелляров, используемых мучителями, палачами и командирами далеких Мародеров. Эти доспехи были сделаны, чтобы похвастаться горейским мастерством владения тьмой; чтобы использовать ее силу, не будучи ее объектом.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior"};
 ITEM.excludeSubfactions = {"Clan Harald", "Clan Gore", "Clan Shagalax", "Clan Crast", "Clan Grock"};

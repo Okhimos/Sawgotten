@@ -4,9 +4,9 @@
 --]]
 
 local ITEM = Clockwork.item:New()
-	ITEM.name = "Cinderblock with Rope"
+	ITEM.name = "Шлакоблок с Верёвкой"
 	ITEM.model = "models/props_junk/CinderBlock01a.mdl"
-	ITEM.description = "A concrete cinderblock with a length of rope tied around it."
+	ITEM.description = "Тяжеленный шлакоблок, к которому была привязана веревка. Добрейшей души люди знают, что с этим нужно делать."
 	ITEM.weight = 20
 	ITEM.uniqueID = "cinder_block"
 	
@@ -20,14 +20,14 @@ local ITEM = Clockwork.item:New()
 		if (IsValid(trace.Entity) and (trace.Entity:GetClass() == "prop_ragdoll"--[[ or trace.Entity:IsPlayer()]])) then
 			return Schema:CinderBlockExecution(player, trace.Entity, self)
 		else
-			Schema:EasyText(player, "peru", "You must look at somebody to tie this!")
+			Schema:EasyText(player, "peru", "Чтобы использовать это, смотри на бедолагу!")
 			return false
 		end
 	end
 	
 	function ITEM:CanPickup(player, bQuickUse, entity)
 		if (player:HasItemByID("cinder_block")) then
-			Schema:EasyText(player, "peru", "You cannot carry more than one cinder block at a time!")
+			Schema:EasyText(player, "peru", "Куда тебе больше одного камоня? Переломиться хочешь, подоросок?!")
 			return false
 		end
 	end

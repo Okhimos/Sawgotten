@@ -73,7 +73,7 @@ end;
 
 local DISEASE = {};
 	DISEASE.uniqueID = "common_cold";
-	DISEASE.name = "Common Cold";
+	DISEASE.name = "Простуда";
 	DISEASE.deathChance = 15; -- Chance of death when final stage is reached. Otherwise they will recover.
 	DISEASE.contagious = true;
 	DISEASE.inPerishables = true;
@@ -88,7 +88,7 @@ cwMedicalSystem:RegisterDisease(DISEASE.uniqueID, DISEASE);
 
 local DISEASE = {};
 	DISEASE.uniqueID = "flu";
-	DISEASE.name = "Flu";
+	DISEASE.name = "Грипп";
 	DISEASE.deathChance = 33; -- Chance of death when final stage is reached. Otherwise they will recover.
 	DISEASE.rarity = 50; -- Chance from 1 to 100 of the disease being considered an option, usually further modified by other chances.
 	DISEASE.contagious = true;
@@ -104,7 +104,7 @@ cwMedicalSystem:RegisterDisease(DISEASE.uniqueID, DISEASE);
 
 local DISEASE = {};
 	DISEASE.uniqueID = "begotten_plague";
-	DISEASE.name = "Begotten Plague";
+	DISEASE.name = "Чума Порожденного";
 	DISEASE.deathChance = 75; -- Chance of death when final stage is reached. Otherwise they will recover.
 --	DISEASE.rarity = 1; -- Chance from 1 to 100 of the disease being considered an option, usually further modified by other chances.
 	DISEASE.contagious = true;
@@ -128,7 +128,7 @@ cwMedicalSystem:RegisterDisease(DISEASE.uniqueID, DISEASE);
 -- Only from trait, non-contagious.
 local DISEASE = {};
 	DISEASE.uniqueID = "leprosy";
-	DISEASE.name = "Leprosy";
+	DISEASE.name = "Проказа";
 	DISEASE.permanent = true;
 	DISEASE.stages = {
 		[1] = {symptoms = {"Deformities"}},

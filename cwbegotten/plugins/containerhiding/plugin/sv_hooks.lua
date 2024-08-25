@@ -92,7 +92,7 @@ function cwContainerHiding:EntityHandleMenuOption(player, entity, option, argume
 					if (!entity.nextCooldown or curTime > entity.nextCooldown) then
 						entity.nextCooldown = curTime + 1;
 						
-						Schema:EasyText(player, "firebrick", "You cannot hide in this container for another "..math.ceil(entity.nextHideUse - curTime).." seconds!");
+						Schema:EasyText(player, "firebrick", "Ты не можешь спрятаться в контейнер еще "..math.ceil(entity.nextHideUse - curTime).." секунд!");
 					end;
 				end;
 			elseif (arguments == "cw_entityUnHide") then
@@ -101,7 +101,7 @@ function cwContainerHiding:EntityHandleMenuOption(player, entity, option, argume
 						self:AttemptHide(player, entity, false);
 					end);
 				else
-					Schema:EasyText(player, "maroon", "You are locked inside this container!");
+					Schema:EasyText(player, "maroon", "Ты оказался заперт! Вот блядь!");
 				end
 			--[[elseif (arguments == "cwContainerOpen") and (entity:GetNWBool("unlocked", true) == false) then
 				if (player:GetCharacterData("hidden") == true) then
@@ -162,7 +162,7 @@ function cwContainerHiding:PlayerCanUseCommand(player, commandTable, arguments)
 		};
 		
 		if (table.HasValue(blacklisted, commandTable.name)) then
-			Schema:EasyText(player, "firebrick", "You cannot use this command while you are hiding in a prop!");
+			Schema:EasyText(player, "firebrick", "Эту команду нельзя использовать, пока вы прячетесь!");
 			
 			return false;
 		end;
@@ -174,7 +174,7 @@ function cwContainerHiding:PlayerCanSwitchCharacter(player, character)
 	local hidden = player:GetCharacterData("hidden");
 	
 	if (hidden) then
-		return false, "You cannot switch characters while hiding in a closet!";
+		return false, "Ты не можешь сменить персонажа, пока прячешься!";
 	end;
 end;
 
@@ -184,7 +184,7 @@ function cwContainerHiding:PlayerCanDropItem(player, itemTable, noMessage)
 	
 	if (hidden) then
 		if (!noMessage) then
-			Schema:EasyText(player, "firebrick", "You cannot drop items while you are hiding in a closet!");
+			Schema:EasyText(player, "firebrick", "Ты не можешь выбрасывать предметы, пока прячешься!");
 		end;
 		
 		return false;
@@ -197,7 +197,7 @@ function cwContainerHiding:PlayerCanUseItem(player, itemTable, noMessage)
 	
 	if (hidden) then
 		if (!noMessage) then
-			Schema:EasyText(player, "firebrick", "You cannot use items while you are hiding in a closet!");
+			Schema:EasyText(player, "firebrick", "Ты не можешь использовать предметы, пока прячешься!");
 		end;
 		
 		return false;

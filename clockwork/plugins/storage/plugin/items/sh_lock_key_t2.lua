@@ -1,9 +1,9 @@
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Lock";
+	ITEM.name = "Стандартный Замок";
 	ITEM.model = "models/props_wasteland/prison_padlock001a.mdl";
 	ITEM.weight = 0.2;
 	ITEM.category = "Locks";
-	ITEM.description = "A generic looking key lock.";
+	ITEM.description = "Обычный на вид замок с ключом.";
 	ITEM.lockType = "key";
 	ITEM.lockTier = 2;
 
@@ -12,7 +12,7 @@ local ITEM = Clockwork.item:New();
 		function ITEM:GetClientSideInfo()
 			if (self:IsInstance()) then
 				local color = Color(255, 200, 200);
-				local text = "This lock can withstand a little damage, but is still weak.";
+				local text = "Этот замок может выдержать небольшие повреждения, но все равно он слабый.";
 
 				if (text != "") then
 					return Clockwork.kernel:AddMarkupLine(

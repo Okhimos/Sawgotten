@@ -115,17 +115,17 @@ function cwDisplayTyping:PostDrawTranslucentRenderables()
 							eyeAngles:RotateAroundAxis(eyeAngles:Right(), 90)
 
 							if (typing == TYPING_WHISPER) then
-								drawText = "Whispering"
+								drawText = "Шепчет"
 							elseif (typing == TYPING_PERFORM) then
-								drawText = "Performing"
+								drawText = "Действует"
 							elseif (typing == TYPING_NORMAL) then
-								drawText = "Talking"
+								drawText = "Разговаривает"
 							elseif (typing == TYPING_RADIO) then
-								drawText = "Radioing"
+								drawText = "Передает"
 							elseif (typing == TYPING_YELL) then
-								drawText = "Yelling"
+								drawText = "Кричит"
 							elseif (typing == TYPING_OOC) then
-								drawText = "Typing"
+								drawText = "Пишет"
 							end
 
 							if (drawText != "") then

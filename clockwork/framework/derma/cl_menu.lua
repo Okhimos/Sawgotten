@@ -104,11 +104,11 @@ function PANEL:Rebuild(change)
 		end;
 		
 		-- Close Menu Button
-		local width, height = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Close");
+		local width, height = Clockwork.kernel:GetCachedTextSize(smallTextFont, "ЗАКРЫТЬ");
 		
 		self.closeMenu = vgui.Create("cwLabelButton", self);
 		self.closeMenu:SetFont(smallTextFont);
-		self.closeMenu:SetText("Close");
+		self.closeMenu:SetText("ЗАКРЫТЬ");
 		self.closeMenu:SetCallback(function(button)
 			self:SetOpen(false);
 		end);
@@ -118,7 +118,7 @@ function PANEL:Rebuild(change)
 		self.closeMenu:SetPos(scrW - (width / 2), scrH - (height / 2));
 		function self.closeMenu:Paint()
 			if (self:GetHovered()) then
-				local texts = {"CLOSE", "cLoSe", "ClOsE"};
+				local texts = {"ЗАКРЫТЬ", "ЗаКрЫтЬ", "зАкРыТь"};
 				
 				for i = 1, math.random(2, 4) do
 					surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))
@@ -132,7 +132,7 @@ function PANEL:Rebuild(change)
 		
 		self.characterMenu = vgui.Create("cwLabelButton", self);
 		self.characterMenu:SetFont(Clockwork.option:GetFont("menu_text_tiny"));
-		self.characterMenu:SetText("Victims");
+		self.characterMenu:SetText("Жертвы");
 		self.characterMenu:SetCallback(function(button)
 			self:SetOpen(false);
 			Clockwork.character:SetPanelOpen(true);
@@ -149,7 +149,7 @@ function PANEL:Rebuild(change)
 			self:SetPos((((scrW - width / 2) - 256) + width / 2) - (math.cos((PentR - 200) / 57.5) * 232) + 232, ((scrH - height / 2) + imageHeight * 0.125) + (math.sin((PentR - 200) / 57.5) * 232) - (imageHeight * 0.125));
 
 			if (self:GetHovered()) then
-				local texts = {"VICTIMS", "vIcTiMs", "ViCtImS"};
+				local texts = {"ЖЕРТВЫ", "жЕрТвЫ", "ЖеРтВы"};
 				
 				for i = 1, math.random(2, 4) do
 					surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))
@@ -163,7 +163,7 @@ function PANEL:Rebuild(change)
 		
 		self.ritualsmenu = vgui.Create("cwLabelButton", self);
 		self.ritualsmenu:SetFont(Clockwork.option:GetFont("menu_text_tiny"));
-		self.ritualsmenu:SetText("Rituals");
+		self.ritualsmenu:SetText("Ритуалы");
 		self.ritualsmenu:SetCallback(function(button)
 			if cwRituals then
 				if !Clockwork.Client.cwRitualsMenu or !IsValid(Clockwork.Client.cwRitualsMenu) then
@@ -186,7 +186,7 @@ function PANEL:Rebuild(change)
 			self:SetPos((((scrW - width / 2) - 256) + width / 2) - (math.cos((PentR - 128) / 57.5) * 232) + 192, ((scrH - height / 2) + imageHeight * 0.125) + (math.sin((PentR - 128) / 57.5) * 232) - (imageHeight * 0.125));
 			
 			if (self:GetHovered()) then
-				local texts = {"RITUALS", "rItUaLs", "RiTuAlS"};
+				local texts = {"РИТУАЛЫ", "рИтУаЛы", "РиТуАлЫ"};
 				
 				for i = 1, math.random(2, 4) do
 					surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))
@@ -200,7 +200,7 @@ function PANEL:Rebuild(change)
 		
 		self.craftingmenu = vgui.Create("cwLabelButton", self);
 		self.craftingmenu:SetFont(Clockwork.option:GetFont("menu_text_tiny"));
-		self.craftingmenu:SetText("Crafting");
+		self.craftingmenu:SetText("Крафт");
 		self.craftingmenu:SetCallback(function(button)
 			if cwRecipes then
 				if Clockwork.player:GetAction(Clockwork.Client) == "crafting" then
@@ -227,7 +227,7 @@ function PANEL:Rebuild(change)
 			self:SetPos((((scrW - width / 2) - 256) + width / 2) - (math.cos((PentR + 88) / 57.5) * 232) + 232, ((scrH - height / 2) + imageHeight * 0.125) + (math.sin((PentR + 88) / 57.5) * 232) - (imageHeight * 0.125));
 			
 			if (self:GetHovered()) then
-				local texts = {"CRAFTING", "cRaFtInG", "CrAfTiNg"};
+				local texts = {"КРАФТ", "КрАфТ", "кРаФт"};
 				
 				for i = 1, math.random(2, 4) do
 					surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))
@@ -241,7 +241,7 @@ function PANEL:Rebuild(change)
 		
 		self.beliefsmenu = vgui.Create("cwLabelButton", self);
 		self.beliefsmenu:SetFont(Clockwork.option:GetFont("menu_text_tiny"));
-		self.beliefsmenu:SetText("Beliefs");
+		self.beliefsmenu:SetText("Верования");
 		self.beliefsmenu:SetCallback(function(button)
 			if cwBeliefs then
 				cwBeliefs:OpenTree();
@@ -260,7 +260,7 @@ function PANEL:Rebuild(change)
 			self:SetPos((((scrW - width / 2) - 256) + width / 2) - (math.cos((PentR - 56) / 57.5) * 232) + 232, ((scrH - height / 2) + imageHeight * 0.125) + (math.sin((PentR - 56) / 57.5) * 232) - (imageHeight * 0.125));
 			
 			if (self:GetHovered()) then
-				local texts = {"BELIEFS", "bElIeFs", "BeLiEfS"};
+				local texts = {"BЕРОВАНИЯ", "вЕрОвАнИЯ", "ВеРоВаНиЯ"};
 				
 				for i = 1, math.random(2, 4) do
 					surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))
@@ -365,10 +365,10 @@ function PANEL:Rebuild(change)
 				local scrW, scrH = ScrW() * 0.2, ScrH() * 0.5;
 				
 				if (string.find(string.upper(v.text), "INVENTORY")) then
-					local width, height = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Sack");
+					local width, height = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Мешок");
 					button:SetPos((((scrW - width / 2) - 256) + width / 2), ((scrH - height / 2) + imageHeight * 0.125));
 					button:SetSize(width, height);
-					button:SetText("Sack");
+					button:SetText("Мешок");
 					buttons[#buttons + 1] = button;
 					function button:Paint()
 						local width = self:GetWide();
@@ -376,7 +376,7 @@ function PANEL:Rebuild(change)
 						self:SetPos((((scrW - width / 2) - 256) + width / 2) - (math.cos((PentR + 16) / 57.5) * 232) + 232, ((scrH - height / 2) + imageHeight * 0.125) + (math.sin((PentR + 16) / 57.5) * 232) - (imageHeight * 0.125));
 
 						if (self:GetHovered()) then
-							local texts = {"SACK", "sAcK", "SaCk"};
+							local texts = {"МЕШОК", "МеШоК", "мЕшОк"};
 							
 							for i = 1, math.random(2, 4) do
 								surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))
@@ -391,13 +391,13 @@ function PANEL:Rebuild(change)
 					local width, height = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Settings");
 					button:SetPos(ScrW() - width - 40, height);
 					button:SetSize(width, height);
-					button:SetText("Settings");
+					button:SetText("Настройки");
 					buttons[#buttons + 1] = button;
 				elseif (string.find(string.upper(v.text), "MANIFESTO")) then
 					local width, height = Clockwork.kernel:GetCachedTextSize(smallTextFont, "Manifesto");
 					button:SetPos(ScrW() - width - 40, (height * 2) + 8);
 					button:SetSize(width, height);
-					button:SetText("Manifesto");
+					button:SetText("Манифест");
 					buttons[#buttons + 1] = button;
 				end;
 			end;

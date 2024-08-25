@@ -1,9 +1,9 @@
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Buckler";
+	ITEM.name = "Баклер";
 	ITEM.model = "models/demonssouls/shields/buckler.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "shield4";
-	ITEM.description = "For its impressive metalwork, it is clear that this offensive shield was forged by the Holy Hierarchy long ago. A weapon once infamous for its use by Glazic mercenaries and thugs, for its ability to parry hits and stun opponents.";
+	ITEM.description = "По его впечатляющей металлической конструкции ясно, что этот наступательный щит был выкован Святой Иерархией давным-давно. Оружие, когда-то печально известное своим использованием наемниками и головорезами Света за свою способностью парировать удары и оглушать противников.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/buckler.png"
 	ITEM.isAttachment = true;
 	ITEM.hasIncreasedDeflectionWindow = true;
@@ -16,11 +16,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Car Door Shield";
+	ITEM.name = "Щит из двери Машины";
 	ITEM.model = "models/props_vehicles/carparts_door01a.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "shield3";
-	ITEM.description = "A heavy metal part from an ancient machine. It should only be used by the most desperate of fighters, or the strongest of warriors.";
+	ITEM.description = "Тяжелая металлическая часть древней машины. Ее должны использовать только самые отчаянные бойцы или самые сильные воины.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/car_door_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -34,11 +34,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Clan Shield";
+	ITEM.name = "Клановый Щит";
 	ITEM.model = "models/begotten/weapons/goreroundshield.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "shield14";
-	ITEM.description = "A sturdy shield made from abnormally strong wood from the Gore Forest. It is decorated and protected by Goreic clan sigils.";
+	ITEM.description = "Щит, сделанный из необычайно прочного дерева Горейского Леса. Он украшен клановыми символами.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/clan_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -51,11 +51,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Dreadshield";
+	ITEM.name = "Щит Ужаса";
 	ITEM.model = "models/props/begotten/melee/drakekeeper_greatshield.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "shield13";
-	ITEM.description = "A shield forged from hellfire, though it is now icy cold to the touch. Being in the mere presence of this malevolent craft brings a sense of impending doom.";
+	ITEM.description = "Стена из чёрной стали, выкованная лучшими мастерами клана Ре-Хет-Са. Тёмные иероглифы покрывают её поверхность, словно древние заклинания, несущие в себе дурное знамение. Один взгляд на неё внушает животный ужас, будто бы сама смерть смотрит на тебя из-за этой мрачной преграды.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/dreadshield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -69,11 +69,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Gatekeeper Shield";
+	ITEM.name = "Щит Привратника";
 	ITEM.model = "models/props/begotten/melee/twin_dragon_greatshield.mdl";
 	ITEM.weight = 5;
 	ITEM.uniqueID = "shield11";
-	ITEM.description = "A well-crafted tower shield bearing an inscribed depiction of the Glaze.";
+	ITEM.description = "Простой, но добротно сделанный деревянный щит с металлическими вставками, которым обычно вооружаются рядовые привратники. Надёжно защищает своего владельца от различного рода угроз.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gatekeeper_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -86,11 +86,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Gore Guardian Shield";
+	ITEM.name = "Щит Стража Древа";
 	ITEM.model = "models/demonssouls/shields/large brushwood shield.mdl";
 	ITEM.weight = 9;
 	ITEM.uniqueID = "shield10";
-	ITEM.description = "An ancient thing, created by the Blade Druids long before the would-be Gores ever set foot near the Great Tree. It now serves the protectors of the natural order from the only thing that threatens it, mankind. The metalwork of the shield becomes stronger the closer it is to its source of power, the Great Tree.";
+	ITEM.description = "Древняя вещь, созданная Друидами Клинкf задолго до того, как потенциальные Горы ступили на земли Великого Древа. Теперь она служит защитникам естественного порядка от единственного, что ему угрожает, человечества. Металлическая конструкция щита становится прочнее, чем ближе он к источнику своей силы, — Великому Древу.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_guardian_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -106,11 +106,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Iron Shield";
+	ITEM.name = "Железный Щит";
 	ITEM.model = "models/demonssouls/shields/soldier's shield.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "shield6";
-	ITEM.description = "Scratched and scorched, this metal shield has served many soldiers before it found you.";
+	ITEM.description = "Этот металлический щит, поцарапанный и обгоревший, послужил многим солдатам, прежде чем попал к вам.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/iron_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -123,11 +123,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Knight's Shield";
+	ITEM.name = "Рыцарский Щит";
 	ITEM.model = "models/demonssouls/shields/knight's shield.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "shield7";
-	ITEM.description = "A shield of purified metal that has been touched by Sol. Whoever is to hold this shield must serve it as much as it serves them, for its metal will burn the hand of anyone with a heretic's heart. If a true hero of the Glaze is to wield this shield, it will ignite in a great holy flame, but that is yet to be seen by the Knights of Sol.";
+	ITEM.description = "Щит из очищенного металла, которого коснулся Сол. Тот, кто будет держать этот щит, должен служить ему так же, как он служит ему, ибо его металл сожжет руку любого с душой еретика. Если истинный герой Сияния будет владеть этим щитом, он воспламенится великим священным пламенем, но это еще предстоит увидеть Рыцарям Солнца...";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/knights_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -141,11 +141,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Leather Shield";
+	ITEM.name = "Кожаный Щит";
 	ITEM.model = "models/props/begotten/melee/large_leather_shield.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "shield17";
-	ITEM.description = "A circular shield of wooden construction, its face covered with leather.";
+	ITEM.description = "Круглый щит деревянной конструкции, лицевая сторона которого покрыта кожей.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/leather_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -158,11 +158,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Rusted Kite Shield";
+	ITEM.name = "Ржавый Каплевидный Щит";
 	ITEM.model = "models/props/begotten/melee/red_rust_shield.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "shield19";
-	ITEM.description = "A battered and rusted shield that has obviously seen extensive use. A previous owner has tallied their kills on its face.";
+	ITEM.description = "Потрепанный и ржавый щит, который, очевидно, широко использовался. Предыдущий владелец подсчитывал свои убийства на его лицевой стороне";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/rusted_kite_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -175,11 +175,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Scrap Shield";
+	ITEM.name = "Щит из Скрапа";
 	ITEM.model = "models/props_bebris/metal_panel02a.mdl";
 	ITEM.weight = 5;
 	ITEM.uniqueID = "shield1";
-	ITEM.description = "A shield made of sheet metal, decorated by various fetishes depicting the wearer's faith.";
+	ITEM.description = "Щит из листового металла, украшенный различными знаками, показывающие веру владельца.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scrap_shield_new.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -192,11 +192,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Slaveshield";
+	ITEM.name = "Щит Раба";
 	ITEM.model = "models/demonssouls/shields/slave's shield.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "shield2";
-	ITEM.description = "A terrible wooden shield once used by a great army of slaves.";
+	ITEM.description = "Отвратительный деревянный щит, когда-то использовавшийся большой армией рабов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/slaveshield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -209,11 +209,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Sol Sentinel Shield";
+	ITEM.name = "Щит Последнего Стража";
 	ITEM.model = "models/demonssouls/shields/tower shield.mdl";
 	ITEM.weight = 10;
 	ITEM.uniqueID = "shield9";
-	ITEM.description = "A great shield that found its use by the personal bodyguard of Lord Maximus himself. A massive thing, it is now used by High Gatekeepers to defend the last remaining sanctuaries of Light.";
+	ITEM.description = "Массивная стена из священного металла, подвластная лишь самым могучим воинам Света. На её передней части изображена величественная геральдика с образом Лорда Максимуса, словно воплощение самого Сияния. Этот артефакт — истинное чудо кузнечного искусства, созданное для защиты последних святынь.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/sol_sentinel_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -229,11 +229,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Spiked Shield";
+	ITEM.name = "Адская Роза";
 	ITEM.model = "models/demonssouls/shields/spiked shield.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "shield8";
-	ITEM.description = "A hateful thing of twisted metal and spikes. A thing forged in Hell itself, intended for human followers of the Dark Prince to enact their bloodthirsty desires. It seems that a terrible soul is trapped inside of the metal, taking lustful pleasure from each kill brought by its user. If the wielder is to disappoint or follow some god other than Lucifer himself, the metal will twist and contort around their hands and bleed them dry with its spikes.";
+	ITEM.description = "Это омерзительное творение, выкованное из искажённого металла и покрытое жуткими шипами, будто само пекло дышало на него. Сотворённое в бездне Ада, оно предназначено для верных последователей Тёмного Принца, чтобы помогать им воплощать в жизнь свои бесчеловечные мечты. Металл щита словно таит в себе ужасную душу, наслаждающуюся каждым убийством, совершённым своим хозяином. Если же владелец предаст его, поклонится иному богу, кроме Люцифера, щит оживёт — его металл исказится, закрутится вокруг рук предателя, и жаждущие крови шипы начнут высасывать из него жизнь.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/spiked_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -247,11 +247,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Steel Gatekeeper Shield";
+	ITEM.name = "Стальной Щит Привратника";
 	ITEM.model = "models/props/begotten/melee/tower_shield.mdl";
 	ITEM.weight = 8;
 	ITEM.uniqueID = "shield18";
-	ITEM.description = "A masterfully-crafted steel greatshield bearing a personification of the Glaze.";
+	ITEM.description = "Мастерски выкованный, массивный стальной щит, украшенный изображениями святых Сияния, воплощает в себе совершенство ремесла и символ божественной защиты. Этот величественный артефакт используется только в Легионах Сияния, чтобы вселять свет и надежду в сердца воинов и вселять страх в души врагов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/steel_gatekeeper_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -265,11 +265,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Steel Tower Shield";
+	ITEM.name = "Стальной Башенный Щит";
 	ITEM.model = "models/props/begotten/melee/pate_shield.mdl";
 	ITEM.weight = 6;
 	ITEM.uniqueID = "shield16";
-	ITEM.description = "A tall wooden shield plated with blackened steel plates; its design incorporates elements commonly found in Darklander equipment.";
+	ITEM.description = "Высокий деревянный щит, покрытый чернеными стальными пластинами; в его дизайне использованы элементы, обычно встречающиеся в снаряжении Темноземцев.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/steel_tower_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -281,11 +281,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Voltshield";
+	ITEM.name = "Вольт-Щит";
 	ITEM.model = "models/props_vebris/metal_panel02a.mdl";
 	ITEM.weight = 5.5;
 	ITEM.uniqueID = "shield15";
-	ITEM.description = "A scrap shield augmented by a salvaged car battery that feeds electricity into the shield. Any enemy who makes contact with this shield using a metal weapon shall indeed regret it.";
+	ITEM.description = "Щит из металлолома, дополненный аккумулятором от машины, который питает его электричеством. Любой враг, который коснется этого щита металлическим оружием, действительно пожалеет об этом.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/volt_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -299,11 +299,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Warfighter Shield";
+	ITEM.name = "Щит Воина Горов";
 	ITEM.model = "models/props/begotten/melee/pursuer_greatshield.mdl";
 	ITEM.weight = 6;
 	ITEM.uniqueID = "shield12";
-	ITEM.description = "An extremely heavy shield forged from Blade Druid steel. Meant for the purpose of protecting Warfighters from hails of cowardly gunfire by the Glazic decievers.";
+	ITEM.description = "Необычайно массивный щит, выкованный из стали друидов-клинка, обладает практически полной непробиваемостью. Созданный для защиты истинных воинов, он с лёгкостью отражает град трусливых выстрелов идиотов из уездов Света.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/warfighter_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -316,11 +316,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Wooden Shield";
+	ITEM.name = "Деревянный Щит";
 	ITEM.model = "models/skyrim/shield_stormcloaks.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "shield5";
-	ITEM.description = "A standard shield that can take a fair few hits.";
+	ITEM.description = "Стандартный щит, способный выдержать несколько ударов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/wooden_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -333,11 +333,11 @@ local ITEM = Clockwork.item:New("shield_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shield_base");
-	ITEM.name = "Red Wolf Shield";
+	ITEM.name = "Гнев Сестры";
 	ITEM.model = "models/begotten/weapons/uniquegoreshield.mdl";
 	ITEM.weight = 9;
 	ITEM.uniqueID = "shieldunique1";
-	ITEM.description = "An unholy wall of black steel forged in the fires of hell. It is adorned with the dried flesh of flayed victims. A shield meant for the Red Wolves, a twisted warrior lodge of Clan Reaver.";
+	ITEM.description = "Нечестивая стена из черной стали, выкованная в адском огне. Она украшена высушенной плотью освежеванных жертв. Щит, предназначенный для Красных Волков, извращенной воинской ложи Клана Ривера.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/red_wolf_shield.png"
 	ITEM.isAttachment = true;
 	ITEM.isUnique = true;

@@ -26,7 +26,7 @@ local COMMAND = Clockwork.command:New("CharMark");
 		
 		if (target) then
 			if target:GetCharacterData("markedBySatanist") == true then
-				Schema:EasyText(player, "darkgrey", target:Name().." is already marked for death!");
+				Schema:EasyText(player, "darkgrey", target:Name().." уже помечен на смерть!");
 			else
 				target:SetCharacterData("markedBySatanist", true);
 				target:SetSharedVar("markedBySatanist", true);

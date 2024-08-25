@@ -12,8 +12,8 @@ function ENT:HUDPaintTargetID(x, y, alpha)
 	local colorTargetID = Clockwork.option:GetColor("target_id")
 	local colorWhite = Clockwork.option:GetColor("white")
 	
-	y = Clockwork.kernel:DrawInfo("District One Armor", x, y, colorTargetID, alpha)
-	y = Clockwork.kernel:DrawInfo("An impossible relic from a more enlightened time, a full suit of power armor.", x, y, colorWhite, alpha);
+	y = Clockwork.kernel:DrawInfo("Силовая Броня Первого Дистрикта", x, y, colorTargetID, alpha)
+	y = Clockwork.kernel:DrawInfo("Невозможная реликвия из более просвещенных времен, полный комплект силовой брони.", x, y, colorWhite, alpha);
 end;
 
 local function CreateMenu(state)
@@ -28,7 +28,7 @@ local function CreateMenu(state)
 	menu:SetMinimumWidth(150);
 	
 	if state == "Knight" then
-		menu:AddOption("Enter Suit", function() Clockwork.Client:ConCommand("cw_EnterPowerArmor") end);
+		menu:AddOption("Войти в Броню", function() Clockwork.Client:ConCommand("cw_EnterPowerArmor") end);
 	end
 	
 	menu:Open();

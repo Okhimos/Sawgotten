@@ -115,10 +115,10 @@ function PANEL:Rebuild()
 		self.categoryList:SetDrawBackground(false);
 		
 		self.weaponButton = vgui.Create("DButton", self)
-		self.weaponButton:SetText("Melees");
+		self.weaponButton:SetText("Оружие");
 		self.weaponButton:SetSize(256, 70);
 		self.weaponButton:SetTextColor(Color(160, 0, 0));
-		self.weaponButton:SetFont("nov_IntroTextSmallfaaaaa");
+		self.weaponButton:SetFont("Subtitle_Talk");
 		
 		local width, height = self.weaponButton:GetWide(), self.weaponButton:GetTall()
 		local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -140,10 +140,10 @@ function PANEL:Rebuild()
 		end
 		
 		self.munitionButton = vgui.Create("DButton", self)
-		self.munitionButton:SetText("Munitions");
+		self.munitionButton:SetText("Огнестрел");
 		self.munitionButton:SetSize(256, 70);
 		self.munitionButton:SetTextColor(Color(160, 0, 0));
-		self.munitionButton:SetFont("nov_IntroTextSmallfaaaaa");
+		self.munitionButton:SetFont("Subtitle_Talk");
 		
 		local width, height = self.munitionButton:GetWide(), self.munitionButton:GetTall()
 		local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -165,10 +165,10 @@ function PANEL:Rebuild()
 		end
 		
 		self.armorButton = vgui.Create("DButton", self)
-		self.armorButton:SetText("Armor");
+		self.armorButton:SetText("Броня");
 		self.armorButton:SetSize(256, 70);
 		self.armorButton:SetTextColor(Color(160, 0, 0));
-		self.armorButton:SetFont("nov_IntroTextSmallfaaaaa");
+		self.armorButton:SetFont("Subtitle_Talk");
 		
 		local width, height = self.armorButton:GetWide(), self.armorButton:GetTall()
 		local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -190,10 +190,10 @@ function PANEL:Rebuild()
 		end
 		
 		self.cookingButton = vgui.Create("DButton", self)
-		self.cookingButton:SetText("Cooking");
+		self.cookingButton:SetText("Готовка");
 		self.cookingButton:SetSize(256, 70);
 		self.cookingButton:SetTextColor(Color(160, 0, 0));
-		self.cookingButton:SetFont("nov_IntroTextSmallfaaaaa");
+		self.cookingButton:SetFont("Subtitle_Talk");
 		
 		local width, height = self.cookingButton:GetWide(), self.cookingButton:GetTall()
 		local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -215,10 +215,10 @@ function PANEL:Rebuild()
 		end
 		
 		self.medicalButton = vgui.Create("DButton", self)
-		self.medicalButton:SetText("Medical");
+		self.medicalButton:SetText("Медицина");
 		self.medicalButton:SetSize(256, 70);
 		self.medicalButton:SetTextColor(Color(160, 0, 0));
-		self.medicalButton:SetFont("nov_IntroTextSmallfaaaaa");
+		self.medicalButton:SetFont("Subtitle_Talk");
 		
 		local width, height = self.medicalButton:GetWide(), self.medicalButton:GetTall()
 		local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -240,10 +240,10 @@ function PANEL:Rebuild()
 		end
 		
 		self.otherButton = vgui.Create("DButton", self)
-		self.otherButton:SetText("Other");
+		self.otherButton:SetText("Другое");
 		self.otherButton:SetSize(256, 70);
 		self.otherButton:SetTextColor(Color(160, 0, 0));
-		self.otherButton:SetFont("nov_IntroTextSmallfaaaaa");
+		self.otherButton:SetFont("Subtitle_Talk");
 		
 		local width, height = self.otherButton:GetWide(), self.otherButton:GetTall()
 		local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -298,7 +298,7 @@ function PANEL:Rebuild()
 
 	if (!self.closeButton) then
 		self.closeButton = vgui.Create("DButton", self)
-		self.closeButton:SetText("CLOSE")
+		self.closeButton:SetText("ЗАКРЫТЬ")
 		self.closeButton:SetSize(252, 67)
 		self.closeButton:SetPos(14, (sizeH + 64) - (67 + 8) - 2)
 		self.closeButton:SetTextColor(Color(160, 0, 0))
@@ -422,7 +422,7 @@ function PANEL:UpdateSelectedRecipe(uniqueID)
 	
 	local recipeTable = cwRecipes.recipes.stored[uniqueID];
 	
-	self.rightSide.selectedRecipeLabel:SetText("Selected Recipe: "..recipeTable.name.." ("..self.rightSide.craftAmount.."x)");
+	self.rightSide.selectedRecipeLabel:SetText("Выбранный Рецепт: "..recipeTable.name.." ("..self.rightSide.craftAmount.."x)");
 	self.rightSide.selectedRecipeLabel:SizeToContents();
 	self.rightSide.selectedRecipeLabel:SetPos(370 - (self.rightSide.selectedRecipeLabel:GetSize() / 2), 330);
 end
@@ -485,7 +485,7 @@ function PANEL:Rebuild()
 	self.nameLabel = vgui.Create("DLabel", self);
 	self.nameLabel:SetText(recipeData.name);
 	self.nameLabel:SetTextColor(Color(200, 20, 20));
-	self.nameLabel:SetFont("nov_IntroTextSmallDETrooper");
+	self.nameLabel:SetFont("Subtitle_Talk");
 	self.nameLabel:SizeToContents();
 	self.nameLabel:SetPos(100, 12);
 	
@@ -505,9 +505,9 @@ function PANEL:Rebuild()
 		end
 		
 		if #requiredBeliefNames == 1 then
-			self.tierLabel:SetText("Requires Belief: '"..requiredBeliefNames[1].."'");
+			self.tierLabel:SetText("Необходимые Убеждения: '"..requiredBeliefNames[1].."'");
 		else
-			self.tierLabel:SetText("Requires Beliefs: '"..table.concat(requiredBeliefNames, "', '").."'");
+			self.tierLabel:SetText("Необходимые Убеждения: '"..table.concat(requiredBeliefNames, "', '").."'");
 		end
 	end
 	
@@ -518,7 +518,7 @@ function PANEL:Rebuild()
 	
 	if recipeData.requiresHeatSource then
 		self.heatSourceLabel = vgui.Create("DLabel", self);
-		self.heatSourceLabel:SetText("Requires Heat Source");
+		self.heatSourceLabel:SetText("Нужен Источник Тепла");
 		--self.heatSourceLabel:SetTextColor(Color(160, 145, 145));
 		self.heatSourceLabel:SetFont("Decay_FormText");
 		self.heatSourceLabel:SetPos(100, 60);
@@ -531,7 +531,7 @@ function PANEL:Rebuild()
 		end
 	elseif recipeData.requiresSmithy then
 		self.smithyLabel = vgui.Create("DLabel", self);
-		self.smithyLabel:SetText("Requires Smithy");
+		self.smithyLabel:SetText("Нужна Кузня");
 		--self.smithyLabel:SetTextColor(Color(160, 145, 145));
 		self.smithyLabel:SetFont("Decay_FormText");
 		self.smithyLabel:SetPos(100, 60);
@@ -571,7 +571,7 @@ function PANEL:Rebuild()
 	self.requirementsList:SetPos(300 + 224 - ((68 * #self.requirementsList:GetItems() / 2)), 28);
 	
 	self.requirementsLabel = vgui.Create("DLabel", self);
-	self.requirementsLabel:SetText("Items Required:");
+	self.requirementsLabel:SetText("Необходимые Предметы:");
 	self.requirementsLabel:SetTextColor(Color(160, 145, 145));
 	self.requirementsLabel:SetFont("Decay_FormText");
 	self.requirementsLabel:SizeToContents();
@@ -732,11 +732,11 @@ function PANEL:Init()
 	};
 	
 	self.craftButton = vgui.Create("DButton", self)
-	self.craftButton:SetText("Craft");
+	self.craftButton:SetText("Крафт");
 	self.craftButton:SetSize(256, 70);
 	self.craftButton:SetPos(242, 356);
 	self.craftButton:SetTextColor(Color(160, 0, 0));
-	self.craftButton:SetFont("nov_IntroTextSmallfaaaaa");
+	self.craftButton:SetFont("Subtitle_Talk");
 	
 	local width, height = self.craftButton:GetWide(), self.craftButton:GetTall()
 	local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -841,15 +841,15 @@ function PANEL:Init()
 		self.selectedRecipeLabel = vgui.Create("DLabel", self);
 		
 		if !self:GetParent().selectedRecipe then
-			self.selectedRecipeLabel:SetText("You have no recipe selected!");
+			self.selectedRecipeLabel:SetText("Вы не выбрали рецепт!");
 		else
 			local recipeTable = cwRecipes.recipes.stored[self:GetParent().selectedRecipe];
 			
-			self.selectedRecipeLabel:SetText("Selected Recipe: "..recipeTable.name.." ("..self.craftAmount.."x)");
+			self.selectedRecipeLabel:SetText("Выбранный Рецепт: "..recipeTable.name.." ("..self.craftAmount.."x)");
 		end
 		
 		self.selectedRecipeLabel:SetTextColor(Color(200, 20, 20));
-		self.selectedRecipeLabel:SetFont("nov_IntroTextSmallDETrooper");
+		self.selectedRecipeLabel:SetFont("Subtitle_Talk");
 		self.selectedRecipeLabel:SizeToContents();
 		self.selectedRecipeLabel:SetPos(370 - (self.selectedRecipeLabel:GetSize() / 2), 330);
 	end
@@ -979,14 +979,14 @@ function PANEL:Rebuild()
 	self.weightForm = vgui.Create("DForm", self);
 	self.weightForm:SetPadding(4);
 	self.weightForm:SetSpacing(4);
-	self.weightForm:SetName("Weight");
+	self.weightForm:SetName("Вес");
 	self.weightForm:AddItem(vgui.Create("cwInventoryWeight", self));
 
 	if (Clockwork.inventory:UseSpaceSystem()) then
 		self.spaceForm = vgui.Create("DForm", self);
 		self.spaceForm:SetPadding(4);
 		self.spaceForm:SetSpacing(4);
-		self.spaceForm:SetName("Space");
+		self.spaceForm:SetName("Место");
 		self.spaceForm:AddItem(vgui.Create("cwInventorySpace", self));
 	end
 

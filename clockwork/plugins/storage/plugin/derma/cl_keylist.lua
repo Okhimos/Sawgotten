@@ -149,7 +149,7 @@ function PANEL:Populate(itemTable)
 		
 		if (!IsValid(self.keyTitle)) then
 			self.keyTitle = vgui.Create("DLabel", self);
-			self.keyTitle:SetText("You have no keys!");
+			self.keyTitle:SetText("У тебя нет ключа!");
 			self.keyTitle:SetTextColor(Color(220, 0, 0));
 			self.keyTitle:SetFont("cwMainText");
 			self.keyTitle:SetPos(width - (textWidth * 1.15), 28);
@@ -160,7 +160,7 @@ function PANEL:Populate(itemTable)
 			local buttonWidth = width * 0.8;
 			
 			self.closeButton = vgui.Create("DButton", self);
-			self.closeButton:SetText("CLOSE");
+			self.closeButton:SetText("ЗАКРЫТЬ");
 			self.closeButton:SetSize(buttonWidth, 40); 
 			self.closeButton:SetPos(width - buttonWidth, textHeight + 36);
 			self.closeButton.Large = true;

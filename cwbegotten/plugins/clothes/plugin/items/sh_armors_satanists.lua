@@ -1,5 +1,6 @@
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Darklander Spice Guard Armor";
+ITEM.name = "Латы Темноземского Стража";
+ITEM.uniqueID = "darklander_spice_guard_armor";
 ITEM.model = "models/begotten/headgroups_props/spiceguard.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/darklander_spice_guard_armor.png"
 ITEM.category = "Armor"
@@ -11,7 +12,7 @@ ITEM.protection = 62;
 ITEM.weight = 7;
 ITEM.weightclass = "Medium";
 ITEM.type = "plate";
-ITEM.description = "Cast in the most pure Hellforged steel and adorned with fine silk from the east, this armor set clearly once belonged to a member of the Spice Guard. These Darklander warriors protect trade routes and escort merchants.";
+ITEM.description = "Отлитый из самой чистой адской стали и украшенный тончайшим шелком с востока, этот комплект доспехов явно когда-то принадлежал члену Темноземской Стражи. Эти темноземские войны охраняют торговые пути и сопровождают купцов.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaith = {"Faith of the Dark"};
 ITEM.excludeFactions = {"Goreic Warrior"};
@@ -68,7 +69,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Dread Armor";
+ITEM.name = "Латы Рока";
+ITEM.uniqueID = "dread_armor";
 ITEM.model = "models/begotten/headgroup_props/dreadarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/dread_armor.png"
 ITEM.category = "Armor"
@@ -80,7 +82,7 @@ ITEM.protection = 80;
 ITEM.weight = 9;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "A set of heavy armor forged in the fires of Hell, befitting only the most loyal followers of Satan. Its Hellforged steel composition offers supreme protection against all forms of damage.";
+ITEM.description = "Тяжелые доспехи, выкованные в адском пламени и подобающие только самым верным последователям Темного Лорда. Адская сталь обеспечивает превосходную защиту от всех видов повреждений.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaith = {"Faith of the Dark"};
 ITEM.excludeFactions = {"Goreic Warrior"};
@@ -139,7 +141,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Elegant Robes";
+ITEM.name = "Элегантные Робы";
+ITEM.uniqueID = "elegant_robes";
 ITEM.group = "satanists/elegantrobes";
 ITEM.model = "models/begotten/headgroup_props/elegantrobes.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/elegant_robes.png"
@@ -150,7 +153,7 @@ ITEM.protection = 45
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "Elegant robes that befit only the ornate followers of Satan. It is expertly designed with exotic fabrics that display supremacy and wealth as well as offering unmatched protection with no expense of grace or mobility.";
+ITEM.description = "Элегантные одеяния, подобающие только выдающимся последователям Сатаны. Она создана из экзотических тканей, которые демонстрируют превосходство и богатство, а также обеспечивают непревзойденную защиту, не уступая в изяществе и подвижности.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.requireFaith = {"Faith of the Dark"};
 ITEM.excludeFactions = {"Goreic Warrior"};
@@ -195,7 +198,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Heavy Hellplate Armor";
+ITEM.name = "Укрепленные Адские Латы";
+ITEM.uniqueID = "heavy_hellplate_armor";
 ITEM.group = "satanists/hellplateheavy";
 ITEM.model = "models/begotten/headgroup_props/hellplateheavyarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/heavy_hellplate_armor.png"
@@ -206,7 +210,7 @@ ITEM.protection = 85;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Once the dignified armor of the White Sentinels and the sigil of House Philimaxio, this armor has since been reforged in hellfire many times, only barely resembling its original form. Its existence is a disgrace to the Gatekeeper Order and an outright mockery of the Light. This particular set has been reinforced with additional plates, making it highly protective at the cost of mobility and grace.";
+ITEM.description = "Когда-то эти доспехи были достойной броней Белых Стражей и символом Дома Филимаксио, но с тех пор они многократно переплавлялись в адском пламени, лишь отдаленно напоминая свою первоначальную форму. Ее существование - позор для Ордена Привратников и откровенная насмешка над Светом. Именно этот комплект был усилен дополнительными пластинами, что сделало его высокозащитным за счет снижения подвижности и изящества.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaith = {"Faith of the Dark"};
 ITEM.excludeFactions = {"Goreic Warrior"};
@@ -260,7 +264,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Hellplate Armor";
+ITEM.name = "Адские Латы";
+ITEM.uniqueID = "hellplate_armor"
 ITEM.group = "satanists/hellplatemedium";
 ITEM.model = "models/begotten/headgroup_props/hellplatemediumarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/hellplate_armor.png"
@@ -271,7 +276,7 @@ ITEM.protection = 65;
 ITEM.weight = 5;
 ITEM.weightclass = "Medium";
 ITEM.type = "plate";
-ITEM.description = "Once the dignified armor of the White Sentinels and the sigil of House Philimaxio, this armor has since been reforged in hellfire many times, only barely resembling its original form. Its existence is a disgrace to the Gatekeeper Order and an outright mockery of the Light.";
+ITEM.description = "Когда-то эти доспехи были достойной броней Белых Стражей и символом Дома Филимаксио, но с тех пор они многократно переплавлялись в адском пламени, лишь отдаленно напоминая свою первоначальную форму. Ее существование - позор для Ордена Привратников и откровенная насмешка над Светом.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaith = {"Faith of the Dark"};
 ITEM.excludeFactions = {"Goreic Warrior"};
@@ -323,7 +328,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Hellspike Armor";
+ITEM.name = "Шипастые Латы Ада";
+ITEM.uniqueID = "hellspike_armor"
 ITEM.model = "models/begotten/headgroup_props/hellspikearmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/hellspike_armor.png"
 ITEM.category = "Armor"
@@ -335,7 +341,7 @@ ITEM.protection = 75;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "A set of metal plate armor adorned with spikes, its design originally hailing from the Darklands. These eastern types of armor were once prized possessions in the collections of Glazic nobles, but they are now synonymous with the followers of the Dark Lord.";
+ITEM.description = "Набор металлических пластинчатых доспехов, украшенных шипами, дизайн которых был родом из Темных земель. Когда-то эти восточные виды доспехов были ценным достоянием в коллекциях глазикских дворян, но теперь они стали синонимом последователей Темного Властелина.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaith = {"Faith of the Dark"};
 ITEM.excludeFactions = {"Goreic Warrior"};
@@ -395,7 +401,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Wraith Armor";
+ITEM.name = "Латы Ужаса";
+ITEM.uniqueID = "wraith_armor";
 ITEM.model = "models/begotten/headgroup_props/wraitharmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/wraith_armor.png"
 ITEM.category = "Armor"
@@ -407,7 +414,7 @@ ITEM.protection = 80;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Hellforged Steel armor said to contain the bones of many sacrifices within. It is shaped in the manner of a skeleton and is sure to terrify foes.";
+ITEM.description = "Говорят, что в доспехах из кованой в аду стали хранятся кости многих жертвоприношений. Они выполнены в форме скелета и, несомненно, наводят ужас на врагов.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaith = {"Faith of the Dark"};
 ITEM.excludeFactions = {"Goreic Warrior"};
@@ -468,7 +475,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Darklander Immortal Armor";
+ITEM.name = "Темноземские Латы Бессмертного";
+ITEM.uniqueID = "darklander_immortal_armor";
 ITEM.model = "models/begotten/headgroups_props/darklanderimmortal.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/darklander_immortal_armor.png"
 ITEM.category = "Armor"
@@ -480,7 +488,7 @@ ITEM.protection = 85;
 ITEM.weight = 11;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Heavy plate armor of Eastern Nigerii design. It is meant for the infamous Immortals, an elite band of warriors devoted to the Emperor. A dark magic prevents this armor from being worn by anyone not of the bloodline of the King of Kings.";
+ITEM.description = "Тяжелые пластинчатые доспехи, изготовленные в Восточной Нигерии. Они предназначены для печально известных Бессмертных, элитного отряда воинов, преданных императору. Темная магия не позволяет носить эти доспехи никому, кроме потомков Царя царей.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Children of Satan"};
 ITEM.overlay = "begotten/zomboverlay/skullhelm";

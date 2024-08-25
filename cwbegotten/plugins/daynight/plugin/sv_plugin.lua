@@ -13,20 +13,20 @@ cwDayNight.cycles = {
 	["daytonight"] = {
 		length = 300, -- 5 minutes in seconds.
 		nextCycle = "night",
-		eventText = "The sky begins to darken and bells ring aloud throughout the wasteland, signalling the immediate need for shelter. Night is coming.",
+		eventText = "Небо начинает темнеть, и по всей пустоши раздается громкий звон колоколов, возвещающий о необходимости срочно укрыться. Наступает ночь.",
 		sound = {farSound = "cosmicrupture/bellsdistant.wav", closeSound = "cosmicrupture/bellsclose.wav"},
 		fadeMusic = true
 	},
 	["night"] = {
 		length = 1800, -- 30 minutes in seconds.
 		nextCycle = "nighttoday",
-		eventText = "The Blood Moon has risen to claim those who still wander the wasteland.",
+		eventText = "Кровавая луна взошла, чтобы забрать тех, кто все еще бродит по пустошам.",
 		fadeMusic = true
 	},
 	["nighttoday"] = {
 		length = 300, -- 5 minutes in seconds.
 		nextCycle = "day",
-		eventText = "The Blood Moon finally subsides and the sky begins to lighten. You have survived another night.",
+		eventText = "Кровавая луна наконец-то утихла, и небо начало светлеть. Вы пережили еще одну ночь.",
 		fadeMusic = true
 	},
 };
@@ -34,7 +34,7 @@ cwDayNight.cycles = {
 if game.GetMap() == "rp_scraptown" then
 	local tab = cwDayNight.cycles["daytonight"];
 	
-	tab.eventText = "The sky begins to darken and the klaxons ring aloud throughout the wasteland, signalling the immediate need for shelter. Night is coming.";
+	tab.eventText = "Небо начинает темнеть, и по всей пустоши раздается громкий звук клаксонов, сигнализирующий о необходимости срочно искать укрытие. Наступает ночь.";
 	tab.sound = "warhorns/scrapperklaxon.mp3";
 end
 
@@ -81,9 +81,9 @@ function cwDayNight:ChangeCycle(cycle, notify)
 				end
 			elseif player:GetSubfaction() == "Rekh-khet-sa" then
 				if cycle == "night" then
-					Clockwork.chatBox:Add(player, nil, "event", "You feel the Blood Moon rising. It is time to prowl.");
+					Clockwork.chatBox:Add(player, nil, "event", "Вы чувствуете восход Кровавой Луны. Пришло время пошалить.");
 				elseif cycle == "nighttoday" then
-					Clockwork.chatBox:Add(player, nil, "event", "The Blood Moon is fading, it is no longer safe for you to stalk the Wastes.");
+					Clockwork.chatBox:Add(player, nil, "event", "Кровавая луна угасает, и теперь вам небезопасно бродить по Пустошам.");
 				end
 			end
 		end

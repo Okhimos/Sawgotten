@@ -30,7 +30,7 @@ function cwMelee:GetBars(bars)
 		end;
 		
 		if (self.stability < max_stability) then
-			bars:Add("stability", Color(135, 80, 60), "STABILITY", self.stability, max_stability, self.stability < 25);
+			bars:Add("стабильность", Color(135, 80, 60), "СТАБИЛЬНОСТЬ", self.stability, max_stability, self.stability < 25);
 		end;
 	end;
 	
@@ -54,7 +54,7 @@ function cwMelee:GetBars(bars)
 		end
 		
 		if (self.freeze > 0) then
-			bars:Add("ICE", Color(96, 192, 214), "ICE", self.freeze, 100, self.freeze > 90);
+			bars:Add("ЛЕД", Color(96, 192, 214), "ЛЕД", self.freeze, 100, self.freeze > 90);
 		end;
 	end
 end;

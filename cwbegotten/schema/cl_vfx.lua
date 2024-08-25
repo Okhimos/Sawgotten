@@ -21,10 +21,10 @@ Schema.npcTable = {
 };
 
 Schema.bibleQuotes = {
-	{spaghetti = "And I saw the beast, and the kings of the earth, and their armies, gathered together to make war against him that sat on the horse, and against his army.", pingas = "(Book of Revelation 19:19)"}, -- 
-	{spaghetti = "Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken.", pingas = "(Gospel of Matthew 24:29)"}, -- 
-	{spaghetti = "And God saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually.", pingas = "(Book of Genesis 6:5)"}, --
-	{spaghetti = "For, behold, the Lord will come with fire, and with his chariots like a whirlwind, to render his anger with fury, and his rebuke with flames of fire. For by fire and by his sword will the Lord plead with all flesh: and the slain of the Lord shall be many.", pingas = "(Book of Isaiah 66:15-16)"},
+	{spaghetti = "И увидел я зверя и царей земных и воинства их, собранные, чтобы сразиться с Сидящим на коне и с воинством Его.", pingas = "(Книга Откровения 19:19)"}, -- 
+	{spaghetti = "И вдруг, после скорби дней тех, солнце померкнет, и луна не даст света своего, и звезды спадут с неба, и силы небесные поколеблются;", pingas = "(Евангелие от Матфея 24:29)"}, -- 
+	{spaghetti = "И увидел Господь, что велико развращение человеков на земле, и что все мысли и помышления сердца их были зло во всякое время", pingas = "(Книга Бытия 6:5)"}, --
+	{spaghetti = "Ибо вот, придет Господь в огне, и колесницы Его – как вихрь, чтобы излить гнев Свой с яростью и прещение Свое с пылающим огнем. Ибо Господь с огнем и мечом Своим произведет суд над всякою плотью, и много будет пораженных Господом.", pingas = "(Книга пророка Исаии 66:15-16)"},
 }
 
 Schema.wakeupMusic = {

@@ -55,17 +55,17 @@ function cwPossession:GetScreenTextInfo()
 		if (Clockwork.Client.victim:GetNetVar("beingChloro")) then
 			return {
 				alpha = 255 - blackFadeAlpha,
-				title = "SOMEBODY IS USING CHLOROFORM ON YOUR VESSEL"
+				title = "КТО-ТО ИСПОЛЬЗУЕТ НА ВАС ХЛОРОФОРМ!"
 			};
 		elseif (Clockwork.Client.victim:GetNetVar("beingTied")) then
 			return {
 				alpha = 255 - blackFadeAlpha,
-				title = "YOUR VESSEL IS BEING TIED UP"
+				title = "ВАС ПЫТАЮТСЯ СВЯЗАТЬ!"
 			};
 		elseif (Clockwork.Client.victim:GetNetVar("tied") != 0) then
 			return {
 				alpha = 255 - blackFadeAlpha,
-				title = "YOUR VESSEL HAS BEEN TIED UP"
+				title = "ВЫ СВЯЗАНЫ!"
 			};
 		end;
 	end
@@ -347,15 +347,15 @@ net.Receive("PossessionFreakoutAnim", function()
 end);
 
 Clockwork.chatBox:RegisterClass("demontalk", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(150, 20, 20, 255), "An overpowering voice in the back of your head speaks to you "..info.text);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(150, 20, 20, 255), "Из глубин вашего разума раздается властный голос "..info.text);
 end);
 
 Clockwork.chatBox:RegisterClass("demonnicetalk", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(255, 251, 219, 255), "A melodic and deep voice thunders in the back of your head "..info.text);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(255, 251, 219, 255), "Мелодичный и глубокий голос гремит в твоей голове "..info.text);
 end);
 
 Clockwork.chatBox:RegisterClass("demonhosttalk", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(150, 20, 20, 255), "You gather all your strength and speak inside your mind to the demon "..info.text);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(150, 20, 20, 255), "Ты собираешь все силы, что были и пытаешься говорить с голосом из головы "..info.text);
 end);
 
 Clockwork.chatBox:RegisterClass("whispersomeone", "ic", function(info)
@@ -367,9 +367,9 @@ Clockwork.chatBox:RegisterClass("whispersomeone", "ic", function(info)
 		end;
 
 		if info.font then
-			Clockwork.chatBox:Add(info.filtered, nil, color, "Someone whispers \""..info.text.."\"", info.font);
+			Clockwork.chatBox:Add(info.filtered, nil, color, "Кто-то шепчет \""..info.text.."\"", info.font);
 		else
-			Clockwork.chatBox:Add(info.filtered, nil, color, "Someone whispers \""..info.text.."\"");
+			Clockwork.chatBox:Add(info.filtered, nil, color, "Кто-то шепчет \""..info.text.."\"");
 		end;
 	end;
 end);
@@ -384,14 +384,14 @@ local fadeout = 255;
 local dist;
 
 surface.CreateFont( "radial", {
-	font = "Immortal",
+	font = "v_Kruella",
 	extended = false,
 	size = Clockwork.kernel:FontScreenScale(10),
 	weight = 900,
 })
 
 surface.CreateFont( "radial_big", {
-	font = "Immortal",
+	font = "v_Kruella",
 	extended = false,
 	size = Clockwork.kernel:FontScreenScale(14),
 	weight = 900,

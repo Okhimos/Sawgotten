@@ -517,10 +517,10 @@ function PANEL:RebuildPanel(storagePanel, storageType, usedWeight, weight, usedS
 				end;
 			end;
 		elseif (storagename == "Inventory") then
-			storagename = "Your sack is"
+			storagename = "Твой мешок"
 		end;
 		
-		local tata = storagename.." empty...";
+		local tata = storagename.." пуст";
 		
 		draw.SimpleText(tata, fo, (w / 2), (h / 2), Color(170, 0, 0, self.ALPG2), 1, 1);
 	end;

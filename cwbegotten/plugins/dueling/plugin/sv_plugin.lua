@@ -193,7 +193,7 @@ function cwDueling:Think()
 				self:PlayerExitsMatchmaking(player);
 
 				if IsValid(player) then
-					Schema:EasyText(player, "icon16/door_out.png", "orange", "Exited Duel Matchmaking");
+					Schema:EasyText(player, "icon16/door_out.png", "orange", "Вышел из поиска соперника");
 				end
 			end
 		end
@@ -266,7 +266,7 @@ function cwDueling:PlayerEntersMatchmaking(player)
 			player.PickingUpRagdoll.PickedUpBy = nil;
 		end;
 		
-		Clockwork.chatBox:AddInTargetRadius(player, "me", "releases their grip on the body before them.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+		Clockwork.chatBox:AddInTargetRadius(player, "me", "отпускает тело перед собой.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 		
 		player.NextPickup = CurTime() + 1;
 		player.PickingUpRagdoll = nil;
@@ -283,7 +283,7 @@ function cwDueling:PlayerEntersMatchmaking(player)
 	if player.opponent == nil then -- If both players spam really hard they can have multiple duels trigger at once.
 		table.insert(self.playersInMatchmaking, player);
 
-		Schema:EasyText(player, "icon16/door_in.png", "orange", "Entered Duel Matchmaking")
+		Schema:EasyText(player, "icon16/door_in.png", "orange", "Начал искать соперника")
 		
 		if #self.playersInMatchmaking > 1 then
 			self:MatchmakingCheck();
@@ -561,9 +561,9 @@ function cwDueling:DuelCompleted(winner, loser)
 						end
 					end
 					
-					Schema:EasyText({winner, loser}, "icon16/shield_add.png", "forestgreen", winner:Name().." ("..level..") was the winner with "..winner:Health().." out of "..winner:GetMaxHealth().." health left!");
+					Schema:EasyText({winner, loser}, "icon16/shield_add.png", "forestgreen", winner:Name().." ("..level..") победил с "..winner:Health().." из "..winner:GetMaxHealth().." изначального здоровья!");
 				else
-					Schema:EasyText({winner, loser}, "icon16/shield_add.png", "forestgreen", winner:Name().." was the winner with "..winner:Health().." out of "..winner:GetMaxHealth().." health left!");
+					Schema:EasyText({winner, loser}, "icon16/shield_add.png", "forestgreen", winner:Name().." победил с "..winner:Health().." из "..winner:GetMaxHealth().." изначального здоровья!");
 				end
 			end
 		end
@@ -617,9 +617,9 @@ function cwDueling:DuelCompleted(winner, loser)
 						end
 					end
 				
-					Schema:EasyText(winner, "icon16/shield_add.png", "forestgreen", winner:Name().." ("..level..") was the winner with "..winner:Health().." out of "..winner:GetMaxHealth().." health left!");
+					Schema:EasyText(winner, "icon16/shield_add.png", "forestgreen", winner:Name().." ("..level..") победил с "..winner:Health().." из "..winner:GetMaxHealth().." изначального здоровья!");
 				else
-					Schema:EasyText(winner, "icon16/shield_add.png", "forestgreen", winner:Name().." was the winner with "..winner:Health().." out of "..winner:GetMaxHealth().." health left!");
+					Schema:EasyText(winner, "icon16/shield_add.png", "forestgreen", winner:Name().." победил с "..winner:Health().." из "..winner:GetMaxHealth().." изначального здоровья!");
 				end
 			end
 		end
@@ -652,7 +652,7 @@ function cwDueling:DuelCompleted(winner, loser)
 					end
 				end);
 
-				Schema:EasyText(loser, "icon16/shield_delete.png", "orangered", loser:Name().." loses!");
+				Schema:EasyText(loser, "icon16/shield_delete.png", "orangered", loser:Name().." проиграл!");
 			end
 		end
 	end

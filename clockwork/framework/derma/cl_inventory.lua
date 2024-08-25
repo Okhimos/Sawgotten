@@ -1136,7 +1136,7 @@ function PANEL:Init()
 	self.spaceUsed = vgui.Create("DPanel", self);
 	self.spaceUsed:SetPos(1, 1);
 
-	local font = Clockwork.fonts:GetMultiplied("nov_IntroTextSmallDETrooper", 0.85);
+	local font = Clockwork.fonts:GetMultiplied("cwTooltip", 0.85);
 
 	-- Called when the panel should be painted.
 	function self.spaceUsed.Paint(spaceUsedR)

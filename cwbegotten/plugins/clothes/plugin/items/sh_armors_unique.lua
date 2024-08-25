@@ -1,5 +1,6 @@
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Lord Vasso's Gothic Plate";
+ITEM.name = "Броня Лорда Вассо";
+ITEM.uniqueID = "lord_vasso_armor";
 ITEM.model = "models/begotten/headgroup_props/hellspikearmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/lord_vasso_armor.png"
 ITEM.category = "Armor"
@@ -11,7 +12,7 @@ ITEM.protection = 90;
 ITEM.weight = 6;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Lord Vasso's personal set of hell-forged armor, its style reminiscent of a time before the Empire of Light.";
+ITEM.description = "Личный комплект выкованных в аду доспехов лорда Вассо, стиль которых напоминает о временах до появления Империи Света.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Children of Satan"};
 
@@ -66,7 +67,8 @@ ITEM:Register();
 
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Grand Knight Plate";
+ITEM.name = "Латы Верховного Рыцаря";
+ITEM.uniqueID = "grand_knight_armor";
 ITEM.model = "models/begotten/headgroup_props/knightarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/grand_knight_armor.png"
 ITEM.category = "Armor"
@@ -78,7 +80,7 @@ ITEM.protection = 90;
 ITEM.weight = 6;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Plate armor covered in holy cloth and blessed sigils. A helmet forged in Maximillian steel with gold engravings. It was meant for a powerful figure of Glazic faith.";
+ITEM.description = "Пластинчатый доспех, покрытый святой тканью и благословенными символами. Шлем, выкованный из Максимиллианской стали с золотыми гравюрами. Он предназначался для самых сильных воинов Сияния.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 
 ITEM.requiredbeliefs = {"hauberk"};
@@ -131,7 +133,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Bjornling's Red Wolf Plate";
+ITEM.name = "Доспех Чемпиона Красных Волков";
+ITEM.uniqueID = "bjorling_red_wolf_plate";
 ITEM.model = "models/begotten/headgroup_props/reaverplate.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/bjornling_armor.png"
 ITEM.category = "Armor"
@@ -143,7 +146,7 @@ ITEM.protection = 90;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Heavy armor made from hellforged black iron. Decorated with skulls and hides from man and demon alike, the Red Wolves of Clan Reaver make sure their presence is known.";
+ITEM.description = "Тяжелая броня из адского черного железа. Украшенные черепами и шкурами людей и демонов, Красные Волки Клана Ривера следят за тем, чтобы о них знали.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior"};
 
@@ -196,7 +199,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Goreic Kingplate";
+ITEM.name = "Латы Короля Горов";
+ITEM.uniqueID = "gore_king_plate";
 ITEM.model = "models/begotten/headgroup_props/housecarlarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/lord_vasso_armor.png"
 ITEM.category = "Armor"
@@ -208,7 +212,7 @@ ITEM.protection = 90;
 ITEM.weight = 6;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Plate armor forged from supreme Shagalaxian Steel. It is meant for a King of the Bark Throne.";
+ITEM.description = "Броня, выкованная из превосходной Шагалакской стали. Она предназначена для Короля Народа Копья.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior"};
 
@@ -262,7 +266,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Shingar's Blackwolf Hauberk";
+ITEM.name = "Доспехи Черного Волка";
+ITEM.uniqueID = "black_wolf_armor";
 ITEM.model = "models/begotten/headgroup_props/housecarlarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/lord_vasso_armor.png"
 ITEM.category = "Armor"
@@ -274,7 +279,7 @@ ITEM.protection = 90;
 ITEM.weight = 6;
 ITEM.weightclass = "Heavy";
 ITEM.type = "chainmail";
-ITEM.description = "Shagalaxian chainmail, boiled leather and a bloody wolf's pelt. A brutish set of armor that gets the job done well.";
+ITEM.description = "Шагалакская кольчуга, вареная кожа и окровавленная волчья шкура. Жестокий комплект доспехов, который хорошо справляется со своей задачей.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Goreic Warrior"};
 
@@ -327,7 +332,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Emperor Varazdat's Nigerii Hauberk";
+ITEM.name = "Броня Императора Вараздат";
+ITEM.uniqueID = "varazdat_emperor_armor";
 ITEM.model = "models/begotten/headgroup_props/hellspikearmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/lord_vasso_armor.png"
 ITEM.category = "Armor"
@@ -339,7 +345,7 @@ ITEM.protection = 90;
 ITEM.weight = 6;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Armor of the Emperor of the Eastern Nigerii Empire. It is obviously fitted for a portly figure.";
+ITEM.description = "Доспехи императора Восточной Нигерийской империи. Они явно рассчитаны на дородную фигуру.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Children of Satan"};
 

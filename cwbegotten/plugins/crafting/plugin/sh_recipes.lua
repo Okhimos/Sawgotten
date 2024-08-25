@@ -58,7 +58,7 @@ RECIPE:Register()]]--
 
 function cwRecipes:ClockworkInitialized()
 	local RECIPE = cwRecipes.recipes:New("charcoal");
-		RECIPE.name = "(2x) Charcoal";
+		RECIPE.name = "(2x) Уголь";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
@@ -85,7 +85,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	 
 	RECIPE = cwRecipes.recipes:New("leathercloth");
-		RECIPE.name = "Leather";
+		RECIPE.name = "Кожа";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
 			["cloth"] = {amount = 3},
@@ -111,7 +111,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("leatherhide");
-		RECIPE.name = "(2x) Leather";
+		RECIPE.name = "(2x) Кожа";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
 			["hide"] = {amount = 1},
@@ -137,7 +137,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("hide");
-		RECIPE.name = "(3x) Hide";
+		RECIPE.name = "(3x) Шкуры";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["bearskin"] = {amount = 1},
@@ -163,7 +163,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("wrought_iron_ingot");
-		RECIPE.name = "(4x) Wrought Iron Ingot";
+		RECIPE.name = "(4x) Переплавленное Железо";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"smith"};
 		RECIPE.requirements = {
@@ -191,7 +191,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_ingot");
-		RECIPE.name = "Iron Ingot";
+		RECIPE.name = "Железный Слиток";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"smith"};
 		RECIPE.requirements = {
@@ -219,7 +219,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("iron_ingot_reclaimed");
-		RECIPE.name = "(Reclaimed) Iron Ingot";
+		RECIPE.name = "(Восстановлено) Железный Слиток";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"smith"};
 		RECIPE.requirements = {
@@ -247,7 +247,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("steel_ingot");
-		RECIPE.name = "Steel Ingot";
+		RECIPE.name = "Стальной Слиток";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"blacksmith"};
 		RECIPE.requirements = {
@@ -275,7 +275,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("steel_ingot_reclaimed");
-		RECIPE.name = "(Reclaimed) Steel Ingot";
+		RECIPE.name = "(Восстановлено) Стальной Слиток";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"blacksmith"};
 		RECIPE.requirements = {
@@ -303,7 +303,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gold_ingot");
-		RECIPE.name = "Gold Ingot";
+		RECIPE.name = "Золотой Слиток";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"blacksmith"};
 		RECIPE.requirements = {
@@ -331,7 +331,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("fine_steel_ingot");
-		RECIPE.name = "Fine Steel Ingot";
+		RECIPE.name = "Хороший Стальной Слиток";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"master_blacksmith"};
 		RECIPE.requirements = {
@@ -359,7 +359,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("fine_steel_ingot_reclaimed");
-		RECIPE.name = "(Reclaimed) Fine Steel Ingot";
+		RECIPE.name = "Хороший Железный Слиток";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"master_blacksmith"};
 		RECIPE.requirements = {
@@ -387,7 +387,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("hellforged_steel_ingot");
-		RECIPE.name = "Hellforged Steel Ingot";
+		RECIPE.name = "Слиток Адской Стали";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"master_blacksmith", "sorcerer"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -417,7 +417,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("familial_hellforged_steel_ingot");
-		RECIPE.name = "(Familial) Hellforged Steel Ingot";
+		RECIPE.name = "(Семья) Слиток Адской Стали";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"master_blacksmith", "deceitful_snake"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -447,7 +447,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("maximilian_steel_ingot");
-		RECIPE.name = "Maximilian Steel Ingot";
+		RECIPE.name = "Слиток Максимилианской Стали";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"master_blacksmith", "emissary"};
 		RECIPE.requiredFaiths = {"Faith of the Light"};
@@ -476,7 +476,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("shagalaxian_steel_ingot");
-		RECIPE.name = "Shagalaxian Steel Ingot";
+		RECIPE.name = "Слиток Шагалакской Стали";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"master_blacksmith", "enduring_bear"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -506,7 +506,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("transmuted_hellforged_steel_ingot");
-		RECIPE.name = "(Transmuted) Hellforged Steel Ingot";
+		RECIPE.name = "(Трансмутация) Слиток Адской Стали";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"master_blacksmith", "enduring_bear"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -535,7 +535,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("technocraft");
-		RECIPE.name = "Technocraft";
+		RECIPE.name = "Технокрафт";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"mechanic", "wire_therapy"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
@@ -569,7 +569,7 @@ function cwRecipes:ClockworkInitialized()
 	--
 
 	RECIPE = cwRecipes.recipes:New("cooked_bear_meat");
-		RECIPE.name = "Cooked Bear Meat";
+		RECIPE.name = "Приготовленное Мясо Медведя";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -596,7 +596,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("cooked_leopard_meat");
-		RECIPE.name = "Cooked Leopard Meat";
+		RECIPE.name = "Приготовленное Мясо Медведя";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -623,7 +623,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("cooked_deer_meat");
-		RECIPE.name = "Cooked Deer Meat";
+		RECIPE.name = "Приготовленное Мясо Оленя";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -650,7 +650,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("cooked_goat_meat");
-		RECIPE.name = "Cooked Goat Meat";
+		RECIPE.name = "Приготовленное Мясо Козла";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -677,7 +677,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("cooked_human_meat");
-		RECIPE.name = "Cooked Human Meat";
+		RECIPE.name = "Приготовленная Человечина";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -704,7 +704,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("cooked_yummy_meat");
-		RECIPE.name = "Cooked Yummy Meat";
+		RECIPE.name = "Приготовленная Мерзопакость";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -713,7 +713,7 @@ function cwRecipes:ClockworkInitialized()
 		RECIPE.result = {
 			["cooked_yummy_meat"] = {amount = 1},
 		};
-		RECIPE.category = "Cooking"
+		RECIPE.category = "Other"
 		RECIPE.finishSound = "ambient/fire/mtov_flame2.wav";
 		RECIPE.failSound = "buttons/button2.wav"
 		RECIPE.craftTime = 8
@@ -731,7 +731,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("kings_meal");
-		RECIPE.name = "(2x) King's Meal";
+		RECIPE.name = "(2x) Царский Обед";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"culinarian"};
 		RECIPE.requirements = {
@@ -761,7 +761,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("masterclass_yummy_meal");
-		RECIPE.name = "(2x) Cooked Canned Goodies";
+		RECIPE.name = "(2x) Приготовленная Вкусняшка";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"culinarian"};
 		RECIPE.requirements = {
@@ -789,7 +789,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("wanderers_delight");
-		RECIPE.name = "(2x) Wanderer's Delight";
+		RECIPE.name = "(2x) Деликатес Странника";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"culinarian"};
 		RECIPE.requirements = {
@@ -817,7 +817,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("meatmeal");
-		RECIPE.name = "(3x) Meatmeal";
+		RECIPE.name = "(3x) Мясное Блюдо";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"culinarian"};
 		RECIPE.requirements = {
@@ -845,7 +845,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("purified_water");
-		RECIPE.name = "Purified Water";
+		RECIPE.name = "Очищенная Вода";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -873,7 +873,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("unfuckedmeat");
-		RECIPE.name = "Unfucked Meat";
+		RECIPE.name = "Приготовленное Мясцо";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -900,7 +900,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("canned_meal");
-		RECIPE.name = "Canned Meal";
+		RECIPE.name = "Консервированный Обед";
 		RECIPE.requiresHeatSource = true;
 		RECIPE.requiredBeliefs = {"cookist"};
 		RECIPE.requirements = {
@@ -927,7 +927,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("varazdat_bloodwine");
-		RECIPE.name = "Varazdat Bloodwine";
+		RECIPE.name = "Вино Родословной Вараздат";
 		RECIPE.requiredBeliefs = {"culinarian"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
 		RECIPE.requirements = {
@@ -962,7 +962,7 @@ function cwRecipes:ClockworkInitialized()
 	--
 
 	RECIPE = cwRecipes.recipes:New("crafted_bandage");
-		RECIPE.name = "Crafted Bandage";
+		RECIPE.name = "Самодельный Бинт";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
 			["cloth"] = {amount = 2},
@@ -988,7 +988,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("splint");
-		RECIPE.name = "Makeshift Splint";
+		RECIPE.name = "Самодельная Шина";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
 			["wood"] = {amount = 2},
@@ -1014,7 +1014,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gauze");
-		RECIPE.name = "Gauze";
+		RECIPE.name = "Марля";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["cloth"] = {amount = 3},
@@ -1040,7 +1040,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("skintape");
-		RECIPE.name = "Skintape";
+		RECIPE.name = "Ломоть Кожи";
 		RECIPE.requiredBeliefs = {"primeval"};
 		RECIPE.requirements = {
 			["humanmeat"] = {amount = 2},
@@ -1066,7 +1066,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("skingauze");
-		RECIPE.name = "Skingauze";
+		RECIPE.name = "Марля из Плоти";
 		RECIPE.requiredBeliefs = {"primeval"};
 		RECIPE.requirements = {
 			["humanmeat"] = {amount = 3},
@@ -1093,7 +1093,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("black_remedy");
-		RECIPE.name = "Black Remedy";
+		RECIPE.name = "Черный Порошок";
 		RECIPE.requiredBeliefs = {"ingenious", "plague_doctor"};
 		RECIPE.requirements = {
 			["antibiotics"] = {amount = 2},
@@ -1121,7 +1121,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("survivalpack");
-		RECIPE.name = "Survival Pack";
+		RECIPE.name = "Медицинский Набор";
 		RECIPE.requiredBeliefs = {"ingenious", "doctor"};
 		RECIPE.requirements = {
 			["antibiotic_paste"] = {amount = 1},
@@ -1133,7 +1133,7 @@ function cwRecipes:ClockworkInitialized()
 		RECIPE.result = {
 			["survivalpack"] = {amount = 1},
 		};
-		RECIPE.category = "Medical"
+		RECIPE.category = "Mедицина"
 		RECIPE.finishSound = "begotten/items/first_aid.wav";
 		RECIPE.failSound = "buttons/button2.wav"
 		RECIPE.craftTime = 8
@@ -1157,7 +1157,7 @@ function cwRecipes:ClockworkInitialized()
 	--
 	
 	RECIPE = cwRecipes.recipes:New("campfire_kit");
-		RECIPE.name = "Campfire Kit";
+		RECIPE.name = "Набор для Костра";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
 			["wood"] = {amount = 6},
@@ -1184,7 +1184,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("siege_ladder");
-		RECIPE.name = "Siege Ladder";
+		RECIPE.name = "Осадная Лестница";
 		RECIPE.requiredBeliefs = {"craftsman"};
 	--	RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -1211,7 +1211,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("bear_trap");
-		RECIPE.name = "Bear Trap";
+		RECIPE.name = "Медвежий Капкан";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
 			["iron_ingot"] = {amount = 1},
@@ -1238,7 +1238,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("engraving_tool");
-		RECIPE.name = "Engraving Tool";
+		RECIPE.name = "Набор для Гравировки";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
 			["wrought_iron_ingot"] = {amount = 1},
@@ -1265,7 +1265,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("breakdown_kit");
-		RECIPE.name = "Breakdown Kit";
+		RECIPE.name = "Набор для Разборки";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
 			["iron_ingot"] = {amount = 1},
@@ -1292,7 +1292,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("armor_repair_kit");
-		RECIPE.name = "Armor Repair Kit";
+		RECIPE.name = "Инструменты для Ремонта Брони";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
 			["iron_ingot"] = {amount = 1},
@@ -1319,7 +1319,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("weapon_repair_kit");
-		RECIPE.name = "Melee Repair Kit";
+		RECIPE.name = "Инструменты для Оружия";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
 			["iron_ingot"] = {amount = 2},
@@ -1345,7 +1345,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("firearm_repair_kit");
-		RECIPE.name = "Firearm Repair Kit";
+		RECIPE.name = "Инструменты для Огнестрела";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
 			["iron_ingot"] = {amount = 1},
@@ -1372,7 +1372,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("lockpick");
-		RECIPE.name = "Lockpick";
+		RECIPE.name = "Отмычка";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
 			["scrap"] = {amount = 2},
@@ -1404,7 +1404,7 @@ function cwRecipes:ClockworkInitialized()
 	--
 
 	RECIPE = cwRecipes.recipes:New("backpack_pouch");
-		RECIPE.name = "Pouch";
+		RECIPE.name = "Подсумок";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -1431,7 +1431,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("backpack_small");
-		RECIPE.name = "Small Backpack";
+		RECIPE.name = "Маленький Рюкзак";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -1459,7 +1459,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("backpack");
-		RECIPE.name = "Backpack";
+		RECIPE.name = "Рюкзак";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -1487,7 +1487,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("backpack_pouches");
-		RECIPE.name = "Backpack w/ Pouches";
+		RECIPE.name = "Рюкзак с Подсумками";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -1515,7 +1515,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("backpack_survivalist");
-		RECIPE.name = "Survivalist Backpack";
+		RECIPE.name = "Большой Рюкзак";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -1543,7 +1543,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_pouch");
-		RECIPE.name = "Gore Pouch";
+		RECIPE.name = "Мешок из Шкур";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -1576,7 +1576,7 @@ function cwRecipes:ClockworkInitialized()
 	--
 
 	RECIPE = cwRecipes.recipes:New("savage_claws");
-		RECIPE.name = "Savage Claws";
+		RECIPE.name = "Когти Дикаря";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -1604,7 +1604,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("steel_claws");
-		RECIPE.name = "Steel Claws";
+		RECIPE.name = "Стальные Когти";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -1632,7 +1632,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("elegant_dagger");
-		RECIPE.name = "Elegant Dagger";
+		RECIPE.name = "Элегантный Кинжал";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -1660,7 +1660,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_hunting_dagger");
-		RECIPE.name = "Gore Hunting Dagger";
+		RECIPE.name = "Охотничий Кинжал";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -1689,7 +1689,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_dagger");
-		RECIPE.name = "Iron Dagger";
+		RECIPE.name = "Железный Кинжал";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -1717,7 +1717,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("knightsbane");
-		RECIPE.name = "Knightsbane";
+		RECIPE.name = "Бич Рыцарей";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -1745,7 +1745,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("parrying_dagger");
-		RECIPE.name = "Parrying Dagger";
+		RECIPE.name = "Кинжал для Парирования";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -1774,7 +1774,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("quickshank");
-		RECIPE.name = "Quickshank";
+		RECIPE.name = "Заточка";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -1802,7 +1802,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("caestus");
-		RECIPE.name = "Caestus";
+		RECIPE.name = "Цестусы";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["leather"] = {amount = 2},
@@ -1829,7 +1829,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_knuckles");
-		RECIPE.name = "Iron Knuckles";
+		RECIPE.name = "Железные Кастеты";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
@@ -1856,7 +1856,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("spiked_knuckles");
-		RECIPE.name = "Spiked Knuckles";
+		RECIPE.name = "Шипастые Кастеты";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
@@ -1884,7 +1884,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("claymore");
-		RECIPE.name = "Claymore";
+		RECIPE.name = "Клеймор";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -1914,7 +1914,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("steel_longsword");
-		RECIPE.name = "Steel Longsword";
+		RECIPE.name = "Стальной Длинный Меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -1944,7 +1944,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_cleaver");
-		RECIPE.name = "Gore Cleaver";
+		RECIPE.name = "Секач Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -1973,7 +1973,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_club");
-		RECIPE.name = "Gore Club";
+		RECIPE.name = "Дубина Горов";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2001,7 +2001,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_war_axe");
-		RECIPE.name = "Gore War Axe";
+		RECIPE.name = "Боевой Топор Клана Гор";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2030,7 +2030,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("grockling_stone_maul");
-		RECIPE.name = "Grockling Stone Maul";
+		RECIPE.name = "Булава Клана Грок";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2059,7 +2059,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("grocklingsacredstonemaul");
-		RECIPE.name = "Grockling Sacred Stone Maul";
+		RECIPE.name = "Священная Булава Клана Грок";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2088,7 +2088,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("haralder_war_axe");
-		RECIPE.name = "Haralder War Axe";
+		RECIPE.name = "Боевой Топор Клана Харальд";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2118,7 +2118,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("gorefalx");
-		RECIPE.name = "Gore Falx";
+		RECIPE.name = "Фалькс Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2148,7 +2148,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("darklanderbardiche");
-		RECIPE.name = "Darklander Bardiche";
+		RECIPE.name = "Бердыш Темноземца";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -2178,7 +2178,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("heavy_battle_axe");
-		RECIPE.name = "Heavy Battle Axe";
+		RECIPE.name = "Тяжелый Боевой Топор";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
@@ -2205,7 +2205,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("reaver_war_axe");
-		RECIPE.name = "Reaver War Axe";
+		RECIPE.name = "Боевой Топор Клана Ривер";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2234,7 +2234,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("evening_star");
-		RECIPE.name = "Evening Star";
+		RECIPE.name = "Абендштерн";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2264,7 +2264,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scraphammer");
-		RECIPE.name = "Scraphammer";
+		RECIPE.name = "Скрапмолот";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2291,7 +2291,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("volthammer");
-		RECIPE.name = "Volthammer";
+		RECIPE.name = "Вольтмолот";
 		RECIPE.requiredBeliefs = {"artisan", "jacobs_ladder"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
 		RECIPE.requirements = {
@@ -2319,7 +2319,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("voltsledge");
-		RECIPE.name = "Voltsledge";
+		RECIPE.name = "Вольткувалда";
 		RECIPE.requiredBeliefs = {"craftsman", "wire_therapy"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
 		RECIPE.requirements = {
@@ -2348,7 +2348,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("voltsword");
-		RECIPE.name = "Voltsword";
+		RECIPE.name = "Вольтмеч";
 		RECIPE.requiredBeliefs = {"craftsman", "jacobs_ladder"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
 		RECIPE.requirements = {
@@ -2377,7 +2377,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("voltprod");
-		RECIPE.name = "Voltprod";
+		RECIPE.name = "Вольтдубина"; -- демократизатор лол
 		RECIPE.requiredBeliefs = {"craftsman", "jacobs_ladder"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
 		RECIPE.requirements = {
@@ -2405,7 +2405,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("war_club");
-		RECIPE.name = "War Club";
+		RECIPE.name = "Боевая Дубина";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["iron_ingot"] = {amount = 2},
@@ -2432,7 +2432,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("spiked_bat");
-		RECIPE.name = "Spiked Bat";
+		RECIPE.name = "Шипастая Бита";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2460,7 +2460,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("bladed_bat");
-		RECIPE.name = "Bladed Bat";
+		RECIPE.name = "Бита с Лезвиями";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2488,7 +2488,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("battle_axe");
-		RECIPE.name = "Battle Axe";
+		RECIPE.name = "Боевой Топор";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
@@ -2515,7 +2515,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("spiked_board");
-		RECIPE.name = "Spiked Board";
+		RECIPE.name = "Шипастая Доска";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2543,7 +2543,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("bladed_board");
-		RECIPE.name = "Bladed Board";
+		RECIPE.name = "Доска с Лезвиями";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -2571,7 +2571,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("flanged_mace");
-		RECIPE.name = "Flanged Mace";
+		RECIPE.name = "Фланцевая Булава";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -2599,7 +2599,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("glazicus");
-		RECIPE.name = "Glazicus";
+		RECIPE.name = "Глазикус";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -2628,7 +2628,7 @@ function cwRecipes:ClockworkInitialized()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("ornateglazicus");
-	RECIPE.name = "Ornate Glazicus";
+	RECIPE.name = "Украшенный Глазикус";
 	RECIPE.requiresSmithy = true;
 	RECIPE.requiredBeliefs = {"artisan"};
 	RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -2657,7 +2657,7 @@ function cwRecipes:ClockworkInitialized()
 RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_battle_axe");
-		RECIPE.name = "Gore Battle Axe";
+		RECIPE.name = "Топор Клана Гор";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2686,7 +2686,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("reaverbattleaxe");
-		RECIPE.name = "Reaver Battle Axe";
+		RECIPE.name = "Топор Клана Ривер";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2715,7 +2715,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_falchion");
-		RECIPE.name = "Gore Falchion";
+		RECIPE.name = "Фальшион Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2745,7 +2745,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_shortsword");
-		RECIPE.name = "Gore Shortsword";
+		RECIPE.name = "Меч Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2774,7 +2774,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("gore_seax");
-		RECIPE.name = "Gore Seax";
+		RECIPE.name = "Сакс Горов"; -- СЕКС
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2803,7 +2803,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("goremace");
-		RECIPE.name = "Gore Mace";
+		RECIPE.name = "Булава Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2833,7 +2833,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("familialsword");
-		RECIPE.name = "Familial Sword";
+		RECIPE.name = "Меч Семьи";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2862,7 +2862,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("druidsword");
-		RECIPE.name = "Druid Sword";
+		RECIPE.name = "Меч Друида";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -2890,7 +2890,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_shortsword");
-		RECIPE.name = "Iron Shortsword";
+		RECIPE.name = "Короткий Железный Меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -2919,7 +2919,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_arming_sword");
-		RECIPE.name = "Iron Arming Sword";
+		RECIPE.name = "Железный меч"; -- хз как переводить
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -2948,7 +2948,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("steel_arming_sword");
-		RECIPE.name = "Steel Arming Sword";
+		RECIPE.name = "Стальной Меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -2977,7 +2977,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("spatha");
-		RECIPE.name = "Spatha";
+		RECIPE.name = "Спата";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -3006,7 +3006,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("morning_star");
-		RECIPE.name = "Morning Star";
+		RECIPE.name = "Моргенштерн";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3035,7 +3035,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("war_hammer");
-		RECIPE.name = "War Hammer";
+		RECIPE.name = "Боевой Молот";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3066,7 +3066,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("pipe_mace");
-		RECIPE.name = "Pipe Mace";
+		RECIPE.name = "Трубная Булава";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -3093,60 +3093,8 @@ RECIPE:Register()
 		end;
 	RECIPE:Register()
 	
-	RECIPE = cwRecipes.recipes:New("bone_dagger");
-		RECIPE.name = "Bone Dagger";
-		RECIPE.requiredBeliefs = {"ingenious", "primeval"};
-		RECIPE.requirements = {
-			["human_bone"] = {amount = 2},
-		};
-		RECIPE.result = {
-			["begotten_dagger_bonedagger"] = {amount = 1},
-		};
-		RECIPE.category = "Weapons"
-		RECIPE.finishSound = "physics/wood/wood_strain3.wav";
-		RECIPE.failSound = "buttons/button2.wav"
-		RECIPE.craftTime = 8
-		RECIPE.craftVerb = "assembling"
-		RECIPE.experience = 6;
-		
-		function RECIPE:OnCraft(player)
-		end;
-		function RECIPE:OnFail(player)
-		end;
-		function RECIPE:StartCraft(player)
-		end;
-		function RECIPE:EndCraft(player)
-		end;
-	RECIPE:Register()
-	
-	RECIPE = cwRecipes.recipes:New("bone_mace");
-		RECIPE.name = "Bone Mace";
-		RECIPE.requiredBeliefs = {"ingenious", "primeval"};
-		RECIPE.requirements = {
-			["human_bone"] = {amount = 4},
-		};
-		RECIPE.result = {
-			["begotten_1h_bonemace"] = {amount = 1},
-		};
-		RECIPE.category = "Weapons"
-		RECIPE.finishSound = "physics/wood/wood_strain3.wav";
-		RECIPE.failSound = "buttons/button2.wav"
-		RECIPE.craftTime = 8
-		RECIPE.craftVerb = "assembling"
-		RECIPE.experience = 12;
-		
-		function RECIPE:OnCraft(player)
-		end;
-		function RECIPE:OnFail(player)
-		end;
-		function RECIPE:StartCraft(player)
-		end;
-		function RECIPE:EndCraft(player)
-		end;
-	RECIPE:Register()
-	
 	RECIPE = cwRecipes.recipes:New("scrap_axe");
-		RECIPE.name = "Scrap Axe";
+		RECIPE.name = "Скрап Топор";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -3174,7 +3122,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("hatchet");
-		RECIPE.name = "Hatchet";
+		RECIPE.name = "Топор";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["iron_ingot"] = {amount = 1},
@@ -3199,37 +3147,9 @@ RECIPE:Register()
 		function RECIPE:EndCraft(player)
 		end;
 	RECIPE:Register()
-	
-	RECIPE = cwRecipes.recipes:New("pickaxe");
-		RECIPE.name = "Pickaxe";
-		RECIPE.requiresSmithy = true;
-		RECIPE.requiredBeliefs = {"craftsman"};
-		RECIPE.requirements = {
-			["iron_ingot"] = {amount = 2},
-			["wood"] = {amount = 2},
-		};
-		RECIPE.result = {
-			["begotten_2h_great_pickaxe"] = {amount = 1},
-		};
-		RECIPE.category = "Weapons"
-		RECIPE.finishSound = "generic_ui/smelt_success_02.wav";
-		RECIPE.failSound = "buttons/button2.wav"
-		RECIPE.craftTime = 8
-		RECIPE.craftVerb = "assembling"
-		RECIPE.experience = 25;
-		
-		function RECIPE:OnCraft(player)
-		end;
-		function RECIPE:OnFail(player)
-		end;
-		function RECIPE:StartCraft(player)
-		end;
-		function RECIPE:EndCraft(player)
-		end;
-	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scimitar");
-		RECIPE.name = "Scimitar";
+		RECIPE.name = "Скимитар";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3259,7 +3179,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("warpedsword");
-		RECIPE.name = "Warped Sword";
+		RECIPE.name = "Искаженный Меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3290,7 +3210,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("twistedclub");
-		RECIPE.name = "Twisted Club";
+		RECIPE.name = "Измененная Бита";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3321,7 +3241,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scrap_blade");
-		RECIPE.name = "Scrap Blade";
+		RECIPE.name = "Скрап меч";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -3348,7 +3268,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("training_sword");
-		RECIPE.name = "Training Sword";
+		RECIPE.name = "Тренировочный меч";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["wood"] = {amount = 2},
@@ -3374,7 +3294,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("poleaxe");
-		RECIPE.name = "Poleaxe";
+		RECIPE.name = "Полэкс";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3403,7 +3323,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("billhook");
-		RECIPE.name = "Billhook";
+		RECIPE.name = "Билль";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3433,7 +3353,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("lucerne");
-		RECIPE.name = "Lucerne";
+		RECIPE.name = "Люцернский молот";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3464,7 +3384,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("halberd");
-		RECIPE.name = "Halberd";
+		RECIPE.name = "Алебарда";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3493,7 +3413,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("pike");
-		RECIPE.name = "Pike";
+		RECIPE.name = "Пика";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3522,7 +3442,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("polehammer");
-		RECIPE.name = "Polehammer";
+		RECIPE.name = "Боевой Молот";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3551,7 +3471,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("quarterstaff");
-		RECIPE.name = "Quarterstaff";
+		RECIPE.name = "Посох";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["wood"] = {amount = 3},
@@ -3577,7 +3497,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("war_spear");
-		RECIPE.name = "War Spear";
+		RECIPE.name = "Боевое Копье";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -3606,7 +3526,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("glazic_banner");
-		RECIPE.name = "Glazic Banner";
+		RECIPE.name = "Знамя Сияния";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -3636,7 +3556,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("elegant_epee");
-		RECIPE.name = "Elegant Epee";
+		RECIPE.name = "Элегантная Рапира";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3666,7 +3586,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_rapier");
-		RECIPE.name = "Iron Rapier";
+		RECIPE.name = "Железная Рапира";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3694,7 +3614,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("glaive");
-		RECIPE.name = "Glaive";
+		RECIPE.name = "Глефа";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3723,7 +3643,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("war_scythe");
-		RECIPE.name = "War Scythe";
+		RECIPE.name = "Боевая Коса";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -3752,7 +3672,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("harpoon");
-		RECIPE.name = "Harpoon";
+		RECIPE.name = "Гарпун";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
@@ -3780,7 +3700,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_spear");
-		RECIPE.name = "Iron Spear";
+		RECIPE.name = "Железное Копье";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
@@ -3808,7 +3728,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_spear_short");
-		RECIPE.name = "Iron Short Spear";
+		RECIPE.name = "Короткое Железное Копье";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
@@ -3836,7 +3756,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("satanic_spear");
-		RECIPE.name = "Satanic Spear";
+		RECIPE.name = "Сатанинское Копье";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -3865,7 +3785,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scrap_spear");
-		RECIPE.name = "Scrap Spear";
+		RECIPE.name = "Скрап Копье";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -3893,7 +3813,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("training_spear");
-		RECIPE.name = "Training Spear";
+		RECIPE.name = "Тренировочное копье";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["wood"] = {amount = 2},
@@ -3919,7 +3839,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("training_javelin");
-		RECIPE.name = "Training Javelin";
+		RECIPE.name = "Тренировочный Пилум";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["wood"] = {amount = 2},
@@ -3945,7 +3865,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("voltspear");
-		RECIPE.name = "Voltspear";
+		RECIPE.name = "Вольткопье";
 		RECIPE.requiredBeliefs = {"craftsman", "jacobs_ladder"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
 		RECIPE.requirements = {
@@ -3973,7 +3893,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("winged_spear");
-		RECIPE.name = "Winged Spear";
+		RECIPE.name = "Крылатое копье";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
@@ -4001,7 +3921,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_javelin");
-		RECIPE.name = "Iron Javelin";
+		RECIPE.name = "Железный Дротик";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
@@ -4029,7 +3949,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("throwing_axe");
-		RECIPE.name = "(2x) Throwing Axe";
+		RECIPE.name = "(2x) Метательный Топор";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -4058,7 +3978,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("throwing_dagger");
-		RECIPE.name = "(3x) Throwing Dagger";
+		RECIPE.name = "(3x) Метательный Кинжал";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4087,7 +4007,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("pilum");
-		RECIPE.name = "Pilum";
+		RECIPE.name = "Пилум";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -4116,7 +4036,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("club");
-		RECIPE.name = "Club";
+		RECIPE.name = "Дубина";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requirements = {
 			["cloth"] = {amount = 1},
@@ -4143,7 +4063,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("inquisitor_sword");
-		RECIPE.name = "Inquisitor Sword";
+		RECIPE.name = "Меч Инквизитора";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Light"};
@@ -4173,7 +4093,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("voltlongsword");
-		RECIPE.name = "Voltlongsword";
+		RECIPE.name = "Длинный Вольтмеч";
 		RECIPE.requiredBeliefs = {"mechanic", "jacobs_ladder"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
 		RECIPE.requirements = {
@@ -4202,7 +4122,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("longsword");
-		RECIPE.name = "Longsword";
+		RECIPE.name = "Длинный меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -4231,7 +4151,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("training_longsword");
-		RECIPE.name = "Training Longsword";
+		RECIPE.name = "Тренировочный Длинный Меч";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["wood"] = {amount = 2},
@@ -4257,7 +4177,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("satanicmace");
-		RECIPE.name = "Satanic Mace";
+		RECIPE.name = "Сатанинская Булава";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4287,7 +4207,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("satanicsword");
-		RECIPE.name = "Satanic Sword";
+		RECIPE.name = "Сатанинский меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4317,7 +4237,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("satanicshortsword");
-		RECIPE.name = "Satanic Shortsword";
+		RECIPE.name = "Короткий Сатанинский Меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4347,7 +4267,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("sataniclongsword");
-		RECIPE.name = "Satanic Longsword";
+		RECIPE.name = "Длинный Сатанинский Меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4377,7 +4297,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("satanicmaul");
-		RECIPE.name = "Satanic Maul";
+		RECIPE.name = "Сатанинская Кувалда";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4407,7 +4327,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("shard");
-		RECIPE.name = "Shard";
+		RECIPE.name = "Осколок";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4439,12 +4359,12 @@ RECIPE:Register()
 
 	--
 	--
-	-- SACRIFICIAL WEAPONS
+	-- SACRIFICIAL Weapons
 	--
 	--
 	
 	RECIPE = cwRecipes.recipes:New("hellfire_sword");
-		RECIPE.name = "Hellfire Sword";
+		RECIPE.name = "Меч Адского Огня";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4475,7 +4395,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("unholy_sigil_sword");
-		RECIPE.name = "Unholy Sigil Sword";
+		RECIPE.name = "Меч Нечестивого Символа";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4505,7 +4425,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("dreadaxe");
-		RECIPE.name = "Dreadaxe";
+		RECIPE.name = "Топор Ужаса";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4535,7 +4455,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("unholy_sigil_sword_fire");
-		RECIPE.name = "Unholy Sigil Sword (Fire)";
+		RECIPE.name = "Меч Нечестивого Символа (Огонь)";
 		RECIPE.requiresSmithy = false;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4564,7 +4484,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("unholy_sigil_sword_ice");
-		RECIPE.name = "Unholy Sigil Sword (Ice)";
+		RECIPE.name = "Меч Нечестивого Символа (Лед)";
 		RECIPE.requiresSmithy = false;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4593,7 +4513,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("bell_hammer");
-		RECIPE.name = "Bell Hammer";
+		RECIPE.name = "Молот-Колокол";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Light"};
@@ -4622,7 +4542,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("demonslayer_greataxe");
-		RECIPE.name = "Demonslayer Greataxe";
+		RECIPE.name = "Топор Рока Демонов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -4651,7 +4571,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("frozenfatherlandaxe");
-		RECIPE.name = "Frozen Fatherland Axe";
+		RECIPE.name = "Морозный Топор Предков"; -- ??? вспомнить как на рыготне назывался
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -4681,7 +4601,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("blesseddruidsword");
-		RECIPE.name = "Blessed Druid Sword";
+		RECIPE.name = "Благославленный Меч Друида";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -4711,7 +4631,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("enchanted_longsword");
-		RECIPE.name = "Enchanted Longsword";
+		RECIPE.name = "Зачарованный Длинный Меч";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Light"};
@@ -4741,7 +4661,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("glazicsword_glazicshield");
-		RECIPE.name = "Glazic Sword + Sol Shield";
+		RECIPE.name = "Меч Света + Щит Сола";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Light"};
@@ -4773,7 +4693,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("dark_ice_dagger");
-		RECIPE.name = "Dark Ice Dagger";
+		RECIPE.name = "Кинжал Темного Льда";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4803,7 +4723,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("dark_fire_dagger");
-		RECIPE.name = "Dark Fire Dagger";
+		RECIPE.name = "Кинжал Темного Огня";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4833,7 +4753,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("house_rekh_ancestraldagger");
-		RECIPE.name = "House Rekh-khet-sa Ancestral Dagger";
+		RECIPE.name = "Наследный Кинжал Дома Рекх-кхет-са";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4863,7 +4783,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("house_varazdat_ancestraldagger");
-		RECIPE.name = "House Varazdat Ancestral Dagger";
+		RECIPE.name = "Наследный Кинжал Дома Вараздат";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4893,7 +4813,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("house_philimaxio_ancestraldagger");
-		RECIPE.name = "House Philimaxio Ancestral Dagger";
+		RECIPE.name = "Наследный Кинжал Дома Филимаксио";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4923,7 +4843,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("house_kinisger_ancestraldagger");
-		RECIPE.name = "House Kinisger Ancestral Dagger";
+		RECIPE.name = "Наследный Кинжал Дома Кинисгер";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4953,7 +4873,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("twistedmachete");
-		RECIPE.name = "Twisted Machete";
+		RECIPE.name = "Измененное Мачете";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -4989,7 +4909,7 @@ RECIPE:Register()
 	--
 
 	RECIPE = cwRecipes.recipes:New("clan_shield");
-		RECIPE.name = "Clan Shield";
+		RECIPE.name = "Клановый Щит";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -5018,7 +4938,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("dreadshield");
-		RECIPE.name = "Dreadshield";
+		RECIPE.name = "Щит Ужаса";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -5048,7 +4968,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("spiked_shield");
-		RECIPE.name = "Spiked Shield";
+		RECIPE.name = "Шипастый Щит";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -5077,7 +4997,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gatekeeper_shield");
-		RECIPE.name = "Gatekeeper Shield";
+		RECIPE.name = "Щит Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -5106,7 +5026,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("steel_gatekeeper_shield");
-		RECIPE.name = "Steel Gatekeeper Shield";
+		RECIPE.name = "Стальной Щит Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -5134,7 +5054,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("sol_sentinel_shield");
-		RECIPE.name = "Sol Sentinel Shield";
+		RECIPE.name = "Щит Стражника Сола";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -5163,7 +5083,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("iron_shield");
-		RECIPE.name = "Iron Shield";
+		RECIPE.name = "Железный Щит";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requirements = {
@@ -5191,7 +5111,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("steel_tower_shield");
-		RECIPE.name = "Steel Tower Shield";
+		RECIPE.name = "Стальной Башенный Щит";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -5221,7 +5141,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scrap_shield");
-		RECIPE.name = "Scrap Shield";
+		RECIPE.name = "Скрап Щит";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -5248,7 +5168,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("warfighter_shield");
-		RECIPE.name = "Warfighter Shield";
+		RECIPE.name = "Щит Бойца";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -5277,7 +5197,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("voltshield");
-		RECIPE.name = "Voltshield";
+		RECIPE.name = "Вольтщит";
 		RECIPE.requiredBeliefs = {"craftsman", "wire_therapy"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
 		RECIPE.requirements = {
@@ -5305,7 +5225,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("gore_guardian_shield");
-		RECIPE.name = "Gore Guardian Shield";
+		RECIPE.name = "Щит Защитника Древа";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -5334,7 +5254,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("red_wolf_shield");
-		RECIPE.name = "Red Wolf Shield";
+		RECIPE.name = "Щит Красного Волка";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFaiths = {"Faith of the Family"};
@@ -5365,7 +5285,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("wooden_shield");
-		RECIPE.name = "Wooden Shield";
+		RECIPE.name = "Деревянный Щит";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["wood"] = {amount = 5},
@@ -5391,7 +5311,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("leather_shield");
-		RECIPE.name = "Leather Shield";
+		RECIPE.name = "Кожанный Щит";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
 			["shield5"] = {amount = 1},
@@ -5419,7 +5339,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("buckler");
-		RECIPE.name = "Buckler";
+		RECIPE.name = "Баклер";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
@@ -5452,7 +5372,7 @@ RECIPE:Register()
 	--
 
 	RECIPE = cwRecipes.recipes:New("blunderbuss");
-		RECIPE.name = "Blunderbuss";
+		RECIPE.name = "Бомбарда"; -- на самом деле это мушкетон, но ради рофла хлопушка
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -5482,7 +5402,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("wooden_crossbow");
-		RECIPE.name = "Wooden Crossbow";
+		RECIPE.name = "Деревянный Арбалет";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -5510,38 +5430,9 @@ RECIPE:Register()
 		function RECIPE:EndCraft(player)
 		end;
 	RECIPE:Register()
-	
-	RECIPE = cwRecipes.recipes:New("scrap_crossbow");
-		RECIPE.name = "Scrap Crossbow";
-		RECIPE.requiredBeliefs = {"craftsman"};
-		RECIPE.excludedFactions = {"Goreic Warrior"};
-		RECIPE.requirements = {
-			["bindings"] = {amount = 1},
-			["scrap"] = {amount = 5},
-			["wood"] = {amount = 1},
-		};
-		RECIPE.result = {
-			["begotten_scrapbow"] = {amount = 1},
-		};
-		RECIPE.category = "Munitions"
-		RECIPE.finishSound = "generic_ui/smelt_success_02.wav";
-		RECIPE.failSound = "buttons/button2.wav"
-		RECIPE.craftTime = 8
-		RECIPE.craftVerb = "smithing"
-		RECIPE.experience = 35;
-		
-		function RECIPE:OnCraft(player)
-		end;
-		function RECIPE:OnFail(player)
-		end;
-		function RECIPE:StartCraft(player)
-		end;
-		function RECIPE:EndCraft(player)
-		end;
-	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("musket");
-		RECIPE.name = "Musket";
+		RECIPE.name = "Мушкет";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -5570,7 +5461,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("peppershot");
-		RECIPE.name = "Peppershot";
+		RECIPE.name = "Поджига";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -5599,7 +5490,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scavenger_gun");
-		RECIPE.name = "Scavenger Gun";
+		RECIPE.name = "Пушка Мусорщика";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -5629,7 +5520,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("jezail");
-	RECIPE.name = "Jezail";
+	RECIPE.name = "Джезайл";
 	RECIPE.requiresSmithy = true;
 	RECIPE.requiredBeliefs = {"artisan"};
 	RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -5659,7 +5550,7 @@ RECIPE:Register()
 RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("jezail_rifle");
-	RECIPE.name = "Jezail Rifle";
+	RECIPE.name = "Винтовка Джезайл";
 	RECIPE.requiresSmithy = true;
 	RECIPE.requiredBeliefs = {"artisan"};
 	RECIPE.requiredFaiths = {"Faith of the Dark"};
@@ -5689,7 +5580,7 @@ RECIPE:Register()
 RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scavenger_gun_magazine");
-		RECIPE.name = "Scavenger Gun Magazine";
+		RECIPE.name = "Магазин для Пушки Мусорщика";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -5718,7 +5609,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scavenger_gun_large_magazine");
-		RECIPE.name = "Scavenger Gun Large Magazine";
+		RECIPE.name = "Ув. Магазин для Пушки Мусорщика";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -5747,7 +5638,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("voltist_railgun");
-		RECIPE.name = "Voltist Railgun";
+		RECIPE.name = "Рейлган Вольтистов"; -- очень хотел назвать вольтганом
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic", "the_paradox_riddle_equation"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
@@ -5776,7 +5667,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gunpowder");
-		RECIPE.name = "Gunpowder";
+		RECIPE.name = "Порох";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -5811,7 +5702,7 @@ RECIPE:Register()
 	--
 	
 	RECIPE = cwRecipes.recipes:New("armored_blade_druid_robes");
-		RECIPE.name = "Armored Blade Druid Robes";
+		RECIPE.name = "Бронированные Робы Друда Клинка";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -5840,7 +5731,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("blade_druid_robes");
-		RECIPE.name = "Blade Druid Robes";
+		RECIPE.name = "Робы Друида Клинка";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -5869,7 +5760,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_seafarer_garb");
-		RECIPE.name = "Gore Seafarer Garb";
+		RECIPE.name = "Одеяние Моряка Горов";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -5898,7 +5789,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_beserker_armor");
-		RECIPE.name = "Gore Berserker Armor";
+		RECIPE.name = "Шкуры Берсерка";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -5927,7 +5818,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_chainmail");
-		RECIPE.name = "Gore Chainmail";
+		RECIPE.name = "Кольчуга Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -5957,7 +5848,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("gore_lamellar");
-		RECIPE.name = "Gore Lamellar";
+		RECIPE.name = "Ламеллярный Доспех";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -5987,7 +5878,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("marauder_lamellar");
-	RECIPE.name = "Reaver Marauder Lamellar";
+	RECIPE.name = "Доспех Клана Ривер";
 	RECIPE.requiresSmithy = true;
 	RECIPE.requiredBeliefs = {"artisan"};
 	RECIPE.requiredBeliefsNiceNames = {"Artisan"};
@@ -6018,7 +5909,7 @@ RECIPE:Register()
 RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("marauder_drottin_lamellar");
-	RECIPE.name = "Reaver Drottinn Lamellar";
+	RECIPE.name = "Броня Ривера-Вожака";
 	RECIPE.requiresSmithy = true;
 	RECIPE.requiredBeliefs = {"artisan"};
 	RECIPE.requiredBeliefsNiceNames = {"Artisan"};
@@ -6048,7 +5939,7 @@ RECIPE:Register()
 RECIPE:Register()
 
     RECIPE = cwRecipes.recipes:New("marauder_helm");
-	RECIPE.name = "Reaver Marauder Helmet";
+	RECIPE.name = "Шлем Ривера Мародера";
 	RECIPE.requiresSmithy = true;
 	RECIPE.requiredBeliefs = {"artisan"};
 	RECIPE.requiredBeliefsNiceNames = {"Artisan"};
@@ -6079,7 +5970,7 @@ RECIPE:Register()
 RECIPE:Register()
 
     RECIPE = cwRecipes.recipes:New("marauder_drottin_helm");
-	RECIPE.name = "Reaver Drottinn Helmet";
+	RECIPE.name = "Шлем Ривера Вождя";
 	RECIPE.requiresSmithy = true;
 	RECIPE.requiredBeliefs = {"artisan"};
 	RECIPE.requiredBeliefsNiceNames = {"Artisan"};
@@ -6110,7 +6001,7 @@ RECIPE:Register()
 RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_housecarl_armor");
-		RECIPE.name = "Gore Housecarl Armor";
+		RECIPE.name = "Броня Хускарла";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6140,7 +6031,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("gore_king's_chosen_armor");
-		RECIPE.name = "Gore King's Chosen Armor";
+		RECIPE.name = "Броня Избранного";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6170,7 +6061,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("gore_king's_chosen_helmet");
-		RECIPE.name = "Gore King's Chosen Helmet";
+		RECIPE.name = "Шлем Избранного";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6200,7 +6091,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("grockling_rattleshirt_armor");
-		RECIPE.name = "Grockling Rattleshirt Armor";
+		RECIPE.name = "Костянка Гроков";
 		RECIPE.requiredBeliefs = {"ingenious", "primeval"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requiredSubfactions = {"Clan Grock"};
@@ -6229,7 +6120,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("haralder_chainmail");
-		RECIPE.name = "Haralder Chainmail";
+		RECIPE.name = "Кольчуга Харальда";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6259,7 +6150,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_warfighter_armor");
-		RECIPE.name = "Gore Warfighter Armor";
+		RECIPE.name = "Одежды Воина Горов";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -6287,7 +6178,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("red_wolf_plate");
-		RECIPE.name = "Red Wolf Plate";
+		RECIPE.name = "Латы Красного Волка";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6317,7 +6208,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_shagalax_helm");
-		RECIPE.name = "Gore Shagalax Helm";
+		RECIPE.name = "Шлем Шагалкс Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6347,7 +6238,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_guardian_helm");
-		RECIPE.name = "Gore Guardian Helm";
+		RECIPE.name = "Шлем Стража Древа";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6375,7 +6266,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_seafarer_hood");
-		RECIPE.name = "Gore Seafarer Hood";
+		RECIPE.name = "Капюшон Моряка Горов";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -6402,7 +6293,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_warfighter_helm");
-		RECIPE.name = "Gore Warfighter Helm";
+		RECIPE.name = "Шлем Бойца Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6431,7 +6322,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_raider_helm");
-		RECIPE.name = "Gore Raider Helm";
+		RECIPE.name = "Шлем Рейдера Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6461,7 +6352,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_ridge_helm");
-		RECIPE.name = "Gore Ridge Helm";
+		RECIPE.name = "Гребневой Шлем Горов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6491,7 +6382,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("gore_champion_ridge_helm");
-		RECIPE.name = "Gore Champion Ridge Helm";
+		RECIPE.name = "Особый Шлем Чемпиона";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6522,7 +6413,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("reaver_despoiler_helm");
-		RECIPE.name = "Reaver Despoiler Helm";
+		RECIPE.name = "Шлем Разорителя";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6553,7 +6444,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gore_reaver_helm");
-		RECIPE.name = "Gore Reaver Helm";
+		RECIPE.name = "Дешевый Шлем Ривера";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requiredFactions = {"Goreic Warrior"};
@@ -6583,7 +6474,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("voltist_archangel_exoskeleton");
-		RECIPE.name = "Voltist Archangel Exoskeleton";
+		RECIPE.name = "Экзоскелет Архангел Вольтистов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
@@ -6612,7 +6503,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("voltist_stormchaser_exoskeleton");
-		RECIPE.name = "Voltist Stormchaser Exoskeleton";
+		RECIPE.name = "Экзоскелет Вольтистов Шторм";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
@@ -6642,7 +6533,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("voltist_exoskeleton");
-		RECIPE.name = "Voltist Exoskeleton";
+		RECIPE.name = "Вольтистский Экзоскелет";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
@@ -6671,7 +6562,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gatekeeper_halfplate_upgrade_gambeson");
-		RECIPE.name = "(Upgrade) Gatekeeper Halfplate";
+		RECIPE.name = "(Улучшение) Полулаты Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6700,7 +6591,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gatekeeper_halfplate_upgrade_auxiliary");
-		RECIPE.name = "(Upgrade) Gatekeeper Halfplate";
+		RECIPE.name = "(Улучшение) Полулаты Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6729,7 +6620,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("gatekeeper_halfplate_upgrade_praeventor");
-		RECIPE.name = "(Upgrade) Gatekeeper Halfplate";
+		RECIPE.name = "(Улучшение) Полулаты Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6758,7 +6649,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gatekeeper_halfplate");
-		RECIPE.name = "Gatekeeper Halfplate";
+		RECIPE.name = "Полулаты Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6787,7 +6678,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gatekeeper_plate_upgrade_halfplate");
-		RECIPE.name = "(Upgrade) Gatekeeper Plate";
+		RECIPE.name = "(Улучшение) Латы Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6816,7 +6707,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gatekeeper_plate");
-		RECIPE.name = "Gatekeeper Plate";
+		RECIPE.name = "Латы Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6845,7 +6736,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("fine_gatekeeper_plate");
-		RECIPE.name = "Fine Gatekeeper Plate";
+		RECIPE.name = "Хорошие Латы Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6875,7 +6766,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("fine_gatekeeper_plate_upgrade");
-		RECIPE.name = "(Upgrade) Fine Gatekeeper Plate";
+		RECIPE.name = "(Ул). Хорошие Латы Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6905,7 +6796,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("ornate_gatekeeper_plate");
-		RECIPE.name = "Ornate Gatekeeper Plate";
+		RECIPE.name = "Исключительные Латы Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6935,7 +6826,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("vexillifer_gatekeeper_plate");
-		RECIPE.name = "Vexillifer Gatekeeper Plate";
+		RECIPE.name = "Латы Знаменосца";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6965,7 +6856,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("knight_plate");
-		RECIPE.name = "Knight Plate";
+		RECIPE.name = "Латы Рыцаря";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -6997,7 +6888,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("knight_justicar_plate");
-		RECIPE.name = "Knight Justicar Plate";
+		RECIPE.name = "Латы Юстициария";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -7029,7 +6920,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("high_gatekeeper_reinforced_plate");
-		RECIPE.name = "Heavy Gatekeeper Reinforced Plate";
+		RECIPE.name = "Укрепленные Латы Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -7058,7 +6949,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("high_gatekeeper_heavy_plate_upgrade");
-		RECIPE.name = "(Upgrade) Heavy Gatekeeper Plate";
+		RECIPE.name = "Тяжелые Латы Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -7087,7 +6978,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("high_gatekeeper_heavy_plate");
-		RECIPE.name = "Heavy Gatekeeper Plate";
+		RECIPE.name = "Тяжелые Латы Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -7117,7 +7008,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("auxiliary_gambeson");
-		RECIPE.name = "Auxiliary Gambeson";
+		RECIPE.name = "Гамбенезон Ауксилярия";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
 		RECIPE.requirements = {
@@ -7146,7 +7037,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gatekeeper_gambeson");
-		RECIPE.name = "Gatekeeper Gambeson";
+		RECIPE.name = "Гамбенезон Привратника";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
 		RECIPE.requirements = {
@@ -7175,7 +7066,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("praeventor_gambeson");
-		RECIPE.name = "Praeventor Gambeson";
+		RECIPE.name = "Гамбенезон Превентора";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
 		RECIPE.requirements = {
@@ -7204,7 +7095,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("exile_knight_armor");
-		RECIPE.name = "Exile Knight Armor";
+		RECIPE.name = "Латы Рыцаря-Изгнанника";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -7232,7 +7123,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("light_brigandine_armor");
-		RECIPE.name = "Light Brigandine Armor";
+		RECIPE.name = "Легкая Бригантина";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -7261,7 +7152,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("wanderer_mail");
-		RECIPE.name = "Wanderer Mail";
+		RECIPE.name = "Кольчуга Странника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -7290,7 +7181,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("wanderer_crude_plate");
-		RECIPE.name = "Wanderer Crude Plate";
+		RECIPE.name = "Грубые Латы Странника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -7321,7 +7212,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("padded_coat");
-		RECIPE.name = "Padded Coat";
+		RECIPE.name = "Стеганное Пальто";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -7349,7 +7240,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("twisted_fuck_armor");
-		RECIPE.name = "Twisted Fuck Armor";
+		RECIPE.name = "Броня Людоеда";
 		RECIPE.requiredBeliefs = {"primeval"};
 		RECIPE.requirements = {
 			["human_bone"] = {amount = 6},
@@ -7376,7 +7267,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("orthodoxist_monk_robes");
-		RECIPE.name = "Orthodoxist Monk Robes";
+		RECIPE.name = "Робы Монаха";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredSubfaiths = {"Sol Orthodoxy", "Hard-Glazed"};
 		RECIPE.requirements = {
@@ -7405,7 +7296,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("orthodoxist_battle_monk_robes");
-		RECIPE.name = "Orthodoxist Battle Monk Robes";
+		RECIPE.name = "Боевые Робы Монаха";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredSubfaiths = {"Sol Orthodoxy", "Hard-Glazed"};
@@ -7434,7 +7325,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("brigandine_armor");
-		RECIPE.name = "Brigandine Armor";
+		RECIPE.name = "Бригантина";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -7463,7 +7354,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("plague_doctor_robes");
-		RECIPE.name = "Plague Doctor Robes";
+		RECIPE.name = "Робы Чумного Доктора";
 		RECIPE.requiredBeliefs = {"ingenious", "plague_doctor"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -7490,7 +7381,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scrapper_grunt_plate");
-		RECIPE.name = "Scrapper Grunt Plate";
+		RECIPE.name = "Скрапперские Латы";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -7518,7 +7409,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scrapper_machinist_plate");
-		RECIPE.name = "Scrapper Machinist Plate";
+		RECIPE.name = "Латы Скраппера Машиниста";
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -7546,7 +7437,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("wanderer_oppressor_armor");
-		RECIPE.name = "Wanderer Oppressor Armor";
+		RECIPE.name = "Броня Угнетателя";
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -7575,7 +7466,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("gatekeeper_helmet");
-		RECIPE.name = "Gatekeeper Helmet";
+		RECIPE.name = "Шлем Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -7603,7 +7494,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("wanderer_crude_plate_helm");
-		RECIPE.name = "Wanderer Crude Plate Helm";
+		RECIPE.name = "Грубый Шлем Странника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requirements = {
@@ -7631,7 +7522,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("helm_of_atonement");
-		RECIPE.name = "Helm of Atonement";
+		RECIPE.name = "Шлем Искупления";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredSubfaiths = {"Sol Orthodoxy", "Hard-Glazed"};
@@ -7662,7 +7553,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("helm_of_repentance");
-		RECIPE.name = "Helm of Repentance";
+		RECIPE.name = "Шлем Покаяния";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredSubfaiths = {"Sol Orthodoxy", "Hard-Glazed"};
@@ -7692,7 +7583,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("hood");
-		RECIPE.name = "Hood";
+		RECIPE.name = "Капюшон";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -7719,7 +7610,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("hood_mask");
-		RECIPE.name = "Masked Hood";
+		RECIPE.name = "Капюшон с Маской";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -7747,7 +7638,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("skintape_mask");
-		RECIPE.name = "Skintape Mask";
+		RECIPE.name = "Маска из Кожи";
 		RECIPE.requiredBeliefs = {"ingenious", "primeval"};
 		RECIPE.requirements = {
 			["skingauze"] = {amount = 2},
@@ -7775,7 +7666,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scrap_helmet");
-		RECIPE.name = "Scrap Helmet";
+		RECIPE.name = "Скрап Шлем";
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 		RECIPE.requirements = {
@@ -7802,7 +7693,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("wanderer_cap");
-		RECIPE.name = "Wanderer Cap";
+		RECIPE.name = "Смешная Шляпка";
 		RECIPE.requiredBeliefs = {"ingenious"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
 		RECIPE.requirements = {
@@ -7829,7 +7720,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("mail_coif");
-		RECIPE.name = "Mail Coif";
+		RECIPE.name = "Кольчужный Койф";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -7857,7 +7748,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("plate_helmet_mail_coif");
-		RECIPE.name = "Plate Helmet & Mail Coif";
+		RECIPE.name = "Латный Шлем с Койфом";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -7886,7 +7777,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("spangenhelm");
-		RECIPE.name = "Spangenhelm";
+		RECIPE.name = "Спангенхелм";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedFactions = {"Goreic Warrior"};
@@ -7916,7 +7807,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("fine_gatekeeper_helmet");
-		RECIPE.name = "Fine Gatekeeper Helmet";
+		RECIPE.name = "Хороший Шлем Привратника";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Gatekeeper", "Holy Hierarchy"};
@@ -7945,7 +7836,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("dread_armor");
-		RECIPE.name = "Dread Armor";
+		RECIPE.name = "Латы Рока";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
@@ -7975,7 +7866,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("darklander_immortal_armor");
-		RECIPE.name = "Darklander Immortal Armor";
+		RECIPE.name = "Броня Бессмертного";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
@@ -8005,7 +7896,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("elegant_robes");
-		RECIPE.name = "Elegant Robes";
+		RECIPE.name = "Элегантная Роба";
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
 		RECIPE.requirements = {
@@ -8033,7 +7924,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("heavy_hellplate_armor");
-		RECIPE.name = "Heavy Hellplate Armor";
+		RECIPE.name = "Тяжелая Адская Броня";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
@@ -8064,7 +7955,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("hellplate_armor");
-		RECIPE.name = "Hellplate Armor";
+		RECIPE.name = "Адская Броня";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
@@ -8094,7 +7985,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("hellspike_armor");
-		RECIPE.name = "Hellspike Armor";
+		RECIPE.name = "Броня Адских Шипов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
@@ -8124,7 +8015,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("wraith_armor");
-		RECIPE.name = "Wraith Armor";
+		RECIPE.name = "Ужасающая Броня";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
@@ -8154,7 +8045,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("skullshield");
-		RECIPE.name = "Skullshield";
+		RECIPE.name = "Щит из Черепов";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
@@ -8184,7 +8075,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("hellplate_helmet");
-		RECIPE.name = "Hellplate Helmet";
+		RECIPE.name = "Адский Шлем";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"artisan"};
 		RECIPE.requiredFactions = {"Children of Satan"};
@@ -8213,7 +8104,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("pop_a_shot");
-		RECIPE.name = "(10x) Pop-a-Shot";
+		RECIPE.name = "(10x) Пуля";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -8242,7 +8133,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("longshot");
-		RECIPE.name = "(4x) Longshot";
+		RECIPE.name = "(4x) Дальнобойный Патрон";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -8271,7 +8162,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("grapeshot");
-		RECIPE.name = "(3x) Grapeshot";
+		RECIPE.name = "(3x) Картечь";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -8300,7 +8191,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("scrapshot");
-		RECIPE.name = "(10x) Scrapshot";
+		RECIPE.name = "(10x) Скрап Патрон";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.excludedSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
@@ -8329,7 +8220,7 @@ RECIPE:Register()
 	RECIPE:Register()
 
 	RECIPE = cwRecipes.recipes:New("volt_projectile");
-		RECIPE.name = "Volt Projectile";
+		RECIPE.name = "Вольт Снаряд";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman", "wire_therapy"};
 		RECIPE.requiredSubfaiths = {"Voltism"};
@@ -8357,7 +8248,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("iron_bolt");
-		RECIPE.name = "(3x) Iron Bolt";
+		RECIPE.name = "(3x) Железный Болт";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
@@ -8385,11 +8276,11 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("scrap_bolt");
-		RECIPE.name = "Scrap Bolt";
+		RECIPE.name = "Скрап Болт";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"craftsman"};
 		RECIPE.requirements = {
-			["scrap"] = {amount = 2},
+			["scrap"] = {amount = 1},
 		};
 		RECIPE.result = {
 			["scrap_bolt"] = {amount = 1},
@@ -8412,7 +8303,7 @@ RECIPE:Register()
 	RECIPE:Register()
 	
 	RECIPE = cwRecipes.recipes:New("thermal_implant");
-		RECIPE.name = "Thermal Implant";
+		RECIPE.name = "Термальный Имплант";
 		RECIPE.requiresSmithy = true;
 		RECIPE.requiredBeliefs = {"mechanic", "the_paradox_riddle_equation"};
 		RECIPE.requiredSubfaiths = {"Voltism"};

@@ -110,14 +110,14 @@ function cwPossession:StartCommand(player, ucmd)
 								
 								if player:GetNWBool("ThrustStance") == false then
 									if activeWeapon.isJavelin then
-										player:PrintMessage(HUD_PRINTTALK, "*** Switched to melee stance.")
-										possessor:PrintMessage(HUD_PRINTTALK, "*** Switched to melee stance.")
+										player:PrintMessage(HUD_PRINTTALK, "*** Перешел в стойку ближнего боя.")
+										possessor:PrintMessage(HUD_PRINTTALK, "*** Перешел в стойку ближнего боя.")
 									elseif activeWeapon.CanSwipeAttack == true then
-										player:PrintMessage(HUD_PRINTTALK, "*** Switched to swiping stance.")
-										possessor:PrintMessage(HUD_PRINTTALK, "*** Switched to swiping stance.")
+										player:PrintMessage(HUD_PRINTTALK, "*** Перешел в положение для размахивания.")
+										possessor:PrintMessage(HUD_PRINTTALK, "*** Перешел в положение для размахивания.")
 									else
-										player:PrintMessage(HUD_PRINTTALK, "*** Switched to thrusting stance.")
-										possessor:PrintMessage(HUD_PRINTTALK, "*** Switched to thrusting stance.")
+										player:PrintMessage(HUD_PRINTTALK, "*** Перешел в колющую стойку.")
+										possessor:PrintMessage(HUD_PRINTTALK, "*** Перешел в колющую стойку.")
 									end
 									
 									player:SetNWBool( "ThrustStance", true )
@@ -127,17 +127,17 @@ function cwPossession:StartCommand(player, ucmd)
 									end
 								else
 									if activeWeapon.isJavelin then
-										player:PrintMessage(HUD_PRINTTALK, "*** Switched to throwing stance.")
-										possessor:PrintMessage(HUD_PRINTTALK, "*** Switched to throwing stance.")
+										player:PrintMessage(HUD_PRINTTALK, "*** Перешел в стойку для метания.")
+										possessor:PrintMessage(HUD_PRINTTALK, "*** Перешел в стойку для метания.")
 									elseif activeWeapon.CanSwipeAttack == true then
-										player:PrintMessage(HUD_PRINTTALK, "*** Switched to thrusting stance.")
-										possessor:PrintMessage(HUD_PRINTTALK, "*** Switched to thrusting stance.")
+										player:PrintMessage(HUD_PRINTTALK, "*** Перешел в колющую стойку.")
+										possessor:PrintMessage(HUD_PRINTTALK, "*** Перешел в колющую стойку.")
 									elseif attacktable["dmgtype"] == 128 then
-										player:PrintMessage(HUD_PRINTTALK, "*** Switched to bludgeoning stance.")
-										possessor:PrintMessage(HUD_PRINTTALK, "*** Switched to bludgeoning stance.")
+										player:PrintMessage(HUD_PRINTTALK, "*** Перешел в ударную стойку.")
+										possessor:PrintMessage(HUD_PRINTTALK, "*** Перешел в ударную стойку.")
 									else
-										player:PrintMessage(HUD_PRINTTALK, "*** Switched to slashing stance.")
-										possessor:PrintMessage(HUD_PRINTTALK, "*** Switched to slashing stance.")
+										player:PrintMessage(HUD_PRINTTALK, "*** Перешел в рубящую стойку.")
+										possessor:PrintMessage(HUD_PRINTTALK, "*** Перешел в рубящую стойку.")
 									end
 									
 									player:SetNWBool( "ThrustStance", false )
@@ -188,7 +188,7 @@ function cwPossession:StartCommand(player, ucmd)
 end;
 
 local COMMAND = Clockwork.command:New("DemonHeal");
-	COMMAND.tip = "Use demonic powers to heal the injuries of a vessel, should only be used on possessed people and is a very public occurrence.";
+	COMMAND.tip = "Использование демонических сил для исцеления ран сосуда следует применять только к одержимым людям и это очень публичное явление.";
 	COMMAND.text = "<string Name>";
 	COMMAND.access = "s";
 	COMMAND.optionalArguments = 1;
@@ -237,7 +237,7 @@ local COMMAND = Clockwork.command:New("DemonHeal");
 					Clockwork.player:SetRagdollState(target, RAGDOLL_NONE);
 				end
 				
-				Clockwork.chatBox:AddInTargetRadius(target, "me", "is suddenly and miraculously healed of their wounds! Your eyes seem almost to deceive you as you watch their wounds disappear.", target:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(target, "me", "внезапно и чудесным образом исцеляется от своих ран! Ваши глаза, кажется, почти обманывают вас, когда вы понимаете, что их порезы затягиваются, кровотечения останавливаются, а сломанные конечности срастаются за пару секунд.", target:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 			else
 				Schema:EasyText(player, "peru", "You cannot use this command for another "..tostring(math.ceil(player.nextDemonHeal - curTime)).." seconds!");
 			end
@@ -249,7 +249,7 @@ local COMMAND = Clockwork.command:New("DemonHeal");
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("DemonShriek");
-COMMAND.tip = "If possessing a player, let out a blood-curdling shriek that disorients nearby players and drains their sanity.";
+COMMAND.tip = "Если вселился в игрока,  издай душераздирающий крик, который дезориентирует и снижает рассудок игрокам поблизости.";
 COMMAND.access = "s";
 COMMAND.alias = {"Shriek"};
 
@@ -273,7 +273,7 @@ function COMMAND:OnRun(player, arguments)
 				end
 			end
 			
-			Clockwork.chatBox:AddInTargetRadius(player.victim, "me", "lets out an unholy and blood-curdling shriek!", player.victim:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+			Clockwork.chatBox:AddInTargetRadius(player.victim, "me", "издает нечестивый и леденящий кровь вопль!", player.victim:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 		else
 			Schema:EasyText(player, "peru", "You cannot use this command for another "..tostring(math.ceil(player.nextDemonShriek - curTime)).." seconds!");
 		end
@@ -285,7 +285,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("DemonTalk");
-COMMAND.tip = "Send a message to a player as a demon.";
+COMMAND.tip = "Отправьте игроку сообщение в облике демона.";
 COMMAND.text = "<string Name> <string Message>";
 COMMAND.access = "s";
 COMMAND.arguments = 2;
@@ -314,7 +314,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("DemonNiceTalk");
-COMMAND.tip = "Send a message to a player as a demon pretending to be something nicer.";
+COMMAND.tip = "Отправьте игроку сообщение в облике доброго демона.";
 COMMAND.text = "<string Name> <string Message>";
 COMMAND.access = "s";
 COMMAND.arguments = 2;
@@ -343,7 +343,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("DemonWhisper");
-COMMAND.tip = "Whisper a message into a player's ear.";
+COMMAND.tip = "Нашепчи игроку в ухо.";
 COMMAND.text = "<string Name> <string Message>";
 COMMAND.access = "s";
 COMMAND.arguments = 2;
@@ -369,7 +369,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("DemonFakeTalk");
-COMMAND.tip = "Make a player think another player is saying something.";
+COMMAND.tip = "Заставь игрока думать, что кто-то ему что-то сказал.";
 COMMAND.text = "<string Target Name> <string Speaker Name> <string Message>";
 COMMAND.access = "s";
 COMMAND.arguments = 3;
@@ -399,7 +399,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("DemonFakeWhisper");
-COMMAND.tip = "Make a player think another player is whispering something.";
+COMMAND.tip = "Заставь игрока думать, будто бы ему кто-то что-то шепчет.";
 COMMAND.text = "<string Target Name> <string Speaker Name> <string Message>";
 COMMAND.access = "s";
 COMMAND.arguments = 3;
@@ -430,7 +430,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("DemonFakeMe");
-COMMAND.tip = "Make a player think another player is whispering something.";
+COMMAND.tip = "Заставь игрока думать, будто бы ему кто-то что-то делает.";
 COMMAND.text = "<string Target Name> <string Speaker Name> <string Message>";
 COMMAND.access = "s";
 COMMAND.arguments = 3;
@@ -460,7 +460,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("ForceSuicide");
-COMMAND.tip = "Force your enemies to fucking commit suicide.";
+COMMAND.tip = "Заставь своего врага совершить ебучий суицид.";
 COMMAND.text = "<string Name>";
 COMMAND.access = "s";
 COMMAND.arguments = 1;
@@ -480,7 +480,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("PlyMakeFreakout");
-COMMAND.tip = "Make a possessed player go fucking crazy!!! Lowers the sanity of nearby players. Lasts 30 seconds and then knocks the player unconcious, though possessing them prior will abort the latter behavior. Optional argument to ignore the trait requirement.";
+COMMAND.tip = "Заставьте одержимого игрока сойти с ума!!! Снижает рассудок находящихся рядом игроков. Длится 30 секунд, а затем лишает игрока сознания, хотя предварительное овладение им отменит последнее поведение. Необязательный аргумент для игнорирования требования черты.";
 COMMAND.text = "<string Name> [bool IgnoreTrait]";
 COMMAND.access = "s";
 COMMAND.arguments = 1;
@@ -508,7 +508,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("PlySummonDemon");
-COMMAND.tip = "Make a possessed player explode and a thrall will spawn in their place.";
+COMMAND.tip = "Заставьте одержимого игрока взорваться, и на его месте появится порожденный.";
 COMMAND.text = "<string Name> [bool IgnoreTrait]";
 COMMAND.access = "s";
 COMMAND.arguments = 1;
@@ -521,7 +521,7 @@ function COMMAND:OnRun(player, arguments)
 	if (target) then
 		local targetPos = target:GetPos();
 		
-		Clockwork.chatBox:AddInTargetRadius(target, "me", "abruptly explodes into a shower of fire and gore as a fucking demon bursts from their very flesh!", targetPos, config.Get("talk_radius"):Get() * 2);
+		Clockwork.chatBox:AddInTargetRadius(target, "me", "внезапно превращается в струю огня, крови! А через пару секунд на месте убиенного появляется ЕБУЧИЙ ПОРОЖДЕННЫЙ!", targetPos, config.Get("talk_radius"):Get() * 2);
 		
 		target:Kill();
 		
@@ -579,7 +579,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("PlyPossess");
-COMMAND.tip = "Possess a player, you should probably only do this if they have the 'Possessed' trait. Optional argument to ignore the trait requirement.";
+COMMAND.tip = "Захвати игрока, чье имя укажешь. Не забудь, что просто так это делать не стоит!";
 COMMAND.text = "<string Name> [bool IgnoreTrait]";
 COMMAND.access = "s";
 COMMAND.arguments = 1;
@@ -611,7 +611,7 @@ end;
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("PlyUnPossess");
-COMMAND.tip = "Unpossess the player you are currently possessing.";
+COMMAND.tip = "Верни владельцу его тело.";
 COMMAND.access = "s";
 COMMAND.alias = {"UnPossess", "CharUnPossess"};
 

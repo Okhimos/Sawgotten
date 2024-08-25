@@ -1,11 +1,11 @@
 -- Reserve for events/admins only - Aly
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "ECW Radio";
+	ITEM.name = "ECW Рация";
 	ITEM.model = "models/Items/battery.mdl";
 	ITEM.weight = 1;
 	ITEM.category = "Communication"
-	ITEM.description = "A portable electronic warfare unit that has miraculously survived the ages.";
+	ITEM.description = "Переносной блок радиоэлектронной борьбы, который чудом сохранился на протяжении веков.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/handheld_radio.png"
 	ITEM.customFunctions = {"Frequency", "Turn On", "Turn Off", "Jamming On", "Jamming Off"};
 	

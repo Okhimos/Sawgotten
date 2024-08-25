@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("backpack_base");
-	ITEM.name = "Small Backpack";
+	ITEM.name = "Маленький Рюкзак";
 	ITEM.uniqueID = "backpack_small";
 	ITEM.model = "models/fallout 3/backpack_1.mdl";
 	ITEM.weight = 1;
 	ITEM.invSpace = 8;
-	ITEM.description = "An old, small backpack of Glazic manufacture that has somehow survived the wear of time.";
+	ITEM.description = "Небольших размеров сумка, которую можно накинуть на спину. Скорее всего пошита была еще в Империи Света. Её потёртые швы и выцветший материал свидетельствуют о долгих годах использования, однако он всё ещё сохраняет свою функциональность, являясь верным спутником своего владельца, несмотря на неизбежный износ.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine4";
@@ -18,12 +18,12 @@ local ITEM = Clockwork.item:New("backpack_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("backpack_base");
-	ITEM.name = "Backpack";
+	ITEM.name = "Рюкзак";
 	ITEM.uniqueID = "backpack";
 	ITEM.model = "models/fallout 3/backpack_2.mdl";
 	ITEM.weight = 2;
 	ITEM.invSpace = 10;
-	ITEM.description = "An old, medium-sized backpack of Glazic manufacture that has somehow survived the wear of time.";
+	ITEM.description = "Старый рюкзак средних размеров, скорее всего пошиттый ещё в Империи Света. Выглядит так, будто прошёл через многие испытания. Его потёртые швы местами слегка распустились, а выцветший материал приобрёл неоднородный оттенок, сочетая остатки изначального цвета с следами времени. На поверхности видны царапины и пятна, которые рассказывают о его многочисленных владельцах и пережитых путешествиях. Лямки слегка изношены, но всё ещё прочны, а металлические пряжки и застёжки покрыты налётом ржавчины.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine4";
@@ -37,12 +37,12 @@ local ITEM = Clockwork.item:New("backpack_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("backpack_base");
-	ITEM.name = "Backpack w/ Pouches";
+	ITEM.name = "Рюкзак с Подсумками";
 	ITEM.uniqueID = "backpack_pouches";
 	ITEM.model = "models/fallout 3/backpack_3.mdl";
 	ITEM.weight = 3;
 	ITEM.invSpace = 15;
-	ITEM.description = "A medium-sized backpack with an assortment of pouches, it can probably fit a lot inside of it.";
+	ITEM.description = "Старый рюкзак средних размеров, созданный ещё в Империи Света. Кто бы то ни был, но он додумался пришить несколько подсумков, чтобы увеличить грузоподъемность и иметь возможность унести с собой побольше полезностей. Славная находка для темных времен.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine4";
@@ -56,12 +56,12 @@ local ITEM = Clockwork.item:New("backpack_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("backpack_base");
-	ITEM.name = "Survivalist Backpack";
+	ITEM.name = "Большой Рюкзак";
 	ITEM.uniqueID = "backpack_survivalist";
 	ITEM.model = "models/fallout 3/backpack_6.mdl";
 	ITEM.weight = 4;
 	ITEM.invSpace = 20;
-	ITEM.description = "A large backpack with a huge amount of storage space.";
+	ITEM.description = "Огромный и вместительный рюкзак с обширным внутренним пространством и даже разделением на отсеки. Его материал выцвел от времени, а швы местами потёрлись. На поверхности видны царапины и пятна, свидетельствующие о долгих годах использования. Этот рюкзак, несмотря на свой возраст и износ, остаётся надёжным и готовым к использованию.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine4";
@@ -75,12 +75,12 @@ local ITEM = Clockwork.item:New("backpack_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("backpack_base");
-	ITEM.name = "Pouch";
+	ITEM.name = "Подсумок";
 	ITEM.uniqueID = "backpack_pouch";
 	ITEM.model = "models/props_junk/garbage_bag001a.mdl";
 	ITEM.weight = 0.5;
 	ITEM.invSpace = 4;
-	ITEM.description = "A small crafted pouch ideal for holding small things.";
+	ITEM.description = "Небольшой мешок ручной работы, подходящий для хранения мелких вещей. Пошит умельцем на славу, но все равно недостаточно хорош, чтобы считаться полноценным рюкзаком.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine4";
@@ -93,12 +93,12 @@ local ITEM = Clockwork.item:New("backpack_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("backpack_base");
-	ITEM.name = "Gore Pouch";
+	ITEM.name = "Мешок из Шкур";
 	ITEM.uniqueID = "gore_pouch";
 	ITEM.model = "models/mosi/fallout4/props/junk/hidebundle.mdl";
 	ITEM.weight = 1;
 	ITEM.invSpace = 15;
-	ITEM.description = "A pouch crafted using the hide of animals, it can fit a reasonable amount of stuff inside.";
+	ITEM.description = "Больших размеров сумка, пошитая из шкуры животного. Для жалкого Южанина великолепная находка. К тому же, отлично висит на спине и вмещает большое количество вещей, но даже это не все! Он настолько мягкий и теплый, что может быть использован как подушка.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine4";

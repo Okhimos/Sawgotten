@@ -2337,10 +2337,10 @@ concommand.Add("cw_CoinslotSalaryCheck", function(player, cmd, args)
 				local ranksRestrictedWages = Schema.RanksRestrictedWages;
 				local rank = player:GetCharacterData("rank", 1);
 				
-				Schema:EasyText(player, "olive", "You pull the lever to check your salary. According to the Coinslot's mechanical display, you have "..collectableWages.." collectible salaries, for a total of "..coin.." coin.");
+				Schema:EasyText(player, "olive", "Вы тянете рычаг, чтобы проверить свою зарплату. Согласно механическому дисплею, у вас есть "..collectableWages.." заработные платы, суммарно на "..coin.." коинов.");
 				
 				if ranksRestrictedWages and ranksRestrictedWages[faction] and table.HasValue(ranksRestrictedWages[faction], rank) then
-					Schema:EasyText(player, "peru", "At your current rank you will not accumulate salaries whilst inside the safezone!");
+					Schema:EasyText(player, "peru", "На своем текущем ранге вы не будете получать зарплату, находясь в безопасной зоне!");
 				end
 				
 				entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
@@ -2363,7 +2363,7 @@ concommand.Add("cw_CoinslotSalary", function(player, cmd, args)
 				local coin = player.cwInfoTable.coinslotWages * collectableWages
 				
 				if coin <= 0 then
-					Schema:EasyText(player, "olive", "You pull the lever to dispense your salary, but you have none available at present.");
+					Schema:EasyText(player, "olive", "Вы тянете рычаг, чтобы получить зарплату, но ничего не происходит.");
 					entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 					
 					return;
@@ -2375,7 +2375,7 @@ concommand.Add("cw_CoinslotSalary", function(player, cmd, args)
 					player:SetCharacterData("collectableWages", 0);
 					
 					Clockwork.kernel:PrintLog(LOGTYPE_GENERIC, player:Name().." has collected their salary of "..coin.." coin from the coinslot. The treasury now sits at "..Schema.towerTreasury..".");
-					Schema:EasyText(player, "olivedrab", "You pull the lever to dispense your salary, gaining "..coin.." coin.");
+					Schema:EasyText(player, "olivedrab", "Вы тяните рычаг, чтобы получить зарплату. Издав немного звуков, монета выплевывает несколько монет разным номиналом, суммарно на "..coin.." коинов.");
 					entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 					
 					timer.Simple(0.5, function()
@@ -2384,7 +2384,7 @@ concommand.Add("cw_CoinslotSalary", function(player, cmd, args)
 						end
 					end);
 				else
-					Schema:EasyText(player, "olive", "Try as you might, the coinslot won't dispense your salary. How odd.");
+					Schema:EasyText(player, "olive", "Как бы вы ни старались, касса не выдает вам зарплату. Как странно.");
 					Schema:EasyText(GetAdmins(), "tomato", player:Name().." has attempted to collect his salary, but the treasury is bankrupt!", nil);
 				end
 			end
@@ -2406,7 +2406,7 @@ concommand.Add("cw_CoinslotRation", function(player, cmd, args)
 				
 				if (unixTime >= player:GetCharacterData("nextration", 0)) then
 					if (Schema.towerTreasury and Schema.towerTreasury <= 250) or config.GetVal("enable_famine") then
-						Schema:EasyText(player, "olive", "You pull the ration lever but one is not dispensed, yet you feel as though it has been long enough. How odd.");
+						Schema:EasyText(player, "olive", "Вы тянете рычаг выдачи пайков, но пища не выдается, хотя вы чувствуете, что прошло уже достаточно времени. Как странно.");
 						entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 						
 						return;
@@ -2415,23 +2415,23 @@ concommand.Add("cw_CoinslotRation", function(player, cmd, args)
 					if (faction == "Gatekeeper" or faction == "Pope Adyssa's Gatekeepers" or faction == "Holy Hierarchy") then
 						player:GiveItem(item.CreateInstance("gatekeeper_ration"), true);
 						player:GiveItem(item.CreateInstance("purified_water"), true);
-						Schema:EasyText(player, "olivedrab", "The machine dispenses a Gatekeeper ration and a bottle of purified water.");
+						Schema:EasyText(player, "olivedrab", "Вы тянете за рычаг, чтобы получить паек. С легкой тряской машина выплевывает из себя рацион и бутылку воды.");
 						entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 					elseif player:HasBelief("favored") and math.random(1, 3) == 1 then
 						player:GiveItem(item.CreateInstance("canned_meal"), true);
 						player:GiveItem(item.CreateInstance("papa_petes_ice_cold_pop"), true);
-						Schema:EasyText(player, "lawngreen", "The machine appears to momentarily malfunction, dispensing goodies and sweet treats! It's your lucky day!");
+						Schema:EasyText(player, "lawngreen", "Машина, похоже, на мгновение вышла из строя, выдавая вкусности и сладкие угощения! Это ваш счастливый день!");
 						entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 					else
 						player:GiveItem(item.CreateInstance("moldy_bread"), true);
 						player:GiveItem(item.CreateInstance("dirtywater"), true);
-						Schema:EasyText(player, "olivedrab", "The machine dispenses half of a loaf of moldy bread and a bottle of dirty water.");
+						Schema:EasyText(player, "olivedrab", "Машина выдает половину буханки заплесневелого хлеба и бутылку грязной воды.");
 						entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 					end
 					
 					player:SetCharacterData("nextration", unixTime + 7200);
 				else
-					Schema:EasyText(player, "olive", "You pull the ration lever but one is not dispensed. You must wait for now.");
+					Schema:EasyText(player, "olive", "Вы тянете рычаг пайка, но пища не выдается. Придется подождать.");
 					entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 				end;
 			end
@@ -2456,7 +2456,7 @@ concommand.Add("cw_CoinslotGear", function(player, cmd, args)
 					
 					if (unixTime >= player:GetData("nextGear", 0)) then
 						if (Schema.towerTreasury and Schema.towerTreasury <= 250) then
-							Schema:EasyText(player, "olive", "You pull the lever to dispense your standard issue Gatekeeper kit, but one is not dispensed. How odd.");
+							Schema:EasyText(player, "olive", "Вы тянете рычаг, чтобы получить стандартный набор привратника, но его не выдают. Как странно.");
 							entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 							
 							return;
@@ -2470,7 +2470,7 @@ concommand.Add("cw_CoinslotGear", function(player, cmd, args)
 							player:GiveItem(item.CreateInstance("gatekeeper_standard_issue"), true);
 						end
 						
-						Schema:EasyText(player, "olive", "You pull the lever to dispense your standard issue Gatekeeper kit. A receptacle beneath the machine opens and a crude duffel bag dispenses.");
+						Schema:EasyText(player, "olive", "Вы тянете рычаг, который отвечает за подачу комплектов со снаряжением. Под кассой открывается отверстие, из которого вываливается грубая вещевая сумка.");
 						entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 						
 						timer.Simple(0.5, function()
@@ -2483,7 +2483,7 @@ concommand.Add("cw_CoinslotGear", function(player, cmd, args)
 						player:SetCharacterData("collectedGear", true);
 						player:SetLocalVar("collectedGear", true);
 					else
-						Schema:EasyText(player, "olive", "You pull the lever to dispense your standard issue Gatekeeper kit, but one is not dispensed. You must wait for now.");
+						Schema:EasyText(player, "olive", "Вы тянете рычаг, который отвечает за подачу комплектов со снаряжением, но ничего не происходит. Придется подождать.");
 						entity:EmitSound(coinslotSounds[math.random(#coinslotSounds)]);
 					end
 				end;
@@ -2545,7 +2545,7 @@ concommand.Add("cw_HellPortalArch", function(player, cmd, args)
 						end
 					end);
 				else
-					Schema:EasyText(player, "peru", "You cannot use the Hellportal for another "..nextTeleport.." seconds!");
+					Schema:EasyText(player, "peru", "Вы не можете пользоваться порталом еще "..nextTeleport.." секунд!");
 				end
 			end
 		end;
@@ -2589,7 +2589,7 @@ concommand.Add("cw_HellPortalPillars", function(player, cmd, args)
 						end
 					end);
 				else
-					Schema:EasyText(player, "peru", "You cannot use the Hellportal for another "..nextTeleport.." seconds!");
+					Schema:EasyText(player, "peru", "Вы не можете пользоваться порталом еще "..nextTeleport.." секунд!");
 				end
 			end
 		end;

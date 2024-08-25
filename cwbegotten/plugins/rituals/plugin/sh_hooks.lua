@@ -98,7 +98,7 @@ function cwRituals.rituals:Register(ritual)
 												Clockwork.entity:MakeFlushToGround(entity, trace.HitPos, trace.HitNormal);
 												entity:SetColor(Color(255, 255, 255, 255));
 												
-												Clockwork.chatBox:AddInTargetRadius(player, "it", "A "..itemTable.name.." materializes in a ring of fire.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+												Clockwork.chatBox:AddInTargetRadius(player, "it", "Перед вами материализуется "..itemTable.name.." объятый кольцом огня, что вскоре угасает.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 											end;
 										end);
 									end
@@ -113,7 +113,7 @@ function cwRituals.rituals:Register(ritual)
 							util.Decal("PentagramBurn", trace.HitPos + trace.HitNormal, trace.HitPos - trace.HitNormal);
 						end);
 					else
-						Schema:EasyText(player, "firebrick", "You must be looking at a closer position to summon this ritual's item.");
+						Schema:EasyText(player, "firebrick", "Вы должны смотреть на поверхность близкую вам.");
 						return;
 					end;
 				end

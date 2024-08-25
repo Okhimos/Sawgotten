@@ -139,10 +139,10 @@ end
 if CLIENT then
 	function PLUGIN:GetProgressBarInfoAction(action, percentage)
 		if (action == "raise") then
-			local raiseText = "RAISING...";
+			local raiseText = "ВЫ ПОДНИМАЕТЕ ОРУЖИЕ...";
 
 			if (Clockwork.Client:IsWeaponRaised()) then
-				raiseText = "LOWERING..."
+				raiseText = "ВЫ ОПУСКАЕТЕ ОРУЖИЕ..."
 			end;
 						
 			return {text = raiseText, percentage = percentage, flash = percentage < 10}

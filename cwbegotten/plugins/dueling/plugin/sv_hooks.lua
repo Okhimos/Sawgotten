@@ -96,7 +96,7 @@ end;
 -- Called when a player attempts to use an item.
 function cwDueling:PlayerCanUseItem(player, itemTable, noMessage)
 	if self:PlayerIsInMatchmaking(player) then
-		Schema:EasyText(player, "firebrick", "You cannot use items while matchmaking for a duel!");
+		Schema:EasyText(player, "firebrick", "Вы не можете использовать предметы во время подбора соперников для дуэли.!");
 		return false;
 	--elseif self:PlayerIsDueling(player) then
 	elseif player.opponent then
@@ -108,11 +108,11 @@ end;
 -- Called when a player attempts to drop an item.
 function cwDueling:PlayerCanDropItem(player, itemTable, noMessage)
 	if self:PlayerIsInMatchmaking(player) then
-		Schema:EasyText(player, "firebrick", "You cannot drop items while matchmaking for a duel!");
+		Schema:EasyText(player, "firebrick", "Вы не можете выбрасывать предметы во время подбора соперников для дуэли!");
 		return false;
 	--elseif self:PlayerIsDueling(player) then
 	elseif player.opponent then
-		Schema:EasyText(player, "firebrick", "You cannot drop items while in a duel!");
+		Schema:EasyText(player, "firebrick", "Во время дуэли нельзя выбрасывать предметы!");
 		return false;
 	end;
 end;

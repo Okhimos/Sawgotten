@@ -16,27 +16,10 @@ function cwEncumberment:PlayerThink(player, curTime, infoTable, alive, initializ
 				return;
 			end;
 			
-			local bOverEncumbered = false;
-			local holdingEnt = plyTab.cwHoldingEnt;
-			
-			if holdingEnt and IsValid(holdingEnt) and holdingEnt:GetClass() == "prop_ragdoll" then
-				local ragdollPlayer = Clockwork.entity:GetPlayer(holdingEnt);
-				
-				if ragdollPlayer and ragdollPlayer.OverEncumbered then
-					if ragdollPlayer.OverEncumbered then
-						bOverEncumbered = true;
-					end
-				end
-			end
-			
 			if (plyTab.inventoryWeight > plyTab.maxWeight) then
-				bOverEncumbered = true;
-			end
-			
-			if bOverEncumbered then
 				if (!plyTab.OverEncumbered) then
 					plyTab.OverEncumbered = true;
-					Schema:EasyText(player, "maroon", "You are now overencumbered and your movement speed has decreased!");
+					Schema:EasyText(player, "maroon", "Теперь вы перегружены и ваша скорость передвижения уменьшена!");
 				end;
 				
 				if (cwStamina) then
@@ -52,11 +35,13 @@ function cwEncumberment:PlayerThink(player, curTime, infoTable, alive, initializ
 				end;
 				
 				hook.Run("RunModifyPlayerSpeed", player, infoTable);
-			elseif (plyTab.OverEncumbered) then
-				plyTab.OverEncumbered = false;
-				Schema:EasyText(player, "lawngreen", "You are no longer overencumbered.");
-				
-				hook.Run("RunModifyPlayerSpeed", player, infoTable, true);
+			else
+				if (plyTab.OverEncumbered) then
+					plyTab.OverEncumbered = false;
+					Schema:EasyText(player, "lawngreen", "You are no longer overencumbered.");
+					
+					hook.Run("RunModifyPlayerSpeed", player, infoTable, true);
+				end;
 			end;
 		end;
 	end;
@@ -74,9 +59,8 @@ function cwEncumberment:SetupMove(player, moveData)
 end
 
 function cwEncumberment:ModifyPlayerSpeed(player, infoTable)
-	local plyTab = player:GetTable();
-	local inventoryWeight = plyTab.inventoryWeight;
-	local maxWeight = plyTab.maxWeight;
+	local inventoryWeight = player.inventoryWeight;
+	local maxWeight = player.maxWeight;
 
 	if inventoryWeight and maxWeight and (inventoryWeight > maxWeight) then
 		infoTable.walkSpeed = infoTable.walkSpeed / (inventoryWeight / maxWeight);
@@ -88,35 +72,5 @@ function cwEncumberment:ModifyPlayerSpeed(player, infoTable)
 		else
 			infoTable.jumpPower = infoTable.jumpPower / ((inventoryWeight / maxWeight) * 2);
 		end
-	else
-		local holdingEnt = plyTab.cwHoldingEnt;
-		
-		if IsValid(holdingEnt) and holdingEnt:GetClass() == "prop_ragdoll" then
-			local ragdollPlayer = Clockwork.entity:GetPlayer(holdingEnt);
-			
-			if ragdollPlayer and ragdollPlayer.OverEncumbered then
-				infoTable.walkSpeed = infoTable.walkSpeed * 0.5;
-				infoTable.crouchedWalkSpeed = infoTable.crouchedWalkSpeed * 0.5;
-				infoTable.runSpeed = infoTable.runSpeed * 0.35;
-				infoTable.jumpPower = infoTable.jumpPower * 0.5;
-			else
-				infoTable.walkSpeed = infoTable.walkSpeed * 0.9;
-				infoTable.crouchedWalkSpeed = infoTable.crouchedWalkSpeed * 0.9;
-				infoTable.runSpeed = infoTable.runSpeed * 0.75;
-				infoTable.jumpPower = infoTable.jumpPower * 0.9;
-			end
-		end
-	end
-end
-
-function cwEncumberment:PlayerPickedUpEntity(player, entity)
-	if IsValid(entity) and entity:GetClass() == "prop_ragdoll" then
-		player.nextEncumberedCheck = nil;
-	end
-end
-
-function cwEncumberment:PlayerDroppedEntity(player, entity)
-	if IsValid(entity) and entity:GetClass() == "prop_ragdoll" then
-		player.nextEncumberedCheck = nil;
 	end
 end

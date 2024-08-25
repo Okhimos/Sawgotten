@@ -177,10 +177,10 @@ function cwSailing:SpawnLongship(owner, location, itemTable)
 			end
 			
 			-- No available spot found so remove it.
-			Schema:EasyText(owner, "peru", "The location you are trying to spawn your longship in is currently full or invalid!");
+			Schema:EasyText(owner, "peru", "Место, в котором вы пытаетесь пришвартовать свой корабль, в настоящее время заполнено или недопустимо!");
 			longshipEnt:Remove();
 		else
-			Schema:EasyText(owner, "peru", "The longship for this scroll is already undocked!");
+			Schema:EasyText(owner, "peru", "Корабль для этого свитка уже отшвартован!");
 		end
 	end
 end
@@ -225,7 +225,7 @@ function cwSailing:BeginSailing(longshipEnt, destination)
 			Schema:EasyText(GetAdmins(), "icon16/anchor.png", "cornflowerblue", owner:Name().."'s longship is setting sail to destination "..destination.."!");
 			
 			longshipEnt:EmitSound("ambient/machines/thumper_dust.wav");
-			Clockwork.chatBox:AddInTargetRadius(owner, "me", "prepares to set sail for "..tostring(self.shipDestinations[destination].name)..".", owner:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+			Clockwork.chatBox:AddInTargetRadius(owner, "me", "готовит корабль к отплытию в "..tostring(self.shipDestinations[destination].name)..".", owner:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 			
 			longshipEnt:SetBodygroup(0, 0);
 			
@@ -551,7 +551,7 @@ function cwSailing:MoveLongship(longshipEnt, longshipEntBoundingBox, location)
 												
 												util.ScreenShake(alarm:GetPos(), 1, 20, 15, 1024, true);
 												
-												Clockwork.chatBox:AddInRadius(nil, "localevent", "The Gorewatch alarm sounds, heralding the arrival of a Goreic host!", alarm:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 4);
+												Clockwork.chatBox:AddInRadius(nil, "localevent", "Звучит сигнал тревоги, возвещающий о прибытии Народа Копья!", alarm:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 4);
 												
 												local alarmPos = alarm:GetPos();
 												local filter = RecipientFilter();
@@ -596,7 +596,7 @@ function cwSailing:MoveLongship(longshipEnt, longshipEntBoundingBox, location)
 							for k, v in ipairs(_player.GetAll()) do
 								if v:GetFaction() == "Children of Satan" and v:Alive() then
 									v:SendLua([[Clockwork.Client:EmitSound("begotten/sfx/hellwind.wav")]]);
-									Schema:EasyText(v, "red", "An overwhelming gust of infernal wind erupts past you, carrying the whispers of damned souls released from their suffering. The Dark Lord's domain has been breached by a Goreic host, and they will soon descend upon the manor.");
+									Schema:EasyText(v, "red", "Мимо вас проносится подавляющий порыв адского ветра, разносящий шепот проклятых душ, освободившихся от страданий. Владения Темного Лорда были нарушены северными захватчиками, и вскоре они обрушатся на поместье. К оружию!");
 									v:HandleSanity(-15);
 								end
 							end

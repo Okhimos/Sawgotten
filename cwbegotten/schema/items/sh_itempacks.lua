@@ -1,19 +1,20 @@
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Gatekeeper Standard Issue";
+	ITEM.name = "Сумка с Вещами";
 	ITEM.model = "models/vj_props/duffle_bag.mdl";
-	ITEM.useText = "Open";
+	ITEM.useText = "Распаковать";
 	ITEM.uniqueID = "gatekeeper_standard_issue";
 	ITEM.useSound = "npc/combine_soldier/zipline_hitground1.wav";
 	ITEM.category = "Other";
-	ITEM.description = "A duffel bag containing equipment standard to that of the Gatekeeper Order.";
+	ITEM.description = "Вещевой мешок, содержащий снаряжение, стандартное для Ордена Привратников.";
 	ITEM.weight = 5;
+    ITEM.uniqueID = "gatekeeper_standard_issue"
 	ITEM.randomWeapons = {"begotten_1h_brokensword", "begotten_1h_pipemace", "begotten_1h_spikedbat", "begotten_1h_spikedboard", "begotten_spear_pitchfork"};
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
 	local subfaction = player:GetSubfaction();
 
-	Clockwork.player:GiveCash(player, 200, "Gatekeeper Allowance");
+	Clockwork.player:GiveCash(player, 200, "Пособие Привратника");
 	player:GiveItem(Clockwork.item:CreateInstance("gatekeeper_ration"), true);
 	--player:GiveItem(Clockwork.item:CreateInstance("gatekeeper_ration"), true);
 	player:GiveItem(Clockwork.item:CreateInstance("purified_water"), true);

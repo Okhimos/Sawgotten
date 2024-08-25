@@ -2,9 +2,9 @@ local overlay;
 
 function PLUGIN:GetProgressBarInfoAction(action, percentage)
 	if (action == "putting_on_armor") then
-		return {text = "You are putting on your armor. Click to cancel.", percentage = percentage, flash = percentage < 10};
+		return {text = "Вы надеваете на себя броню. Нажмите ЛКМ, чтобы отменить.", percentage = percentage, flash = percentage < 10};
 	elseif (action == "taking_off_armor") then
-		return {text = "You are taking off your armor. Click to cancel.", percentage = percentage, flash = percentage < 10};
+		return {text = "Вы снимаете с себя броню. Нажмите ЛКМ, чтобы отменить.", percentage = percentage, flash = percentage < 10};
 	end
 end
 

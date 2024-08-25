@@ -95,7 +95,7 @@ function cwGore:FuckMyLife(player, damageInfo)
 				local attacker = damageInfo:GetAttacker();
 				
 				if IsValid(attacker) and attacker:IsPlayer() then
-					local death_strings = {"is decapitated by", "'s head goes flying off in an arc, cut off by", "loses their head to"};
+					local death_strings = {"обезглавлен", "голова отрывается от тела и летит по дуге, отрезанная", "теряет голову с плеч"};
 				
 					Clockwork.chatBox:AddInTargetRadius(player, "me", death_strings[math.random(1, #death_strings)]..attacker:Name().."!", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 				end

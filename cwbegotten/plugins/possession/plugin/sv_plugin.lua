@@ -87,7 +87,7 @@ function playerMeta:Possess(possessor)
 		
 		self:SetSharedVar("currentlyPossessed", true);
 		
-		Clockwork.chatBox:Add(self, nil, "itnofake", "As much as you struggle, you cannot fight off the entity that is now taking control of your body!");
+		Clockwork.chatBox:Add(self, nil, "itnofake", "Как бы вы ни боролись, вы не сможете победить сущность, которая теперь захватывает контроль над вашим телом!");
 		
 		--local max_poise = self:GetMaxPoise();
 		local max_stability = self:GetMaxStability();
@@ -114,7 +114,7 @@ function playerMeta:Possess(possessor)
 		if self:IsRagdolled() then
 			Clockwork.player:SetRagdollState(self, RAGDOLL_NONE);
 			
-			Clockwork.chatBox:AddInTargetRadius(self, "me", "suddenly pulls themself up in a manner that seems to defy gravity!", self:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+			Clockwork.chatBox:AddInTargetRadius(self, "me", "внезапно подтягивается вверх таким образом, что, кажется, бросает вызов гравитации!", self:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 		end
 		
 		if self:HasWeapon("cw_senses") then
@@ -149,8 +149,8 @@ function playerMeta:PossessionFreakout()
 	self:SetSharedVar("possessionFreakout", true);
 	self:Freeze(true);
 	
-	Clockwork.chatBox:Add(self, nil, "itnofake", "You feel something claw its way into your mind!");
-	Clockwork.chatBox:AddInTargetRadius(self, "me", "begins involuntarily convulsing and trembling, almost as if they are losing control of their body!", self:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+	Clockwork.chatBox:Add(self, nil, "itnofake", "Вы чувствуете, как что-то проникает в ваш разум!");
+	Clockwork.chatBox:AddInTargetRadius(self, "me", "начинает непроизвольно содрогаться и дрожать, как будто теряет контроль над своим телом!", self:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 	
 	net.Start("PossessionFreakoutAnim")
 	net.WriteEntity(self);
@@ -176,7 +176,7 @@ function playerMeta:PossessionFreakout()
 			if !self.possessor then
 				if self:Alive() then
 					Clockwork.player:SetRagdollState(self, RAGDOLL_KNOCKEDOUT, 15);
-					Clockwork.chatBox:AddInTargetRadius(self, "me", "suddenly falls limp and drops to the ground!", self:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+					Clockwork.chatBox:AddInTargetRadius(self, "me", "внезапно обмякает и падает на землю!", self:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 					
 					self:EmitSound("possession/spiritsting.wav");
 				end
@@ -210,7 +210,7 @@ function playerMeta:Unpossess()
 	self:SetSharedVar("possessionFreakout", false);
 	netstream.Start(self, "Stunned", 5); -- Replace with damnation or custom VFX later!
 	Clockwork.player:SetRagdollState(self, RAGDOLL_KNOCKEDOUT, 15);
-	Clockwork.chatBox:AddInTargetRadius(self, "me", "suddenly falls limp and drops to the ground!", self:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+	Clockwork.chatBox:AddInTargetRadius(self, "me", "внезапно обмякает и падает на землю!", self:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 	self:EmitSound("possession/spiritsting.wav");
 	
 	if cwSenses and !self:HasWeapon("cw_senses") then

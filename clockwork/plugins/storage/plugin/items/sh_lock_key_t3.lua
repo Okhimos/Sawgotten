@@ -1,5 +1,5 @@
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Strong Lock";
+	ITEM.name = "Крепкий Замок";
 	ITEM.model = "models/props_wasteland/prison_padlock001a.mdl";
 	ITEM.weight = 0.25;
 	ITEM.category = "Locks";
@@ -12,7 +12,7 @@ local ITEM = Clockwork.item:New();
 		function ITEM:GetClientSideInfo()
 			if (self:IsInstance()) then
 				local color = Color(230, 230, 255);
-				local text = "This lock is strong and can take a beating.";
+				local text = "Этот замок прочный и выдерживает большие нагрузки.";
 
 				if (text != "") then
 					return Clockwork.kernel:AddMarkupLine(

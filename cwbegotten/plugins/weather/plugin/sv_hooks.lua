@@ -70,7 +70,7 @@ function cwWeather:PlayerThink(player, curTime, infoTable, alive, initialized, p
 	if plyTab.nextWeatherEffectCheck <= curTime then
 		plyTab.nextWeatherEffectCheck = curTime + weatherEffectCheckDelay;
 		
-		if !alive or plyTab.cwObserverMode or plyTab.cwWakingUp or plyTab.opponent then return end;
+		if !alive or plyTab.cwObserverMode or plyTab.cwWakingUp then return end;
 		
 		local lastZone = player:GetCharacterData("LastZone") or "wasteland";
 		local zoneTable = zones:FindByID(lastZone);
@@ -101,7 +101,7 @@ function cwWeather:PlayerThink(player, curTime, infoTable, alive, initialized, p
 							if ammo and #ammo > 0 and !itemTable.usesMagazine then
 								itemTable:SetData("Ammo", {});
 								
-								Clockwork.player:Notify(player, "Your weapon fills with water and your powder charge is ruined!");
+								Clockwork.player:Notify(player, "На ваше оружие попала вода, из-за чего порох вымок! Вот беда...");
 							end
 						end
 					end

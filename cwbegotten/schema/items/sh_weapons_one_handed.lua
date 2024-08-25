@@ -1,11 +1,11 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Bat";
+	ITEM.name = "Бита";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/baseballbat.mdl";
 	ITEM.skin = 3;
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_bat";
 	ITEM.category = "Melee";
-	ITEM.description = "A simple wooden bat.";
+	ITEM.description = "Простая деревянная бита.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/bat.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -20,7 +20,7 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Spiked Bat";
+	ITEM.name = "Бита с шипами";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/baseballbat.mdl";
 	ITEM.skin = 3;
 	ITEM.bodygroup1 = 6;
@@ -28,7 +28,7 @@ local ITEM = Clockwork.item:New("weapon_base");
 	ITEM.weight = 1.1;
 	ITEM.uniqueID = "begotten_1h_spikedbat";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden bat with nails hammered in for added brutality.";
+	ITEM.description = "Деревянная бита с вбитыми гвоздями для нанесения более серьезных увечий.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/spiked_bat.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -42,7 +42,7 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Bladed Bat";
+	ITEM.name = "Бита с Лезвиями";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/baseballbat.mdl";
 	ITEM.skin = 3;
 	ITEM.bodygroup1 = 10;
@@ -50,7 +50,7 @@ local ITEM = Clockwork.item:New("weapon_base");
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_1h_bladedbat";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden bat that has been fitted with dual sawblades. It is now a primitive slashing weapon.";
+	ITEM.description = "Деревянная бита, оснащенная двумя пилами. Теперь это примитивное рубящее оружие.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/bladed_bat.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -64,12 +64,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Battle Axe";
+	ITEM.name = "Боевой Топор";
 	ITEM.model = "models/demonssouls/weapons/battle axe.mdl";
 	ITEM.weight = 1.5;
 	ITEM.uniqueID = "begotten_1h_battleaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A bulky black iron double-sided axe. A crude weapon for crude men.";
+	ITEM.description = "Громоздкий черный железный двусторонний топор. Грубое оружие для грубых людей.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/battle_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -83,12 +83,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Board";
+	ITEM.name = "Доска";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/board.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_board";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden board, a common implement of war in the Wasteland.";
+	ITEM.description = "Деревянная доска, распространённое орудие войны в Пустоши.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/board.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -103,13 +103,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Spiked Board";
+	ITEM.name = "Доска с Гвоздями";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/board.mdl";
 	ITEM.bodygroup1 = 2;
 	ITEM.weight = 1.1;
 	ITEM.uniqueID = "begotten_1h_spikedboard";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden board with nails hammered in for added brutality.";
+	ITEM.description = "Деревянная доска с вбитыми гвоздями для нанесения более обширных ранений.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/spiked_board.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -123,13 +123,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Bladed Board";
+	ITEM.name = "Доска с лезвиями";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/board.mdl";
 	ITEM.bodygroup1 = 4;
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_1h_bladedboard";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden board that has been fitted with dual sawblades. It is now a primitive slashing weapon.";
+	ITEM.description = "Деревянная доска, оснащенная двойными пилами. Теперь это примитивное рубящее оружие.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/bladed_board.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -143,12 +143,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Broken Sword";
+	ITEM.name = "Сломанный Меч";
 	ITEM.model = "models/demonssouls/weapons/broken sword.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "begotten_1h_brokensword";
 	ITEM.category = "Melee";
-	ITEM.description = "A horrible excuse for a sword, rusted almost beyond use and with its blade broken in half. Something is better than nothing, however...";
+	ITEM.description = "Ужасное подобие меча, заржавевшего почти до непригодности и с лезвием, сломанным пополам. Однако это лучше, чем ничего...";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/broken_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -163,12 +163,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Voltsword";
+	ITEM.name = "Меч Вольтистов";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/chineeseofficersword.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "begotten_1h_voltsword";
 	ITEM.category = "Melee";
-	ITEM.description = "An ancient military sword that has been fitted with voltist prongs and pylons. It is capable of dealing considerable damage to armored fools, if you're capable of handling it without electrifying yourself.";
+	ITEM.description = "Меч, оснащенный проводами, трубками и другими предметами проводящими ток. Он способен нанести значительный урон бронированным глупцам.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/voltsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -184,12 +184,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Voltprod";
+	ITEM.name = "Булава Вольтистов";
 	ITEM.model = "models/newvegasprops/voltprod.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_voltprod";
 	ITEM.category = "Melee";
-	ITEM.description = "A prod that was once used on cattle, now re-charged with technoheretical gizmos to deliver near fatal electrifying blows to the flesh-afflicted who unrightfully seek protection from metal plate.";
+	ITEM.description = "Электрошокер, который когда-то использовался для борьбы со скотом, теперь заряженный техноеретическими приспособлениями, чтобы наносить почти смертельные удары током, поражая плоть, которая ищет защиты в металлических пластинах.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/volt_prod.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -205,12 +205,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Druid Sword";
+	ITEM.name = "Клинок Друида";
 	ITEM.model = "models/begotten/weapons/sword1.mdl";
 	ITEM.weight = 0.7;
 	ITEM.uniqueID = "begotten_1h_druidsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A crude iron blade engraved with various Goreic glyphs.";
+	ITEM.description = "Грубый железный клинок, на котором выгравированы различные символы клана Краст.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/druid_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -224,12 +224,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Familial Sword";
+	ITEM.name = "Меч Семьи";
 	ITEM.model = "models/begotten/weapons/sword2_unique.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_familialsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A finely crafted steel shortsword made in honor of the Family.";
+	ITEM.description = "Изящно изготовленный короткий меч из хорошей стали, созданный в честь Семьи.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/familial_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -243,12 +243,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Flanged Mace";
+	ITEM.name = "Шестопер";
 	ITEM.model = "models/demonssouls/weapons/mace.mdl";	
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_1h_flangedmace";
 	ITEM.category = "Melee";
-	ITEM.description = "A heavy steel mace with a spike at its end. Expertly designed to pierce armor, no matter its resilience.";
+	ITEM.description = "Тяжелая стальная булава с шипом на конце. Специально разработана для прокалывания брони, независимо от ее прочности.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/flanged_mace.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -263,12 +263,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Glazicus";
+	ITEM.name = "Глазикус";
 	ITEM.model = "models/demonssouls/weapons/broad sword.mdl";
 	ITEM.weight = 0.8;
 	ITEM.uniqueID = "begotten_1h_glazicus";
 	ITEM.category = "Melee";
-	ITEM.description = "A common Glazic shortsword made from a cheap iron.";
+	ITEM.description = "Короткий Меч из Легионов Сияния, изготовленный из дешевого железа.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/glazicus.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -285,12 +285,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Spatha";
+	ITEM.name = "Спата";
 	ITEM.model = "models/begotten/weapons/spatha.mdl";
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_1h_spatha";
 	ITEM.category = "Melee";
-	ITEM.description = "An iron straight sword from the Glazic Legions. Forged for the purpose of civilizing savages.";
+	ITEM.description = "Железный меч средних размеров, которым частенько пользуются Легионеры Сияния.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/spatha.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -304,12 +304,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Ornate Glazicus";
+	ITEM.name = "Изысканный Глазикус";
 	ITEM.model = "models/begotten/weapons/ornateglazicus.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_ornateglazicus";
 	ITEM.category = "Melee";
-	ITEM.description = "A finely crafted steel Glazicus with decorative inlays. Glorious to behold.";
+	ITEM.description = "Короткий Меч, принадлежащий Империи Света, изготовленный из дорогого метала с инкрустированными золотыми частями. Превосходно!";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ornateglazicus.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -323,12 +323,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Satanic Shortsword";
+	ITEM.name = "Лезвие Скверны";
 	ITEM.model = "models/aoc_weapon/w_shortsword_evil.mdl";
 	ITEM.weight = 0.7;
 	ITEM.uniqueID = "begotten_1h_satanicshortsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A hellish shortsword that expresses the supremacy of bloody expression. It is exceptionally nimble, and capable of piercing armor with deadly close range successive thrust attacks.";
+	ITEM.description = "Короткий меч выкованный в Адских Жерновах. Он весит мало, но прекрасно заточен, благодаря чему и способен пробивать броню смертоносными последовательными колющими атаками на близкой дистанции.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/satanicshortsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -343,12 +343,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore Battle Axe";
+	ITEM.name = "Одноручный Топор Клана Гор";
 	ITEM.model = "models/begotten/weapons/axe1.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_gorebattleaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A well crafted battle axe. The markings of Clan Gore are carved into its handle.";
+	ITEM.description = "Искусно сделанный боевой топор, который прекрасно лежит в руке. На рукояти вырезаны знаки клана Гора.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_battle_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -365,12 +365,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore Falchion";
+	ITEM.name = "Горейский Фальшион";
 	ITEM.model = "models/begotten/weapons/sword4.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_gorefalchion";
 	ITEM.category = "Melee";
-	ITEM.description = "A steel chopping blade on a finely carved Goreic hilt. A warrior's weapon, excellent for its ability to hack off limbs.";
+	ITEM.description = "Стальной рубящий клинок на тонко вырезанной деревянной рукояти. Оружие воина, превосходное своей способностью отрубать конечности.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_falchion.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -384,12 +384,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore Mace";
+	ITEM.name = "Каменная Булава";
 	ITEM.model = "models/begotten/weapons/mace2.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_goremace";
 	ITEM.category = "Melee";
-	ITEM.description = "A spiked wooden club with a heavy stone head, crude in construction yet effective in combat.";
+	ITEM.description = "Деревянная дубинка с шипами и тяжелым каменным наконечником. Грубая по конструкции, но эффективная в бою.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_mace.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -403,12 +403,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore Seax";
+	ITEM.name = "Сакс Горов";
 	ITEM.model = "models/begotten/weapons/sword3.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_goreseax";
 	ITEM.category = "Melee";
-	ITEM.description = "A steel blade with a curved end, engraved with various Goreic runes.";
+	ITEM.description = "Стальной клинок с изогнутым концом, на котором выгравированы различные горейские руны.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_seax.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -422,12 +422,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore Shortsword";
+	ITEM.name = "Одноручный Меч Горов";
 	ITEM.model = "models/begotten/weapons/sword2.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_goreshortsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A short iron blade equally suited to slashing or stabbing, decorated with Goreic motifs.";
+	ITEM.description = "Короткий железный клинок, одинаково подходящий как для рубящих, так и для колющих ударов, украшенный горейскими мотивами.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gore_shortsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -441,12 +441,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Iron Arming Sword";
+	ITEM.name = "Полуторный Меч";
 	ITEM.model = "models/demonssouls/weapons/knight sword.mdl";	
 	ITEM.weight = 1.1;
 	ITEM.uniqueID = "begotten_1h_ironarmingsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A crudely made yet robust iron sword, equally suited to slashing or stabbing.";
+	ITEM.description = "Грубо сделанный, но прочный одноручный железный меч, одинаково подходящий как для рубящих, так и для колющих ударов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/iron_arming_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -461,12 +461,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Steel Arming Sword";
+	ITEM.name = "Меч Бастард";
 	ITEM.model = "models/aoc_weapon/sword_01_static.mdl";	
 	ITEM.weight = 1.2;
 	ITEM.uniqueID = "begotten_1h_steelarmingsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A well balanced steel arming sword, equally suited to slashing or stabbing.";
+	ITEM.description = "Хорошо сбалансированный стальной меч, одинаково подходящий как для рубящих, так и для колющих ударов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/steelarmingsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -481,12 +481,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Iron Shortsword";
+	ITEM.name = "Меч Солдата";
 	ITEM.model = "models/demonssouls/weapons/short sword.mdl";
 	ITEM.weight = 0.8;
 	ITEM.uniqueID = "begotten_1h_ironshortsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A common shortsword made from a cheap iron.";
+	ITEM.description = "Обычный короткий меч, сделанный из дешевого железа. До прихода Глазикусов,  им частенько пользовались в Легионах Сияния, но не сейчас.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/iron_shortsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -501,12 +501,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Machete";
+	ITEM.name = "Мачете";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/machete.mdl";	
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_machete";
 	ITEM.category = "Melee";
-	ITEM.description = "A large rusty blade that can cut through flesh with ease.";
+	ITEM.description = "Большое ржавое лезвие, которое с легкостью разрежет плоть и кости.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/machete.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -521,12 +521,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Morning Star";
+	ITEM.name = "Восходящая Звезда";
 	ITEM.model = "models/demonssouls/weapons/morning star.mdl";	
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_1h_morningstar";
 	ITEM.category = "Melee";
-	ITEM.description = "A heavy iron ball covered in spikes, mounted on a wood and metal shaft; this weapon ascertains a deadly combination of blunt force and armor-piercing capability.";
+	ITEM.description = "Тяжелый железный шар, покрытый шипами, закрепленный на деревянном или метталическом стержне это оружие представляет собой смертоносное сочетание грубой силы и бронебойной способности.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/morningstar.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -541,32 +541,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Bone Mace";
-	ITEM.model = "models/begotten/weapons/bonemace.mdl";	
-	ITEM.weight = 0.6;
-	ITEM.uniqueID = "begotten_1h_bonemace";
-	ITEM.category = "Melee";
-	ITEM.description = "A primeval bludgeoning tool fashioned from the bones of your fellow man.";
-	ITEM.iconoverride = "materials/begotten/ui/itemicons/bonemace.png"
-	ITEM.meleeWeapon = true;
-	ITEM.isAttachment = true;
-	ITEM.attachmentBone = "ValveBiped.Bip01_L_Thigh";
-	ITEM.attachmentOffsetAngles = Angle(0, 180, 349.06);
-	ITEM.attachmentOffsetVector = Vector(3.71, -3.54, 27.58);
-	ITEM.canUseOffhand = true;
-	ITEM.canUseShields = true;
-	
-	ITEM.components = {breakdownType = "breakdown", items = {"human_bone", "human_bone", "human_bone"}};
-ITEM:Register();
-
-local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Pipe";
+	ITEM.name = "Труба";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/leadpipe.mdl";
 	ITEM.bodygroup1 = 1;
 	ITEM.weight = 0.6;
 	ITEM.uniqueID = "begotten_1h_pipe";
 	ITEM.category = "Melee";
-	ITEM.description = "A small but weighty section of lead pipe, perfect for use as a club.";
+	ITEM.description = "Небольшой, но увесистый отрезок свинцовой трубы, идеально подходящий для использования в качестве дубинки.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pipe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -581,13 +562,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Pipe Mace";
+	ITEM.name = "Трубная Булава";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/leadpipe.mdl";
 	ITEM.bodygroup1 = 2;
 	ITEM.weight = 0.8;
 	ITEM.uniqueID = "begotten_1h_pipemace";
 	ITEM.category = "Melee";
-	ITEM.description = "A lead pipe fitted with scrap bolts. A primitive mace, frequently used by County District peacekeeping forces and delinquents alike.";
+	ITEM.description = "Свинцовая труба, оснащенная болтами из металлолома. Примитивная булава, часто используемая миротворческими силами округа и правонарушителями.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pipe_mace.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -601,12 +582,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Tire Iron";
+	ITEM.name = "Кусок Железки";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/tireiron.mdl";
 	ITEM.weight = 0.6;
 	ITEM.uniqueID = "begotten_1h_tireiron";
 	ITEM.category = "Melee";
-	ITEM.description = "An ancient tool of rusted scrap metal. It's a decent weapon for striking foes on the head.";
+	ITEM.description = "Древний инструмент из ржавого металлолома. Это достойное оружие для удара по голове.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/tireiron.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -621,13 +602,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Scrap Axe";
+	ITEM.name = "Топор из Скрапа";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/tireiron.mdl";
 	ITEM.bodygroup1 = 2;
 	ITEM.weight = 0.9;
 	ITEM.uniqueID = "begotten_1h_scrapaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A tire iron welded with a scrap axehead. A typical weapon of a Wasteland bandit.";
+	ITEM.description = "Монтировка, сваренная с обухом топора. Типичное оружие бандита из Пустоши.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/tire_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -641,12 +622,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Reaver Battle Axe";
+	ITEM.name = "Одноручный Топор Клана Ривер";
 	ITEM.model = "models/begotten/weapons/axe3.mdl";
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_1h_reaverbattleaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A one-handed iron battle axe with a broad head. It is commonly used by Gores of Clan Reaver for its head-taking ability.";
+	ITEM.description = "Одноручный железный боевой топор с широкой головкой. Обычно используется Жестокими Воинами из Клана Ривер из-за его способности сносить головы.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/reaver_battle_axe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -660,12 +641,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Scimitar";
+	ITEM.name = "Скимитар";
 	ITEM.model = "models/demonssouls/weapons/scimitar.mdl";
 	ITEM.weight = 0.9;
-	ITEM.uniqueID = "begotten_1h_scimitar";
+	ITEM.uniqueID = "scimitar";
 	ITEM.category = "Melee";
-	ITEM.description = "A curved iron sword inspired by designs from the far eastern Darklands brought back by campaigning soldiers under Lord Maximus. This type of sword excels at cutting.";
+	ITEM.description = "Изогнутый железный меч, вдохновленный образцами из Темноземья, привезенными солдатами, сражающимися под началом лорда Максимуса. Этот тип меча отлично подходит для рубящих ударов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scimitar.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -683,12 +664,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Warped Sword";
+	ITEM.name = "Деформированный Меч";
 	ITEM.model = "models/props/begotten/melee/warped_sword.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_warpedsword";
 	ITEM.category = "Melee";
-	ITEM.description = "An unholy oddity of a sword. Its metal has been warped by a sadistic demon with a morbid sense of humor. It excels at carving flesh at the expense of armor-piercing.";
+	ITEM.description = "Нечестивый меч. Его металл был деформирован садистским демоном с болезненным чувством юмора. Он отлично режет плоть в ущерб бронебойности.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/warped_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -704,12 +685,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Twisted Club";
+	ITEM.name = "Ужасная Булава";
 	ITEM.model = "models/props/begotten/melee/barbed_club.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_twistedclub";
 	ITEM.category = "Melee";
-	ITEM.description = "A club that has been twisted by demonic energy. It excels at punishing armored foes.";
+	ITEM.description = "Дубинка, искаженная демонической энергией. Она отлично подходит для уничтожения бронированных врагов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/barbed_club.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -724,12 +705,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Scrap Blade";
+	ITEM.name = "Клинок из Скрапа";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/shishkebab.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_scrapblade";
 	ITEM.category = "Melee";
-	ITEM.description = "A tossed-together amalgamation of scrap metal resembling a sword. It may be more dangerous for the wielder than its intended target.";
+	ITEM.description = "Смешанная груда металлолома, напоминающая меч. Может быть опаснее для владельца, чем для предполагаемой цели.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scrap_blade.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -747,12 +728,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Hatchet";
+	ITEM.name = "Топорик";
 	ITEM.model = "models/begotten/weapons/serfhatchet.mdl";
 	ITEM.weight = 1.2;
 	ITEM.uniqueID = "begotten_1h_hatchet";
 	ITEM.category = "Melee";
-	ITEM.description = "A small hatchet that excels at cutting wood. It also excels at cutting flesh...";
+	ITEM.description = "Маленький топорик, который отлично подходит для рубки дерева. Он также отлично подходит для рубки мяса...";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/hatchet.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -770,12 +751,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Training Sword";
+	ITEM.name = "Тренировочный Меч";
 	ITEM.model = "models/begotten/weapons/training_1h.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_trainingsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden sword that can be used for low-risk one-handed combat training.";
+	ITEM.description = "Деревянный меч, который можно использовать для тренировок по одноручному бою с низким уровнем риска.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/training_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -789,13 +770,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Twisted Machete";
+	ITEM.name = "Извращенный Мачете";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/machete.mdl";	
 	ITEM.weight = 0.9;
 	ITEM.bodygroup2 = 3;
 	ITEM.uniqueID = "begotten_1h_twistedmachete";
 	ITEM.category = "Melee";
-	ITEM.description = "A curved machete-like blade, used by many followers of the Dark Lord for their sacrifices.";
+	ITEM.description = "Изогнутый клинок, похожий на мачете, который использовали многие последователи Темного Лорда для жертвоприношений.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/twisted_machete.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -810,12 +791,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Satanic Mace";
+	ITEM.name = "Ужасающая Булава";
 	ITEM.model = "models/skyrim/daedric/mace/w_daedricmace.mdl";	
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_1h_satanicmace";
 	ITEM.category = "Melee";
-	ITEM.description = "A black steel mace of twisted design. It excels at punishing plated fools and bringing foes to heel.";
+	ITEM.description = "Черная стальная булава с устрашающим дизайном. Она отлично подходит для наказания латных дураков и принуждения к повиновению.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/satanic_mace.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -830,12 +811,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Satanic Sword";
+	ITEM.name = "Коготь";
 	ITEM.model = "models/skyrim/daedric/sword/w_daedricsword.mdl";	
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_1h_satanicsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A black steel sword of twisted design. It excels at flencing flesh and cutting bone.";
+	ITEM.description = "Черный стальной меч с устрашающим дизайном. Он отлично подходит для рубки плоти и костей.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/satanic_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -851,12 +832,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Shard";
+	ITEM.name = "Осколок";
 	ITEM.model = "models/items/weapons/sword_souldrinker/sword_souldrinker.mdl";	
 	ITEM.weight = 0.8;
 	ITEM.uniqueID = "begotten_1h_shard";
 	ITEM.category = "Melee";
-	ITEM.description = "A glowing shard of unholy design. It flashes red when it hungers for flesh.";
+	ITEM.description = "Меч, выкованный в адских жерновах. Излучает нечестивый свет, пробуждая страх в сердцах врагов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/shard.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -874,12 +855,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "War Hammer";
+	ITEM.name = "Боевой Молот";
 	ITEM.model = "models/begotten/weapons/warhammer.mdl";	
 	ITEM.weight = 1.2;
 	ITEM.uniqueID = "begotten_1h_warhammer";
 	ITEM.category = "Melee";
-	ITEM.description = "A steel hammerhead and spike on a wooden handle. An excellent weapon against armored foes.";
+	ITEM.description = "Короткое древковое дробящее оружие, похожее на Булаву. Пользуется Популярностью у Православных или у людей Сияния.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/warhammer.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Savage Claws";
+	ITEM.name = "Когти Дикаря";
 	ITEM.model = "models/demonssouls/weapons/claws.mdl";
 	ITEM.weight = 0.4;
 	ITEM.uniqueID = "begotten_claws_savageclaws";
 	ITEM.category = "Melee";
-	ITEM.description = "Steel blades shaped in the image of a bear's claws. The distinctive Goreic ritual weapon of the now extinct Clan Ursa.";
+	ITEM.description = "Стальные лезвия имеют форму когтей медведя. Характерное горейское ритуальное оружие ныне вымершего клана Урса.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/savage_claws.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -18,12 +18,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Steel Claws";
+	ITEM.name = "Стальные Когти";
 	ITEM.model = "models/props/begotten/melee/claws.mdl";
 	ITEM.weight = 0.6;
 	ITEM.uniqueID = "begotten_claws_steelclaws";
 	ITEM.category = "Melee";
-	ITEM.description = "Shagalaxian steel claws, terrifyingly crafted for the purpose of shredding men at the hands of the bloodthirsty ravenous Berzerkers of Clan Gore.";
+	ITEM.description = "Шагалаксианские стальные когти, созданные для того, чтобы кромсать людей руками кровожадных и хищных берсеркеров клана Гор.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/steel_claws.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

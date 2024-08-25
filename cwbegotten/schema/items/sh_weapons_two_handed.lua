@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Club";
+	ITEM.name = "Деревянная Дубина";
 	ITEM.model = "models/demonssouls/weapons/club.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "begotten_2h_great_club";
 	ITEM.category = "Melee";
-	ITEM.description = "A simple and brutish weapon, a wooden club. It is just as capable of cracking skulls now as it was ten thousand years ago.";
+	ITEM.description = "Простое и грубое оружие. Оно так же способно проламывать черепа сейчас, как и десять тысяч лет назад.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/club.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -17,13 +17,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Steel Longsword";
+	ITEM.name = "Темный Длинный Меч";
 	ITEM.model = "models/begotten/weapons/templarsword.mdl";
 	ITEM.skin = 2;
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_exileknightsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A darkened fine steel longsword of Glazic design. Once infamously used by exiled Knights of the Holy Hierarchy.";
+	ITEM.description = "Длинный меч из темной стали, выполненный в стиле Сияния. Когда-то его использовали рыцари-изганники.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/exile_knight_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -36,12 +36,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Inquisitor Sword";
+	ITEM.name = "Меч Инквизитора";
 	ITEM.model = "models/demonssouls/weapons/blueblood sword.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_inquisitorsword";
 	ITEM.category = "Melee";
-	ITEM.description = "The legendary swords of the Second Inquisition. Easily identified by their star-shaped hilts, these weapons are forged from only the finest steel. They carry holy judgement, much to the dismay of witches and Glazic nobility alike.";
+	ITEM.description = "Легендарные мечи Второй инквизиции, легко узнаваемые по рукоятям в форме звезды. Их клинки выкованы только из лучшей стали, ибо несут святое правосудие, к большому разочарованию для еретиков и не чистых на руку дворян Сияния.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -53,13 +53,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Longsword";
+	ITEM.name = "Длинный Меч";
 	ITEM.model = "models/demonssouls/weapons/long sword.mdl";
 	ITEM.skin = 2;
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_longsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A formidable iron longsword formerly used in the ranks of the Gatekeepers.";
+	ITEM.description = "Грозный железный длинный меч, ранее использовавшийся в рядах Священного Ордена Привратников.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/longsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -72,12 +72,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Pickaxe";
+	ITEM.name = "Кирка";
 	ITEM.model = "models/begotten/weapons/serfpickaxe.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_great_pickaxe";
 	ITEM.category = "Melee";
-	ITEM.description = "A mining tool designed to crush rock, it can easily crush armor and flesh as well.";
+	ITEM.description = "Горнодобывающий инструмент, предназначенный для дробления горных пород, но он также может легко дробить броню и плоть.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pickaxe.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -90,12 +90,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Sledge";
+	ITEM.name = "Кувалда";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/sledgehammer.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_2h_great_sledge";
 	ITEM.category = "Melee";
-	ITEM.description = "A great heavy sledgehammer that can be used to crush skulls.";
+	ITEM.description = "Огромная тяжелая кувалда, которой можно крушить черепа.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/sledge.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -108,12 +108,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Voltsledge";
+	ITEM.name = "Вольт-Кувалда";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/sledgehammer.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_2h_great_voltsledge";
 	ITEM.category = "Melee";
-	ITEM.description = "A sledgehammer that has been fitted with unholy gizmos that amplify its electrical might.";
+	ITEM.description = "Кувалда, оснащенная нечестивыми приспособлениями, усиливающими ее электрическую мощь.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/voltsledge.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -127,12 +127,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Training Longsword";
+	ITEM.name = "Тренировочный Двуручный Меч";
 	ITEM.model = "models/begotten/weapons/training_2h.mdl";
 	ITEM.weight = 1.5;
 	ITEM.uniqueID = "begotten_2h_traininglongsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden longsword that can be used for low-risk two-handed combat training.";
+	ITEM.description = "Деревянный длинный меч, который можно использовать для тренировок по двуручному бою с низким уровнем риска.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/training_longsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -144,13 +144,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Unholy Sigil Sword";
+	ITEM.name = "Нечестивый Меч";
 	ITEM.model = "models/props/begotten/melee/smelter_sword.mdl";
 	ITEM.skin = 2;
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_2h_unholysigilsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A scarred black iron sigil sword forged in the fires of hell. Its iron unnerves you; dark whispers compel you to empower it with unholy energy.";
+	ITEM.description = "Покрытый шрамами черный железный меч, выкованный в адском огне. Его клинок нервирует вас; темные шепоты заставляют устроить жертвоприношение.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/unholy_sigil_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -164,12 +164,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Quarterstaff";
+	ITEM.name = "Боевой Посох";
 	ITEM.model = "models/begotten/weapons/quarterstaff.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_2h_quarterstaff";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden staff to be used as a combat implement.";
+	ITEM.description = "Деревянный посох, используемый в разных целях. Но чаще всего это убийство себе подобных.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/quarterstaff.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -182,12 +182,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Satanic Longsword";
+	ITEM.name = "Сатанинский Двуручный Меч";
 	ITEM.model = "models/skyrim/draugr/greatsword/w_draugrgreatsword.mdl";
 	ITEM.weight = 2.6;
 	ITEM.uniqueID = "begotten_2h_sataniclongsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A black steel sword of twisted design. It excels at taking heads and various other limbs with skillful cleaves.";
+	ITEM.description = "Черный стальной меч с великолепным дизайном. Он отлично справляется с говорящими головами и различными другими конечностями с помощью сильных рубящих ударов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/satanic_longsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -201,12 +201,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "The Samurai Sword";
+	ITEM.name = "Самурайский Меч";
 	ITEM.model = "models/demonssouls/weapons/blueblood sword.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_eventsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A fucking torch, or a bat, or the noose, or the rat.";
+	ITEM.description = "Чертов факел, или бита, или петля, или крыса.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = false;
@@ -218,12 +218,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Gore Falx";
+	ITEM.name = "Фалькс Горов";
 	ITEM.model = "models/begotten/goreweapons/falx2.mdl";
 	ITEM.weight = 3.5;
 	ITEM.uniqueID = "begotten_2h_great_falx";
 	ITEM.category = "Melee";
-	ITEM.description = "A steel blade curved inwards for penetrating power. It can punch holes in metal and bone with each devastating strike.";
+	ITEM.description = "Стальной клинок, изогнутый внутрь для увеличения пробивной способности. Это по истине жуткое оружие ломает все: Черепа, Кости, Щиты.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/falx.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -236,12 +236,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Skyfallen Sword";
+	ITEM.name = "Меч Падшего";
 	ITEM.model = "models/bloodborne/weapons/skyfeller.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_skyfallensword";
 	ITEM.category = "Melee";
-	ITEM.description = "Skylight supersteel reforged with familial runes and masterwork smithing. A sword befitting a King.";
+	ITEM.description = "Техническое Достояние Света, перекованное с семейными рунами и мастерской кузницей. Меч, достойный короля.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/skyfallen_sword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -253,12 +253,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Voltlongsword";
+	ITEM.name = "Двуручный Вольт-Меч";
 	ITEM.model = "models/begotten/weapons/shishkebab.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_2h_voltlongsword";
 	ITEM.category = "Melee";
-	ITEM.description = "A long scrap blade attached to a crude contraption with an internal battery.";
+	ITEM.description = "Длинное лезвие из металлолома, прикрепленное к грубому приспособлению с внутренней батареей.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/volt_longsword.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

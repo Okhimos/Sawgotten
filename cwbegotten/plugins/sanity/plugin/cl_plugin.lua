@@ -23,27 +23,27 @@ cwSanity.slowDownSpeechSounds = {
 };
 
 cwSanity.backpackSayings = {
-	"Let us out of here!", "Hello? Can anyone hear me?", "Let me go!", "Hey! I know you can hear me! Let us out!", "We just want to go home, let us out!", "We want to leave! Let us go!", "Someone help us, we're being kidnapped!", "Get us out of here!",
+	"Выпусти нас отсюда!", "Привет? Ты слышишь меня?", "Отпусти меня!", "Эй! Я знаю ты меня слышишь! Выпусти меня!", "Я просто хочу пойти домой, выпусти меня!", "Мы просто хотим домой! Выпусти меня!", "Кто-нибудь выпустите нас, нас похищают!", "Выпусти нас отсюда!",
 };
 
 cwSanity.cannibalSayings = {
-	"Mmmmm, don't I just look delectable?", "You ever had our sausages?", "Fresh meat, right here!", "Come on and chow down!", "Why don't you come over here and take a bite of me?", "Yummy meats, right here!", "I'm the best cut of meat you'll ever have!", "Dig in!",
+	"М-мм-м.. Интересно, а моя рука вкусная?", "А ты делал сосиски из своих рук?", "Свежее мясо, вот здесь!", "Давай! Обглодай этот труп!", "Почему бы тебе не подойти и не откусить от меня кусочек?", "Вкусное мясо, прямо здесь!", "Я - лучший кусок мяса, который ты когда-либо ел!", "Dig in!",
 };
 
 cwSanity.corpseSayings = {
-	"Help me up, would you!?", "I don't feel so good...", "What's happening to me...?", "Help me!", "I can't feel my legs!", "Hey you! Give me a hand!", "Won't you stay with me a while?", "Please...", "Hello, friend!", "Why... why me...?", "Say, you wouldn't happen to know who killed me, right?",
+	"Прошу тебя, помоги! Ты ведь поможешь!?", "Я не чувствую себя лучшим образом...", "Что происходит со мной...?", "Помоги мне!", "Я не чувствую своих ног!", "Эй, ты! Подай руку!", "Вы не останетесь со мной ненадолго?", "Пож-жалуй-ста...", "Привет, друг!", "Почему... почему я...?", "Скажите, вы случайно не знаете, кто меня убил?",
 };
 
 cwSanity.itemSayings = {
-	["Drinks"] = {"Slurp me up mister!", "Slurp my juicies!", "Want a drink?"},
-	["Firearms"] = {"Hey, you should use me to blow your brains out.", "I just wanna shoot and kill and blow fucklets away!", "Why don't you use me to kill those friends of yours?"},
-	["Food"] = {"Don't eat me, please! I have a family!", "I don't want to die! Please don't eat me!", "Stay away from me!"},
-	["Junk"] = {"Hahahahaha!", "Am I just junk to you? Why am I not good enough?", "Hey! You! Stop ignoring me and pick me up!", "I keep hearing voices in my head.", "WAKE UP!"},
+	["Drinks"] = {"Прошу тебя! Взглотни мои внутренности!", "Выпей мои соки!", "Хочешь выпить меня?"},
+	["Firearms"] = {"Эй, тебе стоит использовать меня, чтобы вышибить тебе мозги.", "Я просто хочу стрелять, убивать и уничтожать ублюдков!", "Почему бы тебе не использовать меня, чтобы убить этих твоих друзей?"},
+	["Food"] = {"Пожалуйста! Не ешь меня! У меня семья", "Я не хочу умирать! Не ешь меня!", "Убери от меня свои руки!"},
+	["Junk"] = {"Ах-ха-ха!", "Я для тебя просто хлам? Я, БЛЯТЬ, ПО ТВОЕМУ БЕСПОЛЕЗЕН НАХУЙ?", "Ты! Да, ты нахуй! А ну прекрати меня игнорировать и положи себе в карманы!", "Я продолжаю слышать голоса в всоей голове..", "ПРОСНИСЬ БЛЯТЬ!"},
 	["Melee"] = {"How's it going, friend?", "Pick me up already! What are you waiting for?!", "It's a fine day to stab some people, huh?"},
 };
 
 cwSanity.radioSayings = {
-	"DO YOU HEAR THEM?", "THE MOON SEES ME.", "AAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!", "I DEMAND WHO IS THE MAN WITH NO EYES.", "STANDING IN THE DARK ROOM, THE BABY YELLS. MAKE THE BABY SLEEP ONCE MORE.", "THE SCREAMING, THE SCREAMING.", "WILL THEY KNOW?", "I SEE YOU.",
+	"ТЫ СЛЫШИШЬ ИХ?", "БЛЯТЬ.. ЛУНА МЕНЯ ВИДИТ.", "АААААААААААА!!!! БЛЯЯЯЯЯЯЯЯЯТЬ ЭТО ПИЗДЕЦ!!!!!! АААААААААААААА!!!!!", "Я СПРАШИВАЮ, КТО ЭТОТ ЧЕЛОВЕК БЕЗ ГЛАЗ???", "СТОЯ В ТЕМНОЙ КОМНАТЕ, РЕБЕНОК КРИЧИТ. СДЕЛАЙТЕ ТАК, ЧТОБЫ РЕБЕНОК СНОВА ЗАСНУЛ. НАВСЕГДА.", "КРИКИ! КРИИ-И-КИ!", "УЗНАЮТ ЛМ ОНИ?", "Я ТЕБЯ ВИЖУ, СЛАЩАВЫЙ ПЕДИК.",
 };
 
 -- A function to get the local player's sanity level.

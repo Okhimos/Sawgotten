@@ -1,11 +1,11 @@
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Grapeshot";
+	ITEM.name = "Ружейный Патрон";
 	ITEM.model = "models/kali/weapons/metro 2033/magazines/12 gauge shotgun shell.mdl";
 	ITEM.weight = 0.2;
 	ITEM.stackable = true;
-	ITEM.description = "A single shell of Grapeshot.";
+	ITEM.description = "Самодельный патрон для гладкоствольного оружия. Латунная гильза покрыта мелкими царапинами и вмятинами, словно побывала в бою не раз. Капсюль слегка покороблен, намекая на грубую сборку. Пластиковая обертка, поцарапанная и немного потрескавшаяся, туго натянута, удерживая заряд, который виднеется сквозь мутную заглушку. Кажется, что этот патрон способен сотворить настоящий ад на близком расстоянии.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/grapeshot.png"
-	
+	ITEM.uniqueID = "grapeshot";
 	ITEM.ammoType = "Grapeshot";
 	ITEM.ammoName = "Grapeshot";
 	ITEM.requiredReloadBelief = "powder_and_steel";
@@ -14,11 +14,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Old World Grapeshot";
+	ITEM.name = "Ружейный патрон Старого Мира";
+	ITEM.uniqueID = "old_world_grapeshot";
 	ITEM.model = "models/kali/weapons/metro 2033/magazines/12 gauge shotgun shell.mdl";
 	ITEM.weight = 0.2;
 	ITEM.stackable = true;
-	ITEM.description = "An ancient Grapeshot shell, pre-dating even the Empire of Light.";
+	ITEM.description = "Древний ружейный патрон, созданный задолго до существования Империи Света. Этот боеприпас, покрытый налетом вековой пыли и окисленной бронзы, хранит в себе следы множества сражений. Его металлический корпус с гравировками давно потерял былой блеск, а застылая кровь противников, возможно, всё ещё запечатывает его силу. Каждая картечина внутри ждет своего часа, чтобы разлететься, разрывая все на своем пути.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/grapeshot.png"
 	
 	ITEM.ammoType = "Old World Grapeshot";
@@ -29,11 +30,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Pop-a-Shot";
+	ITEM.name = "Пуля";
+	ITEM.uniqueID = "pop-a-shot";
 	ITEM.model = "models/bullets/w_pbullet1.mdl";
 	ITEM.weight = 0.1;
 	ITEM.stackable = true;
-	ITEM.description = "A single cartridge of black powder and small rusty balls that act as a bullet.";
+	ITEM.description = "Один патрон с черным порохом и мелкими ржавым шариком вместо пули. Этот грубо сделанный боеприпас, напоминающий реликт давно ушедшей эпохи, несет в себе разрушительную силу. Снаряд, несмотря на свою ветхость, способен нанести ужасные раны, а черный порох готов выпустить их с глухим, угрожающим грохотом.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pop-a-shot.png"
 	
 	ITEM.ammoType = "Pop-a-Shot";
@@ -44,11 +46,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Longshot";
+	ITEM.name = "Дальнобойный Патрон";
+	ITEM.uniqueID = "longshot";
 	ITEM.model = "models/shells/shell_338mag.mdl";
 	ITEM.weight = 0.2;
 	ITEM.stackable = true;
-	ITEM.description = "A single rusty round that can be fitted into a musket. It packs a punch.";
+	ITEM.description = "Ржавый патрон, которым можно зарядить мушкет. Несмотря на свой ветхий вид, этот патрон обладает разрушительной силой. Вылетая из ствола, он наносит ужасающие ранения и пробивает практически любые доспехи.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/longshot.png"
 	
 	ITEM.ammoType = "Longshot";
@@ -59,10 +62,11 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Old World Magazine";
+	ITEM.name = "Магазин Старого Мира";
+	ITEM.uniqueID = "old_world_magazine";
 	ITEM.model = "models/uzi megazine 20.mdl";
 	ITEM.weight = 0.8;
-	ITEM.description = "A magazine containing ammunition from days long past, a rare find indeed!";
+	ITEM.description = "Среднего размера магазин для оружия, который можно заполнить боеприпасами из давно минувших времён, — настоящая редкость и ценная находка!";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scavenger_gun_magazine.png"
 	
 	ITEM.ammoType = "Old World Magazine";
@@ -74,12 +78,13 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Old World Large Magazine";
+	ITEM.name = "Большой магазин Старого Мира";
+	ITEM.uniqueID = "old_world_large_magazine";
 	ITEM.model = "models/uzi megazine 32.mdl";
 	ITEM.weight = 1.2;
-	ITEM.description = "A large magazine containing ammunition from days long past, a rare find indeed!";
+	ITEM.description = "Большой магазин для оружия, который можно заполнить боеприпасами из давно минувших времён, — настоящая редкость и ценная находка!";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scavenger_gun_large_magazine.png"
-	
+
 	ITEM.ammoType = "Old World Large Magazine";
 	ITEM.ammoName = "Old World Shot";
 	ITEM.ammoMagazineSize = 30;
@@ -89,11 +94,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Old World Longshot";
+	ITEM.name = "Дальнобойный патрон Старого Мира";
+	ITEM.uniqueID = "old_world_longshot";
 	ITEM.model = "models/kali/weapons/metro 2033/magazines/12_7mm round.mdl";
 	ITEM.weight = 0.2;
 	ITEM.stackable = true;
-	ITEM.description = "A single cartridge of ancient manufacture, it surely outclasses anything fielded in this dark time.";
+	ITEM.description = "Один патрон из старого мира, который, без сомнения, превосходит всё, что используется в это мрачное время.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/old_world_longshot.png"
 	
 	ITEM.ammoType = "Old World Longshot";
@@ -104,11 +110,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Old World Shot";
+	ITEM.name = "Пуля Старого Мира";
+	ITEM.uniqueID = "old_world_shot";
 	ITEM.model = "models/bullets/w_pbullet1.mdl";
 	ITEM.weight = 0.1;
 	ITEM.stackable = true;
-	ITEM.description = "A single cartridge of ancient manufacture, it surely outclasses anything fielded in this dark time.";
+	ITEM.description = "Один патрон из старого мира, который, без сомнения, превосходит всё, что используется в это мрачное время.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pop-a-shot.png"
 	
 	ITEM.ammoType = "Old World Shot";
@@ -119,10 +126,11 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Scavenger Gun Magazine";
+	ITEM.name = "Магазин для карабина Мусорщиков";
+	ITEM.uniqueID = "scavenger_gun_magazine";
 	ITEM.model = "models/uzi megazine 20.mdl";
 	ITEM.weight = 0.8;
-	ITEM.description = "A magazine that can fit 15 Scrapshot caliber rounds, for use in the ubiquitous Scavenger Gun.";
+	ITEM.description = "Магазин, вмещающий пятнадцать скрап-патронов, предназначен для использования в оружии мусорщиков.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scavenger_gun_magazine.png"
 	
 	ITEM.ammoType = "Scavenger Gun Magazine";
@@ -135,10 +143,11 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Scavenger Gun Large Magazine";
+	ITEM.name = "Большой магазин для карабина Мусорщиков";
+	ITEM.uniqueID = "scavenger_gun_large_magazine";
 	ITEM.model = "models/uzi megazine 32.mdl";
 	ITEM.weight = 1.2;
-	ITEM.description = "An extended magazine that can fit 25 Scrapshot caliber rounds, for use in the ubiquitous Scavenger Gun.";
+	ITEM.description = "Магазин, вмещающий двадцать пять скрап-патронов, предназначен для использования в оружии мусорщиков.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scavenger_gun_large_magazine.png"
 	
 	ITEM.ammoType = "Scavenger Gun Large Magazine";
@@ -150,11 +159,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Scrapshot";
+	ITEM.name = "Скрап-Пуля";
+	ITEM.uniqueID = "scrapshot";
 	ITEM.model = "models/bullets/w_pbullet1.mdl";
 	ITEM.weight = 0.1;
 	ITEM.stackable = true;
-	ITEM.description = "A very small cartridge made of scrap metal and black powder.";
+	ITEM.description = "Маленький патрон, сделанный из обломков металла и чёрного пороха. Обычно используется мусорщиками.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pop-a-shot.png"
 	
 	ITEM.ammoType = "Scrapshot";
@@ -165,11 +175,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Volt Projectile";
+	ITEM.name = "Заряд Рельсотрона";
+	ITEM.uniqueID = "volt_projectile";
 	ITEM.model = "models/items/librounds.mdl";
 	ITEM.weight = 0.25;
 	ITEM.stackable = true;
-	ITEM.description = "A large, dense projectile launched by Voltist railguns.";
+	ITEM.description = "Больших размеров снаряд, который подходит только к оружию вольтистов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/volt_projectile.png"
 	
 	ITEM.ammoType = "Volt Projectile";
@@ -178,11 +189,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Iron Bolt";
+	ITEM.name = "Железный Болт";
+	ITEM.uniqueID = "iron_bolt";
 	ITEM.model = "models/begotten/items/bolt.mdl";
 	ITEM.weight = 0.2;
 	ITEM.stackable = true;
-	ITEM.description = "An iron-tipped wooden crossbow bolt of good aerodynamic quality. It can punch holes through almost any armor.";
+	ITEM.description = "Деревянный арбалетный болт с железным наконечником и отличными аэродинамическими свойствами. Он способен пробить почти любую броню.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/iron_bolt.png"
 	
 	ITEM.ammoType = "Iron Bolt";
@@ -193,11 +205,12 @@ local ITEM = Clockwork.item:New("shot_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("shot_base");
-	ITEM.name = "Scrap Bolt";
+	ITEM.name = "Скрап Болт";
+	ITEM.uniqueID = "scrap_bolt";
 	ITEM.model = "models/begotten/items/rebar.mdl";
 	ITEM.weight = 0.2;
 	ITEM.stackable = true;
-	ITEM.description = "A crudely constructed crossbow bolt made of scrap rebar found in the Wasteland.";
+	ITEM.description = "Грубо сконструированный арбалетный болт, сделанный из кусков арматуры, найденной в Пустоши.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scrap_bolt.png"
 	
 	ITEM.ammoType = "Scrap Bolt";

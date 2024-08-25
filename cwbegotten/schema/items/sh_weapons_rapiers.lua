@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Elegant Epee";
+	ITEM.name = "Элегантная Рапира";
 	ITEM.model = "models/demonssouls/weapons/epee rapier.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "begotten_rapier_elegantepee";
 	ITEM.category = "Melee";
-	ITEM.description = "An expertly crafted Maximillian steel blade with an elegant golden hilt. It bears the engravings of a long forgotten Glazic Noble household.";
+	ITEM.description = "Мастерски изготовленный клинок из Максимилианской Стали с прекрасной золотой рукоятью. На нем гравюры давно забытого дворянского дома Сияния.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/elegant_epee.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -19,12 +19,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Iron Rapier";
+	ITEM.name = "Железная Рапира";
 	ITEM.model = "models/demonssouls/weapons/rapier.mdl";
 	ITEM.weight = 0.4;
 	ITEM.uniqueID = "begotten_rapier_ironrapier";
 	ITEM.category = "Melee";
-	ITEM.description = "A well-crafted and nimble weapon. It is exceptionally light and balanced, with a sharp and deadly point.";
+	ITEM.description = "Хорошо сделанное и ловкое оружие. Оно исключительно легкое и сбалансированное, с острым и смертоносным наконечником.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/iron_rapier.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

@@ -4,16 +4,16 @@
 --]]
 
 local BRUTALITY = cwBeliefs.beliefTrees:New("brutality")
-	BRUTALITY.name = "Brutality";
+	BRUTALITY.name = "Жестокость";
 	BRUTALITY.color = Color(150, 20, 20);
 	BRUTALITY.order = 2;
 	BRUTALITY.size = {w = 258, h = 407};
 	BRUTALITY.textures = {"brutality", "brutalityarrows"};
 	BRUTALITY.tooltip = {
-		{"Brutality", BRUTALITY.color, "Civ5ToolTip4"},
-		{"Brutality is a measure of your character's depravity and hatred of man, primarily affecting your character's survival ability and unlocking abilities such as cannibalism and bone harvesting. Fully upgrading Brutality will make your character far more survivable while increasing your combat ability while insane.", Color(225, 200, 200)},
-		{"\n\"There will be no exile for the laggards. They will feel my wrath. I will impale a pitchfork through their foul, satanic flesh and harvest it for the cow.\"", Color(128, 90, 90, 240)},
-		{"\nBelief Tree Completion Bonus: Killing another character instantly restores 3.5% of your Health, Stamina, and Stability per sacrament level of the character.", Color(50, 255, 50)}
+		{"Жестокость", BRUTALITY.color, "Civ5ToolTip4"},
+		{"Жестокость — это мера испорченности и ненависти вашего персонажа к человеку, в первую очередь влияющая на способность вашего персонажа к выживанию и разблокированию таких способностей, как каннибализм и сбор костей. Полная прокачка Жестокости сделает вашего персонажа гораздо более выживаемым, одновременно увеличивая ваши боевые способности в состоянии безумия.", Color(225, 200, 200)},
+		{"\n\"Не будет изгнания для отстающих. Они почувствуют мой гнев. Я пронжу вилами их грязную плоть и соберу ее, превратив в пищу.\"", Color(128, 90, 90, 240)},
+		{"\nБонус за завершение Древа Верований: Убийство другого персонажа мгновенно восстанавливает 3,5% вашего Здоровья, Выносливости и Устойчивости за каждый уровень таинства персонажа.", Color(50, 255, 50)}
 	};
 	BRUTALITY.columnPositions = {
 		[1] = (BRUTALITY.size.w - 4) * 0.3,
@@ -34,14 +34,14 @@ local BRUTALITY = cwBeliefs.beliefTrees:New("brutality")
 	BRUTALITY.beliefs = {
 		[1] = {
 			["primeval"] = {
-				name = "Primeval",
-				description = "Unlocks the 'Harvesting' mechanic, allowing you to harvest bones from corpses for use in crafting. Unlocks the ability to craft skin-based healing items.",
+				name = "Потерявший Человечность",
+				description = "Открывает механику «Свеживания», позволяющую собирать кости с трупов для использования в крафте. Разблокирует особые крафты.",
 				requirements = {"savage"},
 				row = 2,
 			},
 			["headtaker"] = {
-				name = "Headtaker",
-				description = "Deal 25% more limb damage with all damage types. Unlocks the ability to decapitate characters via killing blows to the head with a slash weapon that exceed 30 damage. Decapitating characters will grant 20% increased melee damage for 30 seconds.",
+				name = "Головорез",
+				description = "Теперь вы наносите на 25% больше урона конечностям всеми типами урона. Открывает возможность обезглавливать персонажей с помощью смертельных ударов по голове рубящим оружием, которые наносят более 30 урона. Обезглавливание персонажей увеличит урон в ближнем бою на 20% в течении последующих 30 секунд.",
 				iconOverride = "begotten/ui/belieficons/brutality.png",
 				requirements = {"savage", "primeval"},
 				row = 3,
@@ -49,29 +49,29 @@ local BRUTALITY = cwBeliefs.beliefTrees:New("brutality")
 		},
 		[2] = {
 			["savage"] = {
-				name = "Savage",
-				description = "Unlocks the 'Cannibalism' mechanic. Meat from corpses can be harvested for sustenance. Gain sanity from consuming cooked human meat.",
+				name = "Дикарь",
+				description = "Разблокирует механику «Каннибализм». Мясо с трупов можно собирать для пропитания. Восстанавливайте рассудок, употребляя приготовленное человеческое мясо.",
 				row = 1,
 			},
 			["savage_animal"] = {
-				name = "Savage Animal",
-				description = "Eating uncooked or spoiled food or drinking dirty water no longer has any negative effects. Also removes sanity loss for eating hearts.",
-				quote = "\"Fear the one who will rip out your heart, eat your flesh, and wear your bones. For they are the predator, and we the prey!\"",
+				name = "Хищник",
+				description = "Употребление сырой или испорченной пищи, а также питье грязной воды больше не имеет дает негативных эффектов. Также убирает потерю рассудка за поедание сердец.",
+				quote = "\"Бойтесь того, кто вырвет ваше сердце, съест вашу плоть и наденет ваши кости. Ибо они — хищники, а мы — добыча!\"",
 				requirements = {"savage", "primeval", "headtaker", "heart_eater", "bestial"},
 				row = 4,
 			},
 		},
 		[3] = {
 			["heart_eater"] = {
-				name = "Heart Eater",
-				description = "Unlocks the ability to rip out someone's heart and eat it to restore thirst.",
+				name = "Сердцеед",
+				description = "Открывает возможность вырвать сердце у трупа и съесть его, чтобы утолить жажду.",
 				iconOverride = "begotten/ui/belieficons/persistent_urges.png",
 				requirements = {"savage"},
 				row = 2,
 			},
 			["bestial"] = {
-				name = "Bestial",
-				description = "While at or below 40% sanity, deal 10% more damage with all melee weapons.",
+				name = "Одичавший",
+				description = "При уровне рассудка 40% и ниже наносите на 10% больше урона любым оружием ближнего боя.",
 				requirements = {"savage", "heart_eater"},
 				row = 3,
 			},

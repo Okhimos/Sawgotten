@@ -579,10 +579,8 @@ function cwMelee:PlayerStabilityFallover(player, falloverTime, bNoBoogie, bNoTex
 	
 	if !bNoText then
 		local randomPhrases = {
-			"is knocked off #HIS feet!",
-			"loses #HIS footing and falls to the ground!",
-			"is violently knocked to the ground!",
-			"is slammed hard and falls down!",
+			"резко сбит с ног!",
+			"сильно ударяется и падает!",
 		}
 		
 		local phrase = randomPhrases[math.random(1, #randomPhrases)];

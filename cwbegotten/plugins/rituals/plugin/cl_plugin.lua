@@ -63,10 +63,10 @@ function cwRituals:AttemptRitual(uniqueID, itemIDs)
 					end
 				--end
 			else
-				Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "No valid ritual for this combination of items could be found!");
+				Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "Ритуала для такой комбинации каталистов не существует!");
 			end
 		else
-			Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "No valid ritual for this combination of items could be found!");
+			Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "Ритуала для такой комбинации каталистов не существует!");
 		end
 		
 		self.nextRitualAttempt = curTime + 2;
@@ -90,7 +90,7 @@ function cwRituals:PlayerCanPerformRitual(uniqueID)
 	local subfaith = Clockwork.Client:GetNetVar("subfaith");
 	
 	if Clockwork.Client:IsRagdolled() or !Clockwork.Client:Alive() then
-		--Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "Your character cannot perform a ritual at this moment!");
+		--Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "Ваш персонаж не может сделать это в данный момент!");
 		return false;
 	end
 	
@@ -102,7 +102,7 @@ function cwRituals:PlayerCanPerformRitual(uniqueID)
 	
 	if requiredSubfaction then
 		if subfaction and not table.HasValue(requiredSubfaction, subfaction) then
-			--Schema:EasyText(player, "firebrick", "You are not the correct subfaction to perform this ritual!");
+			--Schema:EasyText(player, "firebrick", "Вы не относитесь к нужному направлению веры для данного ритуала!");
 			return false;
 		end
 	end
@@ -143,7 +143,7 @@ end;
 		ritualTable = self.rituals.stored[ritualTable];
 		
 		if !ritualTable or isstring(ritualTable) then
-			Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "No valid ritual for this combination of items could be found!");
+			Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "Ритуал для такой комбинации каталистов не существует!");
 			return false;
 		end
 	end

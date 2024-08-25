@@ -6,13 +6,13 @@
 --]]
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Small Bottle of Oil";
+	ITEM.name = "Маленький Бутылек с Маслом";
 	ITEM.model = "models/weapons/w_oil.mdl";
 	ITEM.weight = 0.1;
 	ITEM.useText = "Refill";
 	ITEM.category = "Fuel"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/small_oil.png";
-	ITEM.description = "A small bottle of oil. Use it wisely.";
+	ITEM.description = "Большой Бутылек с Маслом.";
 	ITEM.useSound = "begotten/ui/use_oil.mp3";
 	ITEM.uniqueID = "small_oil";
 	
@@ -30,14 +30,14 @@ local ITEM = Clockwork.item:New();
 				player:SetSharedVar("oil", math.Round(weaponItemTable:GetData("oil"), 0));
 				
 				if (currentOil + 30) > 100 then
-					Schema:EasyText(player, "olive", "Some of the oil did not make it into your lantern, as it is now full.");
+					Schema:EasyText(player, "olive", "Часть масла не попала в лампу, по всей видимости она полна.");
 				end;
 				
 				return;
 			end
 		end
 		
-		Schema:EasyText(player, "firebrick", "You must be holding your lantern to refill it!");
+		Schema:EasyText(player, "firebrick", "Вам нужно держать лампу в руках, чтобы наполнить ее.");
 		
 		return false;
 	end;

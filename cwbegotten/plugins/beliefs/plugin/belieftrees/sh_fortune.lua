@@ -4,16 +4,16 @@
 --]]
 
 local FORTUNE = cwBeliefs.beliefTrees:New("fortune")
-	FORTUNE.name = "Fortune";
+	FORTUNE.name = "Удача";
 	FORTUNE.color = Color(60, 69, 72);
 	FORTUNE.order = 3;
 	FORTUNE.size = {w = 258, h = 407};
 	FORTUNE.textures = {"fortune", "fortunearrows"};
 	FORTUNE.tooltip = {
-		{"Fortune", FORTUNE.color, "Civ5ToolTip4"},
-		{"Fortune is a measure of your character's luck. Neglecting this belief tree for others may contribute to your character's demise, while upgrading it may improve your character's chances of escaping perilous situations as well improving as your character's scavenging ability.", Color(225, 200, 200)},
-		{"\n\"Practice the coin in your only hand. Your other fell off in rot...\"", Color(128, 90, 90, 240)},
-		{"\nBelief Tree Completion Bonus: Increases the chance of finding exceedingly rare items. Reduces the cost of all items from salesmen by 10%.", Color(50, 255, 50)}
+		{"Удача", FORTUNE.color, "Civ5ToolTip4"},
+		{"Удача — это мера везучести вашего персонажа. Пренебрежение этим деревом убеждений для других может способствовать гибели вашего персонажа, в то время как его улучшение может повысить шансы вашего персонажа избежать опасных ситуаций, а также улучшить его способность к сбору припасов.", Color(225, 200, 200)},
+		{"\n\"Потренируйтесь держать монету в одной руке. Другая рука отвалилась и сгнила...\"", Color(128, 90, 90, 240)},
+		{"\nБонус за завершение Дерева Верований: Увеличивает шанс найти чрезвычайно редкие предметы. Снижает стоимость всех предметов у продавцов на 10%.", Color(50, 255, 50)}
 	};
 	FORTUNE.columnPositions = {
 		[1] = (FORTUNE.size.w - 4) * 0.3,
@@ -34,21 +34,21 @@ local FORTUNE = cwBeliefs.beliefTrees:New("fortune")
 	FORTUNE.beliefs = {
 		[1] = {
 			["fortunate"] = {
-				name = "Fortunate",
-				description = "You now have a chance of finding slightly better items while scavenging.",
-				quote = "\"Fortune favors the bold.\"",
+				name = "Видящий Ценность",
+				description = "Теперь у вас есть шанс найти немного лучшие предметы во время сбора мусора.",
+				quote = "\"Удача сопутствует смелым.\"",
 				row = 1,
 			},
 			["lucky"] = {
-				name = "Lucky",
-				description = "5% chance of completely avoiding damage when taking damage from any source (excluding flagellation/self-electrocution).",
+				name = "Извивающийся",
+				description = "5% шанс полностью избежать урона при получении урона от любого источника (исключая бичевание/самоудар электрическим током).",
 				requirements = {"fortunate"},
 				row = 2,
 			},
 			["favored"] = {
-				name = "Favored",
-				description = "An other-worldly power, be they blessed or unholy, looks down upon you with favor. Your prayers have a higher chance of being heard, and malevolent forces will no longer target you. You will no longer die from consuming certain food or drink items, and those items that were once lethal may now have hidden value.",
-				quote = "\"The Gods favor this one.\"",
+				name = "Услышавший Своего Бога",
+				description = "Потусторонняя сила, будь она благословенной или нечестивой, смотрит на вас с благосклонностью. Ваши молитвы имеют больше шансов быть услышанными, и злые силы больше не будут нападать на вас. Вы больше не умрете от употребления определенных продуктов питания или напитков, а те предметы, которые когда-то были смертельными, теперь могут иметь скрытую ценность.",
+				quote = "\"Он любимец Богов!\"",
 				requirements = {"fortunate", "lucky"},
 				row = 3,
 			},
@@ -56,21 +56,21 @@ local FORTUNE = cwBeliefs.beliefTrees:New("fortune")
 		[2] = {},
 		[3] = {
 			["talented"] = {
-				name = "Talented",
-				description = "Increases faith gain from all activities by 15%.",
-				quote = "\"A natural at everything. Are they a prodigy from the heavens, or descended from noble stature?\"",
+				name = "Талантливый",
+				description = "Увеличивает прирост веры из всех источников на 15%",
+				quote = "\"Прирожденные во всем. Они вундеркинды с небес или произошли из знатного рода?\"",
 				row = 1,
 			},
 			["gifted"] = {
-				name = "Gifted",
-				description = "Additional 10% faith gain increase from all activities.",
+				name = "Одаренный",
+				description = "Дополнительные 10% прироста веры от всех видов деятельности.",
 				requirements = {"talented"},
 				row = 2,
 			},
 			["jack_of_all_trades"] = {
-				name = "Jack of All Trades",
-				description = "Instantly gain six faith levels but all non-subfaith tier 4 beliefs are locked (excluding sub-faith beliefs). Any epiphanies invested in the locked beliefs will be refunded. Note that this will not increase your maximum sacrament level, so if you are already at the maximum level then this belief will do nothing.",
-				quote = "\"..and master of none.\"",
+				name = "Мастер на Все Руки",
+				description = "Мгновенно получите шесть уровней веры, но все не-подконфессиональные верования 4-го уровня будут заблокированы (за исключением подконфессиональных верований). Любые прозрения, вложенные в заблокированные верования, будут возвращены. Обратите внимание, что это не увеличит ваш максимальный уровень таинства, поэтому если вы уже на максимальном уровне, то это верование ничего не даст.",
+				quote = "\"Я знаю все по чуть-чуть...\"",
 				requirements = {"talented", "gifted"},
 				row = 3,
 			},

@@ -12,8 +12,8 @@ function ENT:HUDPaintTargetID(x, y, alpha)
 	local colorTargetID = Clockwork.option:GetColor("target_id")
 	local colorWhite = Clockwork.option:GetColor("white")
 	
-	y = Clockwork.kernel:DrawInfo("Coinslot", x, y, colorTargetID, alpha)
-	y = Clockwork.kernel:DrawInfo("An ancient machine with a multitude of cranks and gears. It has a prominent coinslot.", x, y, colorWhite, alpha);
+	y = Clockwork.kernel:DrawInfo("Касса", x, y, colorTargetID, alpha)
+	y = Clockwork.kernel:DrawInfo("Древняя машина, которая стоит здесь не просто так. Имеет украшенный слот для монет и пару рычажков.", x, y, colorWhite, alpha);
 end;
 
 local function CreateMenu(state)
@@ -28,16 +28,16 @@ local function CreateMenu(state)
 	menu:SetMinimumWidth(150);
 	
 	if state ~= "Gore" then
-		menu:AddOption("Collect Ration", function() Clockwork.Client:ConCommand("cw_CoinslotRation") end);
+		menu:AddOption("Получить Рацион", function() Clockwork.Client:ConCommand("cw_CoinslotRation") end);
 		
 		if state == "Gatekeeper" then
 			if !Clockwork.Client:GetNetVar("collectedGear") then
-				menu:AddOption("Collect Gatekeeper Kit", function() Clockwork.Client:ConCommand("cw_CoinslotGear") end);
+				menu:AddOption("Получить Набор Привратника", function() Clockwork.Client:ConCommand("cw_CoinslotGear") end);
 			end
 		end
 		
-		menu:AddOption("Donate", function() 
-			Derma_StringRequest("Coinslot", "How much coin would you offer to the Coinslot?", nil, function(text)
+		menu:AddOption("Пожертвовать", function() 
+			Derma_StringRequest("Coinslot", "Сколько денег вы хотите пожертвовать?", nil, function(text)
 				Clockwork.kernel:RunCommand("CoinslotDonate", text);
 			end)
 		end);
@@ -46,58 +46,58 @@ local function CreateMenu(state)
 			local playerShack = Clockwork.Client:GetNetVar("shack");
 			
 			if !playerShack then
-				local subMenu = menu:AddSubMenu("Purchase Property");
-				local marketMenu = subMenu:AddSubMenu("Market Area");
+				local subMenu = menu:AddSubMenu("Купить Помещение");
+				local marketMenu = subMenu:AddSubMenu("Рыночная Площадь");
 				
 				for k, v in SortedPairsByMemberValue(cwShacks.shackData["market"], "name") do
 					if not cwShacks.shacks[k].owner then
 						marketMenu:AddOption("("..tostring(v.price)..") "..v.name, function() Clockwork.kernel:RunCommand("CoinslotPurchase", k) end);
 					else
-						marketMenu:AddOption("(SOLD) "..v.name, function() end);
+						marketMenu:AddOption("(ПРОДАТЬ) "..v.name, function() end);
 					end
 				end
 				
-				local groundFloorMenu = subMenu:AddSubMenu("Ground Floor");
+				local groundFloorMenu = subMenu:AddSubMenu("Первый Этаж");
 				
 				for k, v in SortedPairsByMemberValue(cwShacks.shackData["floor1"], "name") do
 					if not cwShacks.shacks[k].owner then
 						groundFloorMenu:AddOption("("..tostring(v.price)..") "..v.name, function() Clockwork.kernel:RunCommand("CoinslotPurchase", k) end);
 					else
-						groundFloorMenu:AddOption("(SOLD) "..v.name, function() end);
+						groundFloorMenu:AddOption("(ПРОДАТЬ) "..v.name, function() end);
 					end
 				end
 				
-				local secondFloorMenu = subMenu:AddSubMenu("Second Floor");
+				local secondFloorMenu = subMenu:AddSubMenu("Второй Этаж");
 				
 				for k, v in SortedPairsByMemberValue(cwShacks.shackData["floor2"], "name") do
 					if not cwShacks.shacks[k].owner then
 						secondFloorMenu:AddOption("("..tostring(v.price)..") "..v.name, function() Clockwork.kernel:RunCommand("CoinslotPurchase", k) end);
 					else
-						secondFloorMenu:AddOption("(SOLD) "..v.name, function() end);
+						secondFloorMenu:AddOption("(ПРОДАТЬ) "..v.name, function() end);
 					end
 				end
 				
-				local thirdFloorMenu = subMenu:AddSubMenu("Third Floor");
+				local thirdFloorMenu = subMenu:AddSubMenu("Третий Этаж");
 				
 				for k, v in SortedPairsByMemberValue(cwShacks.shackData["floor3"], "name") do
 					if not cwShacks.shacks[k].owner then
 						thirdFloorMenu:AddOption("("..tostring(v.price)..") "..v.name, function() Clockwork.kernel:RunCommand("CoinslotPurchase", k) end);
 					else
-						thirdFloorMenu:AddOption("(SOLD) "..v.name, function() end);
+						thirdFloorMenu:AddOption("(ПРОДАТЬ) "..v.name, function() end);
 					end
 				end
 				
-				local fourthFloorMenu = subMenu:AddSubMenu("Fourth Floor");
+				local fourthFloorMenu = subMenu:AddSubMenu("Четвертый Этаж");
 				
 				for k, v in SortedPairsByMemberValue(cwShacks.shackData["floor4"], "name") do
 					if not cwShacks.shacks[k].owner then
 						fourthFloorMenu:AddOption("("..tostring(v.price)..") "..v.name, function() Clockwork.kernel:RunCommand("CoinslotPurchase", k) end);
 					else
-						fourthFloorMenu:AddOption("(SOLD) "..v.name, function() end);
+						fourthFloorMenu:AddOption("(ПРОДАТЬ) "..v.name, function() end);
 					end
 				end
 			else
-				local subMenu = menu:AddSubMenu("Sell Property");
+				local subMenu = menu:AddSubMenu("Продать Помещение");
 				
 				for k, v in pairs(cwShacks.shackData) do
 					for k2, v2 in pairs(v) do
@@ -108,11 +108,11 @@ local function CreateMenu(state)
 							
 							if ownerData then
 								if !ownerData.coowners or (table.Count(ownerData.coowners) < cwShacks.maxCoowners) then
-									menu:AddOption("Add Co-Owner", function() Clockwork.kernel:RunCommand("CoinslotAddCoowner") end);
+									menu:AddOption("Добавить Совладельца", function() Clockwork.kernel:RunCommand("CoinslotAddCoowner") end);
 								end
 
 								if ownerData.coowners and table.Count(ownerData.coowners) > 0 then
-									local removeMenu = menu:AddSubMenu("Remove Co-Owner");
+									local removeMenu = menu:AddSubMenu("Убрать Совладельца");
 									
 									for k3, v3 in pairs(ownerData.coowners) do
 										removeMenu:AddOption(v3, function() Clockwork.kernel:RunCommand("CoinslotRemoveCoowner", k3) end);
@@ -129,10 +129,10 @@ local function CreateMenu(state)
 	end
 	
 	if state == "Gatekeeper" then
-		local subMenu = menu:AddSubMenu("Salary");
+		local subMenu = menu:AddSubMenu("Зарплата");
 		
-		subMenu:AddOption("Check", function() Clockwork.Client:ConCommand("cw_CoinslotSalaryCheck") end);
-		subMenu:AddOption("Collect", function() Clockwork.Client:ConCommand("cw_CoinslotSalary") end);
+		subMenu:AddOption("Проверить", function() Clockwork.Client:ConCommand("cw_CoinslotSalaryCheck") end);
+		subMenu:AddOption("Получить", function() Clockwork.Client:ConCommand("cw_CoinslotSalary") end);
 	end
 	
 	if state == "Hierarchy" then
@@ -145,16 +145,16 @@ local function CreateMenu(state)
 			end) 
 		end);]]--
 	elseif Clockwork.Client:IsAdmin() then
-		local subMenu = menu:AddSubMenu("(ADMIN) Treasury");
+		local subMenu = menu:AddSubMenu("(Админ) Казна");
 		
-		subMenu:AddOption("Check", function() Clockwork.Client:ConCommand("cw_CoinslotTreasury") end);
-		subMenu:AddOption("Collect", function() 
+		subMenu:AddOption("Проверить", function() Clockwork.Client:ConCommand("cw_CoinslotTreasury") end);
+		subMenu:AddOption("Забрать", function() 
 			Derma_StringRequest("Coinslot", "How much coin would you collect from the Coinslot?", nil, function(text)
 				Clockwork.kernel:RunCommand("CoinslotCollect", text);
 			end) 
 		end);
-		subMenu:AddOption("Set Tax", function() 
-			Derma_StringRequest("Coinslot", "What tax rate would you like to set for the Tower? (1-99)", nil, function(text)
+		subMenu:AddOption("Установить Пошлину", function() 
+			Derma_StringRequest("Coinslot", "Какую Пошлину вы хотите установить? (1-99)", nil, function(text)
 				Clockwork.kernel:RunCommand("CoinslotTax", text);
 			end) 
 		end);
@@ -164,6 +164,6 @@ local function CreateMenu(state)
 	menu:SetPos(scrW / 2 - (menu:GetWide() / 2), scrH / 2 - (menu:GetTall() / 2));
 end
 
-netstream.Hook("OpenCoinslotMenu", function(state)
+Clockwork.datastream:Hook("OpenCoinslotMenu", function(state)
 	CreateMenu(state);
 end);

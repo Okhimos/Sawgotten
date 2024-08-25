@@ -6,14 +6,14 @@
 --]]
 
 local ITEM = Clockwork.item:New();
-ITEM.name = "Paper";
+ITEM.name = "Бумага";
 ITEM.uniqueID = "paper";
 ITEM.cost = 50;
 ITEM.model = "models/items/magic/scrolls/scroll_rolled.mdl";
 ITEM.weight = 0.25;
 ITEM.category = "Tools";
 ITEM.stackable = true;
-ITEM.description = "A blank piece of paper, likely procured by the Hierarchy. It can be used to write on.";
+ITEM.description = "Чистый лист бумаги, вероятно, добытый Иерархией. На нем можно писать.";
 ITEM.iconoverride = "materials/begotten/ui/itemicons/scroll.png";
 
 ITEM.itemSpawnerInfo = {category = "City Junk", rarity = 100, onGround = false};
@@ -49,7 +49,7 @@ function ITEM:OnUse(player, itemEntity)
 			Clockwork.entity:MakeFlushToGround(entity, trace.HitPos, trace.HitNormal);
 		end;
 	else
-		Schema:EasyText(player, "firebrick", "You cannot drop paper that far away!");
+		Schema:EasyText(player, "firebrick", "Ты не можешь выкинуть бумагу так далеко!");
 		
 		return false;
 	end;

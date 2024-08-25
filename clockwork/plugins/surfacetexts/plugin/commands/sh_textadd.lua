@@ -29,7 +29,7 @@ function COMMAND:OnRun(player, arguments)
 	data.angles:RotateAroundAxis(data.angles:Forward(), 90);
 	data.angles:RotateAroundAxis(data.angles:Right(), 270);
 	
-	netstream.Start(nil, "SurfaceTextAdd", data);
+	Clockwork.datastream:Start(nil, "SurfaceTextAdd", data);
 	
 	cwSurfaceTexts.storedList[#cwSurfaceTexts.storedList + 1] = data;
 	cwSurfaceTexts:SaveSurfaceTexts();

@@ -212,7 +212,7 @@ function cwBeliefs:DrawTargetPlayerMarked(target, alpha, x, y)
 					gender = "She";
 				end;
 			
-				y = Clockwork.kernel:DrawInfo(Clockwork.kernel:ParseData(gender.." is marked for death for transgressions against the Dark Lord!"), x, y, Color(200, 0, 0), alpha);
+				y = Clockwork.kernel:DrawInfo(Clockwork.kernel:ParseData(gender.." приговорен к смерти за преступления против Темного Лорда!"), x, y, Color(200, 0, 0), alpha);
 				
 				return y;
 			end

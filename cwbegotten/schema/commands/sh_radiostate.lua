@@ -1,5 +1,5 @@
 local COMMAND = Clockwork.command:New();
-COMMAND.tip = "Turn your handheld radio on or off.";
+COMMAND.tip = "Позволяет включить или выключить свою рацию.";
 COMMAND.text = "[bool TurnOn]"
 COMMAND.flags = bit.bor(CMD_DEFAULT, CMD_DEATHCODE, CMD_FALLENOVER);
 COMMAND.arguments = 1;
@@ -14,9 +14,9 @@ function COMMAND:OnRun(player, arguments)
 			player:EmitSound("buttons/lightswitch2.wav", 70, 90, 0.4);
 			
 			if (gender == GENDER_MALE) then
-				Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("turns on his handheld radio.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("включает свою рацию.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 			else
-				Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("turns on her handheld radio.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("включает свою рацию.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 			end;
 			
 			netstream.Start(player, "RadioState", true);
@@ -25,15 +25,15 @@ function COMMAND:OnRun(player, arguments)
 			player:EmitSound("buttons/lightswitch2.wav", 70, 90, 0.4);
 			
 			if (gender == GENDER_MALE) then
-				Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("turns off his handheld radio.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("выключает свою рацию.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 			else
-				Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("turns off her handheld radio.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("выключает свою рацию.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 			end;
 			
 			netstream.Start(player, "RadioState", false);
 		end
 	else
-		Clockwork.player:Notify(player, "You must specify true or false!");
+		Clockwork.player:Notify(player, "Ты должен выбрать Да или Нет");
 	end
 end;
 

@@ -943,10 +943,10 @@ end
 function Clockwork.kernel:ForceUnequipItem(player, uniqueID, itemID, arguments)
 	if cwDueling then
 		if player.opponent then
-			Schema:EasyText(player, "peru", "You cannot unequip items while in a duel!");
+			Schema:EasyText(player, "peru", "Во время дуэли нельзя снимать предметы!");
 			return;
 		elseif cwDueling:PlayerIsInMatchmaking(player) then
-			Schema:EasyText(player, "peru", "You cannot unequip items while matchmaking for a duel!");
+			Schema:EasyText(player, "peru", "Вы не можете снимать предметы во время подбора соперников для дуэли!");
 			return;
 		end
 	end
@@ -1309,7 +1309,7 @@ function playerMeta:StripWeapon(weaponClass)
 
 		for k, v in pairs(ragdollWeapons) do
 			if (v.weaponData["class"] == weaponClass) then
-				ragdollWeapons[k] = nil
+				weapons[k] = nil
 			end
 		end
 	else

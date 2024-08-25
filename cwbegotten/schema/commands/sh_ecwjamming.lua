@@ -14,7 +14,7 @@ COMMAND.arguments = 1;
 -- Called when the command has been run.
 function COMMAND:OnRun(player, arguments)
 	if !player:HasItemByID("ecw_radio") then
-		Clockwork.player:Notify(player, "You must have an ECW radio in order to use this command!");
+		Clockwork.player:Notify(player, "Для использования этой команды у вас должно быть ECW радио.");
 		
 		return false;
 	end
@@ -37,14 +37,14 @@ function COMMAND:OnRun(player, arguments)
 			player:SetCharacterData("radioJamming", true);
 			player:EmitSound("buttons/lightswitch2.wav", 70, 90, 0.4);
 			
-			Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("turns on a strange device.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+			Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("включает странное устройство.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 			
 			netstream.Start(player, "radioJamming", true);
 		else
 			player:SetCharacterData("radioJamming", false);
 			player:EmitSound("buttons/lightswitch2.wav", 70, 90, 0.4);
 			
-			Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("turns off a strange device.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+			Clockwork.chatBox:AddInTargetRadius(player, "me", string.gsub("выключает странное устройство.", "^.", string.lower), player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 			
 			netstream.Start(player, "radioJamming", false);
 		end

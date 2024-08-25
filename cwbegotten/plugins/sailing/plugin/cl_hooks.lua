@@ -6,13 +6,13 @@ local cwSailing = cwSailing;
 
 function cwSailing:GetProgressBarInfoAction(action, percentage)
 	if (action == "burn_longship") then
-		return {text = "You are setting the longship alight. Click to cancel.", percentage = percentage, flash = percentage < 10};
+		return {text = "Вы поджигаете судно. Нажмите ЛКМ, чтобы отменить.", percentage = percentage, flash = percentage < 10};
 	elseif (action == "extinguish_longship") then
-		return {text = "You are trying to put out the flames. Click to cancel.", percentage = percentage, flash = percentage < 10};
+		return {text = "Вы пытаетесь потушить пламя. Нажмите ЛКМ , чтобы отменить.", percentage = percentage, flash = percentage < 10};
 	elseif (action == "repair_longship") then
-		return {text = "You are making repairs to the longship. Click to cancel.", percentage = percentage, flash = percentage < 10};
+		return {text = "Вы ремонтируете корабль. Нажмите ЛКМ, чтобы отменить.", percentage = percentage, flash = percentage < 10};
 	elseif (action == "repair_alarm") then
-		return {text = "You are repairing the Gorewatch alarm. Click to cancel.", percentage = percentage, flash = percentage < 10};
+		return {text = "Вы ремонтируете сигнализацию. Нажмите ЛКМ, чтобы отменить.", percentage = percentage, flash = percentage < 10};
 	end
 end
 
@@ -44,7 +44,7 @@ function cwSailing:SubModifyItemMarkupTooltip(category, maximumWeight, weight, c
 		local health = itemTable:GetData("health");
 		
 		if health then
-			frame:AddText("Longship Health: "..tostring(health), Color(180, 20, 20), "nov_IntroTextSmallDETrooper", 1.15);
+			frame:AddText("Здоровье Корабля: "..tostring(health), Color(180, 20, 20), "nov_IntroTextSmallDETrooper", 1.15);
 		end
 	end
 end
@@ -137,7 +137,7 @@ netstream.Hook("OpenAlarmMenu", function(alarmEnt)
 		menu:SetMinimumWidth(150);
 		
 		menu:AddOption("Examine", function()
-			Schema:EasyText("skyblue", "A jury-rigged alarm system with seismic sensors set to activate an alarm should a Goreic longship arrive. Note that the alarm is not powerful enough to be heard from the Tower of Light, and will only sound if Gorewatch has an occupying garrison.");
+			Schema:EasyText("skyblue", "Самодельная система сигнализации с сейсмическими датчиками, настроенная на включение сигнала тревоги в случае прибытия кораблей в гавань. Обратите внимание, что сигнал тревоги недостаточно мощный, чтобы его можно было услышать из Башни Света, и он сработает только в том случае, если подле заставы есть люди.");
 		end);
 		
 		if alarmEnt:GetNWBool("broken") then

@@ -174,12 +174,12 @@ function cwPickupObjects:KeyPress(player, key)
 								if (ragdollPlayer) and !ragdollPlayer:GetNetVar("IsDragged") and !ragdollPlayer.BeingPickedUp then
 									if ragdollPlayer:Alive() then
 										if ragdollPlayer.possessor then
-											Schema:EasyText(player, "chocolate", "No matter how hard you try you can't seem to hold this person down!");
+											Schema:EasyText(player, "chocolate", "Несмотря на попытки, вы не можете удержать этого человека!");
 											return;
 										end
 									
 										if ragdollPlayer.stabilityStunned and !player:HasBelief("wrestle_subdue") then
-											Schema:EasyText(player, "chocolate", "You cannot pick up this person while they are knocked over from low stability unless you have the 'Wrestle and Subdue' belief!");
+											Schema:EasyText(player, "chocolate", "Вы не можете поднять этого человека, пока он был сбит с ного низкой стабильностью, если у вас нет убеждения «Схватить и Удержать»!");
 											return;
 										end
 									end
@@ -200,7 +200,7 @@ function cwPickupObjects:KeyPress(player, key)
 										end
 										
 										player:SetNWBool("PickingUpRagdoll", true);
-										Clockwork.chatBox:AddInTargetRadius(player, "me", "starts picking up the body before them.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+										Clockwork.chatBox:AddInTargetRadius(player, "me", "начинает поднимать тело перед ним.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 										
 										local pickupTime = 5;
 										
@@ -244,7 +244,7 @@ function cwPickupObjects:KeyPress(player, key)
 									entity.PickedUpBy = player;
 									
 									player:SetNWBool("PickingUpRagdoll", true);
-									Clockwork.chatBox:AddInTargetRadius(player, "me", "starts picking up the body before them.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+									Clockwork.chatBox:AddInTargetRadius(player, "me", "начинает поднимать тело перед ним.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 									
 									local pickupTime = 5;
 									
@@ -295,7 +295,7 @@ function cwPickupObjects:KeyPress(player, key)
 						player.PickingUpRagdoll.PickedUpBy = nil;
 					end;
 					
-					Clockwork.chatBox:AddInTargetRadius(player, "me", "releases their grip on the body before them.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+					Clockwork.chatBox:AddInTargetRadius(player, "me", "ослабляет хватку на теле перед ним.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 					
 					player.NextPickup = CurTime() + 1;
 					player.PickingUpRagdoll = nil;

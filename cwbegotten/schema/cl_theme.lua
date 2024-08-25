@@ -6,7 +6,7 @@
 --]]
 
 surface.CreateFont("corruption_IntroTextTiny", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:ScaleToWideScreen(24),
 	weight		= 600,
 	antialiase	= true,
@@ -14,7 +14,7 @@ surface.CreateFont("corruption_IntroTextTiny", {
 });
 
 surface.CreateFont("Subtitle_Whisper", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:ScaleToWideScreen(20),
 	weight		= 100,
 	antialiase	= true,
@@ -22,7 +22,7 @@ surface.CreateFont("Subtitle_Whisper", {
 })
 
 surface.CreateFont("Subtitle_Talk", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:ScaleToWideScreen(26),
 	weight		= 100,
 	antialiase	= true,
@@ -30,7 +30,7 @@ surface.CreateFont("Subtitle_Talk", {
 })
 
 surface.CreateFont("Subtitle_Yell", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:ScaleToWideScreen(32),
 	weight		= 100,
 	antialiase	= true,
@@ -38,7 +38,7 @@ surface.CreateFont("Subtitle_Yell", {
 })
 
 surface.CreateFont("corruption_IntroTextSmall", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:ScaleToWideScreen(24),
 	weight		= 500,
 	antialiase	= true,
@@ -46,7 +46,7 @@ surface.CreateFont("corruption_IntroTextSmall", {
 })
 
 surface.CreateFont("Ritual_Button", {
-	font		= "Dominican Italic",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:ScaleToWideScreen(32),
 	weight		= 100,
 	antialiase	= true,
@@ -54,7 +54,7 @@ surface.CreateFont("Ritual_Button", {
 })
 
 surface.CreateFont("Ritual_Text", {
-	font		= "Dominican Small Caps",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:ScaleToWideScreen(26),
 	weight		= 100,
 	antialiase	= true,
@@ -62,7 +62,7 @@ surface.CreateFont("Ritual_Text", {
 })
 
 surface.CreateFont("BarTextBegotten", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:ScaleToWideScreen(28),
 	weight		= 100,
 	antialiase	= true,
@@ -76,18 +76,18 @@ surface.CreateFont("Decay_FormText", {
 	size = Clockwork.kernel:ScaleToWideScreen(18),
 	weight = 700,
 	antialias = true,
-	font = "Times New Roman"
+	font = "Oranienbaum"
 })
 
 surface.CreateFont("DecayButtonText", {
 	size = Clockwork.kernel:FontScreenScale(18),
 	weight = 700,
 	antialias = true,
-	font = "Day Roman"
+	font = "Oranienbaum"
 })
 
 surface.CreateFont("begotten_InventoryText", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= ScaleToWideScreen(24),
 	weight		= 700,
 	antialiase	= true,
@@ -95,7 +95,7 @@ surface.CreateFont("begotten_InventoryText", {
 })
 
 surface.CreateFont("begotten_InventoryTextSmall", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= ScaleToWideScreen(20),
 	weight		= 700,
 	antialiase	= true,
@@ -103,7 +103,7 @@ surface.CreateFont("begotten_InventoryTextSmall", {
 })
 
 surface.CreateFont("DialogueTextQuestion", {
-	font = "Dominican Small Caps",
+	font = "Oranienbaum",
 	size = ScaleToWideScreen(35),
 	weight = 700,
 	antialiase = true,
@@ -111,7 +111,7 @@ surface.CreateFont("DialogueTextQuestion", {
 })
 
 surface.CreateFont("DialogueTextAnswer", {
-	font = "Dominican",
+	font = "Oranienbaum",
 	size = ScaleToWideScreen(30),
 	weight = 700,
 	antialiase = true,
@@ -119,7 +119,7 @@ surface.CreateFont("DialogueTextAnswer", {
 })
 
 surface.CreateFont("DialogueTextAnswerItalics", {
-	font = "Dominican Italic",
+	font = "Oranienbaum",
 	size = ScaleToWideScreen(30),
 	weight = 700,
 	antialiase = true,
@@ -127,7 +127,7 @@ surface.CreateFont("DialogueTextAnswerItalics", {
 })
 
 surface.CreateFont("DialogueTextAnswerBold", {
-	font = "Dominican Small Caps",
+	font = "Oranienbaum",
 	size = ScaleToWideScreen(30),
 	weight = 700,
 	antialiase = true,
@@ -135,7 +135,7 @@ surface.CreateFont("DialogueTextAnswerBold", {
 })
 
 surface.CreateFont("Civ5Tooltip5", {
-	font = "Immortal",
+	font = "Uk_Antique",
 	size = ScaleToWideScreen(27),
 	weight = 700,
 	antialiase = true,
@@ -143,7 +143,7 @@ surface.CreateFont("Civ5Tooltip5", {
 })
 
 surface.CreateFont("Civ5Tooltip1", {
-	font = "Immortal",
+	font = "Uk_Antique",
 	size = ScaleToWideScreen(25),
 	weight = 700,
 	antialiase = true,
@@ -151,7 +151,7 @@ surface.CreateFont("Civ5Tooltip1", {
 })
 
 surface.CreateFont("Civ5ToolTip2", {
-	font = "Immortal",
+	font = "Uk_Antique",
 	size = ScaleToWideScreen(18),
 	weight = 700,
 	antialiase = true,
@@ -159,7 +159,7 @@ surface.CreateFont("Civ5ToolTip2", {
 })
 
 surface.CreateFont("Civ5ToolTip4", {
-	font = "Immortal",
+	font = "Uk_Antique",
 	size = ScaleToWideScreen(23),
 	weight = 700,
 	antialiase = true,
@@ -167,15 +167,15 @@ surface.CreateFont("Civ5ToolTip4", {
 })
 
 surface.CreateFont("Civ5ToolTip5", {
-	font = "Immortal",
-	size = ScaleToWideScreen(40),
+	font = "Uk_Antique",
+	size = ScaleToWideScreen(30),
 	weight = 700,
 	antialiase = true,
 	shadow = false
 })
 
 surface.CreateFont("Civ5ToolTi3", {
-	font = "Immortal",
+	font = "Uk_Antique",
 	size = ScaleToWideScreen(20),
 	weight = 700,
 	antialiase = true,
@@ -183,7 +183,7 @@ surface.CreateFont("Civ5ToolTi3", {
 })
 
 surface.CreateFont("Civ5ToolTip3", {
-	font = "Immortal",
+	font = "Uk_Antique",
 	size = ScaleToWideScreen(20),
 	weight = 700,
 	antialiase = true,
@@ -191,15 +191,15 @@ surface.CreateFont("Civ5ToolTip3", {
 })
 
 surface.CreateFont("schema_ThickArial", {
-	font		= "Arial",
-	size		= Clockwork.kernel:FontScreenScale(8),
+	font		= "Uk_Antique",
+	size		= Clockwork.kernel:FontScreenScale(7),
 	weight		= 700,
 	antialiase	= true,
 	additive 	= false
 });
 
 surface.CreateFont("schema_PlayerInfoText", {
-	font		= "Verdana",
+	font		= "Uk_Antique",
 	size		= Clockwork.kernel:FontScreenScale(7),
 	weight		= 600,
 	antialiase	= true,
@@ -207,7 +207,7 @@ surface.CreateFont("schema_PlayerInfoText", {
 });
 
 surface.CreateFont("schema_Large3D2D", {
-	font		= "Day Roman",
+	font		= "Uk_Antique",
 	size		= Clockwork.kernel:GetFontSize3D(),
 	weight		= 600,
 	antialiase	= true,
@@ -215,7 +215,7 @@ surface.CreateFont("schema_Large3D2D", {
 });
 
 surface.CreateFont("schema_IntroTextSmall", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(10),
 	weight		= 600,
 	antialiase	= true,
@@ -223,7 +223,7 @@ surface.CreateFont("schema_IntroTextSmall", {
 });
 
 surface.CreateFont("schema_IntroTextTiny", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(9),
 	weight		= 600,
 	antialiase	= true,
@@ -231,15 +231,15 @@ surface.CreateFont("schema_IntroTextTiny", {
 });
 
 surface.CreateFont("schema_CinematicText", {
-	font		= "Day Roman",
-	size		= Clockwork.kernel:FontScreenScale(8),
+	font		= "Uk_Antique",
+	size		= Clockwork.kernel:FontScreenScale(9),
 	weight		= 600,
 	antialiase	= true,
 	additive 	= false
 });
 
 surface.CreateFont("schema_IntroTextBig", {
-	font		= "Day Roman",
+	font		= "Uk_Antique",
 	size		= Clockwork.kernel:FontScreenScale(18),
 	weight		= 600,
 	antialiase	= true,
@@ -247,7 +247,7 @@ surface.CreateFont("schema_IntroTextBig", {
 });
 
 surface.CreateFont("schema_MainText", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(7),
 	weight		= 600,
 	antialiase	= true,
@@ -255,7 +255,7 @@ surface.CreateFont("schema_MainText", {
 });
 
 surface.CreateFont("schema_TargetIDText", {
-	font		= "Day Roman",
+	font		= "Uk_Antique",
 	size		= Clockwork.kernel:FontScreenScale(7),
 	weight		= 600,
 	antialiase	= true,
@@ -263,7 +263,7 @@ surface.CreateFont("schema_TargetIDText", {
 });
 
 surface.CreateFont("schema_MenuTextHuge", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(30),
 	weight		= 600,
 	antialiase	= true,
@@ -271,7 +271,7 @@ surface.CreateFont("schema_MenuTextHuge", {
 });
 
 surface.CreateFont("schema_MenuTextBig", {
-	font		= "Immortal",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(18),
 	weight		= 600,
 	antialiase	= true,
@@ -311,7 +311,7 @@ function Schema:PreDrawBar(barInfo)
 	barInfo.drawProgress = false;
 	
 	if (barInfo.text) then
-		barInfo.text = string.upper(barInfo.text);
+		barInfo.text = string.utf8upper(barInfo.text);
 	end;
 end;
 

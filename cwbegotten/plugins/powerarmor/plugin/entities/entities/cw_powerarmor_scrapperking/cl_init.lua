@@ -12,8 +12,8 @@ function ENT:HUDPaintTargetID(x, y, alpha)
 	local colorTargetID = Clockwork.option:GetColor("target_id")
 	local colorWhite = Clockwork.option:GetColor("white")
 	
-	y = Clockwork.kernel:DrawInfo("Scrapper King Power Armor", x, y, colorTargetID, alpha)
-	y = Clockwork.kernel:DrawInfo("An intimidating set of power armor made from the finest scrap the Wasteland has to offer.", x, y, colorWhite, alpha);
+	y = Clockwork.kernel:DrawInfo("Силовая Броня Скраппера-Короля", x, y, colorTargetID, alpha)
+	y = Clockwork.kernel:DrawInfo("Устрашающий комплект силовой брони, изготовленный из лучшего металлолома, который может предложить Пустошь.", x, y, colorWhite, alpha);
 end;
 
 local function CreateMenu(state)
@@ -27,7 +27,7 @@ local function CreateMenu(state)
 		
 	menu:SetMinimumWidth(150);
 	
-	menu:AddOption("Enter Suit", function() Clockwork.Client:ConCommand("cw_EnterPowerArmor") end);
+	menu:AddOption("Войти в Костюм", function() Clockwork.Client:ConCommand("cw_EnterPowerArmor") end);
 	
 	menu:Open();
 	menu:SetPos(scrW / 2 - (menu:GetWide() / 2), scrH / 2 - (menu:GetTall() / 2));

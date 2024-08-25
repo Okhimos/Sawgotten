@@ -20,21 +20,21 @@ function cwGore:HUDPaintEntityTargetID(entity, info)
 	
 	if (entity:GetClass() == "prop_physics") then
 		if (entity:GetModel() == "models/gibs/hgibs.mdl") then
-			info.y = Clockwork.kernel:DrawInfo("A human skull.", info.x, info.y, colorTargetID, info.alpha);
+			info.y = Clockwork.kernel:DrawInfo("Человеческий череп.", info.x, info.y, colorTargetID, info.alpha);
 		end;
 	elseif (entity:GetClass() == "prop_ragdoll") then
 		if (entity:GetModel() == "models/undead/charple01.mdl") then
-			info.y = Clockwork.kernel:DrawInfo("A rotting body.", info.x, info.y, colorTargetID, info.alpha);
+			info.y = Clockwork.kernel:DrawInfo("Гниющий труп.", info.x, info.y, colorTargetID, info.alpha);
 		elseif (entity:GetModel() == "models/skeleton/skeleton_torso2.mdl") then
-			info.y = Clockwork.kernel:DrawInfo("A human ribcage.", info.x, info.y, colorTargetID, info.alpha);
+			info.y = Clockwork.kernel:DrawInfo("Человеческая грудная клетка.", info.x, info.y, colorTargetID, info.alpha);
 		elseif (entity:GetModel() == "models/skeleton/skeleton_leg_l.mdl" or entity:GetModel() == "models/skeleton/skeleton_leg.mdl") then
-			info.y = Clockwork.kernel:DrawInfo("A human leg bone.", info.x, info.y, colorTargetID, info.alpha);
+			info.y = Clockwork.kernel:DrawInfo("Кость человеческой ноги.", info.x, info.y, colorTargetID, info.alpha);
 		elseif (entity:GetModel() == "models/skeleton/skeleton_arm.mdl" or entity:GetModel() == "models/skeleton/skeleton_arm_l.mdl") then
-			info.y = Clockwork.kernel:DrawInfo("A human arm bone.", info.x, info.y, colorTargetID, info.alpha);
+			info.y = Clockwork.kernel:DrawInfo("Кость человеческой руки.", info.x, info.y, colorTargetID, info.alpha);
 		end;
 		
 		if (entity:GetSkin() == 2) then
-			info.y = Clockwork.kernel:DrawInfo("It is still fresh with blood.", info.x, info.y, colorWhite, info.alpha);
+			info.y = Clockwork.kernel:DrawInfo("Кровь еще свежая.", info.x, info.y, colorWhite, info.alpha);
 		end;
 	end;
 end;

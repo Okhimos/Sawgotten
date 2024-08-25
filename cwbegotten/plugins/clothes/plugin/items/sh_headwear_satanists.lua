@@ -1,5 +1,5 @@
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Ballroom Mask"
+	ITEM.name = "Бальная Маска"
 	ITEM.model = "models/begotten/headgroup_props/ballroommask.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ballroom_mask_plebian.png"
 	ITEM.concealsFace = true;
@@ -10,7 +10,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroupVal = 1
 	ITEM.headSuffix = "_satanist";
 	ITEM.skin = 1
-	ITEM.description = "A ballroom mask for the most important social event that the Children of Satan partake in: the masquerade. This mask is plain and cracked, denoting a lack of social status."
+	ITEM.description = "Бальная маска для самого важного общественного мероприятия, в котором участвуют Дети Сатаны, - маскарада. Именно данный предмет простой простой и покрытый трещинами, что говорит об отсутствии социального статуса владельца."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	ITEM.faction = "Children of Satan";
@@ -19,7 +19,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Ornate Ballroom Mask"
+	ITEM.name = "Гравированная Бальная Маска"
 	ITEM.model = "models/begotten/headgroup_props/ballroommask.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ballroom_mask.png"
 	ITEM.concealsFace = true;
@@ -30,7 +30,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroupVal = 2
 	ITEM.headSuffix = "_satanist";
 	ITEM.skin = 2
-	ITEM.description = "A ballroom mask for the most important social event that the Children of Satan partake in: the masquerade. This mask is decorated with golden engravings, a sign of wealth and prestige."
+	ITEM.description = "Бальная маска для самого важного общественного мероприятия, в котором участвуют Дети Сатаны, - маскарада. Эта маска украшена золотой гравировкой - знак богатства и престижа."
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 	ITEM.faction = "Children of Satan";
@@ -39,7 +39,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Skullshield"
+	ITEM.name = "Маска Череп"
 	ITEM.model = "models/begotten/headgroup_props/skullshield.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/skullshield.png"
 	ITEM.concealsFace = true;
@@ -49,7 +49,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 3
 	ITEM.headSuffix = "_satanist";
-	ITEM.description = "A cushioned metal plate mask to be worn over the face. It is vaguely stylized to resemble a human skull. An imposing armor item found within the ranks of many dark cults. A haunting aura prevents you from wearing this if you are not worthy."
+	ITEM.description = "Маска из мягких металлических пластин, надеваемая на лицо. Нечетко стилизована под человеческий череп. Внушительный предмет доспехов, встречающийся в рядах многих темных культов. Призрачная аура не позволит носить ее недостойным."
 	ITEM.requireFaith = {"Faith of the Dark"};
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
@@ -75,7 +75,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Gothic Plate Helmet"
+	ITEM.name = "Готический Латный Шлем"
 	ITEM.model = "models/begotten/headgroup_props/vasso_helm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/gothic_plate_helmet.png"
 	ITEM.concealsFace = true;
@@ -84,7 +84,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.category = "Helms"
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 1
-	ITEM.description = "A Gothic plate helmet belonging to the one and only Lord Vasso."
+	ITEM.description = "Готический пластинчатый шлем, принадлежащий единственному и неповторимому лорду Вассо."
 	ITEM.requireFaith = {"Faith of the Dark"};
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";
@@ -108,7 +108,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("bodygroup_base")
-	ITEM.name = "Hellplate Helmet"
+	ITEM.name = "Адский Шлем"
 	ITEM.model = "models/begotten/headgroup_props/hellplatehelm.mdl"
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/hellplate_helmet.png"
 	ITEM.weight = 1.5
@@ -117,7 +117,7 @@ local ITEM = Clockwork.item:New("bodygroup_base")
 	ITEM.bodyGroup = 1
 	ITEM.bodyGroupVal = 4
 	ITEM.headSuffix = "_satanist";
-	ITEM.description = "Once the dignified helmet of the White Sentinels and the sigil of House Philimaxio, this helmet has since been reforged in hellfire many times, only barely resembling its original form. Its existence is a disgrace to the Gatekeeper Order and an outright mockery of the Light."
+	ITEM.description = "Когда-то этот шлем был достоен Белых Стражей и был символом Дома Филимаксио, но с тех пор они многократно переплавлялись в адском пламени, лишь отдаленно напоминая свою первоначальную форму. Ее существование - позор для Ордена Привратников и откровенная насмешка над Светом."
 	ITEM.requireFaith = {"Faith of the Dark"};
 	ITEM.excludeFactions = {"Goreic Warrior"};
 	ITEM.useSound = "armor/plate_damage_02.wav";

@@ -48,18 +48,18 @@ function ENT:Use(activator, caller)
 					
 					if weaponItemTable then
 						if weaponItemTable.category == "Firearms" then
-							Schema:EasyText(caller, "peru","You cannot enter a duel with a firearm equipped!");
+							Schema:EasyText(caller, "peru","Вы не можете выйти на дуэль, имея при себе огнестрельное оружие!");
 							
 							return;
 						elseif weaponItemTable.category == "Crossbows" then
-							Schema:EasyText(caller, "peru","You cannot enter a duel with a crossbow equipped!");
+							Schema:EasyText(caller, "peru","Вы не можете выйти на дуэль с экипированным арбалетом!");
 							
 							return;
 						end
 					end
 				end
 				
-				Clockwork.dermaRequest:RequestConfirmation(caller, "Duel", "Are you sure that you want to queue for a duel? Note that you will not lose progress or items upon death.", function()
+				Clockwork.dermaRequest:RequestConfirmation(caller, "Duel", "Вы уверены, что хотите встать в очередь на дуэль? Обратите внимание, что вы не потеряете прогресс или предметы после смерти.", function()
 					if caller:Alive() and IsValid(self) then
 						if caller:GetPos():DistToSqr(self:GetPos()) > (256 * 256) then
 							return;
@@ -75,7 +75,7 @@ function ENT:Use(activator, caller)
 					end
 				end);
 			else
-				Schema:EasyText(caller, "icon16/shield_go.png", "orange", "Exited Duel Matchmaking")
+				Schema:EasyText(caller, "icon16/shield_go.png", "orange", "Вышел из поиска боя")
 				
 				cwDueling:PlayerExitsMatchmaking(caller);
 				

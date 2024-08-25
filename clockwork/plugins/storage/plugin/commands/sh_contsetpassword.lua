@@ -3,8 +3,8 @@
 --]]
 
 local COMMAND = Clockwork.command:New("ContSetPassword")
-COMMAND.tip = "Set a container's password."
-COMMAND.text = "<string Pass>"
+COMMAND.tip = "Установите Пароль на Контейнер"
+COMMAND.text = "<Введите пароль, чтобы установить его на контейнер>"
 COMMAND.flags = CMD_DEFAULT
 COMMAND.access = "a"
 COMMAND.arguments = 1
@@ -29,22 +29,22 @@ function COMMAND:OnRun(player, arguments)
 				trace.Entity:SetNWBool("unlocked", false);
 				cwStorage:SaveStorage()
 
-				Schema:EasyText(player, "cornflowerblue", "["..self.name.." This container's password has been set to '"..trace.Entity.cwPassword.."'.")
+				Schema:EasyText(player, "cornflowerblue", "["..self.name.." Новый пароль этого контейнера: '"..trace.Entity.cwPassword.."'.")
 			else
-				Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+				Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 			end
 		else
-			Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+			Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 		end
 	else
-		Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+		Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 	end
 end
 
 COMMAND:Register()
 
 local COMMAND = Clockwork.command:New("ContGetPassword")
-COMMAND.tip = "Get a container's password."
+COMMAND.tip = "Получите пароль от Контейнера"
 COMMAND.flags = CMD_DEFAULT
 COMMAND.access = "a"
 
@@ -55,22 +55,22 @@ function COMMAND:OnRun(player, arguments)
 	if (IsValid(trace.Entity)) then
 		if (Clockwork.entity:IsPhysicsEntity(trace.Entity)) then
 			if (trace.Entity.cwPassword) then
-				Schema:EasyText(player, "cornflowerblue", "["..self.name.."] This container's password is '"..trace.Entity.cwPassword.."'.")
+				Schema:EasyText(player, "cornflowerblue", "["..self.name.."] Пароль этого контейнера:'"..trace.Entity.cwPassword.."'.")
 			else
-				Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container or it does not have a password!")
+				Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер или у него нет пароля!")
 			end
 		else
-			Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+			Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 		end
 	else
-		Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+		Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 	end
 end
 
 COMMAND:Register()
 
 local COMMAND = Clockwork.command:New("ContForceOpen")
-COMMAND.tip = "Open a container without the password."
+COMMAND.tip = "Открой Контейнер не Имея Пароля"
 COMMAND.flags = CMD_DEFAULT
 COMMAND.access = "s"
 

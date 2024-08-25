@@ -88,9 +88,9 @@ function ENT:OnTakeDamage(damageInfo)
 					local playerFaction = player:GetFaction();
 					
 					if playerFaction == "Gatekeeper" then
-						player:HandleXP(15);
+						player:HandleXP(45);
 					else
-						player:HandleXP(5);
+						player:HandleXP(20);
 					end
 				end
 				
@@ -117,7 +117,7 @@ function ENT:OnTakeDamage(damageInfo)
 			end
 			
 			if self.woodLeft <= 0 then
-				Clockwork.chatBox:AddInTargetRadius(player, "it", "The wood pile is reduced to nothing, its resources fully extracted.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(player, "it", "От кучи валежника ничего не осталось. Больше здесь делать нечего.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 				
 				self:Remove();
 			end

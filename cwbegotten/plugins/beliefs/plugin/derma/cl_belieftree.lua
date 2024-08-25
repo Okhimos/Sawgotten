@@ -189,20 +189,20 @@ function PANEL:Paint()
 	self.levelNumeral = RomanNumerals.ToRomanNumerals(level)
 	
 	--[[if (experience < (cwBeliefs.sacramentCosts[level + 1] or 666) / 2) then
-		draw.SimpleText("SACRAMENT LEVEL: "..self.levelNumeral, "Civ5Tooltip1", self.barWidth + (self.barX) + 4 + 4, ((self.barY) + 4), Color(200, 0, 0))
-		draw.SimpleText("SACRAMENT LEVEL: "..self.levelNumeral, "Civ5Tooltip1", self.barWidth + (self.barX) + 6 + 4, ((self.barY) + 4) + 2, Color(0, 0, 0, 150))
+		draw.SimpleText("УРОВЕНЬ ТАИНСТВА: "..self.levelNumeral, "cwESPText", self.barWidth + (self.barX) + 4 + 4, ((self.barY) + 4), Color(200, 0, 0))
+		draw.SimpleText("УРОВЕНЬ ТАИНСТВА: "..self.levelNumeral, "cwESPText", self.barWidth + (self.barX) + 6 + 4, ((self.barY) + 4) + 2, Color(0, 0, 0, 150))
 	else
-		draw.SimpleText("SACRAMENT LEVEL: "..self.levelNumeral, "Civ5Tooltip1", (256 - 8) + (self.barX) + 6 + 4, ((self.barY) + 4) + 2, Color(150, 0, 0, 200))
-		draw.SimpleText("SACRAMENT LEVEL: "..self.levelNumeral, "Civ5Tooltip1", (256 - 8) + (self.barX) + 4 + 4, ((self.barY) + 4), Color(0, 0, 0, 255))
+		draw.SimpleText("УРОВЕНЬ ТАИНСТВА: "..self.levelNumeral, "cwESPText", (256 - 8) + (self.barX) + 6 + 4, ((self.barY) + 4) + 2, Color(150, 0, 0, 200))
+		draw.SimpleText("УРОВЕНЬ ТАИНСТВА: "..self.levelNumeral, "Civ5Tooltip1", (256 - 8) + (self.barX) + 4 + 4, ((self.barY) + 4), Color(0, 0, 0, 255))
 	end]]--
 	
-	draw.SimpleText("SACRAMENT LEVEL: "..self.levelNumeral, "Civ5Tooltip1", self.barX + 8, self.barY + 4, Color(200, 0, 0))
-	draw.SimpleText("SACRAMENT LEVEL: "..self.levelNumeral, "Civ5Tooltip1", self.barX + 10, self.barY + 6, Color(0, 0, 0, 150))
+	draw.SimpleText("Уровень Таинства: "..self.levelNumeral, "Civ5Tooltip1", self.barX + 8, self.barY + 4, Color(200, 0, 0))
+	draw.SimpleText("Уровень Таинства: "..self.levelNumeral, "Civ5Tooltip1", self.barX + 10, self.barY + 6, Color(0, 0, 0, 150))
 	
 	if self.player == Clockwork.Client then
 		if (points <= 0) then
-			draw.SimpleText("YOU HAVE NO EPIPHANIES!", "Civ5Tooltip1", (self.barX) + 6, ((self.barY) + 4) + 1 + 32, Color(200, 0, 0))
-			draw.SimpleText("YOU HAVE NO EPIPHANIES!", "Civ5Tooltip1", (self.barX) + 4, ((self.barY) + 4) - 1 + 32, Color(0, 0, 0, 150))
+			draw.SimpleText("У вас нет прозрений!", "Civ5Tooltip1", (self.barX) + 6, ((self.barY) + 4) + 1 + 32, Color(200, 0, 0))
+			draw.SimpleText("У вас нет прозрений!", "Civ5Tooltip1", (self.barX) + 4, ((self.barY) + 4) - 1 + 32, Color(0, 0, 0, 150))
 		else
 			local epiphany = "EPIPHANY"
 			
@@ -210,13 +210,13 @@ function PANEL:Paint()
 				epiphany = "EPIPHANIES"
 			end
 
-			draw.SimpleText("YOU HAVE "..points.." "..epiphany.." TO INVEST!", "Civ5ToolTi3", (self.barX) + 6, ((self.barY) + 4) + 1 + 32, Color(200, 0, 0))
-			draw.SimpleText("YOU HAVE "..points.." "..epiphany.." TO INVEST!", "Civ5ToolTi3", (self.barX) + 4, ((self.barY) + 4) - 1 + 32, Color(0, 0, 0, 150))
+			draw.SimpleText("У вас есть "..points.." свободных прозрений!", "Civ5ToolTi3", (self.barX) + 6, ((self.barY) + 4) + 1 + 32, Color(200, 0, 0))
+			draw.SimpleText("У вас есть "..points.." свободных прозрений!", "Civ5ToolTi3", (self.barX) + 4, ((self.barY) + 4) - 1 + 32, Color(0, 0, 0, 150))
 		end
 	else
 		if (points <= 0) then
-			draw.SimpleText("THEY HAVE NO EPIPHANIES!", "Civ5Tooltip1", (self.barX) + 6, ((self.barY) + 4) + 1 + 32, Color(200, 0, 0))
-			draw.SimpleText("THEY HAVE NO EPIPHANIES!", "Civ5Tooltip1", (self.barX) + 4, ((self.barY) + 4) - 1 + 32, Color(0, 0, 0, 150))
+			draw.SimpleText("У них нет прозрений!", "Civ5Tooltip1", (self.barX) + 6, ((self.barY) + 4) + 1 + 32, Color(200, 0, 0))
+			draw.SimpleText("У них нет прозрений!", "Civ5Tooltip1", (self.barX) + 4, ((self.barY) + 4) - 1 + 32, Color(0, 0, 0, 150))
 		else
 			local epiphany = "EPIPHANY"
 			
@@ -224,26 +224,26 @@ function PANEL:Paint()
 				epiphany = "EPIPHANIES"
 			end
 
-			draw.SimpleText("THEY HAVE "..points.." "..epiphany.." TO INVEST!", "Civ5ToolTi3", (self.barX) + 6, ((self.barY) + 4) + 1 + 32, Color(200, 0, 0))
-			draw.SimpleText("THEY HAVE "..points.." "..epiphany.." TO INVEST!", "Civ5ToolTi3", (self.barX) + 4, ((self.barY) + 4) - 1 + 32, Color(0, 0, 0, 150))
+			draw.SimpleText("У них есть "..points.." свободных прозрений", "Civ5ToolTi3", (self.barX) + 6, ((self.barY) + 4) + 1 + 32, Color(200, 0, 0))
+			draw.SimpleText("У них есть "..points.." свободных прозрений!", "Civ5ToolTi3", (self.barX) + 4, ((self.barY) + 4) - 1 + 32, Color(0, 0, 0, 150))
 		end
 	end
 	
 	self.sacramentCost = cwBeliefs.sacramentCosts[level + 1] or 666;
 
-	draw.SimpleText("Faith Concentrated: "..math.floor(experience), "Civ5Tooltip1",(self.barX) + 4 + 16 + 512, ((self.barY) + 3), Color(200, 0, 0, 255))
-	draw.SimpleText("Faith Concentrated: "..math.floor(experience), "Civ5Tooltip1", (self.barX) + 6 + 16 + 512, ((self.barY) + 5), Color(0, 0, 0, 127))
+	draw.SimpleText("Веры Накоплено: "..math.floor(experience), "Civ5Tooltip1",(self.barX) + 4 + 16 + 512, ((self.barY) + 3), Color(200, 0, 0, 255))
+	draw.SimpleText("Веры Накоплено: "..math.floor(experience), "Civ5Tooltip1", (self.barX) + 6 + 16 + 512, ((self.barY) + 5), Color(0, 0, 0, 127))
 	
 	if level < self.localLevelCap then
-		draw.SimpleText("Faith Required For Next Epiphany: "..self.sacramentCost, "Civ5Tooltip1", (self.barX) + 4 + 16 + 512, ((self.barY) + 4 + 32), Color(200, 0, 0, 255))
-		draw.SimpleText("Faith Required For Next Epiphany: "..self.sacramentCost, "Civ5Tooltip1", (self.barX) + 6 + 16 + 512, ((self.barY) + 6 + 32), Color(0, 0, 0, 127))
+		draw.SimpleText("Веры необходимой для следующего Прозрения: "..self.sacramentCost, "Civ5Tooltip1", (self.barX) + 4 + 16 + 512, ((self.barY) + 4 + 32), Color(200, 0, 0, 255))
+		draw.SimpleText("Веры необходимой для следующего Прозрения: "..self.sacramentCost, "Civ5Tooltip1", (self.barX) + 6 + 16 + 512, ((self.barY) + 6 + 32), Color(0, 0, 0, 127))
 	else
 		if self.player == Clockwork.Client then
-			draw.SimpleText("You Are At The Maximum Sacrament Level!", "Civ5Tooltip1", (self.barX) + 4 + 16 + 512, ((self.barY) + 4 + 32), Color(200, 0, 0, 255))
-			draw.SimpleText("You Are At The Maximum Sacrament Level!", "Civ5Tooltip1", (self.barX) + 6 + 16 + 512, ((self.barY) + 6 + 32), Color(0, 0, 0, 127))
+			draw.SimpleText("Вы находитесь на Максимальном Уровне Таинства!!", "Civ5Tooltip1", (self.barX) + 4 + 16 + 512, ((self.barY) + 4 + 32), Color(200, 0, 0, 255))
+			draw.SimpleText("Вы находитесь на Максимальном Уровне Таинства!", "Civ5Tooltip1", (self.barX) + 6 + 16 + 512, ((self.barY) + 6 + 32), Color(0, 0, 0, 127))
 		else
-			draw.SimpleText("They Are At The Maximum Sacrament Level!", "Civ5Tooltip1", (self.barX) + 4 + 16 + 512, ((self.barY) + 4 + 32), Color(200, 0, 0, 255))
-			draw.SimpleText("They Are At The Maximum Sacrament Level!", "Civ5Tooltip1", (self.barX) + 6 + 16 + 512, ((self.barY) + 6 + 32), Color(0, 0, 0, 127))
+			draw.SimpleText("Вы находитесь на Максимальном Уровне Таинства!", "Civ5Tooltip1", (self.barX) + 4 + 16 + 512, ((self.barY) + 4 + 32), Color(200, 0, 0, 255))
+			draw.SimpleText("Вы находитесь на Максимальном Уровне Таинства!", "Civ5Tooltip1", (self.barX) + 6 + 16 + 512, ((self.barY) + 6 + 32), Color(0, 0, 0, 127))
 		end
 	end
 end
@@ -410,7 +410,7 @@ function PANEL:AddIcon(iconData)
 			local selectedGood = Color(50, 255, 50, 255);
 			local selectedNeutral = Color(200, 200, 200, 255);
 			
-			local canTake = "You can take this belief!"
+			local canTake = "Вы можете принять это Убеждение!"
 			local canTakeColor = selectedGood;
 			local canUnlock = true
 			
@@ -425,7 +425,7 @@ function PANEL:AddIcon(iconData)
 			end
 			
 			if (beliefs[icon.uniqueID]) then
-				canTake = "You already follow this belief!"
+				canTake = "Вы уже следуете этому Убеждению!"
 				canTakeColor = selectedNeutral;
 				icon:SetColor(Unlocked)
 			else
@@ -435,7 +435,7 @@ function PANEL:AddIcon(iconData)
 					for i, v in ipairs(parent.lockedTraits) do
 						if table.HasValue(traits, v) then
 							icon:SetColor(HardLocked)
-							canTake = "This belief tree is locked due to a trait you took!"
+							canTake = "Это древо убеждений заблокировано из-за выбранной вами черты!"
 							canTakeColor = selectedBad;
 							canUnlock = false;
 							
@@ -448,7 +448,7 @@ function PANEL:AddIcon(iconData)
 					for i, v in ipairs(icon.lockedTraits) do
 						if table.HasValue(traits, v) then
 							icon:SetColor(HardLocked)
-							canTake = "This belief is locked due to a trait you took!"
+							canTake = "Это убеждение заблокировано из-за черты, которую вы взяли!"
 							canTakeColor = selectedBad;
 							canUnlock = false;
 							
@@ -461,7 +461,7 @@ function PANEL:AddIcon(iconData)
 					for i, v in ipairs(parent.lockedBeliefs) do
 						if beliefs[v] then
 							icon:SetColor(HardLocked)
-							canTake = "This belief tree is locked due to a belief you took!"
+							canTake = "Это древо убеждений заблокировано из-за принятого вами убеждения!"
 							canTakeColor = selectedBad;
 							canUnlock = false;
 							
@@ -474,7 +474,7 @@ function PANEL:AddIcon(iconData)
 					for i, v in ipairs(icon.lockedBeliefs) do
 						if beliefs[v] then
 							icon:SetColor(HardLocked)
-							canTake = "This belief is locked due to a belief you took!"
+							canTake = "Этот навык заблокирован из-за убеждения, которое вы приняли!"
 							canTakeColor = selectedBad;
 							canUnlock = false;
 							
@@ -486,35 +486,35 @@ function PANEL:AddIcon(iconData)
 				if canUnlock then
 					if parent.disabled then
 						icon:SetColor(HardLocked)
-						canTake = "This belief tree is temporarily disabled until it can be implemented!"
+						canTake = "Это дерево убеждений временно отключено до тех пор, пока его не удастся реализовать!"
 						canTakeColor = selectedBad;
 					elseif icon.disabled then
 						icon:SetColor(HardLocked)
-						canTake = "This belief is temporarily disabled until it can be implemented!"
+						canTake = "Это убеждение временно отключено, пока его не удастся реализовать!"
 						canTakeColor = selectedBad;
 					elseif (cwBeliefs:HasBelief("jack_of_all_trades") and icon.row >= 4 and !icon.subfaith) then
 						icon:SetColor(HardLocked)
-						canTake = "This belief is locked due to a belief you took!"
+						canTake = "Это убеждение заблокировано из-за убеждения, которое вы приняли!"
 						canTakeColor = selectedBad;
 					elseif parent.lockedSubfactions and table.HasValue(parent.lockedSubfactions, beliefPanel.player:GetNetVar("subfaction")) then
 						icon:SetColor(HardLocked)
-						canTake = "This belief tree is locked due to the subfaction you took!"
+						canTake = "Это дерево убеждений заблокировано из-за выбранной вами подфракции!"
 						canTakeColor = selectedBad;
 					elseif icon.lockedSubfactions and table.HasValue(icon.lockedSubfactions, beliefPanel.player:GetNetVar("subfaction")) then
 						icon:SetColor(HardLocked)
-						canTake = "This belief is locked due to the subfaction you took!"
+						canTake = "Это убеждение заблокировано из-за выбранной вами подфракции!"
 						canTakeColor = selectedBad;
 					elseif parent.lockedFactions and table.HasValue(parent.lockedFactions, beliefPanel.player:GetFaction()) then
 						icon:SetColor(HardLocked)
-						canTake = "This belief tree locked due to the faction you took!"
+						canTake = "Это дерево убеждений заблокировано из-за фракции, которую вы выбрали!"
 						canTakeColor = selectedBad;
 					elseif icon.lockedFactions and table.HasValue(icon.lockedFactions, beliefPanel.player:GetFaction()) then
 						icon:SetColor(HardLocked)
-						canTake = "This belief is locked due to the faction you took!"
+						canTake = "Это убеждение заблокировано из-за фракции, которую вы выбрали!"
 						canTakeColor = selectedBad;
 					elseif icon.subfaith and beliefPanel.player:GetNetVar("subfaith") and beliefPanel.player:GetNetVar("subfaith") ~= "" and beliefPanel.player:GetNetVar("subfaith") ~= "N/A" and icon.subfaith ~= beliefPanel.player:GetNetVar("subfaith") then
 						icon:SetColor(HardLocked)
-						canTake = "You have already selected a subfaith!"
+						canTake = "Вы уже выбрали подконфессию!"
 						canTakeColor = selectedBad;
 					elseif (table.Count(requirements) > 0) then
 						for k, v in pairs (requirements) do
@@ -526,7 +526,7 @@ function PANEL:AddIcon(iconData)
 						
 						if (canUnlock) then
 							if (points <= 0) then
-								canTake = "You do not have any epiphanies to spend on this belief!"
+								canTake = "У вас нет свободных Прозрений!"
 								canTakeColor = selectedBad;
 								icon:SetColor(Locked)
 							else
@@ -534,9 +534,9 @@ function PANEL:AddIcon(iconData)
 							end
 						else
 							if (points <= 0) then
-								canTake = "You have no epiphanies and do not meet the requirements for this belief!"
+								canTake = "У вас нет прозрений, и вы не соответствуете требованиям для этого Убеждения!"
 							else
-								canTake = "You do not meet the requirements for this belief!"
+								canTake = "Вы не соответствуете требованиям для этого Убеждения!"
 							end
 							
 							canTakeColor = selectedBad;
@@ -544,7 +544,7 @@ function PANEL:AddIcon(iconData)
 						end
 					else
 						if (points <= 0) then
-							canTake = "You do not have any epiphanies to spend on this belief!"
+							canTake = "У вас нет свободных Прозрений!"
 							canTakeColor = selectedBad;
 							icon:SetColor(Locked)
 						else
@@ -563,7 +563,7 @@ function PANEL:AddIcon(iconData)
 				end
 				
 				if requirementsNiceNames and #requirementsNiceNames > 0 then
-					local requirementString = "Requirements: "..table.concat(requirementsNiceNames, ", ");
+					local requirementString = "Необходимо: "..table.concat(requirementsNiceNames, ", ");
 					
 					frame:AddText(requirementString, Color(225, 200, 200));
 				end
@@ -682,11 +682,11 @@ function PANEL:Rebuild(player, level, experience, beliefs, points, faith, highli
 
 	if (!self.closeButton) then
 		self.closeButton = vgui.Create("DButton", self)
-		self.closeButton:SetText("CLOSE")
+		self.closeButton:SetText("ЗАКРЫТЬ")
 		self.closeButton:SetSize(252, 67)
 		self.closeButton:SetPos(14, (sizeH) - (67 + 8) - 2)
 		self.closeButton:SetTextColor(Color(160, 0, 0))
-		self.closeButton:SetFont("nov_IntroTextSmallfaaaaa")
+		self.closeButton:SetFont("nov_IntroTextSmallaaafaa")
 		
 		local width, height = self.closeButton:GetWide(), self.closeButton:GetTall()
 		local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -789,7 +789,7 @@ function PANEL:RebuildBeliefTrees()
 			cwBeliefs:DrawTreeBackground(0, 0, v.size.w, v.size.h, self);
 		end
 
-		local font = v.headerFontOverride or "nov_IntroTextSmallaaaaa";
+		local font = v.headerFontOverride or "nov_IntroTextSmallaaafaa";
 		
 		if v.headerFontOverride then
 			beliefTreePanel.noShadow = true;

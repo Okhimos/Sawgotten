@@ -32,7 +32,8 @@ ITEM.stabilityScale = 0.45; -- reduces stability damage by 55%
 --]]
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Wanderer Mail";
+ITEM.name = "Кольчуга Странника";
+ITEM.uniqueID = "wanderer_mail";
 ITEM.group = "wanderers/wanderermail";
 ITEM.model = "models/begotten/headgroups_props/wanderermail.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/wanderer_mail.png"
@@ -43,7 +44,7 @@ ITEM.protection = 53
 ITEM.type = "chainmail";
 ITEM.weight = 4.5;
 ITEM.weightclass = "Medium";
-ITEM.description = "Rusty iron chainmail worn underneath a decaying leather jerkin. It bears no colors or insignias, making it a true Wanderer's choice of armor.";
+ITEM.description = "Ржавая железная кольчуга, надетая под выцвешую куртку. На ней нет ни цветов, ни знаков отличия, что делает ее славным комплектом доспехов для настоящего Странника.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 
@@ -92,7 +93,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Wanderer Crude Plate";
+ITEM.name = "Грубая Кираса Странника";
+ITEM.uniqueID = "wanderer_crude_plate";
 ITEM.group = "wanderers/crudeplate";
 ITEM.model = "models/begotten/headgroups_props/crudeplate.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/crude_plate.png"
@@ -103,7 +105,7 @@ ITEM.protection = 75;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "A crudely constructed set of armor that nevertheless provides outstanding protection. It is comprised of steel plates that cover almost the entire body.";
+ITEM.description = "Грубо сделанный комплект брони, который, тем не менее, обеспечивает достойную защиту. Он состоит из стальных пластин, покрывающих почти все тело.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.requiredbeliefs = {"hauberk"};
@@ -154,7 +156,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gatekeeper Plate";
+ITEM.name = "Латы Привратника";
+ITEM.uniqueID = "gatekeeper_plate";
 ITEM.group = "gatekeepers/gatekeepermedium";
 ITEM.model = "models/items/magic/armors/player_armors/player_armor_chainmail.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/gatekeeper_plate.png"
@@ -165,7 +168,7 @@ ITEM.protection = 55
 ITEM.type = "chainmail";
 ITEM.weight = 5;
 ITEM.weightclass = "Medium";
-ITEM.description = "A set of iron plate armor commonly used by the Holy Order of the Gatekeepers.";
+ITEM.description = "Комплект железных пластинчатых доспехов, обычно используемый Священным Орденом Привратников.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Gatekeeper";
@@ -214,7 +217,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Fine Gatekeeper Plate";
+ITEM.name = "Хорошие Латы Привратника";
+ITEM.uniqueID = "fine_gatekeeper_plate";
 ITEM.group = "gatekeepers/gatekeeperfine";
 ITEM.model = "models/items/magic/armors/player_armors/player_armor_plate.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/heavy_gatekeeper_plate.png"
@@ -225,7 +229,7 @@ ITEM.protection = 65
 ITEM.type = "chainmail";
 ITEM.weight = 6;
 ITEM.weightclass = "Medium";
-ITEM.description = "An improved set of armor based on that used by the Holy Order of the Gatekeepers, reinforced with fine steel and additional plates.";
+ITEM.description = "Улучшенный комплект доспехов, созданный на основе Лат Привратника, усиленный высококачественной сталью и дополнительными пластинами.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Gatekeeper";
@@ -274,7 +278,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Ornate Gatekeeper Plate";
+ITEM.name = "Исключительные Латы Привратника";
+ITEM.uniqueID = "ornate_gatekeeper_plate";
 ITEM.group = "gatekeepers/gatekeeperornate";
 ITEM.model = "models/items/magic/armors/player_armors/player_armor_plate_magic.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/ornate_gatekeeper_plate.png"
@@ -285,7 +290,7 @@ ITEM.protection = 70
 ITEM.type = "chainmail";
 ITEM.weight = 6;
 ITEM.weightclass = "Medium";
-ITEM.description = "A highly expensive gold-plated set of armor based on that used by the Holy Order of the Gatekeepers, reinforced with fine steel and additional plates.";
+ITEM.description = "Очень дорогой позолоченный доспехов, созданный на основе Лат Привратника, усиленный высококачественной сталью и дополнительными пластинами.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Gatekeeper";
@@ -334,7 +339,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Vexillifer Gatekeeper Plate";
+ITEM.name = "Латы Привратника-Знаменосца";
+ITEM.uniqueID = "vexillifer_gatekeeper_plate";
 ITEM.model = "models/items/magic/armors/player_armors/player_armor_plate_magic.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/ornate_gatekeeper_plate.png"
 ITEM.category = "Armor"
@@ -345,7 +351,7 @@ ITEM.type = "chainmail";
 ITEM.hasHelmet = true;
 ITEM.weight = 8;
 ITEM.weightclass = "Medium";
-ITEM.description = "The golden and ornate armor of a Vexillifer, reinforced with fine steel and topped with a lion pelt and stoic iron mask.";
+ITEM.description = "Золотые и богато украшенные доспехи, усиленные тонкой сталью и увенчанные львиной шкурой и железной маской с ликом святого. Узрев легионы с сотнями развевающихся Знамен, дикари замолят о пощаде, но будет уже слишком поздно.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Gatekeeper";
@@ -397,7 +403,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Auxiliary Gambeson";
+ITEM.name = "Гамбенезон Ауксилярия";
+ITEM.uniqueID = "auxiliary_gambeson";
 ITEM.group = "gatekeepers/gatekeeperlight_black";
 ITEM.model = "models/begotten/headgroup_props/gatekeeperlightarmor_black.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/auxiliary_gambeson.png"
@@ -408,7 +415,7 @@ ITEM.protection = 30
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "A studded leather gambeson with cloth sleeves dyed black, to distinguish Auxiliaries from the standard combat troops of the Gatekeepers.";
+ITEM.description = "Украшенный заклепками кожаный гамбезон с тканевыми рукавами, окрашенными в черный цвет, чтобы отличать Войска Снабжения от обычных Солдатов.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Gatekeeper";
@@ -453,7 +460,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gatekeeper Gambeson";
+ITEM.name = "Гамбенезон Привратника";
+ITEM.uniqueID = "gatekeeper_gambeson"
 ITEM.group = "gatekeepers/gatekeeperlight";
 ITEM.model = "models/begotten/headgroup_props/gatekeeperlightarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/gatekeeper_gambeson_new.png"
@@ -464,7 +472,7 @@ ITEM.protection = 30
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "A studded leather gambeson with cloth sleeves dyed bright red. Minimalist protection for commoner guardsmen.";
+ITEM.description = "Кожаный гамбезон с заклепками и тканевыми рукавами, окрашенными в ярко-красный цвет. Минималистская защита для простых гвардейцев.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Gatekeeper";
@@ -509,7 +517,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Praeventor Gambeson";
+ITEM.name = "Гамбенезон Разведчика";
+ITEM.uniqueID = "praeventor_gambeson";
 ITEM.group = "gatekeepers/gatekeeperlight_brown";
 ITEM.model = "models/begotten/headgroup_props/gatekeeperlightarmor_brown.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/praeventor_gambeson.png"
@@ -520,7 +529,7 @@ ITEM.protection = 30
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "A studded leather gambeson with cloth sleeves dyed brown, to help Praeventors blend in better in the Wasteland.";
+ITEM.description = "Украшенный заклепками кожаный гамбезон с тканевыми рукавами, окрашенными в коричневый цвет, чтобы помочь разведчику получше замаскироваться в Пустошах.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Gatekeeper";
@@ -565,7 +574,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Renegade Disciple Robes";
+ITEM.name = "Гамбенезон Привратника-Отступника";
+ITEM.uniqueID = "renegade_disciple_robes";
 ITEM.model = "models/begotten/headgroups_props/renegadearmor2.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/renegade_disciple_armor.png"
 ITEM.category = "Armor"
@@ -576,7 +586,7 @@ ITEM.type = "leather";
 ITEM.hasHelmet = true;
 ITEM.weight = 1.7;
 ITEM.weightclass = "Light";
-ITEM.description = "Leather robes worn by the Gatekeepers of Pope Adyssa.";
+ITEM.description = "Кожаные одеяния, которые носили привратники папы Адиссы.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Pope Adyssa's Gatekeepers";
@@ -621,7 +631,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Renegade Acolyte Robes";
+ITEM.name = "Латы Привратника-Отступника";
+ITEM.uniqueID = "renegade_acolyte_robes";
 ITEM.model = "models/begotten/headgroups_props/renegadearmor1.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/renegade_acoylte_armor.png"
 ITEM.category = "Armor"
@@ -632,7 +643,7 @@ ITEM.type = "leather";
 ITEM.hasHelmet = true;
 ITEM.weight = 1.8;
 ITEM.weightclass = "Light";
-ITEM.description = "Leather robes worn by the Gatekeepers of Pope Adyssa.";
+ITEM.description = "Комплект лат, которые носили привратники папы Адиссы.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Pope Adyssa's Gatekeepers";
@@ -677,7 +688,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Padded Coat";
+ITEM.name = "Стеганое Пальто";
+ITEM.uniqueID = "padded_coat";
 ITEM.group = "wanderers/leather";
 ITEM.model = "models/begotten/headgroup_props/paddedcoat.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/padded_coat.png"
@@ -688,7 +700,7 @@ ITEM.protection = 37
 ITEM.type = "leather";
 ITEM.weight = 3;
 ITEM.weightclass = "Light";
-ITEM.description = "A padded coat made of leather and heavy cloth that provides decent protection.";
+ITEM.description = "Стеганое пальто из кожи и плотной ткани, обеспечивающее достойную защиту.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 
@@ -731,7 +743,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Orthodoxist Monk Robes";
+ITEM.name = "Роба Православного Монаха";
+ITEM.uniqueID = "orthodoxist_monk_robes";
 ITEM.group = "wanderers/monkrobes";
 ITEM.model = "models/begotten/headgroups_props/monkrobes.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/monk_robes.png"
@@ -742,7 +755,7 @@ ITEM.protection = 25
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "Brown robes with a leather overcoat for minimal protection. The robes of a devout order of peasant flagellants. It appears to be protected by a judgemental aura that brings great unease to sinners.";
+ITEM.description = "Коричневая роба, имеющая минимальную защиту. Одеяния благочестивого ордена крестьян-флагеллянтов. Кажется, что они защищены особой аурой, которая приносит грешникам большое беспокойство.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 
 ITEM.kinisgerOverride = true;
@@ -789,7 +802,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Orthodoxist Battle Monk Robes";
+ITEM.name = "Боевая Роба Православного Монаха";
+ITEM.uniqueID = "orthodoxist_battle_monk_robes";
 ITEM.group = "wanderers/monkmail";
 ITEM.model = "models/begotten/headgroups_props/monkmail.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/battle_monk_robes.png"
@@ -800,7 +814,7 @@ ITEM.protection = 55
 ITEM.type = "chainmail";
 ITEM.weight = 4;
 ITEM.weightclass = "Medium";
-ITEM.description = "Chainmail robes with a boiled leather overcoat. Crafted for an order of battle monks who seek human extinction. It appears to be protected by a judgemental aura that brings great unease to sinners.";
+ITEM.description = "Кольчужное одеяние, изготовлено для ордена боевых монахов. Кажется, что оно защищено осуждающей аурой, которая вселяет животный ужас в еретическую тварь. Особенно когда глаза такого монаха светиться желтым.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 
 ITEM.kinisgerOverride = true;
@@ -852,7 +866,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Old Soldier Cuirass";
+ITEM.name = "Броня Старого Солдата";
+ITEM.uniqueID = "old_soldier_cuirass";
 ITEM.group = "wanderers/oldsoldier";
 ITEM.model = "models/begottenprelude/items/oldsoldier.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/old_soldier_cuirass.png"
@@ -863,7 +878,7 @@ ITEM.protection = 40
 ITEM.type = "metal";
 ITEM.weight = 2.5;
 ITEM.weightclass = "Light";
-ITEM.description = "The weathered uniform of a soldier that served in the Empire of Light's field armies, perhaps even in Lord Maximus' famous campaigns. It is protected by a cuirass and knee plates, but has no arm protection.";
+ITEM.description = "Потрепанная униформа солдата, служившего в полевых армиях Империи Света, возможно, даже в знаменитых кампаниях Лорда Максимуса. Очень удобна и не сковывает движений.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 
@@ -906,7 +921,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Light Brigandine Armor";
+ITEM.name = "Лёгкая Бригантина";
+ITEM.uniqueID = "light_brigandine_armor";
 ITEM.group = "wanderers/brigandinelight";
 ITEM.model = "models/begotten/headgroup_props/brigandinelight.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/light_brigandine.png"
@@ -917,7 +933,7 @@ ITEM.protection = 35
 ITEM.type = "leather";
 ITEM.weight = 2;
 ITEM.weightclass = "Light";
-ITEM.description = "A light leather brigandine that provides adequate protection for its low weight.";
+ITEM.description = "Легкая кожаная бригантина, обеспечивающая достаточную защиту при своем небольшом весе.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 
@@ -961,7 +977,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Brigandine Armor";
+ITEM.name = "Полная Бригантина";
+ITEM.uniqueID = "brigandine_armor";
 ITEM.group = "wanderers/brigandine";
 ITEM.model = "models/begotten/headgroup_props/brigandinemedium.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/brigandine.png"
@@ -972,7 +989,7 @@ ITEM.protection = 50
 ITEM.type = "leather";
 ITEM.weight = 3.5;
 ITEM.weightclass = "Medium";
-ITEM.description = "An iron-plated leather brigandine that provides adequate protection for its low weight.";
+ITEM.description = "Кожаная бригандина с железными пластинами, обеспечивающая достаточную защиту при своем небольшом весе. Сковывает движения.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 
@@ -1020,7 +1037,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Merchant Robes";
+ITEM.name = "Одеяние Торговца Специями";
+ITEM.uniqueID = "merchant_robes";
 ITEM.group = "wanderers/merchant";
 ITEM.model = "models/begotten/headgroup_props/merchant.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/merchant_robes.png"
@@ -1031,7 +1049,7 @@ ITEM.protection = 15
 ITEM.type = "leather";
 ITEM.weight = 1.5;
 ITEM.weightclass = "Light";
-ITEM.description = "These robes are styled off the attire of Darklander merchants, renowned for their trade in exotic goods. They provide a reasonable amount of protection despite their lightness.";
+ITEM.description = "Эти мантии стилизованы под одежду торговцев из Темноземья, известных своей торговлей экзотическими товарами. Они обеспечивают разумную степень защиты, несмотря на свою легкость.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 
@@ -1074,7 +1092,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Scribe Robes";
+ITEM.name = "Роба Писца";
+ITEM.uniqueID = "scribe_robes";
 ITEM.group = "wanderers/scribe";
 ITEM.model = "models/begotten/headgroup_props/scribe.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/scribe_robes.png"
@@ -1085,7 +1104,7 @@ ITEM.protection = 15
 ITEM.type = "leather";
 ITEM.weight = 1.5;
 ITEM.weightclass = "Light";
-ITEM.description = "Robes worn by the scribes of the Holy Hierarchy, denoting their status.";
+ITEM.description = "Одеяния, которые носили писари Святой Иерархии, указывающие на их статус.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 
@@ -1128,7 +1147,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Plague Doctor Robes";
+ITEM.name = "Одеяние Чумного Доктора";
+ITEM.uniqueID = "plague_doctor_robes";
 ITEM.model = "models/begotten/headgroup_props/plaguedocclothes.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/plague_doctor_outfit.png"
 ITEM.category = "Armor"
@@ -1139,7 +1159,7 @@ ITEM.type = "leather";
 ITEM.hasHelmet = true;
 ITEM.weight = 1.5;
 ITEM.weightclass = "Light";
-ITEM.description = "Fine black robes with a beaked mask stuffed with odd-smelling herbs. It grafts its owner with a silhouette synonymous with death; the Plague has come for us all.";
+ITEM.description = "Прекрасные черные одежды с клювовидной маской, набитой странно пахнущими травами. Она прививает своему владельцу силуэт, синонимичный смерти; Чума пришла за всеми нами.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.overlay = "begotten/zomboverlay/skullhelm";
@@ -1192,7 +1212,8 @@ ITEM:Register();
 
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Scrapper Grunt Plate";
+ITEM.name = "Броня Скраппера-Пехотинца";
+ITEM.uniqueID = "scrapper_grunt_plate";
 ITEM.group = "wanderers/scrappergrunt";
 ITEM.model = "models/begotten/headgroup_props/scrappergrunt.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/scrapper_grunt_plate.png"
@@ -1203,7 +1224,7 @@ ITEM.protection = 45
 ITEM.type = "plate";
 ITEM.weight = 5;
 ITEM.weightclass = "Medium";
-ITEM.description = "A series of pieced-together scrap plates that form a crude yet effective set of armor.";
+ITEM.description = "Серия собранных из кусочков пластин, образующих грубый, но эффективный комплект брони.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 
@@ -1252,7 +1273,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Scrapper Machinist Plate";
+ITEM.name = "Броня Скраппера-Машиниста";
+ITEM.uniqueID = "scrapper_machinist_plate";
 ITEM.group = "wanderers/scrapper";
 ITEM.model = "models/begotten/headgroup_props/scrapperarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/scrapper_machinist_plate.png"
@@ -1263,7 +1285,7 @@ ITEM.protection = 70
 ITEM.type = "plate";
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
-ITEM.description = "A series of pieced-together scrap plates that form a crude yet effective set of armor.";
+ITEM.description = "Серия собранных из кусочков пластин, образующих грубый, но эффективный комплект брони.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 
@@ -1314,7 +1336,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Exile Knight Armor";
+ITEM.name = "Латы Рыцаря-Изганника";
+ITEM.uniqueID = "exile_knight_armor";
 ITEM.model = "models/begotten/headgroup_props/exileknightarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/exile_knight_armor.png"
 ITEM.category = "Armor"
@@ -1326,7 +1349,7 @@ ITEM.protection = 80;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "An old set of armor, once belonging to a disgraced Knight of Sol. Although covered in tattered cloth that has hardly withstood the harsh conditions of the wasteland, the armor itself is in substantially better condition, with faded gold markings still visible.";
+ITEM.description = "Старый комплект доспехов, когда-то принадлежавший опозоренному Рыцарю Солнца. Хотя доспехи покрыты рваной тканью, которая едва выдержала суровые условия пустоши, сами пластины находятся в значительно лучшем состоянии, чем все, что вы можете найти на Пустошах.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -1384,18 +1407,19 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Knight Plate";
-ITEM.group = "gatekeepers/knight_set"
-ITEM.model = "models/begotten/headgroup_props/knightarmor.mdl"
-ITEM.iconoverride = "materials/begotten/ui/itemicons/knight_plate.png"
-ITEM.category = "Armor"
+ITEM.name = "Рыцарские Латы";
+ITEM.uniqueID = "knight_plate";
+ITEM.group = "gatekeepers/knight_set";
+ITEM.model = "models/begotten/headgroup_props/knightarmor.mdl";
+ITEM.iconoverride = "materials/begotten/ui/itemicons/knight_plate.png";
+ITEM.category = "Armor";
 ITEM.conditionScale = 0.75
 ITEM.hitParticle = "MetalSpark";
 ITEM.protection = 85;
 ITEM.weight = 9;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "A set of Gothic steel plate armor, used by the Knights of Sol. It has been blessed with catalytic energy and thus cannot be worn by the unworthy.";
+ITEM.description = "Комплект готических стальных пластинчатых доспехов, используемых Рыцарями Солнца. Он был благословлен самим СОЛ'ом и по этому любой недостойный, что осмелится надеть на себя латы, будет заживо сожжен внутри.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Holy Hierarchy"};
 ITEM.faction = "Holy Hierarchy";
@@ -1448,7 +1472,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Knight Justicar Plate";
+ITEM.name = "Латы Рыцаря Юстициария";
+ITEM.uniqueID = "knight_justicar_armor";
 ITEM.group = "gatekeepers/knight_justicar"
 ITEM.model = "models/begotten/headgroups_props/justicararmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/knight_justicar_plate.png"
@@ -1459,7 +1484,7 @@ ITEM.protection = 90;
 ITEM.weight = 9;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Elite blackened steel adorned with the colors of a noble household. It has been blessed with catalytic energy and thus cannot be worn by the unworthy.";
+ITEM.description = "Элитная черненая сталь, украшенная цветами знатного рода. Доспех был благословлен самим СОЛ'ом и по этому любой недостойный, что осмелится надеть на себя латы, будет заживо сожжен внутри. Говорят, что последний носитель таких доспехов, а именно Юстициарий Маркус Руфаниус, был подло заколот в спину..";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Holy Hierarchy"};
 --ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -1512,7 +1537,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Inquisitor Armor";
+ITEM.name = "Одежды Инквизитора";
+ITEM.uniqueID = "inquisitor_armor";
 ITEM.group = "gatekeepers/inquisitor";
 ITEM.model = "models/begotten/headgroup_props/inquisitorarmor_brown.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_armor.png"
@@ -1523,7 +1549,7 @@ ITEM.protection = 55;
 ITEM.weight = 6;
 ITEM.weightclass = "Medium";
 ITEM.type = "leather";
-ITEM.description = "A sturdy brown leather cloak with padding and satchels over a battle-scarred iron breastplate. It is a well-made suit of armor that both boasts its insignias and design while not limiting the wearer's movement and flexibility.";
+ITEM.description = "Прочный коричневый кожаный плащ с подкладкой и сумками поверх железного нагрудника с боевыми шрамами. Это хорошо сделанный комплект доспехов, который может похвастаться как своими знаками отличия, так и дизайном, не сковывая при этом движения владельца.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Holy Hierarchy";
@@ -1573,7 +1599,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Black Inquisitor Armor";
+ITEM.name = "Черные Одежды Инквизитора";
+ITEM.uniqueID = "black_inquisitor_armor";
 ITEM.group = "gatekeepers/blackinquisitor";
 ITEM.model = "models/begotten/headgroup_props/inquisitorarmor_black.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/black_inquisitor_armor.png"
@@ -1584,7 +1611,7 @@ ITEM.protection = 60;
 ITEM.weight = 6.2;
 ITEM.weightclass = "Medium";
 ITEM.type = "leather";
-ITEM.description = "A sturdy black leather cloak with padding and satchels over a battle-scarred steel breastplate. It is a well-made suit of armor that both boasts its insignias and design while not limiting the wearer's movement and flexibility.";
+ITEM.description = "Прочный коричневый кожаный плащ с подкладкой и сумками поверх железного нагрудника с боевыми шрамами. Это хорошо сделанный комплект доспехов, который может похвастаться как своими знаками отличия, так и дизайном, не сковывая при этом движения владельца. Именно этот комплект имеет черную раскраску.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Holy Hierarchy";
@@ -1634,7 +1661,8 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "High Inquisitor Armor";
+ITEM.name = "Белые Одежды Инквизитора";
+ITEM.uniqueID = "high_inquisitor_armor";
 ITEM.group = "gatekeepers/whiteinquisitor";
 ITEM.model = "models/begotten/headgroup_props/inquisitorarmor_white.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/high_inquisitor_armor.png"
@@ -1645,7 +1673,7 @@ ITEM.protection = 65;
 ITEM.weight = 6.5;
 ITEM.weightclass = "Medium";
 ITEM.type = "leather";
-ITEM.description = "A sturdy white leather cloak with padding and satchels over a finely crafted steel breastplate. It is a well-made suit of armor that both boasts its insignias and design while not limiting the wearer's movement and flexibility. This particular set of Inquisition armor is very well crafted and revered.";
+ITEM.description = "Прочный белый кожаный плащ с подкладкой и сумками поверх искусно сделанного стального нагрудника. Это хорошо сделанный комплект доспехов, который может похвастаться как своими знаками отличия, так и дизайном, не сковывая движения владельца. Этот конкретный комплект доспехов Инквизиции очень хорошо сделан и почитаем.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Holy Hierarchy";
@@ -1695,7 +1723,7 @@ ITEM.runSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Heavy Gatekeeper Reinforced Plate";
+ITEM.name = "Укрепленные Тяжелые Латы Привратника";
 ITEM.uniqueID = "high_gatekeeper_reinforced_plate";
 ITEM.model = "models/begotten/headgroup_props/highgatekeeperarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/high_gatekeeper_reinforced_armor.png"
@@ -1708,7 +1736,7 @@ ITEM.protection = 80;
 ITEM.weight = 8.5;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Further augmented by increased steel thickness, this plate is armored to the standard of a Knight's armor set.";
+ITEM.description = "Эта броня, дополнительно усиленная за счет увеличенной толщины стали, бронирована по стандарту рыцарских доспехов.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -1766,7 +1794,7 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Heavy Gatekeeper Plate";
+ITEM.name = "Тяжелые Латы Привратника";
 ITEM.uniqueID = "high_gatekeeper_heavy_plate";
 ITEM.model = "models/begotten/headgroup_props/highgatekeeperarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/high_gatekeeper_armor.png"
@@ -1779,7 +1807,7 @@ ITEM.protection = 75;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "A sturdy set of steel plate armor, scarred by constant battle and war.";
+ITEM.description = "Прочный комплект стальных пластинчатых доспехов, покрытый шрамами от постоянных сражений и войн.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.overlay = "begotten/zomboverlay/gatekeep1";
@@ -1838,7 +1866,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Wanderer Oppressor Armor";
+ITEM.name = "Броня Угнетателя";
+ITEM.uniqueID = "wanderer_oppressor_armor";
 ITEM.model = "models/begotten/headgroup_props/wandereroppressor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/wanderer_oppressor_armor.png"
 ITEM.category = "Armor"
@@ -1849,7 +1878,7 @@ ITEM.type = "leather";
 ITEM.hasHelmet = true;
 ITEM.weight = 8;
 ITEM.weightclass = "Heavy";
-ITEM.description = "The armor of a wasteland tyrant. It is fitted with crude steel plates and held together by scrap.";
+ITEM.description = "Броня тирана пустоши. Она оснащена грубыми стальными пластинами и скреплена металлоломом.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeSubfactions = {"Clan Gore", "Clan Harald", "Clan Reaver", "Clan Crast", "Clan Grock"};
 ITEM.overlay = "begotten/zomboverlay/skullhelm";
@@ -1912,7 +1941,8 @@ ITEM:Register();
 --
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Voltist Archangel Exoskeleton";
+ITEM.name = "Экзоскелет «Архангел» Вольтистов";
+ITEM.uniqueID = "voltist_archangel_exoskeleton";
 ITEM.model = "models/begotten/headgroup_props/voltistarchangelexoarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/voltist_archangel_exoskeleton.png"
 ITEM.category = "Armor"
@@ -1924,7 +1954,7 @@ ITEM.protection = 60
 ITEM.weight = 7;
 ITEM.weightclass = "Medium";
 ITEM.type = "plate";
-ITEM.description = "Plates of painted metal to be hooked into flesh. Rods to be plunged into the eyesockets and through the frontal lobe. Wings of metal; an insult to the faithful. All cobbled together with terrible wires, mismanaged to the point of insanity. Only an outright lunatic or a victim lacking free will would subject themselves to electrozombifcation.";
+ITEM.description = "Пластины из окрашенного металла, которые нужно воткнуть в плоть. Стержни, которые нужно вставить в глазницы и проткнуть лобную долю. Крылья из металла, оскорбляющие верующих. Все это скреплено ужасными проводами, доведено до безумия. Только полный псих или жертва, лишенная свободы воли, подвергнет себя электрозомбированию.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.permanent = true; -- Cannot be unequipped.
 ITEM.overlay = "begotten/zomboverlay/voltyellow";
@@ -2038,7 +2068,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Voltist Exoskeleton";
+ITEM.name = "Экзоскелет Вольтистов";
+ITEM.uniqueID = "voltist_exoskeleton";
 ITEM.model = "models/begotten/headgroup_props/voltistexoarmor.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/voltist_exoskeleton.png"
 ITEM.category = "Armor"
@@ -2050,7 +2081,7 @@ ITEM.protection = 40
 ITEM.weight = 5;
 ITEM.weightclass = "Light";
 ITEM.type = "plate";
-ITEM.description = "Plates of decaying metal to be hooked into flesh. Rods to be plunged into the eyesockets and through the frontal lobe. All cobbled together with terrible wires, mismanaged to the point of insanity. Only an outright lunatic or a victim lacking free will would subject themselves to electrozombifcation.";
+ITEM.description = "Пластины из окрашенного металла, которые нужно вцепить в плоть. Стержни, которые нужно вставить в глазницы и через лобную долю. Все это скреплено ужасными проводами, неправильно управляемыми до безумия. Только полный псих или жертва, лишенная свободы воли, подвергнет себя электрозомбированию.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.permanent = true; -- Cannot be unequipped.
 ITEM.overlay = "begotten/zomboverlay/voltyellow";
@@ -2160,7 +2191,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Voltist Stormchaser Exoskeleton";
+ITEM.name = "Экзоскелет «Повелитель Бури» Вольтистов";
+ITEM.uniqueID = "voltist_stormchaser_exoskeleton";
 ITEM.model = "models/begotten/headgroups_props/voltisttechnoheavy.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/voltist_stormchaser_exoskeleton.png"
 ITEM.category = "Armor"
@@ -2172,7 +2204,7 @@ ITEM.protection = 90
 ITEM.weight = 10;
 ITEM.weightclass = "Heavy";
 ITEM.type = "plate";
-ITEM.description = "Plates of painted metal to be hooked into flesh. Rods to be plunged into the eyesockets and through the frontal lobe. Glowing pylons that emit psionic mind-enslaving energy. Plated and cobbled with surprising efficiency, although extremely bulky and horribly uncomfortable to its host. This exoskeleton was clearly made for a Stormchaser, a technoheretic mastermind that hold a higher sense of free will and tactical forethough than their zombified peers.";
+ITEM.description = "Пластины из окрашенного металла, которые нужно вцепить в плоть. Стержни для погружения в глазницы через лобную долю. Светящиеся пилоны, которые излучают псионическую, порабощающую разум энергию. Покрытые и сколоченные с удивительной эффективностью, хотя чрезвычайно громоздкие и ужасно неудобные для своего хозяина. Этот экзоскелет был явно сделан для Повелителя Бури, техноеретического гения, обладающего более высоким чувством воли и тактической предусмотрительности, чем их зомбированные коллеги.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.permanent = true; -- Cannot be unequipped.
 ITEM.overlay = "begotten/zomboverlay/voltyellow";
@@ -2286,7 +2318,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Master-at-Arms Gatekeeper Plate";
+ITEM.name = "Доспехи Мастера Войны";
+ITEM.uniqueID = "masteratarms_gatekeeper_plate"
 ITEM.group = "gatekeepers/masteratarms";
 ITEM.model = "models/begotten/headgroups_props/masteratarmsplate.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/masteratarms_gatekeeper_plate.png"
@@ -2297,7 +2330,7 @@ ITEM.protection = 80
 ITEM.type = "chainmail";
 ITEM.weight = 6;
 ITEM.weightclass = "Medium";
-ITEM.description = "A unique set of Gatekeeper plate made of the finest materials, designed specifically to protect the Master-at-Arms.";
+ITEM.description = "Уникальный комплект доспехов Привратника, изготовленный из лучших материалов и специально разработанный для защиты Мастера Войны";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.requireFaction = {"Gatekeeper"};
 ITEM.faction = "Gatekeeper";
@@ -2341,7 +2374,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Twisted Fuck Armor";
+ITEM.name = "Броня Людоеда";
+ITEM.uniqueID = "twisted_fuck_armor";
 ITEM.group = "wanderers/wandererbone";
 ITEM.model = "models/begotten/headgroups_props/wandererbone.mdl"
 ITEM.iconoverride = "materials/begotten/ui/itemicons/twisted_fuck_armor.png"
@@ -2352,7 +2386,7 @@ ITEM.protection = 25;
 ITEM.weight = 2.5;
 ITEM.weightclass = "Light";
 ITEM.type = "leather";
-ITEM.description = "Created from the bones of countless victims, this armor signifies the depraved mentality of its wearer. The armor rattles as it moves, giving it a particularly terrifying presence. This armor is uniquely suited against blunt attacks.";
+ITEM.description = "Созданная из костей бесчисленных жертв, эта броня выставляет на общее обозрение извращенный менталитет ее владельца. Гремит при движении, что придает ей особенно устрашающий вид.";
 ITEM.useSound = "npc/combine_soldier/zipline_clothing2.wav";
 ITEM.excludeFactions = {"Goreic Warrior"};
 
@@ -2404,7 +2438,8 @@ ITEM.walkSound = {
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("clothes_base");
-ITEM.name = "Gatekeeper Halfplate";
+ITEM.name = "Полулаты Привратника";
+ITEM.uniqueID = "gatekeeper_halfplate";
 ITEM.group = "gatekeepers/gatekeeperhalfplate";
 ITEM.model = "models/begotten/items/gatekeeperhalfplate.mdl"
 ITEM.iconoverride = "begotten/ui/itemicons/gatekeeperhalfplate.png"
@@ -2415,7 +2450,7 @@ ITEM.protection = 48
 ITEM.type = "chainmail";
 ITEM.weight = 4;
 ITEM.weightclass = "Medium";
-ITEM.description = "A breastplate worn over Gambeson bearing the colors of the Holy Order of the Gatekeepers. A cheap but highly practical piece of armor.";
+ITEM.description = "Нагрудник, надеваемый поверх Гамбезона, с цветами Святого Ордена Привратников. Дешевый, но очень практичный элемент доспехов.";
 ITEM.useSound = "armormovement/body-armor-b4.WAV.mp3";
 ITEM.excludeFactions = {"Goreic Warrior"};
 ITEM.faction = "Gatekeeper";

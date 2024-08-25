@@ -1,10 +1,10 @@
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Harpoon";
+	ITEM.name = "Гарпун";
 	ITEM.model = "models/props_junk/harpoon002a.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_spear_harpoon";
 	ITEM.category = "Melee";
-	ITEM.description = "A pointy thing with a hook on its end. Though heavy, it can be reliably used as a spear. Favored by peasants along coastal regions for its versatility.";
+	ITEM.description = "Острая штука с крюком на конце. Хотя она тяжелая, ее можно надежно использовать как копье. Такое оружие предпочитают крестьяне прибрежных районов за ее универсальность.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/harpoon.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -19,12 +19,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Iron Spear";
+	ITEM.name = "Железное Копье";
 	ITEM.model = "models/demonssouls/weapons/short spear.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "begotten_spear_ironspear";
 	ITEM.category = "Melee";
-	ITEM.description = "A long wooden rod with an iron spearhead. A spear is a deadly weapon, famed for its speed and long reach. Best used by soldiers in a war, no task is too great for an honest spear formation to handle.";
+	ITEM.description = "Копье — смертоносное оружие, славящееся своей скоростью и большой досягаемостью. Лучше всего его используют солдаты на войне, для честного строя копейщиков нет такой задачи, с которой они бы не справились.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/iron_spear.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -39,12 +39,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Iron Short Spear";
+	ITEM.name = "Короткое Железное Копье";
 	ITEM.model = "models/witcher2soldiers/tw2_shortspear.mdl";
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_spear_ironshortspear";
 	ITEM.category = "Melee";
-	ITEM.description = "An iron spear with a shorter shaft for faster and more personal killing.";
+	ITEM.description = "Железное копье с укороченным древком для более быстрого убийства врагов. Или друзей.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/iron_shortspear.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -59,12 +59,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Pitchfork";
+	ITEM.name = "Вилы";
 	ITEM.model = "models/begotten/weapons/serfpitchfork.mdl";
 	ITEM.weight = 1.5;
 	ITEM.uniqueID = "begotten_spear_pitchfork";
 	ITEM.category = "Melee";
-	ITEM.description = "An old serf's tool, not normally used as a weapon, but deadly nonetheless.";
+	ITEM.description = "Старый крепостной инструмент, обычно не используемый в качестве оружия, но тем не менее смертоносный.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pitchfork.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -79,12 +79,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Satanic Spear";
+	ITEM.name = "Копье Еретика";
 	ITEM.model = "models/demonssouls/weapons/scraping spear.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_spear_satanicspear";
 	ITEM.category = "Melee";
-	ITEM.description = "An unholy weapon forged in the fires of Hell. It finds its use in the Legions of Lucifer, the human fighters who each serve the Dark Prince for their own selfish desires. This particular spear is known for being able to pierce through enemy defenses, scraping against the flesh as it is retracted for another thrust.";
+	ITEM.description = "Нечестивое оружие, выкованное в огне Ада. Оно находит свое применение в Легионах Люцифера. Это особое копье известно тем, что способно причинять адские мучения, царапая плоть, когда оно вытягивается для нанесения следующего удара.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/satanic_spear.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -99,13 +99,13 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Scrap Spear";
+	ITEM.name = "Копье из Скрапа";
 	ITEM.model = "models/mosi/fallout4/props/weapons/melee/poolcue.mdl";
 	ITEM.bodygroup1 = 4;
 	ITEM.weight = 1.3;
 	ITEM.uniqueID = "begotten_spear_scrapspear";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden stick with a blade attached to its end, forming a spear. It is not nearly as long nor as durable as a normal spear, but it is swift.";
+	ITEM.description = "Деревянная палка с лезвием на конце, образующая копье. Она не такая длинная и не такая прочная, как обычное копье, но лучше, чем ничего.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scrap_spear.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -120,12 +120,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Training Spear";
+	ITEM.name = "Тренировочное Копье";
 	ITEM.model = "models/begotten/weapons/training_spear.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_spear_trainingspear";
 	ITEM.category = "Melee";
-	ITEM.description = "A wooden pole that can be used for low-risk spear combat training.";
+	ITEM.description = "Деревянный шест, который можно использовать для тренировок по драке на копьях.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/training_spear.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -139,12 +139,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Voltspear";
+	ITEM.name = "Вольт-Копье";
 	ITEM.model = "models/begotten/weapons/voltspear.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_spear_voltspear";
 	ITEM.category = "Melee";
-	ITEM.description = "An electrified voltprod mounted on a wooden shaft to increase its range.";
+	ITEM.description = "Электрифицированный вольтпрод, установленный на деревянном валу для увеличения дальности действия.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/volt_spear.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;
@@ -159,12 +159,12 @@ local ITEM = Clockwork.item:New("weapon_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("weapon_base");
-	ITEM.name = "Winged Spear";
+	ITEM.name = "Крылатое Копье";
 	ITEM.model = "models/demonssouls/weapons/winged spear.mdl";
 	ITEM.weight = 2.3;
 	ITEM.uniqueID = "begotten_spear_wingedspear";
 	ITEM.category = "Melee";
-	ITEM.description = "A refined steel spear, commonly forged by the Holy Hierarchy. It features a wing at the end, good for catching enemy blades.";
+	ITEM.description = "Копье из очищенной стали, обычно выкованное Святой Иерархией. Имеет крыло на конце, хорошо подходящее для ловли вражеских клинков.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/winged_spear.png"
 	ITEM.meleeWeapon = true;
 	ITEM.isAttachment = true;

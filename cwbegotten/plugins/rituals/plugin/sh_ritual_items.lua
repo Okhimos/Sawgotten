@@ -4,12 +4,13 @@
 --]]
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Purifying Stone";
+	ITEM.name = "Камень Очищения";
 	ITEM.model = "models/srp/items/art_flash.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/purifying_stone.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "purifying_stone"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A highly luminescent stone that has various purifying properties.";
+	ITEM.description = "Люминесцентный камень, обладающий различными очищающими свойствами.";
 	ITEM.stackable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 600, supercrateOnly = true};
@@ -25,9 +26,9 @@ local ITEM = Clockwork.item:New();
 			end
 			
 			player:HandleNeed("corruption", -30);
-			Clockwork.chatBox:Add(player, nil, "itnofake", "You crush the purfying stone in your hand and can immediately feel the corruption leaving your body.");
+			Clockwork.chatBox:Add(player, nil, "itnofake", "Вы сжимаете камень очищения в своей руке и чувствуете, как из вашего тела уходит порча.");
 		else
-			Schema:EasyText(player, "firebrick", "You cannot do this action at this moment.")
+			Schema:EasyText(player, "firebrick", "Вы не можете выполнить это действие в данный момент.")
 		end
 	end;
 	
@@ -37,12 +38,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Up Catalyst";
+	ITEM.name = "Каталист Повышения";
 	ITEM.model = "models/srp/items/spezzy/art_poonlight.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/up_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "up_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A large luminescent stone. Barely-visible glyphs appear to be inscribed within.";
+	ITEM.description = "Большой светящийся камень. На нем начертаны едва заметные глифы.";
 	ITEM.stackable = true;
 
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 75};
@@ -52,12 +54,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Tortured Spirit";
+	ITEM.name = "Измученный Дух";
 	ITEM.model = "models/srp/items/art_zoonlight.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/tortured_spirit.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "tortured_spirit"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A glass orb with billowing hot fumes writhing within. Occasionally, the fumes will take the appearance of a screaming face.";
+	ITEM.description = "Стеклянный шар, внутри которого клубятся горячие испарения. Иногда дым принимает вид кричащего лица.";
 	ITEM.stackable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 400, supercrateOnly = true};
@@ -67,12 +70,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Belphegor Catalyst";
+	ITEM.name = "Каталист Бельфегора";
 	ITEM.model = "models/srp/items/art_fireball.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/belphegor_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "belphegor_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A rounded piece of volcanic rock that is warm to the touch. Pulsating magma can be seen within, forming Satanic signets.";
+	ITEM.description = "Округлый кусок вулканической породы, теплый на ощупь. Внутри видна пульсирующая магма, образующая сатанинские руны.";
 	ITEM.stackable = true;
 
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 100};
@@ -82,12 +86,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Xolotl Catalyst";
+	ITEM.name = "Каталист Ксаотля";
 	ITEM.model = "models/srp/items/art_battery.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/xolotl_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "xolotl_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A large piece of coiled rock. It appears electrically charged.";
+	ITEM.description = "Большой кусок свернутого камня. Кажется, что он заряжен электричеством.";
 	ITEM.stackable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 400, supercrateOnly = true};
@@ -97,12 +102,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Down Catalyst";
+	ITEM.name = "Каталист Понижения";
 	ITEM.model = "models/srp/items/art_crystalthorn.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/down_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "down_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A rounded, crater-covered stone. Large luminescent bolts protrude from different angles, all with barely-visible glyphs within.";
+	ITEM.description = "Округлый, покрытый кратерами камень. Под разными углами выступают большие люминесцентные болты, внутри которых едва различимые глифы.";
 	ITEM.stackable = true;
 
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 75};
@@ -112,12 +118,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Elysian Catalyst";
+	ITEM.name = "Райский Каталист";
 	ITEM.model = "models/srp/items/art_sparkler.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/elysian_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "elysian_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A small piece of coiled rock. It appears electrically charged.";
+	ITEM.description = "Небольшой кусок свернутого камня. Кажется, что он заряжен электричеством.";
 	ITEM.stackable = true;
 
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 75};
@@ -127,12 +134,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Familial Catalyst";
+	ITEM.name = "Семейный Каталист";
 	ITEM.model = "models/srp/items/art_bubble.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/familial_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "familial_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A chalky sedimentary rock with striking green-red hues. Northern glyphs have been inscribed on it.";
+	ITEM.description = "Меловая осадочная порода с яркими зелено-красными оттенками. На нем начертаны северные глифы.";
 	ITEM.stackable = true;
 
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 100};
@@ -142,12 +150,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Ice Catalyst";
+	ITEM.name = "Каталист Льда";
 	ITEM.model = "models/srp/items/spezzy/art_vrchen.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ice_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "ice_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A cold orb surrounded by small icicles.";
+	ITEM.description = "Холодная сфера, окруженная маленькими сосульками.";
 	ITEM.stackable = true;
 
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 150};
@@ -157,12 +166,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Light Catalyst";
+	ITEM.name = "Каталист Света";
 	ITEM.model = "models/srp/items/art_gravi.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/light_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "light_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A deformed gold-tinted stone. It is inscribed with glyphs of Light.";
+	ITEM.description = "Деформированный камень с золотым оттенком. На нем начертаны глифы Света.";
 	ITEM.stackable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 100};
@@ -172,12 +182,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Pantheistic Catalyst";
+	ITEM.name = "Пантеистический Каталист";
 	ITEM.model = "models/srp/items/art_kolobok.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pantheistic_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "pantheistic_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A waxy round orb, an energized crystal forming a Northern signet.";
+	ITEM.description = "Восковая круглая сфера, заряженный энергией кристалл, образующий северную печатку.";
 	ITEM.stackable = true;
 
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 100};
@@ -188,12 +199,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Pentagram Catalyst";
+	ITEM.name = "Каталист Пентаграммы";
 	ITEM.model = "models/srp/items/art_crystal.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/pentagram_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "pentagram_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A glowing red crystal formation, with numerous Satanic signets inscribed within.";
+	ITEM.description = "Светящееся светло-красное кристаллическое образование, внутри которого начертаны многочисленные сатанинские руны.";
 	ITEM.stackable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 400, supercrateOnly = true};
@@ -204,12 +216,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Holy Spirit";
+	ITEM.name = "Святой Дух";
 	ITEM.model = "models/srp/items/art_moonlight.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/holy_spirit.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "holy_spirit"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A glass orb with white-hot billowing fumes writhing within. Occasionally, the fumes form the face of a majestic man.";
+	ITEM.description = "Стеклянная сфера, внутри которой клубятся раскаленные дымы. Изредка из дыма появляется лицо величественного мужчины.";
 	ITEM.stackable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Rituals", rarity = 400, supercrateOnly = true};
@@ -220,12 +233,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Trinity Catalyst";
+	ITEM.name = "Каталист Троицы";
 	ITEM.model = "models/srp/items/art_jellyfish.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/trinity_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "trinity_catalyst"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A deformed gold-tinted stone, with a large hollowed centre surrounded by thin tendrils. It is inscribed with glyphs of Light.";
+	ITEM.description = "Деформированный камень золотистого цвета с большим углублением в центре, окруженным тонкими усиками. На нем начертаны глифы Света.";
 	ITEM.stackable = true;
 
 	-- Called when a player drops the item.
@@ -236,12 +250,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Judgemental Sigil Stone";
+	ITEM.name = "Камень Осуждения";
 	ITEM.model = "models/srp/items/spezzy/art_ftoneflower.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/art_ftoneflower.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "judgemental_sigil_stone"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A sigil stone that makes you feel guilty for simply being alive when held in your hand.";
+	ITEM.description = "Знаменный камень, который заставляет вас чувствовать себя виноватым за то, что вы просто живы, когда держите его в руке.";
 	ITEM.stackable = true;
 
 	-- Called when a player drops the item.
@@ -250,12 +265,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Fire Sigil Stone";
+	ITEM.name = "Камень Огня";
 	ITEM.model = "models/srp/items/art_stoneblood.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/art_stoneblood.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "fire_sigil_stone"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A sigil stone that burns furiously in your hand.";
+	ITEM.description = "Знаменный камень, яростно пылающий в вашей руке.";
 	ITEM.stackable = true;	
 	
 	-- Called when a player drops the item.
@@ -264,12 +280,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Ice Sigil Stone";
+	ITEM.name = "Камень Льда";
 	ITEM.model = "models/srp/items/spezzy/art_moldfish.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ice_catalyst.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "ice_sigil_stone"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A sigil stone that saps the air with an unbearable chill.";
+	ITEM.description = "Знаменный камень, пронизывающий воздух невыносимым холодом.";
 	ITEM.stackable = true;
 
 	-- Called when a player drops the item.
@@ -278,12 +295,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Glazic Sigil Stone";
+	ITEM.name = "Камень Сияния";
 	ITEM.model = "models/srp/items/art_mammasbeads.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/art_mammasbeads.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "glazic_sigil_stone"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A sigil stone that bedazzles onlookers with a strong sense of envy and awe.";
+	ITEM.description = "Знаменный камень, вызывающий у окружающих чувство зависти и благоговения.";
 	ITEM.stackable = true;
 
 	-- Called when a player drops the item.
@@ -292,12 +310,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Unholy Sigil Stone";
+	ITEM.name = "Нечестивый Камень";
 	ITEM.model = "models/srp/items/art_slug.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/art_slug.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "unholy_sigil_stone"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A sigil stone that is utterly repulsive to anyone with even the slightest notion of purity.";
+	ITEM.description = "Знаменный камень, который совершенно отвратителен для любого, кто имеет хоть малейшее представление о чистоте.";
 	ITEM.stackable = true;
 
 	-- Called when a player drops the item.
@@ -306,12 +325,13 @@ local ITEM = Clockwork.item:New();
 ITEM:Register();
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Vengeful Sigil Stone";
+	ITEM.name = "Камень Мести";
 	ITEM.model = "models/srp/items/art_firefly.mdl";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/art_firefly.png";
 	ITEM.weight = 0.1;
+	ITEM.uniqueID = "vengeful_sigil_stone"
 	ITEM.category = "Catalysts";
-	ITEM.description = "A sigil stone made from aspects of vengeance.";
+	ITEM.description = "Знаменный камень, который отдает невероятным желанием мести во всех ее проявлениях.";
 	ITEM.stackable = true;
 
 	-- Called when a player drops the item.

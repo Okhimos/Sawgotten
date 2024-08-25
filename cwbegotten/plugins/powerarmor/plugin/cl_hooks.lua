@@ -9,13 +9,13 @@ function cwPowerArmor:GetBatteryText()
 
 	if (battery) then
 		if (battery <= 100 and battery >= 90) then
-			text = "Fully Charged";
+			text = "Полностью Заряжен";
 		elseif (battery < 90 and battery >= 30) then
-			text = "Charged";
+			text = "Заряжен";
 		elseif (battery < 30 and battery >= 1) then
-			text = "Low Power";
+			text = "Мало Заряда";
 		elseif (battery <= 0) then
-			text = "Depleted";
+			text = "Пуст";
 		end;
 	end;
 	

@@ -77,7 +77,7 @@ function COMMAND:OnRun(player, arguments)
 		if (player != target) then
 			Schema:EasyText(GetAdmins(), "cornflowerblue", player:Name().." has stopped all bleeding for "..target:Name()..".");
 		else
-			Schema:EasyText(player, "cornflowerblue","["..self.name.."] You have stopped all bleeding for yourself.");
+			Schema:EasyText(player, "cornflowerblue","["..self.name.."] Все ваши раны больше не кровоточат.");
 		end;
 	else
 		Schema:EasyText(player, "grey", "["..self.name.."] "..arguments[1].." is not a valid player!");
@@ -307,7 +307,7 @@ local COMMAND = Clockwork.command:New("CharDiagnose");
 	-- Called when the command has been run.
 	function COMMAND:OnRun(player, arguments)
 		if cwBeliefs and !player:HasBelief("doctor") then
-			Schema:EasyText(player, "chocolate","You lack the required belief to do this!");
+			Schema:EasyText(player, "chocolate","Вам не хватает навыков, чтобы сделать это!");
 			return false;
 		end
 		
@@ -316,7 +316,7 @@ local COMMAND = Clockwork.command:New("CharDiagnose");
 		if (target) then
 			if (target:GetShootPos():Distance(player:GetShootPos()) <= 192) then
 				local bloodLevel = target:GetCharacterData("BloodLevel", cwMedicalSystem.maxBloodLevel);
-				local diagnoseString = "You take a good look at "..target:Name()..".";
+				local diagnoseString = "Ты внимательно осматриваешь "..target:Name()..".";
 				local health = target:Health();
 				local maxHealth = target:GetMaxHealth();
 				local textColorScale = 0;
@@ -324,19 +324,19 @@ local COMMAND = Clockwork.command:New("CharDiagnose");
 				if target:Alive() then
 					if health < maxHealth then
 						if health <= maxHealth * 0.25 then
-							diagnoseString = diagnoseString.." They appear to be near death.";
+							diagnoseString = diagnoseString.." Похоже, он находится в предсмертном состоянии.";
 							
 							textColorScale = math.min(textColorScale + 0.8, 1);
 						elseif health <= maxHealth * 0.55 then
-							diagnoseString = diagnoseString.." They appear to be badly wounded.";
+							diagnoseString = diagnoseString.." Похоже, он тяжело ранен.";
 							
 							textColorScale = math.min(textColorScale + 0.5, 1);
 						elseif health <= maxHealth * 0.75 then
-							diagnoseString = diagnoseString.." They appear to be wounded.";
+							diagnoseString = diagnoseString.." Похоже, у него средние ранения.";
 							
 							textColorScale = math.min(textColorScale + 0.25, 1);
 						elseif health <= maxHealth * 0.9 then
-							diagnoseString = diagnoseString.." They appear to have minor wounds.";
+							diagnoseString = diagnoseString.." Судя по всему, у него незначительные раны.";
 							
 							textColorScale = math.min(textColorScale + 0.05, 1);
 						end
@@ -356,15 +356,15 @@ local COMMAND = Clockwork.command:New("CharDiagnose");
 						
 						if #bleedingLimbs > 0 then
 							if #bleedingLimbs == 1 then
-								diagnoseString = diagnoseString.." They are bleeding from their "..bleedingLimbs[1]..".";
+								diagnoseString = diagnoseString.." У него кровотечение из "..bleedingLimbs[1]..".";
 							else
-								diagnoseString = diagnoseString.." They are bleeding from their ";
+								diagnoseString = diagnoseString.." У него кровотечение из ";
 								
 								for i = 1, #bleedingLimbs do
 									if i == 1 then
 										diagnoseString = diagnoseString..bleedingLimbs[i];
 									elseif i == #bleedingLimbs then
-										diagnoseString = diagnoseString..", and "..bleedingLimbs[i];
+										diagnoseString = diagnoseString..", и "..bleedingLimbs[i];
 									else
 										diagnoseString = diagnoseString..", "..bleedingLimbs[i];
 									end
@@ -383,7 +383,7 @@ local COMMAND = Clockwork.command:New("CharDiagnose");
 								local injury = cwMedicalSystem.cwInjuryTable[k2];
 							
 								if injury and injury.symptom then
-									diagnoseString = diagnoseString.." Their "..cwMedicalSystem.cwHitGroupToString[k]..injury.symptom;
+									diagnoseString = diagnoseString.." Его "..cwMedicalSystem.cwHitGroupToString[k]..injury.symptom;
 									
 									textColorScale = math.min(textColorScale + 0.1, 1);
 								end
@@ -392,7 +392,7 @@ local COMMAND = Clockwork.command:New("CharDiagnose");
 					end
 					
 					if bloodLevel < cwMedicalSystem.maxBloodLevel - 1250 then
-						diagnoseString = diagnoseString.." They look very pale from blood loss.";
+						diagnoseString = diagnoseString.." Он выглядит очень бледными, скорее всего потерял много крови.";
 						
 						textColorScale = math.min(textColorScale + 0.2, 1);
 					end
@@ -405,33 +405,33 @@ local COMMAND = Clockwork.command:New("CharDiagnose");
 						
 						if symptom == "Paleness" then
 							if symptomText then
-								symptomText = symptomText.." They look very pale and sickly.";
+								symptomText = symptomText.." Он выглядит очень бледным и болезненным.";
 							else
-								symptomText = " They look very pale and sickly.";
+								symptomText = " Он выглядит очень бледным и болезненным..";
 							end
 						elseif symptom == "Pustules" then
 							if symptomText then
-								symptomText = symptomText.." They are covered in pustules and buboes, a textbook symptom of the Begotten Plague.";
+								symptomText = symptomText.." Он покрыт бубонами — это симтом Чумы Порожденных.";
 							else
-								symptomText = " They are covered in pustules and buboes, a textbook symptom of the Begotten Plague.";
+								symptomText = " Он покрыт бубонами — это симтом Чумы Порожденных.";
 							end
 						elseif symptom == "Deformities" then
 							if symptomText then
-								symptomText = symptomText.." Their skin is deformed and discolored, and their eyes bulging.";
+								symptomText = symptomText.." Его кожа деформирована и обесцвечена, а глаза выпячены.";
 							else
-								symptomText = " Their skin is deformed and discolored, and their eyes bulging.";
+								symptomText = " Его кожа деформирована и обесцвечена, а глаза выпячены.";
 							end
 						elseif symptom == "Coughing" then
 							if symptomText then
-								symptomText = symptomText.." They are coughing a great deal.";
+								symptomText = symptomText.." Он сильно кашляет.";
 							else
-								symptomText = " They are coughing a great deal.";
+								symptomText = " Он сильно кашляет..";
 							end
 						elseif symptom == "Nausea" then
 							if symptomText then
-								symptomText = symptomText.." They look mildly disoriented as if afflicted by nausea.";
+								symptomText = symptomText.." Выглядят слегка дезориентированными, как будто его тошнит.";
 							else
-								symptomText = " They look mildly disoriented as if afflicted by nausea.";
+								symptomText = " Выглядят слегка дезориентированными, как будто его тошнит.";
 							end
 						end
 						
@@ -442,19 +442,19 @@ local COMMAND = Clockwork.command:New("CharDiagnose");
 						diagnoseString = diagnoseString..symptomText;
 					end
 					
-					if diagnoseString == "You take a good look at "..target:Name().."." then
+					if diagnoseString == "Вы внимательно осматриваете "..target:Name().."." then
 						diagnoseString = diagnoseString.." They look perfectly healthy.";
 					end
 					
 					Schema:EasyText(player, Color(255 * textColorScale, 255 * (1 - textColorScale), 0), diagnoseString);
 				else
-					Schema:EasyText(player, "indianred", diagnoseString.." They would appear to be deceased, there is nothing more you can do for them.");
+					Schema:EasyText(player, "indianred", diagnoseString.." Судя по всему, он уже умер, и вы больше ничего не можете сделать.");
 				end
 			else
-				Schema:EasyText(player, "firebrick", "This character is too far away!");
+				Schema:EasyText(player, "firebrick", "Он слишком далеко!");
 			end;
 		else
-			Schema:EasyText(player, "firebrick", "You must look at a character!");
+			Schema:EasyText(player, "firebrick", "Вы должны смотреть на персонажа!");
 		end;
 	end;
 COMMAND:Register();
@@ -635,7 +635,7 @@ function COMMAND:OnRun(player, arguments)
 		local headPos, boneAng = target:GetBonePosition(boneIndex);
 		
 		if !arguments[2] then
-			local strings = {"suddenly throws up on the ground, hurling vomit everywhere!", "vomits onto the ground!", "gags and then vomits all over the ground!"};
+			local strings = {"внезапно заблевывается, заставляя содержимое своего желудка лететь во все стороны!", "блюет на землю!", "давится, а затем его рвет на землю!"};
 			
 			if cwCharacterNeeds and target.HandleNeed then
 				target:HandleNeed("hunger", 5);
@@ -654,7 +654,7 @@ function COMMAND:OnRun(player, arguments)
 					target:Freeze(false);
 					
 					if target:Alive() then
-						local curse_strings = {"Fuck...", "Cocksucker...", "Shit...", "Fuck's sake...", "Gah..."};
+						local curse_strings = {"Блядь...", "Вот пиздец...", "Дерьмо...", "Ублюдство...", "Угх..."};
 						
 						Clockwork.chatBox:Add(target, nil, "itnofake", curse_strings[math.random(1, #curse_strings)]);
 					end
@@ -671,7 +671,7 @@ function COMMAND:OnRun(player, arguments)
 			
 			Clockwork.chatBox:AddInTargetRadius(target, "me", strings[math.random(1, #strings)], target:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 		else
-			local strings = {"suddenly throws blood up on the ground!", "vomits blood onto the ground!", "gags and then vomits blood all over the ground!"};
+			local strings = {"внезапно изрыгает из себя мощный кровавый фонтан, забрызгивая окружающих! ", "не сдерживается и выпускает из своего рта кровавую струю, оставляя след на полу! Ну и пиздец!", "начинает давиться, а после раскрывает рот и блюет кровью!"};
 			
 			if cwCharacterNeeds and target.HandleNeed then
 				target:HandleNeed("hunger", 5);
@@ -689,7 +689,7 @@ function COMMAND:OnRun(player, arguments)
 					target:Freeze(false);
 					
 					if target:Alive() then
-						local curse_strings = {"Fuck...", "Cocksucker...", "Shit...", "Fuck's sake...", "Gah..."};
+						local curse_strings = {"Блядь...", "Отвратительно...", "Дерьмо...", "Черт возьми...", "Вот блядь..."};
 						
 						Clockwork.chatBox:Add(target, nil, "itnofake", curse_strings[math.random(1, #curse_strings)]);
 					end
@@ -710,7 +710,7 @@ function COMMAND:OnRun(player, arguments)
 		if (player != target) then
 			Schema:EasyText(GetAdmins(), "olive", "["..self.name.."] "..player:Name().." has made "..target:Name().." vomit.");
 		else
-			Schema:EasyText(player, "olive", "["..self.name.."] You have made yourself vomit.");
+			Schema:EasyText(player, "olive", "["..self.name.."] Вы вызвали у себя рвоту.");
 		end;
 	else
 		Schema:EasyText(player, "grey", "["..self.name.."] "..arguments[1].." is not a valid player!");

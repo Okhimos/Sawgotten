@@ -5,8 +5,8 @@ function ENT:HUDPaintTargetID(x, y, alpha)
 	local colorTargetID = Clockwork.option:GetColor("target_id")
 	local colorWhite = Clockwork.option:GetColor("white")
 	
-	y = Clockwork.kernel:DrawInfo("Goreic Gathering Horn", x, y, colorTargetID, alpha)
-	y = Clockwork.kernel:DrawInfo("A Goreic warhorn handcrafted to produce a sound that will echo throughout the Forest when blown.", x, y, colorWhite, alpha);
+	y = Clockwork.kernel:DrawInfo("Рог Предков", x, y, colorTargetID, alpha)
+	y = Clockwork.kernel:DrawInfo("Горейский боевой рог, изготовленный задолго до Империи Света. Говорят, друиды зачаровали его так, чтобы звук был одинаково хорошо слышен в любой части Священного Леса.", x, y, colorWhite, alpha);
 end;
 
 local function CreateMenu(state)
@@ -21,8 +21,8 @@ local function CreateMenu(state)
 	menu:SetMinimumWidth(150);
 	
 	if state == "Gore" then
-		menu:AddOption("Summon All Goreic Warriors", function() Clockwork.kernel:RunCommand("GoreicHornSummonAll") end);
-        menu:AddOption("Summon Raiding Party", function() Clockwork.kernel:RunCommand("GoreicHornSummonRaid") end);
+		menu:AddOption("Призвать Всех", function() Clockwork.kernel:RunCommand("GoreicHornSummonAll") end);
+        menu:AddOption("Призвать Группу Рейда", function() Clockwork.kernel:RunCommand("GoreicHornSummonRaid") end);
 	end
 	
 	menu:Open();

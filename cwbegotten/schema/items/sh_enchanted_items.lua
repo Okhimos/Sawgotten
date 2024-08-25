@@ -1,21 +1,21 @@
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Abandoned Doll";
+	ITEM.name = "Брошенная Кукла";
 	ITEM.model = "models/props_c17/doll01.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "abandoned_doll";
-	ITEM.description = "An old child's toy from an age of prosperity long gone. It has seen considerable wear and tear, and yet even still can provide some comfort in these darker times.";
+	ITEM.description = "Брошенная кукла, которая несмотря на свой жуткий вид, обладает странной притягательностью.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Reduces sanity loss by 50%.";
+	ITEM.charmEffects = "- Снижает потерю рассудка на 50%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 600};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Bronze Ring of Protection";
+	ITEM.name = "Бронзовое Кольцо Защиты";
 	ITEM.model = "models/items/magic/ring_basic/ring_copper.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_protection_bronze";
-	ITEM.description = "A ring with a mysterious aura, apparently made of bronze. Putting it on your finger makes you feel safer.";
+	ITEM.description = "Кольцо с таинственной аурой, по-видимому, из бронзы. Надев его на палец, чувствуешь себя в большей безопасности.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
 	ITEM.charmEffects = "- Reduces all damage taken by 5%.";
 	ITEM.mutuallyExclusive = {"ring_protection_gold", "ring_protection_silver"};
@@ -24,74 +24,74 @@ local ITEM = Clockwork.item:New("enchanted_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Contortionist's Boot";
+	ITEM.name = "Странный Сапог";
 	ITEM.model = "models/props_junk/Shoe001a.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "boot_contortionist";
-	ITEM.description = "A leather boot that surprisingly has not yet been eaten. Judging by its inscription, it evidently used to belong to an ancient gymnast.";
+	ITEM.description = "Сапог, внутри которого находится такой же, только для другой ноги. Как долго бы вы его не носили, он не сотрется, но несмотря на это может быть порезан или разорван. По всей видимости он защищает ваши ноги.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Grants immunity to breaking your legs.\n- Reduces fall damage taken by 50%.\n- Reduces stamina consumption from combat rolling by 50%.\n- Reduces stamina consumption from jumping by 66.6%.";
+	ITEM.charmEffects = "- Дает иммунитет к переломам ног.\n- Снижает урон от падения на 50%.\n- Снижает расход выносливости при перекатах в бою на 50%.\n- Снижает расход выносливости при прыжках на 66,6%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 750};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Courier's Ring";
+	ITEM.name = "Кольцо Неумолимого";
 	ITEM.model = "models/items/magic/ring_basic/ring_silver.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_courier";
-	ITEM.description = "A silver ring that once belonged to a courier that ran between the county districts. Putting it on your finger makes you feel as though you have more stamina.";
+	ITEM.description = "Серебряное кольцо с которым ваша походка становится увереннее, а шаги — легче, а каждый пройденный километр больше не кажется таким утомительным.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ring_protection_silver.png";
-	ITEM.charmEffects = "- Reduces stamina drain when sprinting by 25%.";
+	ITEM.charmEffects = "- Снижает расход выносливости при беге на 25%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 700, supercrateOnly = true};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Crucifix";
+	ITEM.name = "Деревянное Распятие";
 	ITEM.model = "models/begotten/misc/crucifix.mdl";
 	ITEM.weight = 0.25;
 	ITEM.uniqueID = "crucifix";
-	ITEM.description = "A wooden cross with a carved figure of a bearded prophet. Although a relic of a bygone era, you feel as though it still provides some protection from evil.";
+	ITEM.description = "Деревянный крест с резной фигурой бородатого пророка. Хотя это и реликвия ушедшей эпохи, вы чувствуете, что он все еще обеспечивает некоторую защиту от зла.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Reduces any corruption taken by 25%.";
+	ITEM.charmEffects = "- Уменьшает количество получаемой порчи на 25%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 350, supercrateOnly = true};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Distorted Ring";
+	ITEM.name = "Кольцо Везунчика";
 	ITEM.model = "models/items/magic/ring_secondchance/ring_secondchance.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_distorted";
-	ITEM.description = "A ring with a mysterious aura. Putting it on your finger makes you feel luckier.";
+	ITEM.description = "Кольцо с таинственной аурой. Надев его на палец, чувствуешь, что более удачливым.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Has a 5% chance of completely avoiding damage when taking damage from any source, stackable with the 'Lucky' belief.\n- Will prevent your death when taking lethal damage from another player but will shatter beyond repair and become useless when this occurs.";
+	ITEM.charmEffects = "- Имеет 5% шанс полностью избежать урона при получении урона из любого источника, суммируется с убеждением «Удача».\n- Предотвратит вашу смерть при получении смертельного урона от другого игрока, но при этом разрушится и станет бесполезным.";
 
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 1500, onGround = false};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Earthing Effigy";
+	ITEM.name = "Священная Ветвь";
 	ITEM.model = "models/begotten/misc/effigy2.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "effigy_earthing";
-	ITEM.description = "A rare twig from the Great Tree. It makes you feel grounded and resolute; a reminder of the natural order.";
+	ITEM.description = "Редкая веточка Великого Дерева. Она заставляет вас чувствовать себя более стойким и решительным, напоминая о естественном порядке.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Reduces sanity loss by 25%.\n- Reduces stability loss by 25%.";
+	ITEM.charmEffects = "- Снижает потерю рассудка на 25%.\n- Снижает потерю стабильности на 25%.";
 	
 	ITEM.requireFaith = {"Faith of the Family"};
 	ITEM.kinisgerOverride = true;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Embalmed Heart";
+	ITEM.name = "Забальзамированное Сердце";
 	ITEM.model = "models/items/special/l08_momified_heart.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "embalmed_heart";
-	ITEM.description = "A mummified heart, embalmed with special care by some ancient civilization.";
+	ITEM.description = "Мумифицированное сердце, забальзамированное с особой тщательностью какой-то древней цивилизацией.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Reduces blood loss when bleeding by 50%.\n- Triples the rate of blood regeneration.";
+	ITEM.charmEffects = "- Снижает потерю крови при кровотечении на 50%.\n- Увеличивает скорость регенерации крови в три раза.";
 	
 	--ITEM.requireFaith = {"Faith of the Dark"};
 	--ITEM.kinisgerOverride = true;
@@ -99,13 +99,13 @@ local ITEM = Clockwork.item:New("enchanted_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Evil Eye";
+	ITEM.name = "Дурной Глаз";
 	ITEM.model = "models/mosi/fnv/props/gore/gorehead03.mdl";
 	ITEM.weight = 0.1;
 	ITEM.uniqueID = "evil_eye";
-	ITEM.description = "The detached eyeball of a Begotten thrall. Evil energy radiates from its iris.";
+	ITEM.description = "Глаз, который когда-то принадлежал обычному человеку, который перед смертью явно молил о пощаде. Находясь рядом с этим предметом, вы понимаете, почему должны очистить землю от порожденных.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases damage against Begotten thralls by 50%.\n- Passively increases corruption.";
+	ITEM.charmEffects = "- Увеличивает урон против рабов Порожденных на 50%.\n- Пассивно дает порчу.";
 	
 	--ITEM.requireFaith = {"Faith of the Dark"};
 	--ITEM.kinisgerOverride = true;
@@ -113,150 +113,150 @@ local ITEM = Clockwork.item:New("enchanted_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Human Effigy";
+	ITEM.name = "Чучело Человека";
 	ITEM.model = "models/begotten/misc/effigy1.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "effigy_human";
-	ITEM.description = "A bound collection of sticks in the shape of a human. There is a mysterious aura about it, and carrying it on your person makes you feel safer.";
+	ITEM.description = "Связанная коллекция палочек в форме человека. В ней есть таинственная аура, и ношение ее на себе заставляет вас чувствовать себя в большей безопасности. Ходят слухи, что один из Горейских Воинов сделал что-то ужасное ради этого предмета...";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Reduces all limb damage by 50%.";
+	ITEM.charmEffects = "- Уменьшает все повреждения конечностей на 50%.";
 	
 	ITEM.requireFaith = {"Faith of the Family"};
 	ITEM.kinisgerOverride = true;
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Hurler's Talisman";
+	ITEM.name = "Амулет из Стрелы";
 	ITEM.model = "models/demonssouls/weapons/talisman of beasts.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "hurlers_talisman";
-	ITEM.description = "A pointed bronze charm at the end of a chain, reminiscent of the slings of yore.";
+	ITEM.description = "Наконечник дротика с запекшейся кровью. Смотря на него вы понимаете, как правильно использовать метательное оружие.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases throwable weapon projectile speed and range by 35%.";
+	ITEM.charmEffects = "- Увеличивает скорость и дальность полета метательного оружия на 35%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 1000, onGround = false}
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Lesser Ring of Vitality";
+	ITEM.name = "Малое кольцо жизненной силы";
 	ITEM.model = "models/items/magic/ring_regeneration/ring_regeneration_lesser.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_vitality_lesser";
-	ITEM.description = "A ring with a mysterious aura. Putting it on your finger makes you feel healthier.";
+	ITEM.description = "Кольцо, которое содержит в себе жидкость красного цвета. Надев его на палец ты чувствуешь себя лучше.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases maximum health by 15 points.";
+	ITEM.charmEffects = "- Увеличивает максимальный запас здоровья на 15 единиц.";
 	ITEM.mutuallyExclusive = {"ring_vitality"};
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 700, onGround = false};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Pummeler's Ring";
+	ITEM.name = "Кольцо Ненависти";
 	ITEM.model = "models/items/magic/ring_dexterity/ring_dexterity.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_pummeler";
-	ITEM.description = "A ring with a mysterious aura. Putting it on your finger makes your strikes feel weightier.";
+	ITEM.description = "Кольцо с изображением демонического лица. Надев его на палец  ты начинаешь сильнее ненавидеть своих врагов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases stamina damage of all melee weapons by 15%.";
+	ITEM.charmEffects = "- Увеличивает урон от выносливости всех видов оружия ближнего боя на 15%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 1000, onGround = false};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Pugilist's Ring";
+	ITEM.name = "Перстень Дебошира";
 	ITEM.model = "models/items/magic/ring_strength/ring_strength.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_pugilist";
-	ITEM.description = "A ring with a mysterious aura. Putting it on your finger makes you feel significantly stronger.";
+	ITEM.description = "Кольцо с мистической аурой. Надев его на палец ты понимаешь, как правильно драться в рукопашном бою.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases the damage and stamina damage of your fists to four times its original values and gives them 100% armor-piercing damage. Also allows you to parry with your fists.";
+	ITEM.charmEffects = "- Увеличивает урон и урон выносливости ваших кулаков в четыре раза от их первоначальных значений и дает им 100% бронебойного урона. Также позволяет вам парировать кулаками.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 725, onGround = false};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Gold Ring of Protection";
+	ITEM.name = "Золотое Кольцо Защиты";
 	ITEM.model = "models/items/magic/ring_basic/ring_gold.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_protection_gold";
-	ITEM.description = "A ring with a mysterious aura, apparently made of gold. Putting it on your finger makes you feel safer.";
+	ITEM.description = "Кольцо с таинственной аурой, по-видимому, сделанное из золота. Надев его на палец, чувствуешь себя в большей безопасности.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Reduces all damage taken by 15%.\n- Supersedes the bronze and silver versions of this ring.";
+	ITEM.charmEffects = "- Уменьшает весь получаемый урон на 15%.\n- Заменяет бронзовую и серебряную версии этого кольца.";
 	ITEM.mutuallyExclusive = {"ring_protection_bronze", "ring_protection_silver"};
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 800, supercrateOnly = true};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Ring of Fire";
+	ITEM.name = "Пламенное Кольцо";
 	ITEM.model = "models/items/magic/ring_protectfire/ring_protectfire.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_fire";
-	ITEM.description = "A warm ring with a mysterious aura.";
+	ITEM.description = "Теплое кольцо с таинственной аурой.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Has a 5% chance to set enemies on fire when hit with a melee weapon.\n- Stacks with fire sacrifical weapons for additional ignition time.";
+	ITEM.charmEffects = "- Имеет 5% шанс поджечь врагов при попадании в них холодным оружием.\n- Складывается с огненным жертвенным оружием для дополнительного времени воспламенения.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 700, supercrateOnly = true};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Ring of Penetration";
+	ITEM.name = "Кольцо Пробития";
 	ITEM.model = "models/items/magic/ring_dexterity/ring_dexterity.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_penetration";
-	ITEM.description = "A sharp ring, it digs into your flesh as you put it onto your finger.";
+	ITEM.description = "Острое кольцо, которое впивается в кожу, когда вы надеваете его на палец.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/ring_pummeler.png";
-	ITEM.charmEffects = "- Increases armor-piercing damage by 10 points.";
+	ITEM.charmEffects = "- Увеличивает пробитие брони на 10 единиц.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 700, supercrateOnly = true};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Ring of Vitality";
+	ITEM.name = "Кольцо Жизненной Силы";
 	ITEM.model = "models/items/magic/ring_regeneration/ring_regeneration.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_vitality";
-	ITEM.description = "A ring with a mysterious aura. Putting it on your finger makes you feel healthier.";
+	ITEM.description = "Кольцо с таинственной аурой. Надев его на палец, чувствуешь себя лучше.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases maximum health by 25 points. Supersedes the lesser version of this ring.";
+	ITEM.charmEffects = "- Увеличивает максимальное здоровье на 25 единиц. Заменяет меньшую версию этого кольца.";
 	ITEM.mutuallyExclusive = {"ring_vitality_lesser"};
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 700, supercrateOnly = true};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Satchel of Denial";
+	ITEM.name = "Чемодан Отрицания";
 	ITEM.model = "models/props_c17/briefcase001a.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "satchel_denial";
-	ITEM.description = "A locked briefcase that appears to be in mint condition. It is warm to the touch.";
+	ITEM.description = "Запертый портфель, который, кажется, в идеальном состоянии. Он теплый на ощупь.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Upon death your body will evaporate, taking all of your loot with it save for any weapons you have equipped.";
+	ITEM.charmEffects = "- После смерти ваше тело испарится, забрав с собой всю вашу добычу, за исключением оружия, которое вы экипировали.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 800};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Silver Ring of Protection";
+	ITEM.name = "Серебряное Кольцо Защиты";
 	ITEM.model = "models/items/magic/ring_basic/ring_silver.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "ring_protection_silver";
-	ITEM.description = "A ring with a mysterious aura, apparently made of silver. Putting it on your finger makes you feel safer.";
+	ITEM.description = "Кольцо с таинственной аурой, по-видимому, из серебра. Надев его на палец, чувствуешь себя в большей безопасности.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Reduces all damage taken by 10%.\n- Supersedes the bronze version of this ring.";
+	ITEM.charmEffects = "- Уменьшает весь получаемый урон на 10%.\n- Заменяет бронзовую версию этого кольца.";
 	ITEM.mutuallyExclusive = {"ring_protection_bronze", "ring_protection_gold"};
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 1000, onGround = false}
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Skull of an Animal";
+	ITEM.name = "Череп Животного";
 	ITEM.model = "models/begotten/misc/animalskull.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "skull_animal";
-	ITEM.description = "The skull of a stag, likely kept by a Gore as a trophy or as a good luck charm.";
+	ITEM.description = "Череп оленя, вероятно, хранимый Гором в качестве трофея или талисмана, приносящего удачу.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases all faith gain by 25% if you are of the Faith of the Family.";
+	ITEM.charmEffects = "- Увеличивает прирост веры на 25%, если вы исповедуете Веру Семьи.";
 	ITEM.requireFaith = {"Faith of the Family"};
 	ITEM.kinisgerOverride = true;
 	
@@ -264,13 +264,13 @@ local ITEM = Clockwork.item:New("enchanted_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Skull of a Demon";
+	ITEM.name = "Ужасный Череп";
 	ITEM.model = "models/items/jewels/cr_shadowskull.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "skull_demon";
-	ITEM.description = "The skull of a slain demon, its evil still abounds.";
+	ITEM.description = "Череп животного, в который была заключена людская душа. Ужасающий артефакт, которым захотят пользоваться только еретики с дурными мыслями.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases all faith gain by 25% if you are of the Faith of the Dark.";
+	ITEM.charmEffects = "- Увеличивает прирост веры на 25%, если вы исповедуете Веру Тьмы.";
 	ITEM.requireFaith = {"Faith of the Dark"};
 	ITEM.kinisgerOverride = true;
 	
@@ -278,13 +278,13 @@ local ITEM = Clockwork.item:New("enchanted_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Skull of a Saint";
+	ITEM.name = "Череп Святого";
 	ITEM.model = "models/begotten/misc/skull.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "skull_saint";
-	ITEM.description = "A ritually engraved skull belonging to one of many ancient saints of the Holy Hierarchy. A good omen for those of the Faith of the Light indeed.";
+	ITEM.description = "Ритуально выгравированный череп, принадлежащий одному из многих древних святых Святой Иерархии. Действительно, хорошее предзнаменование для тех, кто имеет Веру Света.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases all faith gain by 25% if you are of the Faith of the Light.";
+	ITEM.charmEffects = "- Увеличивает прирост веры на 25%, если вы исповедуете Веру Света.";
 	ITEM.requireFaith = {"Faith of the Light"};
 	ITEM.kinisgerOverride = true;
 	
@@ -292,49 +292,49 @@ local ITEM = Clockwork.item:New("enchanted_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Smoldering Head";
+	ITEM.name = "Тлеющая Голова";
 	ITEM.model = "models/gibs/gibhead.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "smoldering_head";
-	ITEM.description = "The burned head of a person accused of witchcraft. You can feel it still smoldering in your hands.";
+	ITEM.description = "Сожженная голова человека, обвиненного в колдовстве. Вы можете почувствовать, как она все еще тлеет в ваших руках.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Increases burn damage resistance by 50%.";
+	ITEM.charmEffects = "- Увеличивает сопротивление ожогам на 50%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 900, onGround = false}
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Spine of a Soldier";
+	ITEM.name = "Позвоночник Солдата";
 	ITEM.model = "models/Gibs/HGIBS_spine.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "spine_soldier";
-	ITEM.description = "A fragment of bone from an old soldier with a mysterious aura of strength.";
+	ITEM.description = "Фрагмент кости старого солдата с таинственной аурой силы.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/spine.png";
-	ITEM.charmEffects = "- Increases your inventory capacity by 25%.";
+	ITEM.charmEffects = "- Увеличивает емкость вашего инвентаря на 25%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 900, onGround = false}
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Warding Talisman";
+	ITEM.name = "Священный Оберег";
 	ITEM.model = "models/demonssouls/weapons/talisman of god.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "warding_talisman";
-	ITEM.description = "A talisman inscribed with holy runes, casting a powerful aura that wards off evil spirits.";
+	ITEM.description = "Талисман, покрытый священными рунами, создающий мощную ауру, отпугивающую злых духов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Reduces corruption gain and sanity loss by 50%.";
+	ITEM.charmEffects = "- Снижает рост и потерю здравомыслия на 50%.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 350, supercrateOnly = true}
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Thermal Implant";
+	ITEM.name = "Имплант Тепловизора";
 	ITEM.model = "models/gibs/shield_scanner_gib1.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "thermal_implant";
-	ITEM.description = "An elegant piece of technology crudely inserted into the occipital lobe, granting technologically enhanced sight.";
+	ITEM.description = "Изящное технологическое устройство, грубо вставленное в затылочную долю и обеспечивающее технологически улучшенное зрение.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/thermal_implant.png";
-	ITEM.charmEffects = "- Allows the use of thermal and night vision via your Senses.";
+	ITEM.charmEffects = "- Позволяет использовать тепловизионное и ночное зрение с помощью ваших чувств.";
 	ITEM.requiredSubfaiths = {"Voltism"};
 	ITEM.permanent = true;
 	
@@ -366,35 +366,35 @@ local ITEM = Clockwork.item:New("enchanted_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Thief's Hand";
+	ITEM.name = "Рука Вора";
 	ITEM.model = "models/gibs/pgib_p1.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "thiefs_hand";
-	ITEM.description = "The severed hand of a thief, cut to punish their stealing.";
+	ITEM.description = "Человеческая рука, отрезанная в наказание за воровство.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Slightly increases the chance of finding loot in containers.";
+	ITEM.charmEffects = "- Немного увеличивает вероятность нахождения добычи в контейнерах.";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 900, onGround = false}
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Urn of Silence";
+	ITEM.name = "Урна Тишины";
 	ITEM.model = "models/props_c17/lamp001a.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "urn_silence";
-	ITEM.description = "An urn carrying the ashes of a once-great assassin.";
+	ITEM.description = "Урна с прахом некогда великого убийцы.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
-	ITEM.charmEffects = "- Silences all footsteps, some inventory sounds, and the sound of looting containers (but not lockpicking).";
+	ITEM.charmEffects = "- Заглушает все шаги, некоторые звуки инвентаря и звуки разграбления контейнеров (но не взлома замков).";
 	
 	ITEM.itemSpawnerInfo = {category = "Charms", rarity = 1250, supercrateOnly = true};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Wrench";
+	ITEM.name = "Гаечный Ключ";
 	ITEM.model = "models/props_c17/tools_wrench01a.mdl";
 	ITEM.weight = 0.5;
 	ITEM.uniqueID = "wrench";
-	ITEM.description = "A simple wrench, it can probably be used for something.";
+	ITEM.description = "Простой гаечный ключ, его, вероятно, можно для чего-то использовать.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/"..ITEM.uniqueID..".png";
 	ITEM.charmEffects = "- Turn valves at the scrap factory 80% faster.";
 	
@@ -402,12 +402,12 @@ local ITEM = Clockwork.item:New("enchanted_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("enchanted_base");
-	ITEM.name = "Holy Sigils";
+	ITEM.name = "Святая Печать";
 	ITEM.model = "models/begotten/misc/holysigils.mdl";
 	ITEM.weight = 0.2;
 	ITEM.uniqueID = "holy_sigils";
-	ITEM.description = "A decorated iron buckle with two scraps of scroll cloth torn from the Holy Book of Law, sealed and stamped by the Holy Hierarchy. Wearing these sigils of holy judgement grants supreme authority and righteous conviction to the Inquisitor who deserves it.";
-	ITEM.charmEffects = "- Requires Inquisitor Armor to be worn.\n- Increases faith gain by 15%.\n- Decreases sanity loss by 50%.\n- Decreases corruption gain by 50%.\n- Increases damage against all non-Hard-Glazed characters by 15%.\n- Moderately increases parry and deflection windows for all melee weapons.";
+	ITEM.description = "Украшенная железная пряжка с двумя лоскутками свитка, вырванными из Священной Книги Закона, запечатанными и проштампованными Святой Иерархией. Ношение этих сигилов святого суда дарует высшую власть и праведное осуждение Инквизитору, который этого заслуживает.";
+	ITEM.charmEffects = "- Требует ношения брони инквизитора.\n- Увеличивает прирост веры на 15%.\n- Уменьшает потерю рассудка на 50%.\n- Уменьшает прирост порчи на 50%.\n- Увеличивает урон по всем персонажам, не находящимся в Hard-Glazed, на 15%.\n- Умеренно увеличивает окна парирования и отклонения для всего оружия ближнего боя.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/holy_sigils.png";
 	ITEM.kinisgerOverride = true;
 	ITEM.requiredSubfaiths = {"Hard-Glazed"};
@@ -416,7 +416,7 @@ local ITEM = Clockwork.item:New("enchanted_base");
 	function ITEM:OnUse(player, itemEntity)
 		if (self:HasPlayerEquipped(player)) then
 			if !player.spawning then
-				Schema:EasyText(player, "peru", "You already have a charm of this type equipped!")
+				Schema:EasyText(player, "peru", "У вас уже есть такой амулет!")
 			end
 			
 			return false
@@ -424,7 +424,7 @@ local ITEM = Clockwork.item:New("enchanted_base");
 		
 		if self.requiredSubfaiths and not (table.HasValue(self.requiredSubfaiths, player:GetSubfaith())) then
 			if !player.spawning then
-				Schema:EasyText(player, "chocolate", "You are not of the correct subfaith to wear this!")
+				Schema:EasyText(player, "chocolate", "Вы не той веры, чтобы носить это!")
 			end
 			
 			return false
@@ -434,7 +434,7 @@ local ITEM = Clockwork.item:New("enchanted_base");
 			local clothesItem = player:GetClothesEquipped();
 			
 			if !clothesItem or !clothesItem.bodygroupCharms or !clothesItem.bodygroupCharms[self.uniqueID] then
-				Schema:EasyText(player, "peru", "This charm cannot be worn without inquisitor armor!")
+				Schema:EasyText(player, "peru", "Этот амулет нельзя носить без одежды инквизитора!")
 				
 				return false;
 			end
@@ -448,13 +448,13 @@ local ITEM = Clockwork.item:New("enchanted_base");
 			end
 	
 			if !player.spawning then
-				Schema:EasyText(player, "peru", "You do not have an open slot to equip this charm in!")
+				Schema:EasyText(player, "peru", "У вас нет свободного слота для переноса этого амулета!")
 			end
 			
 			return false;
 		else
 			if !player.spawning then
-				Schema:EasyText(player, "peru", "You cannot do this action at this moment.")
+				Schema:EasyText(player, "peru", "В данный момент вы не можете выполнить это действие!")
 			end
 		end
 

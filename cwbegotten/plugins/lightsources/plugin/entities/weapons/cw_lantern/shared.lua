@@ -11,7 +11,7 @@ end;
 
 SWEP.base = "weapon_base";
 
-SWEP.PrintName = "Lantern";
+SWEP.PrintName = "Лампа";
 SWEP.Author = "Buu342/cash wednesday";
 SWEP.Purpose = "Illuminating dark areas.";
 SWEP.Instructions = "";

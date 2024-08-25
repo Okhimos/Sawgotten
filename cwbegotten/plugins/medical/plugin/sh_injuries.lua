@@ -37,15 +37,15 @@ end;
 
 local INJURY = {};
 	INJURY.uniqueID = "broken_bone";
-	INJURY.name = "Broken Bone";
-	INJURY.description = "This limb has a broken bone!";
+	INJURY.name = "Сломанная Кость";
+	INJURY.description = "У этой конечности сломана кость!";
 	INJURY.symptom = " appears to be broken.";
 cwMedicalSystem:RegisterInjury(INJURY.uniqueID, INJURY);
 
 local INJURY = {};
 	INJURY.uniqueID = "burn";
-	INJURY.name = "Burn";
-	INJURY.description = "You have a sustained a severe burn on this limb!";
+	INJURY.name = "Ожог";
+	INJURY.description = "У вас сильный ожог этой конечности!";
 	INJURY.symptom = " is severely burnt.";
 	INJURY.OnReceive = function(injuryTable, player)
 		local maxHealth = player:GetMaxHealth();
@@ -60,16 +60,16 @@ cwMedicalSystem:RegisterInjury(INJURY.uniqueID, INJURY);
 
 local INJURY = {};
 	INJURY.uniqueID = "gash";
-	INJURY.name = "Gash";
-	INJURY.description = "You have a severe gash in this limb! It cannot be treated with normal bandages.";
+	INJURY.name = "Рваная Рана";
+	INJURY.description = "У вас серьезная рана на этой конечности! Ее нельзя вылечить обычными повязками.";
 	INJURY.symptom = " is torn open and bleeding severely.";
 	INJURY.causesBleeding = true;
 cwMedicalSystem:RegisterInjury(INJURY.uniqueID, INJURY);
 
 local INJURY = {};
 	INJURY.uniqueID = "gunshot_wound";
-	INJURY.name = "Gunshot Wound";
-	INJURY.description = "You have a bullet lodged inside this limb!";
+	INJURY.name = "Огнестрельное Ранение";
+	INJURY.description = "У тебя в конечности застряла пуля!";
 	INJURY.symptom = " has a bullet hole in it with blood gushing out!";
 	INJURY.causesBleeding = true;
 	INJURY.surgeryInfo = {
@@ -81,14 +81,14 @@ cwMedicalSystem:RegisterInjury(INJURY.uniqueID, INJURY);
 
 local INJURY = {};
 	INJURY.uniqueID = "infection";
-	INJURY.name = "Infection";
-	INJURY.description = "You have an infection on this limb!";
+	INJURY.name = "Инфекция";
+	INJURY.description = "У вас инфекция в этой конечности!";
 	INJURY.symptom = " has an festering infection at the site of a previous wound.";
 cwMedicalSystem:RegisterInjury(INJURY.uniqueID, INJURY);
 
 local INJURY = {};
 	INJURY.uniqueID = "minor_infection";
-	INJURY.name = "Minor Infection";
-	INJURY.description = "You have a minor infection on this limb!";
+	INJURY.name = "Незначительная Инфекция";
+	INJURY.description = "У вас незначительная инфекция на этой конечности!";
 	INJURY.symptom = " has a small infection at the site of a previous wound.";
 cwMedicalSystem:RegisterInjury(INJURY.uniqueID, INJURY);

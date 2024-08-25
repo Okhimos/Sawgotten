@@ -297,9 +297,9 @@ function Clockwork.character:RefreshPanelList()
 		end);
 		
 		panel.label = vgui.Create("DLabel", panel);
-		panel.label:SetText("SELECT YOUR VESSEL...");
+		panel.label:SetText("ВЫБЕРИ СВОЙ СОСУД");
 		panel.label:SetTextColor(Color(255, 255, 255));
-		panel.label:SetFont("nov_IntroTextSmallaaafaa");
+		panel.label:SetFont("cwTooltip");
 		panel.label:SizeToContents();
 		panel.label:CenterHorizontal();
 		panel.panelList:AddItem(panel.label);
@@ -350,7 +350,7 @@ function Clockwork.character:RefreshPanelList()
 		
 		panel.cancelButton = vgui.Create("cwLabelButton", panel);
 		panel.cancelButton:SetFont(smallTextFont);
-		panel.cancelButton:SetText("RETURN");
+		panel.cancelButton:SetText("НАЗАД");
 		panel.cancelButton:SetCallback(function(panel)
 			Clockwork.character:GetPanel():ReturnToMainMenu();
 		end);
@@ -361,7 +361,7 @@ function Clockwork.character:RefreshPanelList()
 		
 		function panel.cancelButton:Paint(w, h)
 			if (self:GetHovered()) then
-				local texts = {"RETURN", "rEtUrN", "ReTuRn"};
+				local texts = {"НАЗАД", "НаЗаД", "нАзАд"};
 				
 				for i = 1, math.random(2, 4) do
 					surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))
@@ -371,7 +371,7 @@ function Clockwork.character:RefreshPanelList()
 		
 		panel.necropolisButton = vgui.Create("cwLabelButton", panel);
 		panel.necropolisButton:SetFont(smallTextFont);
-		panel.necropolisButton:SetText("NECROPOLIS");
+		panel.necropolisButton:SetText("НЕКРОПОЛЬ");
 		panel.necropolisButton:SetCallback(function(panel)
 			self:GetPanel():OpenPanel("cwNecropolis", nil);
 		end);
@@ -382,7 +382,7 @@ function Clockwork.character:RefreshPanelList()
 		
 		function panel.necropolisButton:Paint(w, h)
 			if (self:GetHovered()) then
-				local texts = {"NECROPOLIS", "nEcRoPoLiS", "NeCrOpOlIs"};
+				local texts = {"НЕКРОПЛЬ", "НеКрОпЛь", "нЕкРоПлЬ"};
 				
 				for i = 1, math.random(2, 4) do
 					surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))
@@ -392,7 +392,7 @@ function Clockwork.character:RefreshPanelList()
 		
 		panel.enterHellButton = vgui.Create("cwLabelButton", panel);
 		panel.enterHellButton:SetFont(smallTextFont);
-		panel.enterHellButton:SetText("ENTER HELL");
+		panel.enterHellButton:SetText("ВОЙТИ В АД");
 		panel.enterHellButton:SetCallback(function(panel)
 			local valid_characters = {};
 			local name = Clockwork.Client:Name(true);
@@ -422,7 +422,7 @@ function Clockwork.character:RefreshPanelList()
 		
 		function panel.enterHellButton:Paint(w, h)
 			if (self:GetHovered()) then
-				local texts = {"ENTER HELL", "eNtEr HeLl", "EnTeR hElL"};
+				local texts = {"ВОЙТИ В АД", "ВоЙтИ в Ад", "вОйТи В аД"};
 				
 				for i = 1, math.random(2, 4) do
 					surface.DrawRotatedText(table.Random(texts), table.Random(fonts), math.random(-20, 20), math.random(-20, 20), math.random(-5, 5), Color(170, 0, 0))

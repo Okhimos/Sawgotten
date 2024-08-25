@@ -32,7 +32,7 @@ local COMMAND = Clockwork.command:New("CoinslotPurchase");
 
 			if (entity:GetClass() == "cw_coinslot") then
 				if player:GetFaction() == "Holy Hierarchy" then
-					Schema:EasyText(player, "peru", "The Holy Hierarchy cannot purchase property!");
+					Schema:EasyText(player, "peru", "Святая Иерархия не может купить Помещение!");
 					return false;
 				end
 				
@@ -52,7 +52,7 @@ local COMMAND = Clockwork.command:New("CoinslotPurchase");
 			end;
 		end;
 		
-		Schema:EasyText(player, "peru", "You must be looking at the Coinslot to purchase property!");
+		Schema:EasyText(player, "peru", "Вы наверняка заглянули в Кассу, чтобы купить недвижимость?");
 	end;
 COMMAND:Register();
 
@@ -86,7 +86,7 @@ local COMMAND = Clockwork.command:New("CoinslotSell");
 			end;
 		end;
 		
-		Schema:EasyText(player, "peru", "You must be looking at the Coinslot to sell property!");
+		Schema:EasyText(player, "peru", "Вы должны смотреть на кассу, чтобы продать недвижимость.");
 	end;
 COMMAND:Register();
 

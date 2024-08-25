@@ -88,11 +88,11 @@ function COMMAND:OnRun(player, arguments)
 		if (player != target) then
 			netstream.Start({player, target}, "ScarePlayer");
 		
-			Schema:EasyText(player, "cornflowerblue", "["..self.name.."] You have scared "..target:Name().."!");
+			Schema:EasyText(player, "cornflowerblue", "["..self.name.."] Вы испугали "..target:Name().."!");
 		else
 			netstream.Start(player, "ScarePlayer");
 			
-			Schema:EasyText(player, "cornflowerblue", "["..self.name.."] You have scared yourself!");
+			Schema:EasyText(player, "cornflowerblue", "["..self.name.."] Ты испугал сам себяf!");
 		end;
 	end;
 end;

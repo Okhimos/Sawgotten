@@ -491,10 +491,10 @@ function cwMedicalSystem:HealPlayer(player, target, itemTable, hitGroup)
 				player:TakeItem(itemTable, true);
 			end);
 		else
-			Schema:EasyText(player, "peru","This player is already healing!");
+			Schema:EasyText(player, "peru","Этот игрок уже излечивается!");
 		end;
 	else
-		Schema:EasyText(player, "peru", "You are already healing!");
+		Schema:EasyText(player, "peru", "Вы уже излечиваетесь!");
 	end;
 end;
 
@@ -505,7 +505,7 @@ function cwMedicalSystem:PerformSurgeryOnPlayer(player, target, itemTable, hitGr
 	end;
 	
 	if !player:HasBelief("surgeon") then
-		Schema:EasyText(player, "chocolate","You need the 'Surgeon' belief in order to perform surgery on a player.");
+		Schema:EasyText(player, "chocolate","Чтобы провести операцию игроку, вам понадобится убеждение «Хирург».");
 	
 		return;
 	end
@@ -517,7 +517,7 @@ function cwMedicalSystem:PerformSurgeryOnPlayer(player, target, itemTable, hitGr
 	if (actionPlayer != "heal" and actionPlayer != "healing" and actionPlayer != "performing_surgery") then
 		if (actionTarget != "heal" and actionTarget != "healing" and actionTarget != "performing_surgery") then
 			if !target:IsRagdolled() then
-				Schema:EasyText(player, "chocolate","To perform surgery on someone, they must be fallen over.");
+				Schema:EasyText(player, "chocolate","Чтобы провести кому-то операцию, он должен упасть.");
 			
 				return;
 			end
@@ -553,13 +553,13 @@ function cwMedicalSystem:PerformSurgeryOnPlayer(player, target, itemTable, hitGr
 			end
 			
 			if not injury_surgery_table then
-				Schema:EasyText(player, "peru","This limb does not have an injury that can be operated on!");
+				Schema:EasyText(player, "peru","У этой конечности нет травмы, которую можно было бы прооперировать!");
 
 				return;
 			end
 			
 			if target.limbUnderSurgery and target.limbUnderSurgery ~= hitGroup then
-				Schema:EasyText(player, "firebrick", "You must finish the surgery started on their "..self.cwHitGroupToString[target.limbUnderSurgery].." before starting a new operation!");
+				Schema:EasyText(player, "firebrick", "Вы должны закончить операцию, начатую на его "..self.cwHitGroupToString[target.limbUnderSurgery].." прежде чем начать новую операцию!");
 
 				return;
 			end
@@ -569,7 +569,7 @@ function cwMedicalSystem:PerformSurgeryOnPlayer(player, target, itemTable, hitGr
 			end
 			
 			if target.surgeryStage > #injury_surgery_table.surgeryInfo then
-				Schema:EasyText(player, "peru","This limb does not have an injury that can be operated on!");
+				Schema:EasyText(player, "peru","У этой конечности нет травмы, которую можно было бы прооперировать!");
 				
 				target.playerPerformingSurgery = nil;
 				target.limbUnderSurgery = nil;
@@ -579,7 +579,7 @@ function cwMedicalSystem:PerformSurgeryOnPlayer(player, target, itemTable, hitGr
 				return;
 			else
 				if injury_surgery_table.surgeryInfo[target.surgeryStage].tool ~= itemTable.uniqueID then
-					Schema:EasyText(player, "chocolate","This is the wrong tool for this stage of the operation!");
+					Schema:EasyText(player, "chocolate","У этой конечности нет травмы, которую можно было бы прооперировать!");
 					
 					return;
 				end
@@ -647,14 +647,14 @@ function cwMedicalSystem:PerformSurgeryOnPlayer(player, target, itemTable, hitGr
 
 					hook.Run("PlayerHealed", target, itemTable);
 				else
-					Schema:EasyText(player, "chocolate","To perform surgery on someone, they must be fallen over.");
+					Schema:EasyText(player, "chocolate","Чтобы провести кому-то операцию, его нужно уложить");
 				end
 			end);
 		else
-			Schema:EasyText(player, "peru","This player is already healing or operating on someone!");
+			Schema:EasyText(player, "peru","Этот игрок уже лечит или оперирует кого-то!");
 		end;
 	else
-		Schema:EasyText(player, "peru", "You are already healing or operating on someone!");
+		Schema:EasyText(player, "peru", "Вы уже лечите или оперируете кого-то!");
 	end;
 end;
 
@@ -820,14 +820,14 @@ function cwMedicalSystem:PlayerUseUnknownItemFunction(player, itemTable, itemFun
 					if (distance <= (reqDistance * reqDistance)) then
 						itemTable:OnUseTarget(player, target, itemTable, hitGroupEnum);
 					else
-						Schema:EasyText(player, "firebrick", "This character is too far away!");
+						Schema:EasyText(player, "firebrick", "Этот персонаж слишком далеко!!");
 					end;
 				else
 					printp("Fucked!");
 				end;
 			end
 		else
-			Schema:EasyText(player, "firebrick", "You must look at a character!");
+			Schema:EasyText(player, "firebrick", "Ты должен смотреть на персонажа!!");
 		end;
 	end;
 end;

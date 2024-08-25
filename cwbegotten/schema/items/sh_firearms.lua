@@ -6,11 +6,11 @@
 --]]
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Blunderbuss";
+	ITEM.name = "Бомбарда";
 	ITEM.model = "models/arxweapon/ashot.mdl";
 	ITEM.weight = 2;
 	ITEM.uniqueID = "begotten_blunderbuss";
-	ITEM.description = "A clunky metal and wood weapon that can suprisingly withstand the power of pure Grapeshot. It unleashes hell all around you.";
+	ITEM.description = "Сделанное на коленке оружие из металла и дерева. На удивление может гасить силу картечи и ломаться не сразу. Владельцы подобного оружия частенько оставляют на нем заметки, например, — «Эй, Парень!»";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/blunderbuss.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine";
@@ -28,11 +28,11 @@ local ITEM = Clockwork.item:New("firearm_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Colt";
+	ITEM.name = "Кольт M1911";
 	ITEM.model = "models/weapons/doi/w_1911.mdl";
 	ITEM.weight = 1.5;
 	ITEM.uniqueID = "begotten_colt";
-	ITEM.description = "An impossible find! A working antique pistol from an age long past. It uses old world shot and can put fucklets down with ease.";
+	ITEM.description = "Невообразимая Находка! Рабочий старинный пистолет из давно минувших времен. Он стреляет патронами из тех же времен и может с легкостью уложить кого угодно.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/colt.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_R_Thigh";
@@ -46,16 +46,17 @@ local ITEM = Clockwork.item:New("firearm_base");
 	ITEM.reloadTime = 5; -- Seconds (for magazine)
 	ITEM.reloadSounds = {"weapons/m1911/handling/m1911_magrelease.wav", "weapons/m1911/handling/m1911_magout.wav", "weapons/m1911/handling/m1911_magin.wav", "weapons/m1911/handling/m1911_maghit.wav", "weapons/m1911/handling/m1911_boltback.wav", "weapons/m1911/handling/m1911_boltrelease.wav"};
 	ITEM.usesMagazine = true;
+	ITEM.unrepairable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Firearms", rarity = 2500, supercrateOnly = true, supercrateItems = {["old_world_magazine"] = {min = 2, max = 3}, ["old_world_shot"] = {min = 7, max = 14}}};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Corpsecrank";
+	ITEM.name = "Потрошитель";
 	ITEM.model = "models/weapons/w_shot_enforcer.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_corpsecrank";
-	ITEM.description = "A full metal machine that pops Grapeshot one crank at a time. A weapon of war designed to mass produce a valuable product: corpses.";
+	ITEM.description = "Оружие, созданное мастерами оружейного дела. Заряжается картечью и способно выпускать огромное количество патрон за короткий промежуток времени. Не стоит доверять его психически больным людям.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/corpsecrank.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -68,17 +69,19 @@ local ITEM = Clockwork.item:New("firearm_base");
 	ITEM.isRevolver = true;
 	ITEM.reloadTime = 2; -- Seconds (for one round)
 	ITEM.reloadSounds = {"weapons/bulkcannon/draw.wav", "weapons/bulkcannon/insertshell.wav", "weapons/bulkcannon/lock.wav"};
+	ITEM.unrepairable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Firearms", rarity = 2000, supercrateOnly = true, supercrateItems = {["grapeshot"] = {min = 15, max = 30}}};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Wooden Crossbow";
+	ITEM.name = "Арбалет";
 	ITEM.uniqueID = "begotten_crossbow";
 	ITEM.category = "Crossbows";
 	ITEM.model = "models/begotten/weapons/w_crossbow.mdl";
 	ITEM.weight = 3.5;
-	ITEM.description = "Commonly employed by poorly trained levies from the county districts, the crossbow is an ancient design long pre-dating the Empire of Light. It launches bolts at high speeds and features a locking mechanism so that a draw does not need to be maintained, though it still requires considerable strength to reload.";
+	ITEM.uniqueID = "begotten_crossbow";
+	ITEM.description = "Обычно используемый плохо обученными новобранцами из уездов, арбалет — это древняя конструкция, которая существовала задолго до Империи Света. Он выпускает болты с высокой скоростью и имеет механизм блокировки, так что нет необходимости поддерживать натяжение, хотя для перезарядки все еще требуется значительная сила.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/crossbow.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -93,38 +96,15 @@ local ITEM = Clockwork.item:New("firearm_base");
 	ITEM.reloadSounds = {"weapons/bulkcannon/draw.wav", "weapons/crossbow/bow-pre1.wav.mp3", "weapons/crossbow/bowgun-stance.wav.mp3"};
 	
 	ITEM.components = {breakdownType = "breakdown", items = {"iron_chunks", "wood", "wood"}};
-	ITEM.itemSpawnerInfo = {category = "Firearms", rarity = 1650, bNoSupercrate = true};
+	ITEM.itemSpawnerInfo = {category = "Firearms", rarity = 1000, bNoSupercrate = true};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Scrap Crossbow";
-	ITEM.uniqueID = "begotten_scrapbow";
-	ITEM.category = "Crossbows";
-	ITEM.model = "models/begotten/weapons/w_scrapbow.mdl";
-	ITEM.weight = 4;
-	ITEM.description = "A crossbow constructed from scrap metal and rotting wood.";
-	ITEM.iconoverride = "materials/begotten/ui/itemicons/scrapbow.png"
-	ITEM.isAttachment = true;
-	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
-	ITEM.attachmentOffsetAngles = Angle(90, 354.15, 0);
-	ITEM.attachmentOffsetVector = Vector(-3.23, 1.39, -6.36);
-	
-	ITEM.ammoCapacity = 1;
-	ITEM.ammoTypes = {"Iron Bolt", "Scrap Bolt"};
-	ITEM.attributes = {"variable_damage"};
-	ITEM.firearmType = "Crossbow";
-	ITEM.reloadTime = 8; -- Seconds (for one round)
-	ITEM.reloadSounds = {"weapons/bulkcannon/draw.wav", "weapons/crossbow/bow-pre1.wav.mp3", "weapons/crossbow/bowgun-stance.wav.mp3"};
-	
-	ITEM.components = {breakdownType = "breakdown", items = {"scrap", "scrap", "scrap", "wood"}};
-ITEM:Register();
-
-local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Inquisitor Revolver";
+	ITEM.name = "Револьвер Инквизитора";
 	ITEM.model = "models/arxweapon/hellsing.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_inquisitor_revolver";
-	ITEM.description = "A lighter variant of the repeating musket that fires Pop-a-Shot caliber rounds, commonly used by the Inquisition.";
+	ITEM.description = "Облегченный вариант многозарядного мушкета. Крайне распространен на территории Империи Света из-за большого количества сохранившихся чертежей.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/inquisitor_revolver.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -142,11 +122,11 @@ local ITEM = Clockwork.item:New("firearm_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Musket";
+	ITEM.name = "Мушкетон";
 	ITEM.model = "models/weapons/w_snip_ele.mdl";
 	ITEM.weight = 2
 	ITEM.uniqueID = "begotten_musket";
-	ITEM.description = "A long rusted pipe that can load large shots. A revered weapon of the County Districts.";
+	ITEM.description = "Длинная ржавая труба, которая может заряжать крупные дроби. Почитаемое оружие в Низших Уездах.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/musket.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -164,11 +144,11 @@ local ITEM = Clockwork.item:New("firearm_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Peppershot";
+	ITEM.name = "Перечница";
 	ITEM.model = "models/weapons/w_pist_piper.mdl";
 	ITEM.weight = 1;
 	ITEM.uniqueID = "begotten_peppershot";
-	ITEM.description = "A pistol constructed of various scrap materials.";
+	ITEM.description = "Пистолет, сделанный из различных подручных материалов.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/peppershot.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_R_Thigh";
@@ -186,11 +166,11 @@ local ITEM = Clockwork.item:New("firearm_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Repeating Musket";
+	ITEM.name = "Многозарядный Мушкетон";
 	ITEM.model = "models/weapons/w_bulkcannon.mdl";
 	ITEM.weight = 3.5;
 	ITEM.uniqueID = "begotten_musket_repeating";
-	ITEM.description = "This weapon was originally created for the express purpose of executing demons, wielded only by a Grand Magistrate. In these darker times, it serves many additional purposes.";
+	ITEM.description = "Это оружие изначально было создано для явного уничтожения демонов и использовалось только Великим Магистратом. В эти темные времена оно служит многим дополнительным целям.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/repeating_musket.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -203,16 +183,17 @@ local ITEM = Clockwork.item:New("firearm_base");
 	ITEM.isRevolver = true;
 	ITEM.reloadTime = 10; -- Seconds (for one round)
 	ITEM.reloadSounds = {"musket/reload_musket01.wav", "musket/reload_musket02.wav", "musket/reload_musket03.wav", "musket/reload_musket04.wav", "musket/reload_musket05.wav", "musket/reload_musket06.wav", "musket/reload_musket07.wav", "musket/reload_musket08.wav", "musket/reload_musket_cock.wav"};
+	ITEM.unrepairable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Firearms", rarity = 1500, supercrateOnly = true, supercrateItems = {["longshot"] = {min = 10, max = 20}, ["grapeshot"] = {min = 5, max = 10}}};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Scavenger Gun";
+	ITEM.name = "Карабин Мусорщика";
 	ITEM.model = "models/weapons/v_smg_mothgun.mdl";
 	ITEM.weight = 2.5;
 	ITEM.uniqueID = "begotten_scavenger_gun";
-	ITEM.description = "A worn out hand-made machine gun, it barely seems to be functioning. A rare find indeed.";
+	ITEM.description = "Изношенное самодельное оружие, кажется, он едва функционирует. Действительно редкая находка.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/scavenger_gun.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -232,11 +213,11 @@ local ITEM = Clockwork.item:New("firearm_base");
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Springer";
+	ITEM.name = "Винтовка Springfield M1903";
 	ITEM.model = "models/weapons/w_snip_m1903.mdl";
 	ITEM.weight = 4;
 	ITEM.uniqueID = "begotten_springer";
-	ITEM.description = "An ancient high-powered rifle, pre-dating even the Empire of Light. It is powerful enough to kill almost anyone with one shot, though ammunition is scarce. It is common for those who acquire this weapon to have hitmen hired to take it from them.";
+	ITEM.description = "Древняя мощная винтовка, даже более ранняя, чем Империя Света. Она достаточно мощная, чтобы убить практически любого одним выстрелом, хотя боеприпасов мало. Обычно те, кто приобретает это оружие, нанимают киллеров, чтобы отобрать его.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/springer.png"
 	ITEM.isAttachment = true;
 	ITEM.loweredOrigin = Vector(39.50, -28.45, -20.17);
@@ -252,16 +233,17 @@ local ITEM = Clockwork.item:New("firearm_base");
 	ITEM.firearmType = "Rifle";
 	ITEM.reloadTime = 5; -- Seconds
 	ITEM.reloadSounds = {"weapons/request day of defeat/m1903 springfield boltback 1.wav", "weapons/request day of defeat/m1903 springfield clipin.wav", "weapons/request day of defeat/m1903 springfield boltforward 2.wav"};
+	ITEM.unrepairable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Firearms", rarity = 5000, supercrateOnly = true, supercrateItems = {["old_world_longshot"] = {min = 10, max = 20}}};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Sweeper";
+	ITEM.name = "Агрегат Судного Дня";
 	ITEM.model = "models/weapons/w_nik_trenchy.mdl";
 	ITEM.weight = 3.6;
 	ITEM.uniqueID = "begotten_sweeper";
-	ITEM.description = "An old machine of war, operated by pump and fed by Old World Grapeshot. It has seen much use over the years.";
+	ITEM.description = "Оружие, которое боятся и враги и союзники.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/sweeper.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -274,16 +256,17 @@ local ITEM = Clockwork.item:New("firearm_base");
 	ITEM.firearmType = "Repeating Shotgun";
 	ITEM.reloadTime = 1; -- Seconds (for one round)
 	ITEM.reloadSounds = {"weapons/nikm1987trench/shotgun_shell_00.wav"};
+	ITEM.unrepairable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Firearms", rarity = 5000, supercrateOnly = true, supercrateItems = {["old_world_grapeshot"] = {min = 10, max = 20}}};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Thompson";
+	ITEM.name = "Автомат Томпсона";
 	ITEM.model = "models/_tails_ models/props/rust/thompson/thompson.mdl";
 	ITEM.weight = 4.5;
 	ITEM.uniqueID = "begotten_thompson";
-	ITEM.description = "An ancient automatic submachinegun even pre-dating the Empire of Light. It appears to have been looted from an ancient museum and restored to working order with spare parts.";
+	ITEM.description = "Древний автоматический пистолет-пулемет, даже более ранний, чем Империя Света. Похоже, его украли из древнего музея и восстановили до рабочего состояния с помощью запасных частей.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/thompson.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -297,16 +280,17 @@ local ITEM = Clockwork.item:New("firearm_base");
 	ITEM.reloadTime = 5; -- Seconds (for magazine)
 	ITEM.reloadSounds = {"weapons/m1911/handling/m1911_magrelease.wav", "weapons/m1911/handling/m1911_magout.wav", "weapons/m1911/handling/m1911_magin.wav", "weapons/m1911/handling/m1911_maghit.wav", "weapons/m1911/handling/m1911_boltback.wav", "weapons/m1911/handling/m1911_boltrelease.wav"};
 	ITEM.usesMagazine = true;
+	ITEM.unrepairable = true;
 	
 	ITEM.itemSpawnerInfo = {category = "Firearms", rarity = 5000, supercrateOnly = true, supercrateItems = {["old_world_large_magazine"] = {min = 2, max = 3}, ["old_world_shot"] = {min = 20, max = 30}}};
 ITEM:Register();
 
 local ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Voltist Railgun";
+	ITEM.name = "Рельсотрон";
 	ITEM.model = "models/arxweapon/railgun.mdl";
 	ITEM.weight = 3;
 	ITEM.uniqueID = "begotten_voltist_railgun";
-	ITEM.description = "A makeshift electrically charged railgun of Voltist manufacture. It hurls heavy projectiles vast distances and excels at piercing armor.";
+	ITEM.description = "Самодельный электрически заряженный рельсотрон производства Вольтистов. Он метает тяжелые снаряды на большие расстояния и отлично пробивает броню.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/voltist_railgun.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -327,11 +311,11 @@ local ITEM = Clockwork.item:New("firearm_base");
 ITEM:Register();
 
 ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Jezail";
+	ITEM.name = "Укороченная Винтовка «Джезайл»";
 	ITEM.model = "models/sw_battlefront/weapons/jezail_short.mdl";
 	ITEM.weight = 2
 	ITEM.uniqueID = "begotten_jezail_short";
-	ITEM.description = "A Darklander musket. It is fitted with a scope for more accurate fire. A blood red engraving burns the hand of anyone who does not follow the darkness.";
+	ITEM.description = "Мушкет из далекого Темноземья. Он оснащен прицелом для более точной стрельбы. Кроваво-красная гравировка обжигает руку любого, кто не следует за тьмой.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/jezail_short.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";
@@ -349,11 +333,11 @@ ITEM = Clockwork.item:New("firearm_base");
 ITEM:Register();
 
 ITEM = Clockwork.item:New("firearm_base");
-	ITEM.name = "Jezail Rifle";
+	ITEM.name = "Винтовка «Джезайл»";
 	ITEM.model = "models/sw_battlefront/weapons/jazail_long.mdl";
 	ITEM.weight = 6
 	ITEM.uniqueID = "begotten_jezail_long";
-	ITEM.description = "A Darklander rifle, infamously used by the Nigerii Janissaries. It is fitted with a scope for more accurate fire. Its barrel been elongated and rifled, making it excellent for sharpshooting. A blood red engraving burns the hand of anyone who does not follow the darkness.";
+	ITEM.description = "Улучшенная винтовка из далекого Темноземья, печально известная как используемая нигерийскими янычарами. Она оснащена прицелом для более точного огня. Ее ствол удлинен и нарезан, что делает ее превосходной для меткой стрельбы. Кроваво-красная гравировка обжигает руку любого, кто не следует за тьмой.";
 	ITEM.iconoverride = "materials/begotten/ui/itemicons/jazail_long.png"
 	ITEM.isAttachment = true;
 	ITEM.attachmentBone = "ValveBiped.Bip01_Spine2";

@@ -92,7 +92,7 @@ function ENT:Touch(entity)
 				if entity.teleporting then
 					damageInfo:SetDamage(0);
 				else
-					Clockwork.chatBox:AddInTargetRadius(entity, "me", "steps on a bear trap, triggering it!", entity:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+					Clockwork.chatBox:AddInTargetRadius(entity, "me", "как последний еблан наступает на капкан, приводя тот в действие!", entity:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 					
 					if math.random(1, 2) == 1 then
 						-- Left leg.
@@ -112,7 +112,7 @@ function ENT:Touch(entity)
 								entity:StartBleeding(HITGROUP_LEFTLEG);
 							end
 							
-							Clockwork.chatBox:AddInTargetRadius(entity, "me", "'s left leg audibly breaks with a horrifying snap!", entity:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+							Clockwork.chatBox:AddInTargetRadius(entity, "me", " понимает, что трещит и ломается его ебучая левая нога!", entity:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 								
 							entity:EmitSound("misc/bone_fracture.wav", 75, math.random(95, 100));
 						end
@@ -134,7 +134,7 @@ function ENT:Touch(entity)
 								entity:StartBleeding(HITGROUP_RIGHTLEG);
 							end
 							
-							Clockwork.chatBox:AddInTargetRadius(entity, "me", "'s right leg audibly breaks with a horrifying snap!", entity:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+							Clockwork.chatBox:AddInTargetRadius(entity, "me", " понимает, что трещит и ломается его ебучая правая нога!", entity:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 								
 							entity:EmitSound("misc/bone_fracture.wav", 75, math.random(95, 100));
 						end

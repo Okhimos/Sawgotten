@@ -10,7 +10,7 @@ local COMMAND = Clockwork.command:New("cosmicrupture");
 
 	-- Called when the command has been run.
 	function COMMAND:OnRun(player, arguments)
-		Clockwork.chatBox:Add(nil, player, "event", "The ground abruptly begins to shake violently and the sky explodes with lightning as a torrent of cosmic energy sweeps over the Wasteland. Experienced survivors will know what this means...");
+		Clockwork.chatBox:Add(nil, player, "event", "Земля внезапно начинает сильно трястись, а небо взрывается молниями, когда поток космической энергии проносится над Пустошью. Опытные выжившие поймут, что это значит...");
 		
 		if (SERVER) then
 			local players = _player.GetAll()

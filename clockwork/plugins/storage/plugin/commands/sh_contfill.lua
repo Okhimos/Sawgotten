@@ -3,8 +3,8 @@
 --]]
 
 local COMMAND = Clockwork.command:New("ContFill")
-COMMAND.tip = "Fill a container with random items."
-COMMAND.text = "<number Density: 1-5> [string Category]"
+COMMAND.tip = "Заполните контейнер случайными предметами."
+COMMAND.text = "<Плотность чисел: 1-5> [Выберите Категорию]"
 COMMAND.flags = CMD_DEFAULT
 COMMAND.access = "s"
 COMMAND.arguments = 1
@@ -47,30 +47,30 @@ function COMMAND:OnRun(player, arguments)
 
 						cwStorage:SaveStorage()
 
-						Schema:EasyText(player, "cornflowerblue", "["..self.name.."] This container has been filled with random items.")
+						Schema:EasyText(player, "cornflowerblue", "["..self.name.."] Теперь этот контейнер заполнен случайными предметами!")
 						return
 					else
-						Schema:EasyText(player, "grey", "["..self.name.."] That category doesn't exist!")
+						Schema:EasyText(player, "grey", "["..self.name.."] Такой категории не существует!")
 						return
 					end
 				end
 
-				Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+				Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 			else
-				Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+				Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 			end
 		else
-			Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+			Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 		end
 	else
-		Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid scale!")
+		Schema:EasyText(player, "grey", "["..self.name.."] Это недействительная шкала!")
 	end
 end
 
 COMMAND:Register()
 
 local COMMAND = Clockwork.command:New("ContClear")
-COMMAND.tip = "Clear a container of items."
+COMMAND.tip = "Убрать предметы из контейнера."
 COMMAND.flags = CMD_DEFAULT
 COMMAND.access = "s"
 
@@ -91,17 +91,17 @@ function COMMAND:OnRun(player, arguments)
 					trace.Entity.cwInventory = {}
 				end
 				
-				Schema:EasyText(player, "grey", "This container has been cleared!");
+				Schema:EasyText(player, "grey", "Теперь этот контейнер пуст!");
 
 				return;
 			end
 
-			Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+			Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 		else
-			Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+			Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 		end
 	else
-		Schema:EasyText(player, "grey", "["..self.name.."] This is not a valid container!")
+		Schema:EasyText(player, "grey", "["..self.name.."] Это недействительный контейнер!")
 	end
 end
 
