@@ -22,7 +22,7 @@ local COMMAND = Clockwork.command:New("PlaySoundGlobal");
 			
 			for i = 2, 3 do
 				if (tonumber(arguments[i]) == nil) then
-					if (string.len(tostring(arguments[i])) > 0) then
+					if (string.utf8len(tostring(arguments[i])) > 0) then
 						startingIndex = startingIndex - 1;
 					end;
 				else
@@ -621,7 +621,7 @@ local COMMAND = Clockwork.command:New("GetFlags");
 		
 		local flagString = "petcrnCW";
 		
-		if (string.len(flagString) > 0) then
+		if (string.utf8len(flagString) > 0) then
 			player:RunClockworkCmd(command, name, flagString);
 		else
 			Clockwork.player:Notify(player, "No flags were found!");
