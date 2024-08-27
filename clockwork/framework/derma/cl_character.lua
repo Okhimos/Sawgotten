@@ -2783,12 +2783,12 @@ function PANEL:OnNext()
 				return false;
 			end;
 
-			if (string.len(self.info.fullName) < 4) then
+			if (string.utf8len(self.info.fullName) < 4) then
 				Clockwork.character:SetFault("Имя персонажа должно состоять как минимум из 4 символов!");
 				return false;
 			end;
 
-			if (string.len(self.info.fullName) > 32) then
+			if (string.utf8len(self.info.fullName) > 32) then
 				Clockwork.character:SetFault("Полное имя не может быть больше 32 символов!");
 				return false;
 			end;
@@ -2812,12 +2812,12 @@ function PANEL:OnNext()
 				return false;
 			end;]]--
 			
-			if (string.len(self.info.forename) < 2 or string.len(self.info.surname) < 2) then
+			if (string.utf8len(self.info.forename) < 2 or string.utf8len(self.info.surname) < 2) then
 				Clockwork.character:SetFault("Ваши имя и фамилия должны состоять как минимум из 2 символов!");
 				return false;
 			end;
 			
-			if (string.len(self.info.forename) > 16 or string.len(self.info.surname) > 16) then
+			if (string.utf8len(self.info.forename) > 16 or string.utf8len(self.info.surname) > 16) then
 				Clockwork.character:SetFault("Ваши имя и фамилия не должны содержать более 16 символов!");
 				return false;
 			end;
@@ -2832,7 +2832,7 @@ function PANEL:OnNext()
 	if (self.bPhysDesc) then
 		local minimumPhysDesc = Clockwork.config:Get("minimum_physdesc"):Get();
 			self.info.physDesc = self.physDescTextEntry:GetValue();
-		if (string.len(self.info.physDesc) < minimumPhysDesc) then
+		if (string.utf8len(self.info.physDesc) < minimumPhysDesc) then
 			Clockwork.character:SetFault("Описание персонажа должно быть как минимум из "..minimumPhysDesc.." символов!");
 			return false;
 		end;
@@ -2840,7 +2840,7 @@ function PANEL:OnNext()
 		if (IsValid(self.backstoryTextEntry)) then
 			self.info.backstory = self.backstoryTextEntry:GetValue();
 			
-			if (string.len(self.info.backstory) >= 512) then
+			if (string.utf8len(self.info.backstory) >= 512) then
 				Clockwork.character:SetFault("Your backstory must be shorter than or equal to 512 characters!");
 				return false;
 			end;

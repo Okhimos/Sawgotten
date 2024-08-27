@@ -42,7 +42,7 @@ function cwSpawnPoints:GetAdminESPInfo(info)
 							color = colorWhite
 						},
 						{
-							text = string.upper(typeName),
+							text = string.utf8upper(typeName),
 							color = spawnColor
 						}
 					}
