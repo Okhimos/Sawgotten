@@ -9,7 +9,7 @@ local Clockwork = Clockwork;
 
 local COMMAND = Clockwork.command:New("Radio");
 COMMAND.tip = "Отправьте радиосообщение другим персонажам, которые имеют рацию с той же частотой.";
-COMMAND.text = "<string Text>";
+COMMAND.text = "<string Текст>";
 COMMAND.flags = bit.bor(CMD_DEFAULT, CMD_DEATHCODE, CMD_FALLENOVER);
 COMMAND.arguments = 1;
 COMMAND.alias = {"R"};
