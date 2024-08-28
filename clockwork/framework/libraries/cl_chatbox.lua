@@ -435,7 +435,7 @@ function Clockwork.chatBox:Decode(speaker, name, text, data, class, multiplier)
 	
 	if (IsValid(speaker)) then
 		if (!Clockwork.kernel:IsChoosingCharacter() and !Clockwork.Client.LoadingText) then
-			if (name != "") then
+			if (speaker:Name() != "") then
 				local unrecognised = false;
 				local focusedOn = false;
 				local fontOverride;
@@ -498,8 +498,6 @@ function Clockwork.chatBox:Decode(speaker, name, text, data, class, multiplier)
 						end;
 						
 						info.name = "["..unrecognisedName.."]";
-					elseif info.filter == "ic" or info.filter == "looc" then
-						info.name = Clockwork.player:GetName(speaker);
 					end;
 					
 					if (self.classes[info.class]) then
@@ -1040,22 +1038,22 @@ Clockwork.chatBox:RegisterDefaultClass("ic", "ic", function(info)
 		end;
 		
 		local lastChar = string.utf8sub(info.text, string.utf8len(info.text));
-		local sayText = "говорит";
+		local sayText = "says";
 		
 		if lastChar == "?" then
-			sayText = "спрашивает";
+			sayText = "asks";
 		elseif lastChar == "!" then
 			sayText = "exclaims";
 		end
 		
 		if info.font then
 			if info.font == "Voltism" then
-				sayText = "жужжит как микроволновка";
+				sayText = "chirps";
 				
 				if lastChar == "?" then
-					sayText = "вопрошающе щебечет";
+					sayText = "queries";
 				elseif lastChar == "!" then
-					sayText = "рычит как робот-пылесос";
+					sayText = "emits";
 				end
 			end
 			
@@ -1159,10 +1157,10 @@ Clockwork.chatBox:RegisterDefaultClass("yell", "ic", function(info)
 		if info.font == "Voltism" then
 			Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." shrieks \""..info.text.."\"", info.font, "noTime");
 		else
-			Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." кричит \""..info.text.."\"", info.font, "noTime");
+			Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." yells \""..info.text.."\"", info.font, "noTime");
 		end
 	else
-		Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." кричит \""..info.text.."\"", "noTime");
+		Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." yells \""..info.text.."\"", "noTime");
 	end
 end);
 
@@ -1175,9 +1173,9 @@ Clockwork.chatBox:RegisterDefaultClass("whisper", "ic", function(info)
 		end;
 
 		if info.font then
-			Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." шепчет \""..info.text.."\"", info.font, "noTime");
+			Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." whispers \""..info.text.."\"", info.font, "noTime");
 		else
-			Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." шепчет \""..info.text.."\"", "noTime");
+			Clockwork.chatBox:Add(info.filtered, nil, color, info.name.." whispers \""..info.text.."\"", "noTime");
 		end;
 	end;
 end);
@@ -1185,16 +1183,16 @@ end);
 Clockwork.chatBox:RegisterDefaultClass("radio", "ic", function(info)
 	if info.text == "<STATIC>" then
 		surface.PlaySound( "ambient/levels/prison/radio_random"..math.random(1,15)..".wav" )
-		Clockwork.chatBox:Add(info.filtered, nil, Color(75, 150, 50, 255), "Радио издает электрический визг, напоминающий невнятные слова, и помехи.", info.font);
+		Clockwork.chatBox:Add(info.filtered, nil, Color(75, 150, 50, 255), "The radio lets out an electric squeal, what sounds like garbled words, and static.", info.font);
 	else
-		Clockwork.chatBox:Add(info.filtered, nil, Color(75, 150, 50, 255), info.name.." говорит в рацию \""..info.text.."\"", info.font);
+		Clockwork.chatBox:Add(info.filtered, nil, Color(75, 150, 50, 255), info.name.." radios in \""..info.text.."\"", info.font);
 	end
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("radiospy", "ic", function(info)
 	if info.text == "<STATIC>" then
 		surface.PlaySound( "ambient/levels/prison/radio_random"..math.random(1,15)..".wav" )
-		Clockwork.chatBox:Add(info.filtered, nil, Color(75, 150, 50, 255), "Радио издает электрический визг, напоминающий невнятные слова, и помехи.", info.font);
+		Clockwork.chatBox:Add(info.filtered, nil, Color(75, 150, 50, 255), "The radio lets out an electric squeal, what sounds like garbled words, and static.", info.font);
 	else
 		Clockwork.chatBox:Add(info.filtered, nil, Color(75, 150, 50, 255), info.name..info.text, info.font);
 	end
@@ -1213,27 +1211,23 @@ Clockwork.chatBox:RegisterDefaultClass("radio_eavesdrop", "ic", function(info)
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("goreevent", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(СВЯЩЕННЫЙ ЛЕС) "..info.text);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(GORE FOREST) "..info.text);
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("hellevent", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(АД) "..info.text);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(HELL) "..info.text);
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("towerevent", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(БАШНЯ СВЕТА) "..info.text);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(TOWER) "..info.text);
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("wastelandevent", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(ПУСТОШЬ) "..info.text);
-end);
-
-Clockwork.chatBox:RegisterDefaultClass("cavesevent", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(ШАХТЫ) "..info.text);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(WASTELAND) "..info.text);
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("localevent", "ic", function(info)
-	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(НЕИЗВЕСТНО) "..info.text);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(200, 100, 50, 255), "(LOCAL) "..info.text);
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("event", "ic", function(info)		
@@ -1241,7 +1235,7 @@ Clockwork.chatBox:RegisterDefaultClass("event", "ic", function(info)
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("proclaim", "ic", function(info)		
-	Clockwork.chatBox:Add(info.filtered, nil, Color(255, 255, 102, 255), info.name.." заявляет с непогрешимой значимостью \""..info.text.."\"", info.font);
+	Clockwork.chatBox:Add(info.filtered, nil, Color(255, 255, 102, 255), info.name.." proclaims \""..info.text.."\"", info.font);
 end);
 
 Clockwork.chatBox:RegisterDefaultClass("meproclaim", "ic", function(info)				
@@ -1252,7 +1246,7 @@ Clockwork.chatBox:RegisterDefaultClass("meproclaim", "ic", function(info)
 	end;
 end);
 
-Clockwork.chatBox:RegisterDefaultClass("looc", "looc", function(info)
+Clockwork.chatBox:RegisterDefaultClass("looc", "ooc", function(info)
 	if (!config.Get("enable_looc_icons"):Get()) then
 		info.icon = nil;
 	end;
@@ -1260,7 +1254,7 @@ Clockwork.chatBox:RegisterDefaultClass("looc", "looc", function(info)
 	Clockwork.chatBox:Add(info.filtered, info.icon, Color(225, 50, 50, 255), "[LOOC] ", Color(255, 255, 150, 255), info.name..": "..info.text);
 end);
 
-Clockwork.chatBox:RegisterDefaultClass("loocnoicon", "looc", function(info)
+Clockwork.chatBox:RegisterDefaultClass("loocnoicon", "ooc", function(info)
 	if (!config.Get("enable_looc_icons"):Get()) then
 		info.icon = nil;
 	else
@@ -1294,7 +1288,7 @@ Clockwork.chatBox:RegisterDefaultClass("priv", "ooc", function(info)
 	Clockwork.chatBox:Add(info.filtered, nil, colors[info.data.userGroup], "["..info.data.userGroup.."] ", classColor, "("..info.speaker:SteamName()..") "..info.name, ": ", info.text);
 end);
 
-Clockwork.chatBox:RegisterDefaultClass("roll", "looc", function(info)
+Clockwork.chatBox:RegisterDefaultClass("roll", "ooc", function(info)
 	if (info.shouldHear) then
 		Clockwork.chatBox:Add(info.filtered, nil, Color(150, 75, 75, 255), "** "..info.name.." "..info.text);
 	end;
@@ -1304,7 +1298,7 @@ Clockwork.chatBox:RegisterDefaultClass("ooc", "ooc", function(info)
 	Clockwork.chatBox:Add(info.filtered, info.icon, Color(225, 50, 50, 255), "[OOC] ", Color(255, 180, 0, 255), info.speaker:SteamName(), ": ", info.text);
 end);
 
-Clockwork.chatBox:RegisterDefaultClass("pm", "looc", function(info)
+Clockwork.chatBox:RegisterDefaultClass("pm", "ooc", function(info)
 	Clockwork.chatBox:Add(info.filtered, nil, "[PM] ", Color(125, 150, 75, 255), "("..info.speaker:SteamName()..") "..info.name..": "..info.text);
 	surface.PlaySound("hl1/fvox/bell.wav");
 end);

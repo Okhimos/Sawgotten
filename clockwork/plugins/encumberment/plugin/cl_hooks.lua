@@ -12,7 +12,7 @@ function cwEncumberment:GetPlayerInfoText(playerInfoText)
 	local maximumWeight = Clockwork.player:GetMaxWeight();
 	
 	if (inventoryWeight > maximumWeight) then
-		playerInfoText:Add("overencumbered", "Вы перегружены!")
+		playerInfoText:Add("overencumbered", "You are over-encumbered!")
 	end;
 end;
 

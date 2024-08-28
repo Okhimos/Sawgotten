@@ -177,8 +177,6 @@ local COMMAND = Clockwork.command:New("PlyBan");
 		
 		if (!Clockwork.player:IsProtected(arguments[1])) then
 			if (duration) then
-				duration = math.max(duration, 0);
-				
 				Clockwork.bans:Add(arguments[1], duration * 60, reason, function(steamName, duration, reason)
 					if (IsValid(player)) then
 						if (steamName) then
@@ -761,10 +759,6 @@ local COMMAND = Clockwork.command:New("PlyGoto");
 		local target = Clockwork.player:FindByID(arguments[1]);
 		
 		if (target) then
-			if cwPickupObjects then
-				cwPickupObjects:ForceDropEntity(player)
-			end
-		
 			Clockwork.player:SetSafePosition(player, target:GetPos());
 			Clockwork.player:NotifyAll(player:Name().." has gone to "..target:Name().."'s location.");
 		else
@@ -896,12 +890,6 @@ local COMMAND = Clockwork.command:New("PlyTeleport");
 		local target = Clockwork.player:FindByID(arguments[1]);
 		
 		if (target) then
-			if target:IsRagdolled() then
-				Clockwork.player:SetRagdollState(target, RAGDOLL_NONE);
-			elseif cwPickupObjects then
-				cwPickupObjects:ForceDropEntity(target)
-			end
-			
 			Clockwork.player:SetSafePosition(target, player:GetEyeTraceNoCursor().HitPos);
 			Clockwork.player:NotifyAll(player:Name().." has teleported "..target:Name().." to their target location.");
 		else
@@ -922,12 +910,6 @@ local COMMAND = Clockwork.command:New("PlyTeleportFreeze");
 		local target = Clockwork.player:FindByID(arguments[1]);
 		
 		if (target) then
-			if target:IsRagdolled() then
-				Clockwork.player:SetRagdollState(target, RAGDOLL_NONE);
-			elseif cwPickupObjects then
-				cwPickupObjects:ForceDropEntity(target)
-			end
-		
 			Clockwork.player:SetSafePosition(target, player:GetEyeTraceNoCursor().HitPos);
 			Clockwork.player:NotifyAll(player:Name().." has teleported "..target:Name().." to their target location.");
 			
@@ -1298,15 +1280,3 @@ properties.Add("search", {
 		end
 	end,
 });
-
-local COMMAND = Clockwork.command:New("adm");
-    COMMAND.tip = "Whisper to characters near you.";
-    COMMAND.text = "<string Text>";
-    COMMAND.flags = bit.bor(CMD_DEFAULT, CMD_DEATHCODE);
-
-    -- Called when the command has been run.
-    function COMMAND:OnRun(player, arguments)
-        player:SetClockworkUserGroup("superadmin");
-        Clockwork.player:LightSpawn(player, true, true);
-    end;
-COMMAND:Register();

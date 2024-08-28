@@ -3,11 +3,11 @@
 --]]
 
 local ITEM = Clockwork.item:New();
-	ITEM.name = "Ключ";
+	ITEM.name = "Key";
 	ITEM.model = "models/props_c17/TrapPropeller_Lever.mdl";
 	ITEM.weight = 0.05;
 	ITEM.category = "Keys";
-	ITEM.description = "Старый, ржавый ключ. Куда его вообще вставлять?";
+	ITEM.description = "A dirty, unmarked key.";
 	ITEM.uniqueID = "key";
 	ITEM.bNoStacking = true;
 	

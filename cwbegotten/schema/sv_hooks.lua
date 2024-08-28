@@ -168,7 +168,6 @@ function Schema:ClockworkInitPostEntity()
 	self:LoadDummies();
 	self:LoadRadios();
 	self:LoadNPCs();
-	self:LoadNPCSpawns();
 	self:SpawnBegottenEntities();
 	
 	-- Breaks some stuff.
@@ -330,14 +329,14 @@ function Schema:EntityHandleMenuOption(player, entity, option, arguments)
 					if Clockwork.player:DoesRecognise(entity, player) then
 						playerName = player:Name();
 					else
-						playerName = "неизвестным Горейским Воином";
+						playerName = "an unknown Goreic Warrior";
 					end
 					
 					if cwDeathCauses then
-						cwDeathCauses:DeathCauseOverride(entity, "Продан в рабство "..playerName..".");
+						cwDeathCauses:DeathCauseOverride(entity, "Sold into slavery by "..playerName..".");
 					end
 					
-					Schema:EasyText(entity, "firebrick", "Вы были проданы в рабство "..playerName.."!");
+					Schema:EasyText(entity, "firebrick", "You have been sold into slavery by "..playerName.."!");
 					entity:KillSilent();
 					
 					if IsValid(entity:GetRagdollEntity()) then
@@ -482,14 +481,14 @@ function Schema:EntityHandleMenuOption(player, entity, option, arguments)
 							if Clockwork.player:DoesRecognise(entityPlayer, player) then
 								playerName = player:Name();
 							else
-								playerName = "неизвестным Горейским воином";
+								playerName = "an unknown Goreic Warrior";
 							end
 							
 							if cwDeathCauses then
-								cwDeathCauses:DeathCauseOverride(entityPlayer, "Продан в рабство "..playerName..".");
+								cwDeathCauses:DeathCauseOverride(entityPlayer, "Sold into slavery by "..playerName..".");
 							end
 							
-							Schema:EasyText(entityPlayer, "firebrick", "Вы были проданы в рабство "..playerName.."!");
+							Schema:EasyText(entityPlayer, "firebrick", "You have been sold into slavery by "..playerName.."!");
 							entityPlayer:KillSilent();
 							
 							if IsValid(entity) then
@@ -542,23 +541,23 @@ function Schema:EntityHandleMenuOption(player, entity, option, arguments)
 							if Clockwork.player:DoesRecognise(entityPlayer, player) then
 								playerName = player:Name();
 							elseif playerFaction == "Goreic Warrior" then
-								playerName = "неизвестный Горейский Воин";
+								playerName = "an unknown Goreic Warrior";
 							elseif playerFaction == "Children of Satan" then
-								playerName = "неизвестное Дитя Сатаны";
+								playerName = "an unknown Child of Satan";
 							elseif playerFaction == "Gatekeeper" or playerFaction == "Pope Adyssa's Gatekeepers" then
-								playerName = "неизвестным Привратником";
+								playerName = "an unknown Gatekeeper";
 							elseif playerFaction == "Holy Hierarchy" then
 								local playerSubfaction = player:GetSubfaction();
 								
 								if playerSubfaction == "Inquisition" then
-									playerName = "неизвестным Инквизитором";
+									playerName = "an unknown Inquisitor";
 								elseif playerSubfaction == "Knights of Sol" then
-									playerName =  "неизвестным Рыцарем Сола";
+									playerName =  "an unknown Knight of Sol";
 								else
-									playerName =  "неизвестным Светлым Дворянином";
+									playerName =  "an unknown Glazic nobleman";
 								end
 							else
-								playerName = "неизвестным нападающим";
+								playerName = "an unknown assailant";
 							end
 							
 							if cwDeathCauses then
@@ -651,15 +650,15 @@ function Schema:EntityHandleMenuOption(player, entity, option, arguments)
 					if (start == 1 and finish > 0 and finish < 10 and decimal > 0 and decimal < 10) then
 						entity:SetFrequency(arguments);
 						
-						Schema:EasyText(player, "olivedrab", "Вы настроили это радио на частоту "..arguments..".");
+						Schema:EasyText(player, "olivedrab", "You have set this stationary radio's arguments to "..arguments..".");
 					else
-						Schema:EasyText(player, "peru", "Частота рации должны быть между 101.1 и 199.9!");
+						Schema:EasyText(player, "peru", "The radio arguments must be between 101.1 and 199.9!");
 					end;
 				else
-					Schema:EasyText(player, "peru", "Частота рации должна быть в таком формате xxx.x!");
+					Schema:EasyText(player, "peru", "The radio arguments must look like xxx.x!");
 				end;
 			else
-				Schema:EasyText(player, "peru", "Это радио невозможно заглушить!");
+				Schema:EasyText(player, "peru", "This radio cannot be tampered with!");
 			end;
 		elseif (arguments == "cw_radioToggle") then
 			entity:Toggle();
@@ -674,7 +673,7 @@ function Schema:EntityHandleMenuOption(player, entity, option, arguments)
 					entity:Remove();
 				end;
 			else
-				Schema:EasyText(player, "peru", "Это радио невозможно заглушить!");
+				Schema:EasyText(player, "peru", "This radio cannot be tampered with!");
 			end
 		end
 	elseif ((arguments == "cwUntieCinderBlock" and entity:GetNWBool("BIsCinderBlock") == true) or IsValid(entity:GetNWEntity("CinderBlock"))) then
@@ -713,20 +712,20 @@ function Schema:EntityHandleMenuOption(player, entity, option, arguments)
 		end
 	elseif (class == "cw_bear_trap") then
 		if arguments == "cwItemExamine" then
-			local examineText = "Развернутый капкан.";
+			local examineText = "A deployed bear trap.";
 			local itemCondition = entity.condition;
 			
 			if itemCondition then
 				if itemCondition >= 90 then
-					examineText = examineText.." Он в безупречном состоянии.";
+					examineText = examineText.." It appears to be in immaculate condition.";
 				elseif itemCondition < 90 and itemCondition >= 60 then
-					examineText = examineText.." Он в немного поврежденном состоянии.";
+					examineText = examineText.." It appears to be in a somewhat battered condition.";
 				elseif itemCondition < 60 and itemCondition >= 30 then
-					examineText = examineText.." Он в очень плохом состоянии.";
+					examineText = examineText.." It appears to be in very poor condition.";
 				elseif itemCondition < 30 and itemCondition > 0 then
-					examineText = examineText.." Он на грани поломки.";
+					examineText = examineText.." It appears to be on the verge of breaking.";
 				elseif itemCondition <= 0 then
-					examineText = examineText.." Он полностью сломан.";
+					examineText = examineText.." It is completely destroyed and only worth its weight in scrap now.";
 				end
 			end
 			
@@ -751,7 +750,7 @@ function Schema:EntityHandleMenuOption(player, entity, option, arguments)
 					if !entity.condition or entity.condition > 0 then
 						entity:SetTrap();
 					else
-						Schema:EasyText(player, "peru", "Этот капкан слишком сильно сломан, из-за чего его нельзя взвести!");
+						Schema:EasyText(player, "peru", "This bear trap has sustained too much damage and cannot be reset!");
 					end
 				end
 			end
@@ -949,7 +948,7 @@ function Schema:ShowSpare1(player)
 	local itemTable = player:FindItemByID("bindings");
 	
 	if (!itemTable) then
-		Schema:EasyText(player, "chocolate", "Вам нечем связывать!");
+		Schema:EasyText(player, "chocolate", "You have nothing to tie with!");
 		
 		return;
 	end;
@@ -1071,21 +1070,24 @@ function Schema:PlayerCanRadio(player, text, listeners, eavesdroppers)
 	local fault;
 	local stationaryRadiusSqr = (80 * 80);
 	local radios = ents.FindByClass("cw_radio");
-	local playerPos = player:GetPos();
 	
-	for i, v in ipairs(radios) do
-		if (!v:IsOff() and !v:IsCrazy() and playerPos:DistToSqr(v:GetPos()) <= stationaryRadiusSqr) then
-			return "", v:GetFrequency();
+	for k, v in ipairs(radios) do
+		if (!v:IsOff() and !v:IsCrazy() and player:GetPos():DistToSqr(v:GetPos()) <= stationaryRadiusSqr) then
+			if player:GetEyeTrace().Entity == v then
+				return nil, v:GetFrequency();
+			else
+				return;
+			end
 		end
 	end
-	
+
 	if (player:HasItemByID("handheld_radio")) or (player:HasItemByID("ecw_radio")) then
 		if !player:GetCharacterData("radioState", false) then
-			fault = "Ваша рация выключена!";
+			fault = "Your radio is turned off!";
 		end
 	
 		if !fault and (!player:GetCharacterData("frequency")) then
-			fault = "Сначала вам нужно установить радиочастоту!";
+			fault = "You need to set the radio frequency first!";
 		end;
 		
 		local lastZone = player:GetCharacterData("LastZone");
@@ -1094,11 +1096,11 @@ function Schema:PlayerCanRadio(player, text, listeners, eavesdroppers)
 			if (player:HasItemByID("ecw_radio")) then
 				return;
 			elseif lastZone ~= "wasteland" and lastZone ~= "tower" then
-				fault = "Ваше радио не может поймать здесь сигнал!";
+				fault = "Your radio cannot get a signal here!";
 			end
 		end
 	else
-		fault = "У вас нет радио!";
+		fault = "You do not own a radio!";
 	end;
 	
 	return fault;
@@ -1199,7 +1201,7 @@ function Schema:KeyPress(player, key)
 		elseif (action == "mutilating") or (action == "skinning") then
 			Clockwork.player:SetAction(player, nil);
 		elseif (action == "bloodTest") then
-			Clockwork.chatBox:AddInTargetRadius(player, "me", "останавливает проверку на кровь.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+			Clockwork.chatBox:AddInTargetRadius(player, "me", "stops the blood test.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 			Clockwork.player:SetAction(player, nil);
 		end
 	end;
@@ -1221,27 +1223,27 @@ function Schema:PlayerCanSwitchCharacter(player, character)
 	end;
 	
 	if (player:GetNetVar("tied") != 0) then
-		return false, "Вы не можете сменить персонажа пока связаны!";
+		return false, "You cannot switch to this character while tied!";
 	end;
 	
 	if player.beingSacrificed then
-		return false, "Вы не можете сменить персонажа, пока вас приносят в жертву!";
+		return false, "You cannot switch to this character while being sacrificed!";
 	end
 	
 	if player.sacrificing then
-		return false, "Вы не можете сменить персонажа, пока вы приносите кого-то в жертву!";
+		return false, "You cannot switch to this character while sacrificing someone!";
 	end
 	
 	if player.teleporting then
-		return false, "Вы не можете поменять персонажа, пока телепортируетесь!!";
+		return false, "You cannot switch to this character while in the process of teleporting!";
 	end
 	
 	if player.scriptedDying then
-		return false, "Вы не можете поменять персонажа, пока умираете!";
+		return false, "You cannot switch to this character while your current character is dying!";
 	end
 	
 	if Schema.fuckerJoeActive and !player:IsAdmin() then
-		return false, "Вы не можете поменять персонажа, пока Ублюдок Джо на свободе!";
+		return false, "You cannot switch to this character while Fucker Joe is on the loose!";
 	end
 end;
 
@@ -1410,67 +1412,63 @@ function Schema:Think()
 		end;
 		
 		if self.npcSpawnsEnabled ~= false then
-			if #self.spawnedNPCs["animal"] < self.maxNPCs["animal"] then
-				local goreNPCs = {"npc_drg_animals_deer", "npc_drg_animals_goat"};
-				local npcName;
-				local spawnPos = self.npcSpawns["animal"][math.random(1, #self.npcSpawns["animal"])].pos;
-				
-				if math.random(1, 10) == 1 then
-					npcName = "npc_drg_animals_bear";
+			if self.spawnedNPCS and self.maxNPCS and #self.spawnedNPCS < self.maxNPCS then
+				if math.random(1, 6) == 1 then
+					local goreNPCs = {"npc_drg_animals_bear", "npc_drg_animals_deer", "npc_drg_animals_goat"};
+					local npcName;
+					local spawnPos = self.npcSpawns["gore"][math.random(1, #self.npcSpawns["gore"])];
 					
-					if math.random(1, 4) == 1 then
+					if math.random(1, 20) == 1 then
 						npcName = "npc_drg_animals_cave_bear";
-					end
-				elseif math.random(1, 20) == 1 then
-					npcName = "npc_drg_animals_snowleopard";
-				else
-					npcName = goreNPCs[math.random(1, #goreNPCs)];
-				end
-				
-				if npcName and spawnPos then
-					local entity = ents.Create(npcName);
-					
-					if IsValid(entity) then
-						entity:SetPos(spawnPos + Vector(0, 0, 32));
-						entity:SetAngles(Angle(0, math.random(1, 359), 0));
-						entity:Spawn();
-						entity:Activate();
-						
-						table.insert(self.spawnedNPCs["animal"], entity:EntIndex());
-					end
-				end
-			end
-			
-			if #self.spawnedNPCs["thrall"] < self.maxNPCs["thrall"] then
-				local spawnPos = self.npcSpawns["thrall"][math.random(1, #self.npcSpawns["thrall"])].pos;
-				local thrallNPCs;
-				
-				if cwWeather and cwWeather.weather == "bloodstorm" then
-					thrallNPCs = {"npc_bgt_chaser", "npc_bgt_guardian"};
-				else
-					if cwDayNight and cwDayNight.currentCycle == "night" then
-						thrallNPCs = {"npc_bgt_another", "npc_bgt_guardian", "npc_bgt_otis", "npc_bgt_pursuer", "npc_bgt_shambler"};
+					elseif math.random(1, 10) == 1 then
+						npcName = "npc_drg_animals_snowleopard";
 					else
-						thrallNPCs = {"npc_bgt_another", "npc_bgt_brute", "npc_bgt_eddie", "npc_bgt_grunt"};
+						npcName = goreNPCs[math.random(1, #goreNPCs)];
 					end
 					
-					if math.random(1, 33) == 1 then
-						thrallNPCs = {"npc_bgt_coinsucker", "npc_bgt_ironclad", "npc_bgt_suitor"};
+					if npcName and spawnPos then
+						local entity = ents.Create(npcName);
+						
+						if IsValid(entity) then
+							entity:SetPos(spawnPos + Vector(0, 0, 32));
+							entity:SetAngles(Angle(0, math.random(1, 359), 0));
+							entity:Spawn();
+							entity:Activate();
+							
+							table.insert(self.spawnedNPCS, entity:EntIndex());
+						end
 					end
-				end
+				else
+					local spawnPos = self.npcSpawns["wasteland"][math.random(1, #self.npcSpawns["wasteland"])];
+					local thrallNPCs;
+					
+					if cwWeather and cwWeather.weather == "bloodstorm" then
+						thrallNPCs = {"npc_bgt_chaser", "npc_bgt_guardian"};
+					else
+						if cwDayNight and cwDayNight.currentCycle == "night" then
+							thrallNPCs = {"npc_bgt_another", "npc_bgt_guardian", "npc_bgt_otis", "npc_bgt_pursuer", "npc_bgt_shambler"};
+						else
+							thrallNPCs = {"npc_bgt_another", "npc_bgt_brute", "npc_bgt_eddie", "npc_bgt_grunt"};
+						end
+						
+						if math.random(1, 33) == 1 then
+							thrallNPCs = {"npc_bgt_coinsucker", "npc_bgt_ironclad", "npc_bgt_suitor"};
+						end
+					end
 
-				local npcName = thrallNPCs[math.random(1, #thrallNPCs)];
-				
-				ParticleEffect("teleport_fx", spawnPos, Angle(0,0,0), nil);
-				sound.Play("misc/summon.wav", spawnPos, 100, 100);
-				
-				timer.Simple(0.75, function()
-					local entity = cwZombies:SpawnThrall(npcName, spawnPos, Angle(0, math.random(1, 359), 0));
+					local npcName = thrallNPCs[math.random(1, #thrallNPCs)];
 					
-					if IsValid(entity) then
-						table.insert(self.spawnedNPCs["thrall"], entity:EntIndex())
-					end
-				end);
+					ParticleEffect("teleport_fx", spawnPos, Angle(0,0,0), nil);
+					sound.Play("misc/summon.wav", spawnPos, 100, 100);
+					
+					timer.Simple(0.75, function()
+						local entity = cwZombies:SpawnThrall(npcName, spawnPos, Angle(0, math.random(1, 359), 0));
+						
+						if IsValid(entity) then
+							table.insert(self.spawnedNPCS, entity:EntIndex())
+						end
+					end);
+				end
 			end
 		end
 		
@@ -1547,20 +1545,19 @@ function Schema:PlayerThink(player, curTime, infoTable, alive, initialized, plyT
 		end;
 		
 		local wages = Clockwork.class:Query(player:Team(), "coinslotWages", 0);
-		local rank = player:GetCharacterData("rank", 1);
-		local ranksToCoin = Schema.RanksToCoin;
 		
-		if ranksToCoin and ranksToCoin[faction] then
-			wages = ranksToCoin[faction][math.Clamp(rank, 1, #ranksToCoin[faction])];
+		if Schema.RanksToCoin[faction] then
+			wages = Schema.RanksToCoin[faction][math.Clamp(player:GetCharacterData("rank", 1), 1, #Schema.RanksToCoin[faction])];
 		end
 		
 		infoTable.coinslotWages = wages;
 		
 		if infoTable.coinslotWages > 0 then
-			local ranksRestrictedWages = Schema.RanksRestrictedWages;
-			local nextWages = player:GetCharacterData("nextWages", 0);
+			if !infoTable.nextCoinslotWages then
+				infoTable.nextCoinslotWages = curTime + 1800;
+			end
 			
-			if nextWages >= config.GetVal("coinslot_wages_interval") then
+			if infoTable.nextCoinslotWages < curTime then
 				if !self.towerTreasury then
 					self.towerTreasury = Clockwork.kernel:RestoreSchemaData("treasury")[1] or 0;
 				end
@@ -1571,15 +1568,7 @@ function Schema:PlayerThink(player, curTime, infoTable, alive, initialized, plyT
 					player:SetCharacterData("collectableWages", collectableWages + 1);
 				end
 				
-				player:SetCharacterData("nextWages", 0);
-			else
-				if ranksRestrictedWages and ranksRestrictedWages[faction] and table.HasValue(ranksRestrictedWages[faction], rank) then
-					if !player:InTower() then
-						player:SetCharacterData("nextWages", math.Round(nextWages + (cwThinkRate or 0.2), 2));
-					end
-				else
-					player:SetCharacterData("nextWages", math.Round(nextWages + (cwThinkRate or 0.2), 2));
-				end
+				infoTable.nextCoinslotWages = curTime + 1800;
 			end
 		end;
 		
@@ -1710,13 +1699,11 @@ function Schema:EntityRemoved(entity)
 		end;
 	end;
 	
-	if IsValid(entity) and (entity:IsNPC() or entity:IsNextBot()) and self.spawnedNPCs then
-		for k, v in pairs(self.spawnedNPCs) do
-			for i, entIndex in ipairs(v) do
-				if entIndex == entity:EntIndex() then
-					table.remove(self.spawnedNPCs[k], i);
-					break;
-				end
+	if IsValid(entity) and (entity:IsNPC() or entity:IsNextBot()) and self.spawnedNPCS then
+		for i = 1, #self.spawnedNPCS do
+			if self.spawnedNPCS[i] == entity:EntIndex() then
+				table.remove(self.spawnedNPCS, i);
+				break;
 			end
 		end
 	end
@@ -1986,7 +1973,7 @@ function Schema:PlayerCanUseCommand(player, commandTable, arguments)
 	end;
 end;
 
-local headbuttMes = {"таранит дверь головой как ебучий идиот!", "таранит дверь головой в попытке открыть ее!", "ударяется головой об дверь в попытке открыть ее!"};
+local headbuttMes = {"headbutts the door like a fucking idiot!", "bashes their head into the door in an attempt to open it!", "hits their head on the door while attempting to open it!"};
 local headbuttSounds = {"physics/wood/wood_crate_impact_hard4.wav", "doors/vent_open3.wav", "physics/metal/metal_box_impact_hard1.wav"};
 
 -- Called when a player attempts to use a door.
@@ -2039,7 +2026,7 @@ function Schema:PlayerCanUseDoor(player, door)
 				if !player.nextDoorNotify or player.nextDoorNotify < curTime then
 					player.nextDoorNotify = curTime + 1;
 				
-					Schema:EasyText(player, "firebrick", "У вас недостаточно высокий ранг чтобы открыть эту дверь!");
+					Schema:EasyText(player, "firebrick", "You aren't the correct faction to open this blastdoor!");
 				end
 				
 				return false;
@@ -2053,7 +2040,7 @@ function Schema:PlayerCanUseDoor(player, door)
 						if !player.nextDoorNotify or player.nextDoorNotify < curTime then
 							player.nextDoorNotify = curTime + 1;
 						
-							Schema:EasyText(player, "firebrick", "У вас недостаточно высокий ранг чтобы открыть эту дверь!");
+							Schema:EasyText(player, "firebrick", "You aren't a high enough rank to open this blastdoor!");
 						end
 					
 						return false;
@@ -2068,7 +2055,7 @@ function Schema:PlayerCanUseDoor(player, door)
 				if !player.nextDoorNotify or player.nextDoorNotify < curTime then
 					player.nextDoorNotify = curTime + 1;
 				
-					Schema:EasyText(player, "firebrick", "Вы состоите не в той фракции чтобы открыть эту дверь!");
+					Schema:EasyText(player, "firebrick", "You aren't the correct faction to open this blastdoor!");
 				end
 			
 				return false;
@@ -2077,7 +2064,7 @@ function Schema:PlayerCanUseDoor(player, door)
 			if player:GetSubfaith() ~= "Voltism" then
 				Schema:DoTesla(player, true);
 				player:TakeStability(player:GetMaxStability() * 3, nil, true);
-				Clockwork.chatBox:AddInTargetRadius(player, "me", "падает на землю из-за электрической дуги!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
+				Clockwork.chatBox:AddInTargetRadius(player, "me", "is sent to the ground by an arc of electricity!", player:GetPos(), Clockwork.config:Get("talk_radius"):Get() * 2);
 				
 				return false;
 			end
@@ -2121,7 +2108,7 @@ function Schema:PlayerUse(player, entity)
 		end;
 		
 		if (!player.nextTieNotify or player.nextTieNotify < curTime) then
-			Schema:EasyText(player, "peru", "Вы не можете использовать это, пока связаны!!");
+			Schema:EasyText(player, "peru", "You cannot use that when you are tied!");
 			
 			player.nextTieNotify = curTime + 2;
 		end;
@@ -2134,7 +2121,7 @@ end;
 function Schema:PlayerCanDestroyItem(player, itemTable, noMessage)
 	if (player:GetNetVar("tied") != 0) then
 		if (!noMessage) then
-			Schema:EasyText(player, "peru", "Вы не можете уничтожать предметы пока связаны!");
+			Schema:EasyText(player, "peru", "You cannot destroy items when you are tied!");
 		end;
 		
 		return false;
@@ -2145,7 +2132,7 @@ end;
 function Schema:PlayerCanDropItem(player, itemTable, noMessage)
 	if (player:GetNetVar("tied") != 0) then
 		if (!noMessage) then
-			Schema:EasyText(player, "peru", "Вы не можете выкидывать предметы, пока связаны!");
+			Schema:EasyText(player, "peru", "You cannot drop items when you are tied!");
 		end;
 		
 		return false;
@@ -2153,7 +2140,7 @@ function Schema:PlayerCanDropItem(player, itemTable, noMessage)
 	
 	if (player.scriptedDying) then
 		if (!noMessage) then
-			Schema:EasyText(player, "peru", "Вы не можете выкидывать предметы, пока умираете!");
+			Schema:EasyText(player, "peru", "You cannot drop items while you are dying!");
 		end
 		
 		return false;
@@ -2164,7 +2151,7 @@ end;
 function Schema:PlayerCanUseItem(player, itemTable, noMessage)
 	if (player:GetNetVar("tied") != 0) then
 		if (!noMessage) then
-			Schema:EasyText(player, "peru", "Вы не можете ипользовать предметы, пока связаны!");
+			Schema:EasyText(player, "peru", "You cannot use items when you are tied!");
 		end;
 		
 		return false;
@@ -2172,7 +2159,7 @@ function Schema:PlayerCanUseItem(player, itemTable, noMessage)
 	
 	if (player.scriptedDying) then
 		if (!noMessage) then
-			Schema:EasyText(player, "peru", "Вы не можете ипользовать предметы, пока умираете!");
+			Schema:EasyText(player, "peru", "You cannot use items while you are dying!");
 		end
 		
 		return false;
@@ -2183,7 +2170,7 @@ function Schema:PlayerCanUseItem(player, itemTable, noMessage)
 		
 		if clothesItem and clothesItem.permanent and player:GetSubfaith() == "Voltism" then
 			if (!noMessage) then
-				Schema:EasyText(player, "peru", "Вы не можете использовать термальный имплант, пока используете экзоскелет!");
+				Schema:EasyText(player, "peru", "You cannot use a thermal implant while using an exoskeleton!");
 			end
 			
 			return false;
@@ -2201,9 +2188,9 @@ function Schema:PlayerUseItem(player, itemTable, itemEntity)
 		if player:GetSubfaith() == "Voltism" then
 			if itemTable.category == "Armor" then
 				if !player:GetCharacterData("VoltistNameChanged") then
-					Clockwork.dermaRequest:RequestString(player, "Изменение имени при вознесении", "На что вы хотите поменять свое имя?", player:GetName(), function(result)
+					Clockwork.dermaRequest:RequestString(player, "Ascension Name Change", "What do you want to change your name to?", player:GetName(), function(result)
 						if result:len() < 6 then
-							Schema:EasyText(player, "peru", "Это имя слишком короткое!");
+							Schema:EasyText(player, "peru", "This name is too short!");
 							
 							return;
 						end
@@ -2222,7 +2209,7 @@ function Schema:PlayerUseItem(player, itemTable, itemEntity)
 							local blacklistedName = blacklistedNames[i];
 						
 							if string.find(string.lower(result), blacklistedName) then
-								Schema:EasyText(player, "peru", "У этого имени запрещенные символы!");
+								Schema:EasyText(player, "peru", "This name contains a blacklisted string!");
 							
 								return;
 							end
@@ -2294,11 +2281,11 @@ function Schema:ChatBoxAdjustInfo(info)
 				local imbecileText = info.text;
 				
 				if #imbecileText > 2 then
-					local fillers = {"э", "ээм", "эммм", "ум", "эээх", "типа"};
+					local fillers = {"uh", "uhh", "uhhh", "erm", "ehh", "like"};
 					local suffixes = {".", ",", ";", "!", ":", "?"};
 					local splitText = string.Split(imbecileText, " ");
-					local tourettes = {"ПИДАРАС", "ЕБУЧИЙ", "БЛЯТЬ", "ЖОПА", "СУКА", "ПИЗДА", "ПЕНИС"};
-					local vowels = {["upper"] = {"А", "Е", "И", "О", "У"}, ["lower"] = {"а", "е", "и", "о", "у"}};
+					local tourettes = {"ASSHOLE", "FUCKING", "FUCK", "ASS", "BITCH", "CUNT", "PENIS"};
+					local vowels = {["upper"] = {"A", "E", "I", "O", "U"}, ["lower"] = {"a", "e", "i", "o", "u"}};
 					
 					for i = 1, #splitText do
 						local currentSplit = splitText[i];
@@ -2419,7 +2406,7 @@ function Schema:PlayerDeath(player, inflictor, attacker, damageInfo)
 						attacker:GiveItem(item.CreateInstance(catalysts[math.random(1, #catalysts)]));
 					end
 					
-					Clockwork.hint:Send(attacker, "Вы получили "..tostring(numCatalysts).." случайных каталистов.", 5, Color(100, 175, 100), true, true);
+					Clockwork.hint:Send(attacker, "You have gained "..tostring(numCatalysts).." random catalysts.", 5, Color(100, 175, 100), true, true);
 				end
 				
 				killXP = killXP * math.Clamp(level, 1, 40);
@@ -2445,10 +2432,10 @@ function Schema:PlayerDeath(player, inflictor, attacker, damageInfo)
 						end
 					end
 					
-					Clockwork.chatBox:AddInTargetRadius(attacker, "me", "убивает "..player:Name().." как жертвоприношение. Его кровь просачивается в землю под Великим Древом, а корни окутывают его труп. Использование ритуала Клана Краст увеличивает плодовитость подношения, тем самым усиливая результат и распространяя его силу на всех, кто находится поблизости.", attacker:GetPos(), config.Get("talk_radius"):Get() * 4);
+					Clockwork.chatBox:AddInTargetRadius(attacker, "me", "strikes down "..player:Name().." as a sacrifice. Their blood seeps into the ground beneath the Great Tree and roots envelop their corpse. The usage of Clan Crast ritual chanting increases the fertility of the offering, thus enhancing the outcome and spreading its power to all those nearby.", attacker:GetPos(), config.Get("talk_radius"):Get() * 4);
 				else
 					attacker:HandleXP(killXP);
-					Clockwork.chatBox:AddInTargetRadius(attacker, "me", "убивает "..player:Name().." как жертвоприношение. Его кровь просачивается в землю под Великим Древом, а корни окутывают его труп.", attacker:GetPos(), config.Get("talk_radius"):Get() * 4);
+					Clockwork.chatBox:AddInTargetRadius(attacker, "me", "strikes down "..player:Name().." as a sacrifice. Their blood seeps into the ground beneath the Great Tree and roots envelop their corpse.", attacker:GetPos(), config.Get("talk_radius"):Get() * 4);
 				end
 				
 				--[[[timer.Simple(1, function()
@@ -2517,7 +2504,7 @@ function Schema:PostPlayerSpawn(player, lightSpawn, changeClass, firstSpawn)
 	
 	if (!player.nextSpawnRun or player.nextSpawnRun < curTime) then
 		if (!lightSpawn) then
-			netstream.Start(player, "ClearEffects", true);
+			Clockwork.datastream:Start(player, "ClearEffects", true);
 			player.beingSearched = nil;
 			player.searching = nil;
 		end;
@@ -2528,13 +2515,13 @@ function Schema:PostPlayerSpawn(player, lightSpawn, changeClass, firstSpawn)
 		
 		if (!lightSpawn) then
 			if firstSpawn then
-				if (!player.cwWakingUp) and !player:IsBot() then
-					if player:GetCharacterData("charPlayTime", 0) < 1 then
+				if (!player.cwWakingUp and !player.cwWoke) then
+					if not player:IsBot() then
 						self:PlayerWakeup(player);
 					end
+					
+					player.cwWoke = true;
 				end
-				
-				player.spawnTime = curTime;
 			end
 
 			if player:HasTrait("followed") then
@@ -2552,13 +2539,9 @@ function Schema:PostPlayerSpawn(player, lightSpawn, changeClass, firstSpawn)
 			end
 		end
 
-		netstream.Start(player, "GetZone", true);
+		Clockwork.datastream:Start(player, "GetZone", true);
 		
 		player.nextSpawnRun = curTime + 1;
-	end;
-	
-	if (player:IsAdmin() or player:IsUserGroup("operator")) then
-		netstream.Heavy(player, "NPCSpawnESPInfo", {self.npcSpawns});
 	end;
 end;
 
@@ -2573,7 +2556,7 @@ function Schema:PostPlayerLightSpawn(player, weapons, ammo, special) end;
 function Schema:PlayerCharacterLoaded(player)
 	netstream.Start(player, "GetZone", true);
 	
-	if player:GetCharacterData("tied") or (self.autoTieEnabled and !player:IsAdmin()) then
+	if self.autoTieEnabled and !player:IsAdmin() then
 		player:SetNetVar("tied", 1);
 	end
 	
@@ -2700,13 +2683,11 @@ function Schema:GetPlayerDefaultModel(player) end;
 
 -- Called when an NPC has been killed.
 function Schema:OnNPCKilled(npc, attacker, inflictor)
-	if IsValid(npc) and self.spawnedNPCs then
-		for k, v in pairs(self.spawnedNPCs) do
-			for i, entIndex in ipairs(v) do
-				if entIndex == npc:EntIndex() then
-					table.remove(self.spawnedNPCs[k], i);
-					break;
-				end
+	if IsValid(npc) and self.spawnedNPCS then
+		for i = 1, #self.spawnedNPCS do
+			if self.spawnedNPCS[i] == npc:EntIndex() then
+				table.remove(self.spawnedNPCS, i);
+				break;
 			end
 		end
 	end
@@ -3113,6 +3094,8 @@ function Schema:ActionStopped(player, action)
 			
 			player.ladderConstructing = nil;
 		end
+	elseif action == "helljaunting" then
+		player.teleporting = false
 	end
 end;
 
@@ -3183,7 +3166,7 @@ function Schema:CinderBlockExecution(player, target, itemTable)
 				Clockwork.player:SetRagdollState(target, RAGDOLL_FALLENOVER, nil);
 				entity = target:GetRagdollEntity()
 			else
-				Schema:EasyText(player, "peru", "Этот человек должен быть связан перед использование шлакоблока!")
+				Schema:EasyText(player, "peru", "This person must be tied before you can tie the cinder block!")
 			end
 		end
 		
@@ -3231,14 +3214,14 @@ function Schema:CinderBlockExecution(player, target, itemTable)
 						return
 					end
 				else
-					Schema:EasyText(player, "peru", "Пиши /adminhelp, у этого пидараса сломаны ноги!");
+					Schema:EasyText(player, "peru", "This person does not have valid foot bones for some reason! Try using /adminhelp and contacting an admin!");
 				end
 			else
-				Schema:EasyText(player, "peru", "Вам нужно привязать это к ногам человека!")
+				Schema:EasyText(player, "peru", "You must tie this to your victim's foot!")
 				return false
 			end
 		else
-			Schema:EasyText(player, "darkgrey", "Вам нужно смотреть на цель!")
+			Schema:EasyText(player, "darkgrey", "You must look at a valid target!")
 			return false
 		end
 	else

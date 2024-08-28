@@ -44,32 +44,32 @@ function cwCinematicText:ChatBoxAdjustInfo(info)
 					end;
 					
 					local lastChar = string.utf8sub(info.text, string.utf8len(info.text));
-					local sayText = "говорит";
+					local sayText = "says";
 					
 					if info.class == "ic" then
 						if lastChar == "?" then
-							sayText = "спрашивает";
+							sayText = "asks";
 						elseif lastChar == "!" then
-							sayText = "восклицает";
+							sayText = "exclaims";
 						end
 					elseif info.class == "yell" then
-						sayText = "кричит";
+						sayText = "yells";
 					elseif info.class == "whisper" then
-						sayText = "шепчет";
+						sayText = "whispers";
 					end
 					
 					if info.font then
 						if info.font == "Voltism" then
-							sayText = "скрипит";
+							sayText = "chirps";
 							
 							if info.class == "ic" then
 								if lastChar == "?" then
-									sayText = "вопрошает";
+									sayText = "queries";
 								elseif lastChar == "!" then
-									sayText = "издает";
+									sayText = "emits";
 								end
 							elseif info.class == "yell" then
-								sayText = "визжит";
+								sayText = "shrieks";
 							end
 						end
 					end

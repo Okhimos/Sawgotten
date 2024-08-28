@@ -95,7 +95,7 @@ function GM:OnePlayerSecond(player, curTime, infoTable)
 
 	player:SetDTString(STRING_FLAGS, player:GetFlags())
 	player:SetNetVar("Model", player:GetDefaultModel())
-	player:SetDTString(STRING_NAME, player:Name(true))
+	player:SetDTString(STRING_NAME, player:Name())
 	player:SetNetVar("Cash", player:GetCash())
 	player:SetNetVar("CustomColor", player:GetCharacterData("CustomColor"));
 
@@ -410,9 +410,7 @@ end
 -- Called when a player switches their weapon. 
 function GM:PlayerSwitchWeapon(player, oldWeapon, newWeapon)
 	timer.Simple(FrameTime(), function()
-		if IsValid(player) then
-			hook.Run("RunModifyPlayerSpeed", player, player.cwInfoTable, true);
-		end
+		hook.Run("RunModifyPlayerSpeed", player, player.cwInfoTable, true);
 	end);
 end;
 
@@ -1042,7 +1040,7 @@ function GM:PlayerSpawn(player)
 		
 		Clockwork.player:SetRecognises(player, player, RECOGNISE_TOTAL)
 		
-		netstream.Start(player, "RadioState", player:GetCharacterData("radioState", false) or false);
+		Clockwork.datastream:Start(player, "RadioState", player:GetCharacterData("radioState", false) or false);
 		
 		plyTab.cwChangeClass = false
 		plyTab.cwLightSpawn = false
@@ -1443,11 +1441,9 @@ function GM:GetFallDamage(player, velocity)
 	if (damage > 30) and !player:IsRagdolled() then
 		if hook.Run("PlayerCanFallOverFromFallDamage", player) ~= false then
 			timer.Simple(0, function()
-				if IsValid(player) then
-					Clockwork.player:SetRagdollState(player, RAGDOLL_FALLENOVER, nil)
+				Clockwork.player:SetRagdollState(player, RAGDOLL_FALLENOVER, nil)
 
-					player:SetDTBool(BOOL_FALLENOVER, true)
-				end
+				player:SetDTBool(BOOL_FALLENOVER, true)
 			end);
 		end
 	end
@@ -1708,10 +1704,10 @@ end
 do
 	local defaultInvWeight = config.GetVal("default_inv_weight")
 	local defaultInvSpace = config.GetVal("default_inv_weight")
+	local thinkRate = 0.2
 	local cwNextThink = 0
 	local cwNextSecond = 0
 	local cwNextHalfSecond = 0;
-	cwThinkRate = 0.2;
 
 	-- Called each tick.
 	function GM:Tick()
@@ -1747,7 +1743,7 @@ do
 				end
 			end
 
-			cwNextThink = curTime + cwThinkRate
+			cwNextThink = curTime + thinkRate
 
 			if (curTime >= cwNextSecond) then
 				cwNextSecond = curTime + 1
@@ -1983,7 +1979,7 @@ end
 function GM:PlayerCanHolsterWeapon(player, itemTable, weapon, bForce, bNoMsg)
 	if (Clockwork.player:GetSpawnWeapon(player, itemTable:GetWeaponClass())) then
 		if (!bNoMsg) then
-			Schema:EasyText(player, "peru", "Вы не можете убрать это оружие!")
+			Schema:EasyText(player, "peru", "You cannot holster this weapon!")
 		end
 
 		return false
@@ -1998,7 +1994,7 @@ end
 function GM:PlayerCanDropWeapon(player, itemTable, weapon, bNoMsg)
 	if itemTable.GetWeaponClass and (Clockwork.player:GetSpawnWeapon(player, itemTable:GetWeaponClass())) then
 		if (!bNoMsg) then
-			Schema:EasyText(player, "peru", "Вы не можете выбросить это оружие!")
+			Schema:EasyText(player, "peru", "You cannot drop this weapon!")
 		end
 
 		return false
@@ -2021,7 +2017,7 @@ function GM:PlayerCanUseItem(player, itemTable, bNoMsg)
 
 	if (isWeapon and isSpawnWeapon) then
 		if (!bNoMsg) then
-			Schema:EasyText(player, "peru", "Вы не можете использовать это оружие!")
+			Schema:EasyText(player, "peru", "You cannot use this weapon!")
 		end
 
 		return false
@@ -2306,7 +2302,7 @@ function GM:ClockworkInitPostEntity() end
 -- Called when a player attempts to say something in-character.
 function GM:PlayerCanSayIC(player, text)
 	if ((!player:Alive() or player:IsRagdolled(RAGDOLL_FALLENOVER)) and !Clockwork.player:GetDeathCode(player, true)) or player:IsMuted() then
-		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
+		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
 
 		return false
 	else
@@ -2662,7 +2658,7 @@ function GM:PlayerSpawnNPC(player, model)
 	end
 
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "Ты не можешь делать это сейчас!")
+		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
 
 		return false
 	end
@@ -2820,18 +2816,18 @@ function GM:EntityHandleMenuOption(player, entity, option, arguments)
 						if repairItemTable:GetCondition() <= 0 then
 							player:TakeItem(repairItemTable, true);
 							
-							Schema:EasyText(player, "olivedrab", "Ты починил "..itemTable.name.." до "..tostring(math.Round(itemTable:GetCondition(), 2))..", используя последнюю часть набора.");
+							Schema:EasyText(player, "olivedrab", "You have repaired your "..itemTable.name.." to "..tostring(math.Round(itemTable:GetCondition(), 2))..", using the last of the repair kit's parts in the process.");
 						else
-							Schema:EasyText(player, "green", "Ты починил "..itemTable.name.." до "..tostring(math.Round(itemTable:GetCondition(), 2))..".");
+							Schema:EasyText(player, "green", "You have repaired your "..itemTable.name.." to "..tostring(math.Round(itemTable:GetCondition(), 2))..".");
 							Clockwork.inventory:Rebuild(player);
 						end
 					else
-						Schema:EasyText(player, "chocolate", "У вас нет предмета, с помощью которого можно отремонтировать это!");
+						Schema:EasyText(player, "chocolate", "You do not have an item you can repair this item with!");
 						return false;
 					end
 				end
 			else
-				Schema:EasyText(player, "peru", "Этот предмет не нужно ремонтировать!");
+				Schema:EasyText(player, "peru", "This item is already in perfect condition and cannot be repaired.");
 				return false;
 			end
 		end
@@ -2850,7 +2846,7 @@ function GM:EntityHandleMenuOption(player, entity, option, arguments)
 			local itemKills = itemTable:GetData("kills");
 			
 			if itemKills and itemKills > 0 then
-				examineText = examineText.." Вы выгравировали \'"..itemEngraving.."\' вместе с количеством "..tostring(itemKills).." убийств.";
+				examineText = examineText.." It has \'"..itemEngraving.."\' engraved into it, alongside a tally mark of "..tostring(itemKills).." kills.";
 			else
 				examineText = examineText.." It has \'"..itemEngraving.."\' engraved into it.";
 			end
@@ -2858,24 +2854,24 @@ function GM:EntityHandleMenuOption(player, entity, option, arguments)
 
 		if table.HasValue(conditionTextCategories, itemTable.category) then
 			if itemCondition >= 90 then
-				examineText = examineText.." Этот предмет находится в идеальном состоянии!";
+				examineText = examineText.." It appears to be in immaculate condition.";
 			elseif itemCondition < 90 and itemCondition >= 60 then
-				examineText = examineText.." Похоже, он находится в несколько потрепанном состоянии!";
+				examineText = examineText.." It appears to be in a somewhat battered condition.";
 			elseif itemCondition < 60 and itemCondition >= 30 then
-				examineText = examineText.." Похоже, он находится в очень плохом состоянии!";
+				examineText = examineText.." It appears to be in very poor condition.";
 			elseif itemCondition < 30 and itemCondition > 0 then
-				examineText = examineText.." Похоже, он вот-вот сломается!";
+				examineText = examineText.." It appears to be on the verge of breaking.";
 			elseif itemCondition <= 0 then
 				if itemTable:IsBroken() then
-					examineText = examineText.." Этот предмет полностью сломан и представляет из себя лишь мусор.";
+					examineText = examineText.." It is completely destroyed and only worth its weight in scrap now.";
 				else
-					examineText = examineText.." Он сломан, но в какой-то степени его все еще можно использовать.";
+					examineText = examineText.." It is broken yet still usable to some degree.";
 				end
 			end
 		elseif itemTable.category == "Shot" and itemTable.ammoMagazineSize then
 			local rounds = itemTable:GetAmmoMagazine();
 			
-			examineText = examineText.." В магазие находится "..tostring(rounds).." "..itemTable.ammoName.." патрон.";
+			examineText = examineText.." The magazine has "..tostring(rounds).." "..itemTable.ammoName.." rounds loaded.";
 		end
 		local co = itemTable.examineColor or "skyblue"
 		Schema:EasyText(player, co, examineText)
@@ -3024,7 +3020,7 @@ function GM:PlayerSpawnedProp(player, model, entity)
 				Clockwork.player:GiveCash(player, -info.cost, info.name)
 				entity.cwGiveRefundTab = {CurTime() + 10, player, info.cost}
 			else
-				Schema:EasyText(player, "chocolate", "Тебе нужно еще "..Clockwork.kernel:FormatCash(info.cost - player:GetCash(), nil, true).." чтобы купить это!")
+				Schema:EasyText(player, "chocolate", "You need another "..Clockwork.kernel:FormatCash(info.cost - player:GetCash(), nil, true).." to buy this!")
 				entity:Remove()
 				return
 			end
@@ -3052,7 +3048,7 @@ function GM:PlayerSpawnProp(player, model)
 	end
 
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
+		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
 		return false
 	end
 
@@ -3068,7 +3064,7 @@ function GM:PlayerSpawnRagdoll(player, model)
 	if (!Clockwork.player:HasFlags(player, "r")) then return false end
 
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
+		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
 
 		return false
 	end
@@ -3083,7 +3079,7 @@ end
 -- Called when a player attempts to spawn an effect.
 function GM:PlayerSpawnEffect(player, model)
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
+		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
 
 		return false
 	end
@@ -3106,7 +3102,7 @@ function GM:PlayerSpawnVehicle(player, model)
 	end
 
 	if (!player:Alive() or player:IsRagdolled()) then
-		Schema:EasyText(player, "peru", "Ты не можешь сделать это сейчас!")
+		Schema:EasyText(player, "peru", "You cannot do this action at the moment!")
 
 		return false
 	end
@@ -3723,12 +3719,6 @@ function GM:PlayerDeath(player, inflictor, attacker, damageInfo)
 				Clockwork.kernel:PrintLog(LOGTYPE_CRITICAL, attacker:GetClass().." has dealt "..tostring(math.ceil(damageInfo:GetDamage())).." damage to "..player:Name()..", killing them!")
 			end
 		end
-	elseif IsValid(inflictor) then
-		Clockwork.kernel:PrintLog(LOGTYPE_CRITICAL, inflictor:GetClass().." has dealt "..tostring(math.ceil(damageInfo:GetDamage())).." damage to "..player:Name()..", killing them!")
-	elseif damageInfo:IsFallDamage() then
-		Clockwork.kernel:PrintLog(LOGTYPE_CRITICAL, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from fall damage, killing them!")
-	else
-		Clockwork.kernel:PrintLog(LOGTYPE_CRITICAL, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from an unknown source, killing them!")
 	end
 end
 
@@ -3927,21 +3917,13 @@ end
 function GM:EntityTakeDamage(entity, damageInfo)
 	local class = entity:GetClass();
 	
-	if (class == "prop_dynamic" or class == "cw_duelstatue" or class == "cw_hellportal") or entity.cwInventory then
+	if class == "prop_dynamic" or class == "cw_duelstatue" or class == "cw_hellportal" then
+		return true;
+	elseif entity.cwInventory then
 		return true;
 	end
 	
-	local damage = damageInfo:GetDamage();
-	
-	if (damage == 0) then
-		return true;
-	end
-	
-	if (damageInfo:IsDamageType(DMG_CRUSH) and damage < 10) then
-		return true;
-	end
-	
-	if (entity:IsPlayer() and damageInfo:IsExplosionDamage() and damage >= 25 and !entity:IsRagdolled() and !entity:IsNoClipping()) then
+	if (entity:IsPlayer() and damageInfo:IsExplosionDamage() and !entity:IsRagdolled() and !entity:IsNoClipping()) then
 		if !Clockwork.player:HasFlags(entity, "E") and !Clockwork.player:HasFlags(entity, "K") then
 			if !cwBeliefs or (cwBeliefs and !entity:HasBelief("fortitude_finisher")) then
 				local data = {}
@@ -3959,6 +3941,14 @@ function GM:EntityTakeDamage(entity, damageInfo)
 		end
 	end
 	
+	if (damageInfo:IsDamageType(DMG_CRUSH) and damageInfo:GetDamage() < 10) then
+		damageInfo:SetDamage(0)
+	end
+	
+	if (damageInfo:GetDamage() == 0) then
+		return true;
+	end
+
 	local inflictor = damageInfo:GetInflictor()
 	local attacker = damageInfo:GetAttacker()
 
@@ -4092,10 +4082,6 @@ function GM:EntityTakeDamage(entity, damageInfo)
 						else
 							Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from "..attacker:GetClass()..", leaving them at "..player:Health().." health"..armor)
 						end
-					elseif IsValid(inflictor) then
-						Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from "..inflictor:GetClass()..", leaving them at "..player:Health().." health"..armor)
-					elseif damageInfo:IsFallDamage() then
-						Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from fall damage, leaving them at "..player:Health().." health"..armor)
 					else
 						Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from an unknown source, leaving them at "..player:Health().." health"..armor)
 					end
@@ -4170,10 +4156,6 @@ function GM:EntityTakeDamage(entity, damageInfo)
 					else
 						Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from "..attacker:GetClass()..", leaving them at "..player:Health().." health"..armor)
 					end
-				elseif IsValid(inflictor) then
-					Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from "..inflictor:GetClass()..", leaving them at "..player:Health().." health"..armor)
-				elseif damageInfo:IsFallDamage() then
-					Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from fall damage, leaving them at "..player:Health().." health"..armor)
 				else
 					Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name().." has taken "..tostring(math.ceil(damageInfo:GetDamage())).." damage from an unknown source, leaving them at "..player:Health().." health"..armor)
 				end

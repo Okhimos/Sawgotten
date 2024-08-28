@@ -140,7 +140,7 @@ function Clockwork.player:CreateCharacterFromData(player, data)
 	info.lastPlayed = data.lastPlayed
 	info.timeCreated = data.timeCreated
 	info.data = {}
-	
+
 	if (data.plugin) then
 		for k, v in pairs(data.plugin) do
 			info.data[k] = v
@@ -184,30 +184,10 @@ function Clockwork.player:CreateCharacterFromData(player, data)
 			local traitTable = Clockwork.trait:FindByID(v);
 			
 			if (traitTable) then
-				if traitTable.disables then
-					for i, v in ipairs(traitTable.disables) do
-						if table.HasValue(data.traits, v) then
-							return self:SetCreateFault(player, "You have selected traits that are incompatible with eachother!");
-						end
-					end
-				end
-				
 				table.insert(info.data["Traits"], traitTable.uniqueID);
 				pointsSpent = pointsSpent + traitTable.points;
 			end;
 		end;
-		
-		if table.HasValue(data.traits, "leper") then
-			local dummyEnt = ents.Create("prop_dynamic");
-			
-			if IsValid(dummyEnt) then
-				dummyEnt:SetModel(info.model);
-				
-				info.skin = dummyEnt:SkinCount() - 1;
-				
-				dummyEnt:Remove();
-			end
-		end
 		
 		if (pointsSpent > maximumPoints) then
 			return self:SetCreateFault(player, "Your trait point balance must be equal to or above 0!");
@@ -258,9 +238,10 @@ function Clockwork.player:CreateCharacterFromData(player, data)
 	if (!factionTable.GetName) then
 		if (!factionTable.useFullName) then
 			if (data.forename and data.surname) then
-				data.forename = string.gsub(data.forename, "^.", string.utf8upper)
-				data.surname = string.gsub(data.surname, "^.", string.utf8upper)
-
+				-- ^. pattern only detects ASCII characters
+				data.forename = string.utf8upper(data.forename:utf8sub(1, 1)) .. data.forename:utf8sub(2)
+				data.surname = string.utf8upper(data.surname:utf8sub(1, 1)) .. data.surname:utf8sub(2)
+				
 				local forename = string.utf8lower(data.forename);
 				local surname = string.utf8lower(data.surname);
 
@@ -575,7 +556,7 @@ end
 function Clockwork.player:SetAction(player, action, duration, priority, Callback)
 	local currentAction = self:GetAction(player)
 
-	if (!action or type(action) != "string" or action == "") then
+	if (type(action) != "string" or action == "") then
 		timer.Remove("Action"..player:UniqueID())
 
 		player:SetNetVar("StartActTime", 0)
@@ -595,7 +576,8 @@ function Clockwork.player:SetAction(player, action, duration, priority, Callback
 	end
 
 	if (player.cwAction) then
-		if ((priority and priority > player.cwAction[2]) or !currentAction or action == player.cwAction[1]) then
+		if ((priority and priority > player.cwAction[2])
+		or currentAction == "" or action == player.cwAction[1]) then
 			player.cwAction = nil
 		end
 	end
@@ -655,6 +637,8 @@ function Clockwork.player:GetAction(player, percentage)
 		else
 			return action, actionDuration, startActionTime
 		end
+	else
+		return "", 0, 0
 	end
 end
 
@@ -2607,8 +2591,6 @@ function Clockwork.player:SetRagdollState(player, state, delay, decay, force, mu
 			ragdoll:SetBodygroup(0, player:GetBodygroup(0));
 			ragdoll:SetBodygroup(1, player:GetBodygroup(1));
 			ragdoll:Spawn()
-			
-			ragdoll.cwNextFallDamage = CurTime() + 1;
 
 			if string.find(model, "models/begotten/heads") then
 				local clothesItem = player:GetClothesEquipped();
@@ -3066,6 +3048,11 @@ function Clockwork.player:LoadCharacter(player, characterID, tMergeCreate, Callb
 			table.Merge(character, tMergeCreate)
 
 			if (character and type(character) == "table") then
+				character.inventory = {}
+				hook.Run(
+					"GetPlayerDefaultInventory", player, character, character.inventory
+				)
+
 				if (!bForce) then
 					local fault = hook.Run("PlayerCanCreateCharacter", player, character, characterID)
 
@@ -3073,10 +3060,6 @@ function Clockwork.player:LoadCharacter(player, characterID, tMergeCreate, Callb
 						return self:SetCreateFault(player, fault or "You cannot create this character!")
 					end
 				end
-				
-				character.inventory = {}
-				hook.Run("GetPlayerDefaultInventory", player, character, character.inventory)
-				hook.Run("PrePlayerCharacterCreated", player, character);
 
 				self:SaveCharacter(player, true, character, function(key)
 					player.cwCharacterList[characterID] = character
@@ -3127,7 +3110,7 @@ function Clockwork.player:SetBasicSharedVars(player)
 
 	player:SetDTString(STRING_FLAGS, player:GetFlags())
 	player:SetNetVar("Model", self:GetDefaultModel(player))
-	player:SetDTString(STRING_NAME, player:Name(true))
+	player:SetDTString(STRING_NAME, player:Name())
 	player:SetNetVar("Key", player:GetCharacterKey())
 	player:SetNetVar("CharacterID", player:GetCharacterID())
 	player:SetSharedVar("faith", player:GetFaith())

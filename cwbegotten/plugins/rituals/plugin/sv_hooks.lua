@@ -23,7 +23,7 @@ function cwRituals:PlayerCanPerformRitual(player, uniqueID, bIgnoreItems)
 	local subfaction = player:GetSubfaction();
 	local subfaith = player:GetSharedVar("subfaith");
 	
-	if Clockwork.player:GetAction(player) or player:IsRagdolled() or !player:Alive() or player.opponent or (cwDueling and cwDueling:PlayerIsInMatchmaking(player)) or player:GetNetVar("tied") != 0 or player.possessor then
+	if Clockwork.player:GetAction(player) ~= "" or player:IsRagdolled() or !player:Alive() or player.opponent or (cwDueling and cwDueling:PlayerIsInMatchmaking(player)) or player:GetNetVar("tied") != 0 or player.possessor then
 		Schema:EasyText(player, "peru", "Your character cannot perform a ritual at this moment!");
 		return false;
 	end
@@ -155,7 +155,7 @@ function cwRituals:PerformRitual(player, uniqueID, itemIDs, bIgnoreItems)
 				if bIgnoreItems or self:PlayerMeetsRitualItemRequirements(player, ritualTable, itemIDs) then
 					if (ritualTable.ritualTime) then
 						if !ritualTable.isSilent then
-							Clockwork.chatBox:AddInTargetRadius(player, "me", "начинает распевать ритуальное песнопение.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+							Clockwork.chatBox:AddInTargetRadius(player, "me", "begins chanting a hymn.", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 						end
 						
 						if (ritualTable.StartRitual) then
@@ -197,7 +197,7 @@ function cwRituals:PerformRitual(player, uniqueID, itemIDs, bIgnoreItems)
 			
 			hook.Run("PlayerFailedRitual", player, uniqueID, ritualTable, bHasRequirements, bHasFlags)
 		else
-			Schema:EasyText(player, "peru", "Вы должны подождать "..-math.ceil(curTime - player.cwNextRitual).." секунд прежде чем пытаться исполнить ритуал вновь!")
+			Schema:EasyText(player, "peru", "You must wait another "..-math.ceil(curTime - player.cwNextRitual).." seconds before attempting to perform a ritual again!")
 		end;
 	end;
 end;
@@ -205,7 +205,7 @@ end;
 -- This function is expensive as FUCK. You can make a better one if you want cash.
 function cwRituals:PlayerMeetsRitualItemRequirements(player, ritualTable, itemIDs, bTake)
 	if !itemIDs or table.IsEmpty(itemIDs) then
-		Schema:EasyText(player, "chocolate", "У вас нет каталистов для проведения ритуала!");
+		Schema:EasyText(player, "chocolate", "You have no items selected to perform a ritual with!");
 		return false;
 	end
 
@@ -213,7 +213,7 @@ function cwRituals:PlayerMeetsRitualItemRequirements(player, ritualTable, itemID
 		ritualTable = self.rituals.stored[ritualTable];
 		
 		if !ritualTable or isstring(ritualTable) then
-			Schema:EasyText(player, "chocolate", "Ритуалов для такой комбинации каталистов не существует!");
+			Schema:EasyText(player, "chocolate", "No valid ritual for this combination of items could be found!");
 			return false;
 		end
 	end
@@ -241,13 +241,13 @@ function cwRituals:PlayerMeetsRitualItemRequirements(player, ritualTable, itemID
 
 	for i = 1, #requirements do
 		if !temptab[i] or (temptab[i] ~= requirements[i]) then
-			Schema:EasyText(player, "chocolate", "У вас нет каталистов для проведения ритуала!");
+			Schema:EasyText(player, "chocolate", "You do not meet the item requirements for this ritual!");
 			return false;
 		end
 	end
 	
 	if #temptab > 0 then
-		Schema:EasyText(player, "chocolate", "У вас нет каталистов для проведения ритуалаl!");
+		Schema:EasyText(player, "chocolate", "You do not meet the item requirements for this ritual!");
 		return false;
 	end]]--
 	
@@ -263,7 +263,7 @@ function cwRituals:PlayerMeetsRitualItemRequirements(player, ritualTable, itemID
 	
 	for i = 1, #requirements do
 		if (!Clockwork.inventory:HasItemCountByID(inventory, requirements[i], counts[requirements[i]])) then
-			Schema:EasyText(player, "chocolate", "У вас нет каталистов для проведения ритуалаl!");
+			Schema:EasyText(player, "chocolate", "You do not have the items required to perform this ritual!");
 			return false;
 		end;
 	end;
@@ -301,7 +301,7 @@ function cwRituals:PlayerThink(player, curTime, infoTable, alive, initialized, p
 						
 						Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, v:Name().." has taken 3 damage from "..player:Name().."'s 'Enlightenment' ritual, leaving them at "..v:Health().." health.");
 			
-						netstream.Start(v, "Stunned", 3);
+						Clockwork.datastream:Start(v, "Stunned", 3);
 					end
 				end
 			end
@@ -324,7 +324,7 @@ function cwRituals:PreEntityTakeDamage(entity, damageInfo)
 			
 			for i, v in ipairs(players) do
 				if v:GetSharedVar("powderheelActive") and v:GetPos():Distance(entPos) <= config.Get("talk_radius"):Get() then
-					damageInfo:ScaleDamage(0.5);
+					damageInfo:ScaleDamage(0.3);
 					
 					break;
 				end
@@ -559,6 +559,14 @@ function cwRituals:PlayerCharacterLoaded(player)
 		end
 	end
 	
+	if player:GetSharedVar("whiteBanner") == true then
+		player:SetSharedVar("whiteBanner", false);
+
+		if timer.Exists("whiteBannerTimer_"..entIndex) then
+			timer.Remove("whiteBannerTimer_"..entIndex);
+		end
+	end
+
 	if player:GetSharedVar("powderheelActive") then
 		player:SetSharedVar("powderheelActive", false);
 		
@@ -610,7 +618,7 @@ function cwRituals:FuckMyLife(entity, damageInfo)
 				if entity:Health() - damageInfo:GetDamage() <= 10 then
 					damageInfo:SetDamage(math.max(entity:Health() - 10, 0));
 										
-					Clockwork.chatBox:Add(attacker, nil, "itnofake", "Ваш удар почему-то не наносит фатального урона "..entity:Name().."!");
+					Clockwork.chatBox:Add(attacker, nil, "itnofake", "Your blow seemingly does not do fatal damage to "..entity:Name().."!");
 					
 					return true;
 				end
@@ -627,7 +635,7 @@ function cwRituals:DoPlayerDeath(player, attacker, damageInfo)
 				attacker:HandleNeed("corruption", -50);
 				Clockwork.player:GiveCash(attacker, 300);
 				
-				Clockwork.chatBox:Add(attacker, nil, "itnofake", "В момент когда вы добиваете "..player:Name().." вы чувствуете как в ваши карманы наполняются чем-то.");
+				Clockwork.chatBox:Add(attacker, nil, "itnofake", "As you strike down "..player:Name().." and fulfill the blood contract, you feel your pockets suddenly become heavier.");
 				
 				local playerCount = _player.GetCount();
 				local players = _player.GetAll();
@@ -636,7 +644,7 @@ function cwRituals:DoPlayerDeath(player, attacker, damageInfo)
 					local v, k = players[i], i;
 					if v:HasInitialized() then
 						if v == player or v:GetFaith() == "Faith of the Dark" then
-							Clockwork.chatBox:Add(v, nil, "darkwhispernoprefix", "Смерть настигла помеченного человека. "..player:Name().."был убит и теперь его душа принадлежит Темному Лорду.");
+							Clockwork.chatBox:Add(v, nil, "darkwhispernoprefix", "Death has been delivered to a marked one. "..player:Name().." has been dispatched and his soul now belongs to the Dark Lord.");
 						end
 					end
 				end
@@ -854,6 +862,14 @@ function cwRituals:PlayerDeath(player)
 			end
 		end
 		
+		if player:GetSharedVar("whiteBanner") == true then
+			player:SetSharedVar("whiteBanner", false);
+		
+			if timer.Exists("whiteBannerTimer_"..entIndex) then
+				timer.Remove("whiteBannerTimer_"..entIndex);
+			end
+		end
+		
 		if player:GetSharedVar("powderheelActive") then
 			player:SetSharedVar("powderheelActive", false);
 			
@@ -912,7 +928,7 @@ function cwRituals:ModifyPlayerSpeed(player, infoTable, action)
 	end
 end
 
-netstream.Hook("AppearanceAlterationMenu", function(player, data)
+Clockwork.datastream:Hook("AppearanceAlterationMenu", function(player, data)
 	if player.selectingNewAppearance then
 		if data and data[1] and data[2] and data[3] and data[4] and data[5] then
 			local blacklistedNames = {};
@@ -969,7 +985,7 @@ netstream.Hook("AppearanceAlterationMenu", function(player, data)
 				return;
 			end;
 			
-			Clockwork.chatBox:AddInTargetRadius(player, "me", " и все остальные видят как лицо того начинает изменять свою форму "..data[1]..".", player:GetPos(), config.Get("talk_radius"):Get() * 2);
+			Clockwork.chatBox:AddInTargetRadius(player, "me", "'s very flesh warps before your eyes, taking on the form of "..data[1]..".", player:GetPos(), config.Get("talk_radius"):Get() * 2);
 			player:EmitSound("prototype/transform.mp3");
 			
 			timer.Simple(1, function()
@@ -1103,7 +1119,7 @@ netstream.Hook("AppearanceAlterationMenu", function(player, data)
 	end
 end)
 
-netstream.Hook("ClosedAppearanceAlterationMenu", function(player, data)
+Clockwork.datastream:Hook("ClosedAppearanceAlterationMenu", function(player, data)
 	if player.selectingNewAppearance then
 		-- Refund items from the Kinisger Appearance Alteration ritual.
 		local ritualTable = cwRituals.rituals.stored["kinisger_appearance_alteration"];
@@ -1120,13 +1136,13 @@ netstream.Hook("ClosedAppearanceAlterationMenu", function(player, data)
 	end
 end)
 
-netstream.Hook("DoRitual", function(player, data)
+Clockwork.datastream:Hook("DoRitual", function(player, data)
 	if data and data[1] and data[2] then
 		cwRituals:PerformRitual(player, data[1], data[2]);
 	end
 end)
 
-netstream.Hook("RegrowthMenu", function(player, data)
+Clockwork.datastream:Hook("RegrowthMenu", function(player, data)
 	if player.selectingRegrowthLimb then
 		if data and isnumber(data) then
 			local hitGroup = data;
@@ -1138,19 +1154,19 @@ netstream.Hook("RegrowthMenu", function(player, data)
 			
 			if player:GetCharacterData("BleedingLimbs", {})[data] then
 				player:MakeLimbStopBleeding(data);
-				Clockwork.hint:Send(player, "Ваш "..cwMedicalSystem.cwHitGroupToString[data].." перестает кровоточить...", 5, Color(100, 175, 100), true, true);
+				Clockwork.hint:Send(player, "Your "..cwMedicalSystem.cwHitGroupToString[data].." stops bleeding...", 5, Color(100, 175, 100), true, true);
 			end
 			
 			player:HandleNeed("corruption", 5);
 			
-			Clockwork.chatBox:Add(player, nil, "itnofake", "Ты чувствуешь как твои раны залечиваются, покуда ветки древа уходят в твою плоть.");
+			Clockwork.chatBox:Add(player, nil, "itnofake", "You feel your wounds heal as branches and leaves extend and retract into your flesh.");
 		end
 		
 		player.selectingRegrowthLimb = false;
 	end
 end)
 
-netstream.Hook("SaveRitualBinds", function(player, data)
+Clockwork.datastream:Hook("SaveRitualBinds", function(player, data)
 	if data and istable(data) then
 		player:SetCharacterData("BoundRituals", data);
 	end

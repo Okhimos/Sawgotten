@@ -4,11 +4,11 @@
 
 -- 5th is description.
 local needTexts = {
-	["corruption"] = {"Чистый", "Засоренный", "Испорченный", "Без Надеждый", "Порча представляет собой влияние различных демонических и нечестивых сил на вашего персонажа. Обычно она усиливается из-за участия в нечестивых действиях или из-за отсутствия молитвы. Порча отрицательно влияет на приобретение веры, а высокий уровень порчи может привести к одержимости демонами или подозрениям и казни со стороны духовенства.."},
-	["hunger"] = {"Сытый", "Голодный", "Очень Голодный", "Истощенный", "Голод — это мера питания вашего персонажа. Чтобы выжить, вы должны регулярно есть еду. Голод также влияет на скорость регенерации крови."},
-	["thirst"] = {"Сытый", "Жаждущий", "Обезвоженный", "Иссохший", "Жажда — это мера гидратации вашего персонажа. Чтобы выжить, вам необходимо регулярно пить воду. Жажда также влияет на скорость регенерации крови и замедляет регенерацию выносливости при низком уровне."},
-	["sleep"] = {"Отдохнувший", "Сонный", "Уставший", "Истощенный", "Усталость — это мера истощения вашего персонажа, в основном накапливаемая за время бодрствования, хотя на нее могут влиять и другие факторы. Усталость можно уменьшить с помощью сна или определенных расходных материалов, а когда она низкая, она отрицательно сказывается на регенерации выносливости."},
-	["sleepVoltist"] = {"Полностью Работоспособен", "Работоспособен", "Малый Заряд", "Системы Отключаются", "Для вольтистов с убеждением «Желто-черный» усталость — это мера энергии. Она уменьшается со временем или при использовании способностей экзоскелета и может быть восполнена потреблением микросхем или самоэлектризацией."},
+	["corruption"] = {"Untainted", "Tainted", "Corrupted", "No Hope Remains", "Corruption represents the effect of various demonic and unholy forces on your character. It is usually increased by partaking in unholy acts or through lack of prayer. Corruption negatively impacts faith gain, and high levels of corruption can lead to demonic possession or suspicion and execution by the clergy."},
+	["hunger"] = {"Sated", "Hungry", "Very Hungry", "Starved", "Hunger is a measure of your character's nourishment. To survive, you must acquire food on a regular basis. Hunger will also affect the rate of blood regeneration."},
+	["thirst"] = {"Sated", "Thirsty", "Very Thirsty", "Dehydrated", "Thirst is a measure of your character's hydration. To survive, you must acquire water on a regular basis. Thirst will also affect the rate of blood regeneration and will slow stamina regeneration when low."},
+	["sleep"] = {"Rested", "Drowsy", "Tired", "Exhausted", "Fatigue is a measure of your character's exhaustion, primarily accrued over time spent awake, although other factors can influence it. Fatigue can be reduced through sleeping or via certain consumables, and when low will adversely affect stamina regeneration."},
+	["sleepVoltist"] = {"Fully Operational", "Operational", "Low Battery", "Systems Shutting Down", "For Voltists with the 'Yellow and Black' belief, fatigue is instead a measure of one's energy. It is decreased over time or by using exoskeleton abilities, and can be replenished by consuming tech or self-electrocuting."},
 };
 
 local needsInverted = {"hunger", "thirst"};
@@ -96,22 +96,22 @@ function cwCharacterNeeds:ModifyStatusEffects(tab)
 	local sleep = tonumber(Clockwork.Client:GetNetVar("sleep"));
 	
 	if hunger >= 75 then
-		table.insert(tab, {text = "(-) Голод", color = Color(200, 40, 40)});
+		table.insert(tab, {text = "(-) Starvation", color = Color(200, 40, 40)});
 	end
 	
 	if thirst >= 75 then
-		table.insert(tab, {text = "(-) Обезвоживание", color = Color(200, 40, 40)});
+		table.insert(tab, {text = "(-) Dehydration", color = Color(200, 40, 40)});
 	end
 	
 	if corruption >= 75 then
-		table.insert(tab, {text = "(-) Порченный", color = Color(200, 40, 40)});
+		table.insert(tab, {text = "(-) Corrupted", color = Color(200, 40, 40)});
 	end
 	
 	if sleep >= 75 then
 		if cwBeliefs and cwBeliefs:HasBelief("yellow_and_black") then
-			table.insert(tab, {text = "(-) Низкий Заряд", color = Color(200, 40, 40)});
+			table.insert(tab, {text = "(-) Low Battery", color = Color(200, 40, 40)});
 		else
-			table.insert(tab, {text = "(-) Истощенный", color = Color(200, 40, 40)});
+			table.insert(tab, {text = "(-) Exhausted", color = Color(200, 40, 40)});
 		end
 	end
 end

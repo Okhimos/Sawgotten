@@ -134,7 +134,7 @@ function PANEL:Populate(lockType, bSettingPassword, entity)
 		
 		if (!IsValid(self.acceptButton)) then
 			self.acceptButton = vgui.Create("DButton", self);
-			self.acceptButton:SetText("Открыть");
+			self.acceptButton:SetText("Open");
 			self.acceptButton:SetPos(buttonX, 28);
 			self.acceptButton:SetSize(buttonWidth * 0.7, 40);
 			
@@ -154,7 +154,7 @@ function PANEL:Populate(lockType, bSettingPassword, entity)
 
 		if (!IsValid(self.acceptUnlockButton)) then
 			self.acceptUnlockButton = vgui.Create("DButton", self);
-			self.acceptUnlockButton:SetText("Открыть");
+			self.acceptUnlockButton:SetText(" Open\n Unlock");
 			self.acceptUnlockButton:SetPos(buttonX + buttonWidth * 0.7 + 2, 28);
 			self.acceptUnlockButton:SetSize(buttonWidth * 0.3 + 8, 40);
 			
@@ -176,7 +176,7 @@ function PANEL:Populate(lockType, bSettingPassword, entity)
 			end;
 		end;
 	elseif (lockType == "key") then
-		self.title = "Выберите ключ, чтобы открыть этот замок.";
+		self.title = "Select a key to use with the lock.";
 		self:SetSize(264, 72);
 		
 		local width = self:GetWide();
@@ -196,7 +196,7 @@ function PANEL:Populate(lockType, bSettingPassword, entity)
 		if (!IsValid(self.spawnIcon)) then
 			self.spawnIcon = Clockwork.kernel:CreateMarkupToolTip(vgui.Create("cwSpawnIcon", self))
 			self.spawnIcon:SetModel("models/props_junk/cardboard_box004a.mdl");
-			self.spawnIcon:SetToolTip("Нажмите здесь, чтобы выбрать ключ из вашей связки ключей.");
+			self.spawnIcon:SetToolTip("Click here to pick a key from your keyring.");
 			self.spawnIcon:SetSize(38, 38);
 			self.spawnIcon:SetPos(5, 29);
 			self.spawnIcon:SetEnabled(true);
@@ -239,7 +239,7 @@ function PANEL:Populate(lockType, bSettingPassword, entity)
 
 		if (IsValid(self.unlockButton)) then
 			self.unlockButton = vgui.Create("DButton", self);
-			self.unlockButton:SetText("Открыть");
+			self.unlockButton:SetText("Unlock");
 			self.unlockButton:SetPos(width - 44, 28);
 			self.unlockButton:SetSize(40, 40);
 			self.unlockButton:SetEnabled(true);
@@ -253,7 +253,7 @@ function PANEL:Populate(lockType, bSettingPassword, entity)
 				local uniqueID = self.itemTable.uniqueID;
 				local itemID = self.itemTable.itemID;
 				
-				netstream.Start("LockCombo", {
+				Clockwork.datastream:Start("LockCombo", {
 					lockType = "key",
 					set = false,
 					uniqueID = uniqueID,
@@ -295,13 +295,13 @@ function PANEL:Populate(lockType, bSettingPassword, entity)
 		local scrH = ScrH();
 		
 		self.lockpickButton = vgui.Create("DButton");
-		self.lockpickButton:SetText("ВСКРЫТЬ ЗАМОК");
+		self.lockpickButton:SetText("PICK LOCK");
 		self.lockpickButton:SetSize(width, 24); 
 		self.lockpickButton:SetPos(x, (scrH / 2) - (height / 2) + 80);
 		
 		-- Called when the button is clicked.
 		function self.lockpickButton.DoClick()
-			netstream.Start("НАЧАТЬ ВЗЛОМ");
+			Clockwork.datastream:Start("StartLockpick");
 				self:Close(); self:Remove();
 			gui.EnableScreenClicker(false);
 		end;
@@ -334,7 +334,7 @@ function PANEL:ChangeItemTable(itemTable)
 	end;
 	
 	self.spawnIcon = Clockwork.kernel:CreateMarkupToolTip(vgui.Create("cwSpawnIcon", self));
-	self.spawnIcon:SetToolTip("Нажмите здесь, чтобы выбрать ключ из вашей связки ключей.");
+	self.spawnIcon:SetToolTip("Click here to pick a key from your keyring.");
 	self.spawnIcon:SetPos(5, 29);
 	self.spawnIcon:SetSize(38, 38);
 	self.spawnIcon:SetToolTip(toolTip);
@@ -370,7 +370,7 @@ function PANEL:ChangeItemTable(itemTable)
 	end;
 	
 	if (IsValid(self.panelTitle)) then
-		self.panelTitle:SetText("Нажмите «Разблокировать», чтобы использовать этот ключ.");
+		self.panelTitle:SetText("Click unlock to use this key.");
 	end;
 	
 	local inventory = Clockwork.inventory:GetClient();
@@ -398,7 +398,7 @@ function PANEL:SubmitCombination(valueOne, valueTwo, valueThree, valueFour, bUnl
 	if (valueFour) then valueTable.four = valueFour; end;
 	if (bUnlock) then valueTable.unlock = true; end;
 	
-	netstream.Start("LockCombo", valueTable);
+	Clockwork.datastream:Start("LockCombo", valueTable);
 end;
 
 -- Called when the panel is closed.

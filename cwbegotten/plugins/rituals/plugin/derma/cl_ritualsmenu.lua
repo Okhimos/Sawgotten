@@ -66,7 +66,7 @@ function PANEL:Rebuild()
 	self.buttonPeform = vgui.Create("DButton", self)
 	self.buttonPeform:SetPos(280, 26)
 	self.buttonPeform:SetSize(162, 114)
-	self.buttonPeform:SetText("Исполнить")
+	self.buttonPeform:SetText("Perform")
 	self.buttonPeform:SetTextColor(Color(200, 170, 170))
 	--self.buttonPeform:SetFont("Ritual_Button")
 	self.buttonPeform:SetFont("Ritual_Text")
@@ -85,15 +85,15 @@ function PANEL:Rebuild()
 		
 		if (#Clockwork.Client.combinations < 3) then
 			if #Clockwork.Client.combinations == 0 then
-				Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "У вас нет каталистов для проведения ритуала!");
+				Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "You have no items selected to perform a ritual with!");
 			else
-				Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "Вы должны выбрать три каталиста для проведения ритуала!");
+				Clockwork.chatBox:Add(nil, "icon16/error.png", Color(200, 175, 200, 255), "You need three items selected to perform a ritual!");
 			end
 			
 			return
 		end
 		
-		--netstream.Start("DoRitual", {Clockwork.Client.combinations})
+		--Clockwork.datastream:Start("DoRitual", {Clockwork.Client.combinations})
 		cwRituals:AttemptRitual(cwRituals:FindRitualByItems(Clockwork.Client.combinations), Clockwork.Client.combinations);
 		
 		if (IsValid(Clockwork.Client.cwRitualsMenu)) then
@@ -106,7 +106,7 @@ function PANEL:Rebuild()
 	self.buttonHotkey = vgui.Create("DButton", self)
 	self.buttonHotkey:SetPos(446, 26)
 	self.buttonHotkey:SetSize(163, 114)
-	self.buttonHotkey:SetText("Запомнить")
+	self.buttonHotkey:SetText("Bind")
 	self.buttonHotkey:SetTextColor(Color(200, 170, 170))
 	--self.buttonHotkey:SetFont("Ritual_Button")
 	self.buttonHotkey:SetFont("Ritual_Text")
@@ -261,9 +261,9 @@ function PANEL:Rebuild()
 	
 	if (#items > 0 and itemcount >= 3) then
 		local backpanew, backpaneh = self.ritualbackpane:GetSize()
-		local textw, texth = Clockwork.kernel:GetCachedTextSize("Ritual_Text", "ВЫБЕРИТЕ ТРИ КАТАЛИСТА ДЛЯ ПРОВЕДЕНИЯ РИТУАЛА...")
+		local textw, texth = Clockwork.kernel:GetCachedTextSize("Ritual_Text", "SELECT THREE ITEMS TO PERFORM A RITUAL...")
 		local warning = vgui.Create("DLabel", self.ritualbackpane)
-		warning:SetText("ВЫБЕРИТЕ ТРИ КАТАЛИСТА ДЛЯ ПРОВЕДЕНИЯ РИТУАЛА...")
+		warning:SetText("SELECT THREE ITEMS TO PERFORM A RITUAL...")
 		warning:SetFont("Ritual_Text")
 		warning:SetTextColor(Color(170, 10, 10))
 		warning:SetPos((backpanew / 2) - (textw / 2), (backpaneh / 2) - (texth / 2) - (128 + 32 + 4))
@@ -312,9 +312,9 @@ function PANEL:Rebuild()
 		end
 	else
 		local backpanew, backpaneh = self.ritualbackpane:GetSize()
-		local textw, texth = Clockwork.kernel:GetCachedTextSize("Ritual_Text", "У ВАС НЕДОСТАТОЧНО КАТАЛИСТОВ...")
+		local textw, texth = Clockwork.kernel:GetCachedTextSize("Ritual_Text", "YOU DO NOT HAVE ENOUGH RITUAL ITEMS...")
 		local warning = vgui.Create("DLabel", self.ritualbackpane)
-		warning:SetText("У ВАС НЕДОСТАТОЧНО КАТАЛИСТОВ....")
+		warning:SetText("YOU DO NOT HAVE ENOUGH RITUAL ITEMS...")
 		warning:SetFont("Ritual_Text")
 		warning:SetTextColor(Color(200, 0, 0))
 		warning:SetPos((backpanew / 2) - (textw / 2), (backpaneh / 2) - (texth / 2) - (128 + 32 + 4))
@@ -336,7 +336,7 @@ function PANEL:Rebuild()
 	
 	if table.IsEmpty(availableRituals) then
 		local ritualListW, ritualListH = self.ritualList:GetSize()
-		local textw, texth = Clockwork.kernel:GetCachedTextSize("Ritual_Text", "ВЫ ЕЩЕ НЕ ЗНАЕТЕ НИКАКИХ РИТУАЛОВ...")
+		local textw, texth = Clockwork.kernel:GetCachedTextSize("Ritual_Text", "YOU HAVE NOT DISCOVERED ANY RITUALS...")
 		local warning = vgui.Create("DLabel", self.ritualList)
 		
 		warning:SetText("YOU HAVE NOT DISCOVERED ANY RITUALS...")
@@ -356,11 +356,11 @@ function PANEL:Rebuild()
 	self.ritualList:SetVisible(false);
 	
 	self.closeButton = vgui.Create("DButton", self)
-	self.closeButton:SetText("ЗАКРЫТЬ")
+	self.closeButton:SetText("CLOSE")
 	self.closeButton:SetSize(252, 67)
 	self.closeButton:SetPos(35, 554)
 	self.closeButton:SetTextColor(Color(160, 0, 0))
-	self.closeButton:SetFont("Ritual_Text")
+	self.closeButton:SetFont("nov_IntroTextSmallfaaaaa")
 	
 	local width, height = self.closeButton:GetWide(), self.closeButton:GetTall()
 	local buttonMaterial = Material("begotten/ui/butt24.png")
@@ -385,11 +385,11 @@ function PANEL:Rebuild()
 	end
 	
 	self.listButton = vgui.Create("DButton", self)
-	self.listButton:SetText("РИТУАЛЫ")
+	self.listButton:SetText("RITES")
 	self.listButton:SetSize(252, 67)
 	self.listButton:SetPos(325, 554)
 	self.listButton:SetTextColor(Color(160, 0, 0))
-	self.listButton:SetFont("Ritual_Text")
+	self.listButton:SetFont("nov_IntroTextSmallfaaaaa")
 	self.toggled = false;
 	
 	local width, height = self.listButton:GetWide(), self.listButton:GetTall()
@@ -547,7 +547,7 @@ function PANEL:Rebuild()
 	self.requirementsList:SetPos(300 + 198 - ((68 * #self.requirementsList:GetItems() / 2)), 28);
 	
 	self.requirementsLabel = vgui.Create("DLabel", self);
-	self.requirementsLabel:SetText("Необходимые Предметы:");
+	self.requirementsLabel:SetText("Items Required:");
 	self.requirementsLabel:SetTextColor(Color(160, 145, 145));
 	self.requirementsLabel:SetFont("Decay_FormText");
 	self.requirementsLabel:SizeToContents();

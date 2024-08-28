@@ -172,9 +172,7 @@ local COMMAND = Clockwork.command:New("Enlist")
 				
 					if !subfaction or istable(subfaction) then
 						if targetFaction == "Wanderer" or (targetFaction == "Children of Satan" and target:GetSubfaction() == "Kinisger") then
-							local playerName = player:Name();
-						
-							Clockwork.dermaRequest:RequestConfirmation(target, enlistFaction.." Enlistment", playerName.." has invited you to enlist into the "..enlistFaction.." faction!", function()
+							Clockwork.dermaRequest:RequestConfirmation(target, enlistFaction.." Enlistment", player:Name().." has invited you to enlist into the "..enlistFaction.." faction!", function()
 								targetFaction = target:GetSharedVar("kinisgerOverride") or target:GetFaction();
 								
 								if (targetFaction == "Wanderer" or (targetFaction == "Children of Satan" and target:GetSubfaction() == "Kinisger")) and target:Alive() and Clockwork.faction:IsGenderValid(enlistFaction, target:GetGender()) then
@@ -201,15 +199,8 @@ local COMMAND = Clockwork.command:New("Enlist")
 											target:SetCharacterData("rank", 12);
 										end
 										
-										local targetAngles = target:EyeAngles();
-										local targetPos = target:GetPos();
-										
 										Clockwork.player:LoadCharacter(target, Clockwork.player:GetCharacterID(target));
-										
-										target:SetPos(targetPos);
-										target:SetEyeAngles(targetAngles);
-										
-										Clockwork.player:NotifyAll(playerName.." has enlisted "..target:Name().." into the "..enlistFaction.." faction!");
+										Clockwork.player:NotifyAll(player:Name().." has enlisted "..target:Name().." into the "..enlistFaction.." faction!");
 									end;
 								end
 							end)
@@ -375,13 +366,7 @@ local COMMAND = Clockwork.command:New("Promote")
 								target:SetCharacterData("Subfaction", subfaction, true);
 							end
 							
-							local targetAngles = target:EyeAngles();
-							local targetPos = target:GetPos();
-							
 							Clockwork.player:LoadCharacter(target, Clockwork.player:GetCharacterID(target));
-							
-							target:SetPos(targetPos);
-							target:SetEyeAngles(targetAngles);
 						end
 					end
 					
@@ -485,7 +470,7 @@ local COMMAND = Clockwork.command:New("Vector")
 		
 		local vectorString = "Vector("..x..", "..y..", "..z..")"
 		Schema:EasyText(player, "blue", vectorString)
-		netstream.Start(player, "cwClipboardText", vectorString)
+		Clockwork.datastream:Start(player, "cwClipboardText", vectorString)
 	end
 COMMAND:Register()
 
@@ -662,38 +647,6 @@ local COMMAND = Clockwork.command:New("CharUnPermakill");
 	end;
 COMMAND:Register();
 
-local COMMAND = Clockwork.command:New("CharUnPermakillStay");
-	COMMAND.tip = "Un-permanently kill a character and teleport them to where they died.";
-	COMMAND.text = "<string Name>";
-	COMMAND.access = "o";
-	COMMAND.arguments = 1;
-	COMMAND.alias = {"PlyUnPermakillStay", "UnPermakillStay"};
-
-	-- Called when the command has been run.
-	function COMMAND:OnRun(player, arguments)
-		local target = Clockwork.player:FindByID(arguments[1])
-		
-		if (target) then
-			if (target:GetCharacterData("permakilled")) then
-				local targetPos = target:GetPos();
-				
-				Schema:UnPermaKillPlayer(target, target:GetRagdollEntity());
-				Schema:EasyText(GetAdmins(), "cornflowerblue", player:Name().." un-permanently killed "..target:SteamName().."'s character \""..target:Name().."\"!");
-				
-				target:SetPos(targetPos + Vector(0, 0, 16));
-				
-				return;
-			else
-				Schema:EasyText(player, "darkgrey", "This character is not permanently killed!");
-				
-				return;
-			end;
-		else
-			Schema:EasyText(player, "grey", arguments[1].." is not a valid character that can be respawned!");
-		end;
-	end;
-COMMAND:Register();
-
 local COMMAND = Clockwork.command:New("CharUnPermakillAll");
 	COMMAND.tip = "Unpermakill all players on the map.";
 	COMMAND.access = "s";
@@ -724,16 +677,8 @@ local COMMAND = Clockwork.command:New("EventLocal");
 	end;
 COMMAND:Register();
 
-local zoneEventClasses = {
-	["gore"] = {"gore", "gore_tree", "gore_hallway", "supragore"},
-	["wasteland"] = {"wasteland", "suprawasteland"},
-	["tower"] = {"tower"},
-	["hell"] = {"hell", "manor", "suprahell"},
-	["caves"] = {"caves"},
-};
-
 local COMMAND = Clockwork.command:New("EventZone");
-	COMMAND.tip = "Send an event to characters in a specific suprazone (suprawasteland will play for both wasteland and tower for example, or suprahell and supragore) or zone (i.e. wasteland, tower, caves, hell, gore).";
+	COMMAND.tip = "Send an event to characters in a specified zone (wasteland, tower, gore, hell).";
 	COMMAND.text = "<string Zone> <string Text>";
 	COMMAND.flags = CMD_DEFAULT;
 	COMMAND.access = "o";
@@ -741,48 +686,16 @@ local COMMAND = Clockwork.command:New("EventZone");
 
 	-- Called when the command has been run.
 	function COMMAND:OnRun(player, arguments)
-		local valid_zones = {};
+		local valid_zones = {"wasteland", "tower", "gore", "hell"};
 		local zone = string.lower(arguments[1]);
 		
-		table.insert(valid_zones, zones.cwDefaultZone.uniqueID);
-		
-		for k, v in pairs(zones:GetAll()) do
-			table.insert(valid_zones, k);
-		end
-		
-		for k, v in pairs(zones.supraZones) do
-			table.insert(valid_zones, k);
-		end
-		
-		local eventClass = "localevent";
-		
-		for k, v in pairs(zoneEventClasses) do
-			if table.HasValue(v, zone) then
-				eventClass = k.."event";
-				
-				break;
-			end
-		end
-		
 		if table.HasValue(valid_zones, zone) then
-			if zones:IsSupraZone(zone) then
-				for k, v in pairs(_player.GetAll()) do
-					if v:HasInitialized() then
-						local vSupraZone = zones:GetPlayerSupraZone(v);
-							
-						if vSupraZone == zone then
-							Clockwork.chatBox:Add(v, nil, eventClass,  table.concat(arguments, " ", 2));
-						end
-					end
-				end
-			else
-				for k, v in pairs (_player.GetAll()) do
-					if v:HasInitialized() then
-						local vZone = v:GetCharacterData("LastZone", "wasteland");
-							
-						if vZone == zone then
-							Clockwork.chatBox:Add(v, nil, eventClass,  table.concat(arguments, " ", 2));
-						end
+			for k, v in pairs (_player.GetAll()) do
+				if v:HasInitialized() then
+					local lastZone = v:GetCharacterData("LastZone");
+					
+					if lastZone == zone or (zone == "gore" and (lastZone == "gore_tree" or lastZone == "gore_hallway") or (zone == "hell" and lastZone == "manor") or (zone == "tower" and lastZone == "theater")) or v == player then
+						Clockwork.chatBox:Add(v, nil, zone.."event",  table.concat(arguments, " ", 2));
 					end
 				end
 			end
@@ -793,7 +706,7 @@ local COMMAND = Clockwork.command:New("EventZone");
 COMMAND:Register();
 
 local COMMAND = Clockwork.command:New("PlaySoundZone");
-	COMMAND.tip = "Play a sound to all players in a specific suprazone (suprawasteland will play for both wasteland and tower for example, or suprahell and supragore) or zone (i.e. wasteland, tower, caves, hell, gore).";
+	COMMAND.tip = "Play a sound to all players in a specific zone.";
 	COMMAND.text = "<string Zone> <string SoundName> [int Level] [int Pitch]";
 	COMMAND.access = "o";
 	COMMAND.arguments = 2;
@@ -801,18 +714,8 @@ local COMMAND = Clockwork.command:New("PlaySoundZone");
 
 	-- Called when the command has been run.
 	function COMMAND:OnRun(player, arguments)
-		local valid_zones = {};
+		local valid_zones = {"wasteland", "tower", "gore", "hell"};
 		local zone = string.lower(arguments[1]);
-		
-		table.insert(valid_zones, zones.cwDefaultZone.uniqueID);
-		
-		for k, v in pairs(zones:GetAll()) do
-			table.insert(valid_zones, k);
-		end
-		
-		for k, v in pairs(zones.supraZones) do
-			table.insert(valid_zones, k);
-		end
 		
 		if (arguments[2]) then
 			local info = {name = arguments[2], pitch = 100, level = 75};
@@ -831,27 +734,17 @@ local COMMAND = Clockwork.command:New("PlaySoundZone");
 				end;
 				
 				local playerTable = _player.GetAll();
-
-				if zones:IsSupraZone(zone) then
-					for k, v in pairs(playerTable) do
-						if v:HasInitialized() then
-							local vSupraZone = zones:GetPlayerSupraZone(v);
-							
-							if vSupraZone ~= zone then
-								playerTable[k] = nil;
-							end
+				
+				for k, v in pairs (playerTable) do
+					if v:HasInitialized() then
+						local lastZone = v:GetCharacterData("LastZone");
+						
+						if lastZone == zone or (zone == "gore" and (lastZone == "gore_tree" or lastZone == "gore_hallway") or (zone == "hell" and lastZone == "manor") or (zone == "tower" and lastZone == "theater")) or v == player then
+							-- nothing
+						else
+							playerTable[k] = nil;
 						end
-					end;
-				else
-					for k, v in pairs(playerTable) do
-						if v:HasInitialized() then
-							local vZone = v:GetCharacterData("LastZone", "wasteland");
-							
-							if vZone ~= zone then
-								playerTable[k] = nil;
-							end
-						end
-					end;
+					end
 				end;
 				
 				netstream.Start(playerTable, "EmitSound", info);
@@ -963,9 +856,9 @@ local COMMAND = Clockwork.command:New("BlowWarhorn");
 					
 					if vLastZone == "wasteland" or vLastZone == "tower" or vLastZone == "theater" then
 						Clockwork.chatBox:Add(v, nil, "event", "The ground quakes as the terrifying sound of a Goreic Warfighter horn pierces the sky.");
-						--netstream.Start(v, "FadeAmbientMusic");
-						--netstream.Start(v, "EmitSound", {name = "warhorns/warhorn_gore.mp3", pitch = 100, level = 75});
-						netstream.Start(v, "GoreWarhorn");
+						--Clockwork.datastream:Start(v, "FadeAmbientMusic");
+						--Clockwork.datastream:Start(v, "EmitSound", {name = "warhorns/warhorn_gore.mp3", pitch = 100, level = 75});
+						Clockwork.datastream:Start(v, "GoreWarhorn");
 					end
 				end
 			end
@@ -978,108 +871,14 @@ local COMMAND = Clockwork.command:New("BlowWarhorn");
 					
 					if vLastZone == "gore" or vLastZone == "gore_hallway" or vLastZone == "gore_tree" then
 						Clockwork.chatBox:Add(v, nil, "event", "The ground quakes as the sound of a Goreic Warfighter horn pierces the sky.");
-						--netstream.Start(v, "FadeAmbientMusic");
-						--netstream.Start(v, "EmitSound", {name = "warhorns/warhorn_gore.mp3", pitch = 100, level = 75});
-						netstream.Start(v, "GoreWarhorn");
+						--Clockwork.datastream:Start(v, "FadeAmbientMusic");
+						--Clockwork.datastream:Start(v, "EmitSound", {name = "warhorns/warhorn_gore.mp3", pitch = 100, level = 75});
+						Clockwork.datastream:Start(v, "GoreWarhorn");
 					end
 				end
 			end
 		else
 			Schema:EasyText(player, "peru", "This command cannot be used in this area!");
-		end
-	end;
-COMMAND:Register();
-
-local COMMAND = Clockwork.command:New("GoreicHornSummonAll");
-	COMMAND.tip = "Summon all Goreic warriors to the village center using the Goreic Gathering Horn. Utilize discretion before doing so.";
-
-	function COMMAND:OnRun(player, arguments)
-		local trace = player:GetEyeTrace();
-
-		if (trace.Entity) then
-			local entity = trace.Entity;
-
-			if entity:GetClass() == "cw_gorevillagehorn" then
-				local faction = player:GetFaction();
-				local subfaction = player:GetSubfaction();
-				
-				if faction == "Goreic Warrior" then
-					local curTime = CurTime();
-				
-					if player.nextWarHorn and player.nextWarHorn > curTime then
-						Schema:EasyText(player, "chocolate", "You must wait another "..-math.ceil(curTime - player.nextWarHorn).." seconds before blowing the gathering horn again!");
-						
-						return false;
-					end
-					
-					player.nextWarHorn = curTime + 30;
-					
-					for _,v in pairs(_player.GetAll()) do
-						local lastZone = v:GetCharacterData("LastZone");
-						if (lastZone == "gore" or lastZone == "gore_tree" or lastZone == "gore_hallway") then
-							if v:GetFaction() == "Goreic Warrior" then
-								Clockwork.chatBox:Add(v, nil, "event", "A familiar call of "..subfaction.." echoes throughout the forest. All Goreic warriors have been summoned to the village center.");
-							else
-								Clockwork.chatBox:Add(v, nil, "event", "The sound of a warhorn echoes throughout the forest, but you do not know its meaning!");
-							end
-							
-							v:SendLua([[Clockwork.Client:EmitSound("warhorns/summonhorn.mp3", 60, 100)]]);
-							util.ScreenShake(v:GetPos(), 1, 5, 10, 1024);
-						end
-					end
-				else
-					Schema:EasyText(player, "firebrick", "You are not the correct faction to blow the Goreic Gathering Horn!");
-				end
-			else
-				Schema:EasyText(player, "firebrick", "You must be looking at a Goreic Gathering Horn to do this!");
-			end
-		end
-	end;
-COMMAND:Register();
-
-local COMMAND = Clockwork.command:New("GoreicHornSummonRaid");
-	COMMAND.tip = "Summon all Goreic warriors to the village center to organize for a raid.";
-
-	function COMMAND:OnRun(player, arguments)
-		local trace = player:GetEyeTrace();
-
-		if (trace.Entity) then
-			local entity = trace.Entity;
-
-			if entity:GetClass() == "cw_gorevillagehorn" then
-				local faction = player:GetFaction();
-				local subfaction = player:GetSubfaction();
-				
-				if faction == "Goreic Warrior" then
-					local curTime = CurTime();
-				
-					if player.nextWarHorn and player.nextWarHorn > curTime then
-						Schema:EasyText(player, "chocolate", "You must wait another "..-math.ceil(curTime - player.nextWarHorn).." seconds before blowing the gathering horn again!");
-						
-						return false;
-					end
-					
-					player.nextWarHorn = curTime + 30;
-				
-					for _,v in pairs(_player.GetAll()) do
-						local lastZone = v:GetCharacterData("LastZone");
-						if (lastZone == "gore" or lastZone == "gore_tree" or lastZone == "gore_hallway") then
-							if v:GetFaction() == "Goreic Warrior" then
-								Clockwork.chatBox:Add(v, nil, "event", "A familiar call of "..subfaction.." echoes throughout the forest. A raiding party has been requested to organize at the village center.");
-							else
-								Clockwork.chatBox:Add(v, nil, "event", "The sound of a warhorn echoes throughout the forest, but you do not know its meaning!");
-							end
-							
-							v:SendLua([[Clockwork.Client:EmitSound("warhorns/raidhorn.mp3", 60, 100)]]);
-							util.ScreenShake(v:GetPos(), 1, 5, 11, 1024);
-						end
-					end
-				else
-					Schema:EasyText(player, "firebrick", "You are not the correct faction to blow the Goreic Gathering Horn!");
-				end
-			else
-				Schema:EasyText(player, "firebrick", "You must be looking at a Goreic Gathering Horn to do this!");
-			end
 		end
 	end;
 COMMAND:Register();
@@ -1108,17 +907,17 @@ local COMMAND = Clockwork.command:New("CallCongregation");
 				if lastZone == "wasteland" then
 					table.insert(far_players, player);
 					Clockwork.chatBox:Add(player, nil, "event", "The church bell tolls and the holy word is spread: A congregation has been called, and all beings high and lowly are required to attend... or else risk being marked for corpsing.");
-					netstream.Start(player, "FadeAmbientMusic");
+					Clockwork.datastream:Start(player, "FadeAmbientMusic");
 				elseif lastZone == "tower" or lastZone == "theater" then
 					table.insert(close_players, player);
 					Clockwork.chatBox:Add(player, nil, "event", "The church bell tolls and the holy word is spread: A congregation has been called, and all beings high and lowly are required to attend... or else risk being marked for corpsing.");
-					netstream.Start(player, "FadeAmbientMusic");
+					Clockwork.datastream:Start(player, "FadeAmbientMusic");
 				end
 			end
 		end
 		
-		netstream.Start(close_players, "EmitSound", {name = "cosmicrupture/bellsclose.wav", pitch = 90, level = 60});
-		netstream.Start(far_players, "EmitSound", {name = "cosmicrupture/bellsdistant.wav", pitch = 100, level = 75});
+		Clockwork.datastream:Start(close_players, "EmitSound", {name = "cosmicrupture/bellsclose.wav", pitch = 90, level = 60});
+		Clockwork.datastream:Start(far_players, "EmitSound", {name = "cosmicrupture/bellsdistant.wav", pitch = 100, level = 75});
 	end;
 COMMAND:Register();
 
@@ -1143,8 +942,8 @@ local COMMAND = Clockwork.command:New("FuckerJoeAlarm");
 				
 				if lastZone == "wasteland" or lastZone == "tower" or lastZone == "theater" then
 					Clockwork.chatBox:Add(player, nil, "event", "Is it...? No, it cannot be... The alarms sound, for Fucker Joe comes...");
-					netstream.Start(player, "FadeAmbientMusic");
-					netstream.Start(player, "EmitSound", {name = "warhorns/fuckerjoealarm.mp3", pitch = 90, level = 60});
+					Clockwork.datastream:Start(player, "FadeAmbientMusic");
+					Clockwork.datastream:Start(player, "EmitSound", {name = "warhorns/fuckerjoealarm.mp3", pitch = 90, level = 60});
 				end
 			end
 		end
@@ -1975,30 +1774,6 @@ end;
 
 COMMAND:Register();
 
-local COMMAND = Clockwork.command:New("AddNPCSpawn")
-	COMMAND.tip = "Add an npc spawn location at your cursor. (Valid types: animal, thrall)"
-	COMMAND.text = "<string Category>"
-	COMMAND.access = "s"
-	COMMAND.arguments = 1;
-
-	-- Called when the command has been run.
-	function COMMAND:OnRun(player, arguments)
-		Schema:AddNPCSpawn(player:GetEyeTrace().HitPos, arguments[1], player);
-	end
-COMMAND:Register()
-
-local COMMAND = Clockwork.command:New("RemoveNPCSpawn")
-	COMMAND.tip = "Remove an npc spawn location at your cursor."
-	COMMAND.access = "s"
-	COMMAND.optionalArguments = 1;
-	COMMAND.text = "[int Distance]"
-
-	-- Called when the command has been run.
-	function COMMAND:OnRun(player, arguments)
-		Schema:RemoveNPCSpawn(player:GetEyeTrace().HitPos, tonumber(arguments[1]) or 64, player);
-	end
-COMMAND:Register()
-
 local COMMAND = Clockwork.command:New("ToggleNPCSpawns");
 COMMAND.tip = "Toggle the automatic NPC spawning system.";
 COMMAND.flags = CMD_DEFAULT;
@@ -2389,7 +2164,14 @@ local COMMAND = Clockwork.command:New("HellJaunt");
 						sound.Play("misc/summon.wav", destination, 100, 100);
 						player.teleporting = true;
 						
-						timer.Create("summonplayer_"..tostring(player:EntIndex()), 0.75, 1, function()
+						local summonTime = 0.75
+						local freezeLevel = player:GetNWInt("freeze")
+
+						if (freezeLevel > 50) then
+							summonTime = summonTime + (summonTime * ((freezeLevel - 50) / 50))
+						end
+
+						Clockwork.player:SetAction(player, "helljaunting", summonTime, 999, function()
 							if IsValid(player) then
 								player.teleporting = false;
 								
@@ -2398,6 +2180,7 @@ local COMMAND = Clockwork.command:New("HellJaunt");
 								end
 								
 								if player:Alive() then
+									player:HandleNeed("corruption", 50);
 									local target = player.cwHoldingEnt;
 								
 									Clockwork.player:SetSafePosition(player, destination);
@@ -2429,7 +2212,7 @@ local COMMAND = Clockwork.command:New("HellJaunt");
 												phys:Wake()
 												phys:SetPos(newPos)
 											end
-											
+
 											timer.Simple(1, function()
 												if IsValid(ragdollPlayer) then
 													ragdollPlayer:GodDisable();
@@ -2447,16 +2230,18 @@ local COMMAND = Clockwork.command:New("HellJaunt");
 						
 						Schema:EasyText(player, "red", "You begin to helljaunt away!");
 						
+					--[[
 						timer.Simple(1, function()
 							if IsValid(player) and player:Alive() then
 								--if player:GetSubfaction() == "Philimaxio" then
 									-- Philimaxio get their corruption doubled, but to double 50 would be lethal so I'm exempting helljaunt corruption.
 									--player:HandleNeed("corruption", 25);
 								--else
-									player:HandleNeed("corruption", 50);
+								--	player:HandleNeed("corruption", 50);
 								--end
 							end
 						end);
+					]]
 					else
 						Schema:EasyText(player, "peru", "You cannot helljaunt for another "..nextTeleport.." seconds!");
 					end
@@ -2865,7 +2650,7 @@ local COMMAND = Clockwork.command:New("PoisonedWineSequence")
 							ParticleEffect("blood_advisor_puncture_withdraw", headPos + (player:GetForward() * 8) - Vector(0, 0, 1), Angle(180, 0, 0), player);
 							util.Decal("BloodLarge", playerPos - Vector(0, 0, 2), playerPos + Vector(0, 0, 2));
 							
-							netstream.Start(player, "TriggerCrazyBob", 75);
+							Clockwork.datastream:Start(player, "TriggerCrazyBob", 75);
 							
 							timer.Simple(3, function()
 								if IsValid(player) then
