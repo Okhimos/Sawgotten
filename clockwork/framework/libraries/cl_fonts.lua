@@ -68,7 +68,7 @@ Clockwork.fonts:Add("cwMainText",
 })
 Clockwork.fonts:Add("cwESPText",
 {
-	font		= "Ikusuteito",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(5.5),
 	weight		= 700,
 	antialiase	= true,
@@ -86,7 +86,7 @@ Clockwork.fonts:Add("cwTooltip",
 })
 Clockwork.fonts:Add("Clockwork.menuTextBig",
 {
-	font		= "Ikusuteito",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(15),
 	weight		= 700,
 	antialiase	= true,
@@ -95,7 +95,7 @@ Clockwork.fonts:Add("Clockwork.menuTextBig",
 })
 Clockwork.fonts:Add("Clockwork.menuTextTiny",
 {
-	font		= "Ikusuteito",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(10),
 	weight		= 700,
 	antialiase	= true,
@@ -104,7 +104,7 @@ Clockwork.fonts:Add("Clockwork.menuTextTiny",
 })
 Clockwork.fonts:Add("cwInfoTextFont",
 {
-	font		= "Ikusuteito",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(12),
 	weight		= 700,
 	antialiase	= true,
@@ -113,7 +113,7 @@ Clockwork.fonts:Add("cwInfoTextFont",
 })
 Clockwork.fonts:Add("Clockwork.menuTextHuge",
 {
-	font		= "Ikusuteito",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(30),
 	weight		= 700,
 	antialiase	= true,
@@ -131,7 +131,7 @@ Clockwork.fonts:Add("Clockwork.menuTextSmall",
 })
 Clockwork.fonts:Add("cwIntroTextBig",
 {
-	font		= "Ikusuteito",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(18),
 	weight		= 700,
 	antialiase	= true,
@@ -140,7 +140,7 @@ Clockwork.fonts:Add("cwIntroTextBig",
 })
 Clockwork.fonts:Add("cwIntroTextTiny",
 {
-	font		= "Ikusuteito",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(15),
 	weight		= 700,
 	antialiase	= true,
@@ -149,7 +149,7 @@ Clockwork.fonts:Add("cwIntroTextTiny",
 })
 Clockwork.fonts:Add("cwIntroTextSmall",
 {
-	font		= "Ikusuteito",
+	font		= "Oranienbaum",
 	size		= Clockwork.kernel:FontScreenScale(15),
 	weight		= 700,
 	antialiase	= true,
