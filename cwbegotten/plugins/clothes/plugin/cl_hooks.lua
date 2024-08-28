@@ -221,6 +221,6 @@ function PLUGIN:GetBars(bars)
 	local clothesItem = Clockwork.Client:GetClothesEquipped();
 	
 	if clothesItem and clothesItem.attributes and table.HasValue(clothesItem.attributes, "solblessed") then
-		bars:Add("HATRED", Color(255, 69, 0, 255), "HATRED", self.hatred, 100, self.hatred == 100);
+		bars:Add("НЕНАВИСТЬ", Color(255, 69, 0, 255), "НЕНАВИСТЬ", self.hatred, 100, self.hatred == 100);
 	end;
 end;

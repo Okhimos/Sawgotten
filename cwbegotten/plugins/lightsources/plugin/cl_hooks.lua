@@ -133,7 +133,7 @@ function cwLantern:GetBars(bars)
 						self.oil = math.Approach(self.oil, oil, 1);
 					end;
 					
-					bars:Add("OIL", color, oilText, self.oil, 100, self.oil < 10);
+					bars:Add("МАСЛО", color, oilText, self.oil, 100, self.oil < 10);
 				end;
 			--end;
 		end;

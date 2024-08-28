@@ -38,7 +38,7 @@ function cwPowerArmor:GetBars(bars)
 					self.battery = math.Approach(self.battery, battery, 1);
 				end;
 				
-				bars:Add("BATTERY", color, batteryText, self.battery, 100, self.battery < 10);
+				bars:Add("БАТАРЕЯ", color, batteryText, self.battery, 100, self.battery < 10);
 			end;
 		--end;
 	end;

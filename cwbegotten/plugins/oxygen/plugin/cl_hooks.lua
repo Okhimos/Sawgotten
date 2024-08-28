@@ -22,7 +22,7 @@ function cwOxygen:GetBars(bars)
 		end;
 		
 		if (oxygen < 100) then
-			bars:Add("OXYGEN", Color(50, 50, 255), "OXYGEN", self.oxygen, 100, self.oxygen < 10);
+			bars:Add("КИСЛОРОД", Color(50, 50, 255), "КИСЛОРОД", self.oxygen, 100, self.oxygen < 10);
 		end;
 	end;
 end;

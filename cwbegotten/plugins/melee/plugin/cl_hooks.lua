@@ -30,7 +30,7 @@ function cwMelee:GetBars(bars)
 		end;
 		
 		if (self.stability < max_stability) then
-			bars:Add("стабильность", Color(135, 80, 60), "СТАБИЛЬНОСТЬ", self.stability, max_stability, self.stability < 25);
+			bars:Add("СТАБИЛЬНОСТЬ", Color(135, 80, 60), "СТАБИЛЬНОСТЬ", self.stability, max_stability, self.stability < 25);
 		end;
 	end;
 	

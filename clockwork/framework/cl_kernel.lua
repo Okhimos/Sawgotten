@@ -2376,7 +2376,7 @@ function Clockwork.kernel:DrawArmorBar()
 	end
 	
 	if (armor > 0) then
-		Clockwork.bars:Add("ARMOR", Color(139, 174, 179, 255), "ARMOR", self.armor, Clockwork.Client:GetMaxArmor(), self.health < 10, 1)
+		Clockwork.bars:Add("БРОНЯ", Color(139, 174, 179, 255), "БРОНЯ", self.armor, Clockwork.Client:GetMaxArmor(), self.health < 10, 1)
 	end
 end
 
@@ -2393,7 +2393,7 @@ function Clockwork.kernel:DrawHealthBar()
 	end
 	
 	if (health > 0) then
-		Clockwork.bars:Add("HEALTH", Color(179, 46, 49, 255), "HEALTH", self.health, Clockwork.Client:GetMaxHealth(), self.health < 10, 2)
+		Clockwork.bars:Add("ЗДОРОВЬЕ", Color(179, 46, 49, 255), "ЗДОРОВЬЕ", self.health, Clockwork.Client:GetMaxHealth(), self.health < 10, 2)
 	end
 end
 
