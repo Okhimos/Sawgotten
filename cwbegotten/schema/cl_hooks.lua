@@ -743,15 +743,15 @@ end;
 -- Called when the target's status should be drawn.
 function Schema:DrawTargetPlayerStatus(target, alpha, x, y)
 	local informationColor = Clockwork.option:GetColor("information");
-	local thirdPerson = "him";
+	local thirdPerson = "его";
 	local mainStatus;
 	local untieText;
-	local gender = "He";
+	local gender = "Он";
 	local action = Clockwork.player:GetAction(target);
 	
 	if (target:GetGender() == GENDER_FEMALE) then
-		thirdPerson = "her";
-		gender = "She";
+		thirdPerson = "ее";
+		gender = "Она";
 	end;
 	
 	if (target:Alive()) then
